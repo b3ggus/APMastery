@@ -8,6 +8,11 @@ html {
 
 body {
   background-color: #12181B;
+  background-image:
+    radial-gradient(ellipse 900px 600px at 8% -10%, rgba(199, 114, 58, 0.14), transparent 60%),
+    radial-gradient(ellipse 900px 700px at 100% 0%, rgba(76, 122, 94, 0.14), transparent 60%),
+    radial-gradient(ellipse 1100px 800px at 50% 120%, rgba(212, 167, 44, 0.08), transparent 65%);
+  background-attachment: fixed;
   color: #F4EFE3;
   font-family: 'IBM Plex Sans', sans-serif;
   -webkit-font-smoothing: antialiased;
