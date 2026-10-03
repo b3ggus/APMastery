@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link, useLocation } from 'react-router-dom'
 import { useUser } from '../context/UserContext.jsx'
+import { useAuth } from '../context/AuthContext.jsx'
 import { rankForXP, streakFlames } from '../lib/gamification.js'
 
 const LINKS = [
@@ -10,10 +11,12 @@ const LINKS = [
   { to: '/analytics', label: 'Analytics' },
   { to: '/achievements', label: 'Badges' },
   { to: '/ranked', label: 'Ranked' },
+  { to: '/leaderboard', label: 'Leaderboard' },
 ]
 
 export default function Nav() {
   const { state } = useUser()
+  const { user, profile, signOut } = useAuth()
   const location = useLocation()
   const { current } = rankForXP(state.xp)
 
@@ -45,6 +48,22 @@ export default function Nav() {
             <span className="text-paper/80">{state.xp} XP</span>
             <span className="text-ember-light">{state.coins}c</span>
             <span title={`${state.streak} day streak`}>{streakFlames(state.streak)}{state.streak}</span>
+            {user ? (
+              <button
+                className="focus-ring text-paper/50 hover:text-paper text-xs border border-ink-line rounded px-2 py-1"
+                title="Sign out"
+                onClick={signOut}
+              >
+                {profile?.username ?? 'account'}
+              </button>
+            ) : (
+              <Link
+                className="focus-ring text-xs border border-ink-line rounded px-2 py-1 text-paper/60 hover:text-paper"
+                to="/signup"
+              >
+                Sign up
+              </Link>
+            )}
           </div>
         </div>
         <nav className="flex md:hidden gap-1 pb-2 overflow-x-auto">

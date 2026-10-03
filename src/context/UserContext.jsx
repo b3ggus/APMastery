@@ -1,6 +1,7 @@
-import React, { createContext, useContext, useEffect, useMemo, useState } from 'react'
+import React, { createContext, useContext, useEffect, useMemo, useRef, useState } from 'react'
 import { xpForQuestion, coinsForQuestion, updateStreak, todayStr, BADGES } from '../lib/gamification.js'
 import { newCard, reviewCard } from '../lib/srs.js'
+import { useAuth } from './AuthContext.jsx'
 
 const STORAGE_KEY = 'ap-arena-state-v1'
 
@@ -36,10 +37,31 @@ const UserContext = createContext(null)
 
 export function UserProvider({ children }) {
   const [state, setState] = useState(loadState)
+  const { user, syncLeaderboardStats } = useAuth()
 
   useEffect(() => {
     localStorage.setItem(STORAGE_KEY, JSON.stringify(state))
   }, [state])
+
+  // Push the subset of stats the leaderboard cares about to Supabase whenever
+  // they change, but only when signed in and only after a short debounce so
+  // rapid-fire answers during a quiz don't trigger a request per question.
+  const syncTimer = useRef(null)
+  useEffect(() => {
+    if (!user) return
+    clearTimeout(syncTimer.current)
+    syncTimer.current = setTimeout(() => {
+      const bossesDefeated = Object.values(state.bossesBySubject).reduce((a, b) => a + b, 0)
+      syncLeaderboardStats({
+        xp: state.xp,
+        coins: state.coins,
+        bestStreak: state.bestStreak,
+        bossesDefeated,
+        frqCompleted: state.frqCompleted,
+      })
+    }, 1500)
+    return () => clearTimeout(syncTimer.current)
+  }, [user, state.xp, state.coins, state.bestStreak, state.bossesBySubject, state.frqCompleted, syncLeaderboardStats])
 
   // --- Derived aggregate stats used for badge checks ---
   const stats = useMemo(() => {

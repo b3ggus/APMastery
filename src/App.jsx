@@ -12,6 +12,8 @@ import Analytics from './pages/Analytics.jsx'
 import Achievements from './pages/Achievements.jsx'
 import Ranked from './pages/Ranked.jsx'
 import FRQPage from './pages/FRQPage.jsx'
+import Auth from './pages/Auth.jsx'
+import Leaderboard from './pages/Leaderboard.jsx'
 
 export default function App() {
   return (
@@ -30,6 +32,9 @@ export default function App() {
           <Route path="/analytics" element={<Analytics />} />
           <Route path="/achievements" element={<Achievements />} />
           <Route path="/ranked" element={<Ranked />} />
+          <Route path="/signup" element={<Auth />} />
+          <Route path="/login" element={<Auth />} />
+          <Route path="/leaderboard" element={<Leaderboard />} />
           <Route path="*" element={<Home />} />
         </Routes>
       </main>
