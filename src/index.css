@@ -7,11 +7,12 @@ html {
 }
 
 body {
-  background-color: #12181B;
+  background-color: #33393D;
   background-image:
-    radial-gradient(ellipse 900px 600px at 8% -10%, rgba(199, 114, 58, 0.14), transparent 60%),
-    radial-gradient(ellipse 900px 700px at 100% 0%, rgba(76, 122, 94, 0.14), transparent 60%),
-    radial-gradient(ellipse 1100px 800px at 50% 120%, rgba(212, 167, 44, 0.08), transparent 65%);
+    radial-gradient(ellipse 1000px 700px at 5% -10%, rgba(224, 160, 110, 0.26), transparent 60%),
+    radial-gradient(ellipse 1000px 750px at 100% 0%, rgba(127, 169, 140, 0.24), transparent 60%),
+    radial-gradient(ellipse 900px 700px at 90% 85%, rgba(136, 146, 217, 0.18), transparent 62%),
+    radial-gradient(ellipse 1200px 850px at 50% 120%, rgba(212, 167, 44, 0.16), transparent 65%);
   background-attachment: fixed;
   color: #F4EFE3;
   font-family: 'IBM Plex Sans', sans-serif;

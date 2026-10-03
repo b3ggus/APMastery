@@ -39,7 +39,7 @@ export default function App() {
         </Routes>
       </main>
       <footer className="max-w-6xl mx-auto px-4 sm:px-6 py-10 text-xs text-paper/30 font-mono">
-        Specimen — AP Study Arena. Progress is stored locally in this browser.
+        AP Study Arena. Progress is stored locally in this browser.
       </footer>
     </div>
   )

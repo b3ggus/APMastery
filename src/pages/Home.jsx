@@ -18,8 +18,6 @@ export default function Home() {
 
   return (
     <div className="max-w-6xl mx-auto px-4 sm:px-6 py-8 space-y-10">
-      <StatsBar />
-
       <section className="grid sm:grid-cols-3 gap-4">
         <div className="bg-ink-soft border border-ink-line rounded-lg p-5">
           <p className="text-xs uppercase tracking-wide text-paper/50 font-mono mb-1">Streak</p>
@@ -91,6 +89,8 @@ export default function Home() {
           <p className="text-xs text-paper/50">Hard questions only. Climb the tiers.</p>
         </Link>
       </section>
+
+      <StatsBar />
     </div>
   )
 }
