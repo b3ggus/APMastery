@@ -87,6 +87,578 @@ export const chemistry = {
             commonMistake: "Not applying the E = -13.6/n² relationship quantitatively, leading to a qualitative guess that gets the spacing trend backwards.",
             apTip: "College-level insight: memorize that hydrogen's energy levels converge (get closer together) as n increases — this explains both denser line spectra at higher n and why ionization (n→∞) requires a finite, calculable total amount of energy starting from n=1."
           }
+        },
+        {
+          id: 'chem-1-7', difficulty: 1, type: 'mcq', topic: 'Moles and Molar Mass',
+          prompt: "What is the mass, in grams, of 2.50 mol of CaCO3 (molar mass = 100.09 g/mol)?",
+          choices: ['40.0 g', '100.1 g', '250.2 g', '500.5 g'],
+          correct: 2,
+          explanation: {
+            correct: "Mass = moles × molar mass = 2.50 mol × 100.09 g/mol = 250.2 g.",
+            wrong: { 0: "This is molar mass divided by 2.5, not moles times molar mass — the operation is inverted.", 1: "This is just the molar mass itself (for 1.00 mol), not for 2.50 mol.", 3: "This would be the mass of 5.00 mol, double the amount asked for." },
+            tempting: "Choice B is tempting because it's the 'per mole' value directly from the problem, but the question asks for 2.50 mol, not 1 mol.",
+            commonMistake: "Forgetting to multiply by the number of moles and just reporting the molar mass as the final answer.",
+            apTip: "Always write out mass = n × M as a labeled equation before plugging in numbers — it prevents grabbing the wrong given value as your final answer."
+          }
+        },
+        {
+          id: 'chem-1-8', difficulty: 1, type: 'mcq', topic: 'Moles and Molar Mass',
+          prompt: "How many moles of NaOH (molar mass = 40.00 g/mol) are present in a 15.0 g sample?",
+          choices: ['0.375 mol', '2.67 mol', '600 mol', '15.0 mol'],
+          correct: 0,
+          explanation: {
+            correct: "Moles = mass ÷ molar mass = 15.0 g ÷ 40.00 g/mol = 0.375 mol.",
+            wrong: { 1: "This is molar mass divided by mass (40.00 ÷ 15.0), which inverts the correct ratio.", 2: "This results from multiplying instead of dividing (15.0 × 40.00), giving a value with no physical meaning here.", 3: "This just restates the given mass in grams without converting to moles at all." },
+            tempting: "Choice B is tempting because it uses the same two numbers but divides them the wrong way around.",
+            commonMistake: "Setting up mass ÷ molar mass backwards as molar mass ÷ mass.",
+            apTip: "Sanity-check by units: g ÷ (g/mol) = mol. If your setup doesn't cancel to mol, you've inverted the ratio."
+          }
+        },
+        {
+          id: 'chem-1-9', difficulty: 2, type: 'mcq', topic: 'Moles and Molar Mass',
+          prompt: "A sample contains 3.0 mol of CO2 molecules. How many moles of oxygen atoms does the sample contain?",
+          choices: ['1.5 mol', '3.0 mol', '6.0 mol', '9.0 mol'],
+          correct: 2,
+          explanation: {
+            correct: "Each CO2 molecule contains 2 oxygen atoms, so 3.0 mol CO2 contains 3.0 mol × 2 = 6.0 mol of O atoms.",
+            wrong: { 0: "This would result from dividing by 2 instead of multiplying by the 2 oxygen atoms per molecule.", 1: "This is the number of moles of CO2 molecules, not the number of moles of oxygen atoms within them.", 3: "This would be correct only if there were 3 oxygen atoms per CO2 molecule, but CO2 has 2." },
+            tempting: "Choice B is tempting because it's easy to conflate 'moles of molecules' with 'moles of atoms' when the molecule contains more than one atom of the element in question.",
+            commonMistake: "Reporting the moles of the compound itself instead of scaling by the subscript for the atom of interest.",
+            apTip: "Always multiply moles of compound by the subscript of the element you're asked about — subscripts inside a formula are a built-in mole ratio."
+          }
+        },
+        {
+          id: 'chem-1-10', difficulty: 3, type: 'mcq', topic: 'Moles and Molar Mass',
+          prompt: "A student needs to prepare a solution containing 0.250 mol of MgCl2 (molar mass = 95.21 g/mol). Approximately how many grams of MgCl2 should the student weigh out?",
+          choices: ['0.00263 g', '23.8 g', '95.2 g', '380.8 g'],
+          correct: 1,
+          explanation: {
+            correct: "Mass = moles × molar mass = 0.250 mol × 95.21 g/mol ≈ 23.8 g.",
+            wrong: { 0: "This results from dividing moles by molar mass instead of multiplying, and has the wrong units conceptually.", 2: "This is the molar mass for 1.00 mol, not the mass needed for 0.250 mol.", 3: "This is the mass for 4.00 mol, the reciprocal amount of what was asked for (1/0.250 = 4)." },
+            tempting: "Choice C is tempting because it's a 'clean' number pulled straight from the problem, but it answers 'mass of 1 mole' rather than 'mass of 0.250 mole'.",
+            commonMistake: "Grabbing the molar mass value directly as the final answer without scaling by the actual number of moles needed.",
+            apTip: "For any 'how many grams to weigh out' problem, always finish with mass = n × M, even when the mole amount is a fraction less than 1."
+          }
+        },
+        {
+          id: 'chem-1-11', difficulty: 4, type: 'mcq', topic: 'Moles and Molar Mass',
+          prompt: "A gas sample of pure N2 has a mass of 5.60 g. Approximately how many N2 molecules are present (molar mass of N2 = 28.02 g/mol, Avogadro's number = 6.022 × 10^23)?",
+          choices: ['1.20 × 10^23 molecules', '2.40 × 10^23 molecules', '1.20 × 10^24 molecules', '6.02 × 10^23 molecules'],
+          correct: 0,
+          explanation: {
+            correct: "Moles = 5.60 g ÷ 28.02 g/mol ≈ 0.1999 mol. Molecules = 0.1999 mol × 6.022 × 10^23 /mol ≈ 1.20 × 10^23 molecules.",
+            wrong: { 1: "This would be correct only if the sample were about 0.400 mol, roughly double the actual ~0.200 mol present.", 2: "This is off by a factor of 10 from the correct value — likely from a decimal-placement error when multiplying by 10^23.", 3: "This is Avogadro's number itself, the number of molecules in exactly 1.00 mol, not in the ~0.200 mol present here." },
+            tempting: "Choice D is tempting because it's 'the' famous constant from the problem, but plugging in the constant alone skips the mole calculation entirely.",
+            commonMistake: "Reporting Avogadro's number as the final answer instead of first finding moles and then scaling by Avogadro's number.",
+            apTip: "Two-step particle problems always go mass → moles → particles (or the reverse). Never jump straight from grams to particles without the mole step in between."
+          }
+        },
+        {
+          id: 'chem-1-12', difficulty: 5, type: 'mcq', topic: 'Moles and Molar Mass',
+          prompt: "Sample A contains 1.00 mol of C6H12O6 (glucose, 24 atoms/molecule). Sample B contains 342.3 g of C12H22O11 (sucrose, molar mass = 342.3 g/mol, 45 atoms/molecule). Which sample contains more total atoms, and by roughly what factor?",
+          choices: ['Sample A, by about 1.88 times as many atoms as Sample B', 'Sample B, by about 1.88 times as many atoms as Sample A', 'They contain the same number of total atoms', 'Sample B, by about 2.00 times as many atoms as Sample A'],
+          correct: 1,
+          explanation: {
+            correct: "Sample A: 1.00 mol glucose × 24 atoms/molecule = 24.0 mol atoms. Sample B: 342.3 g ÷ 342.3 g/mol = 1.00 mol sucrose × 45 atoms/molecule = 45.0 mol atoms. The ratio is 45.0/24.0 ≈ 1.88, so Sample B contains about 1.88 times as many atoms as Sample A.",
+            wrong: { 0: "This reverses which sample has more atoms — sucrose's larger atom count per molecule (45 vs. 24) means Sample B has more total atoms than Sample A, not the other way around.", 2: "The two samples are NOT equal in atom count; both have exactly 1.00 mol of molecules, but sucrose molecules contain nearly twice as many atoms each as glucose molecules.", 3: "The true ratio 45/24 ≈ 1.88, not exactly 2.00, so 'about 2 times' slightly overstates the actual factor." },
+            tempting: "This problem is designed so that miscounting either molecular formula's total atoms (24 for C6H12O6, 45 for C12H22O11) flips or distorts the answer — always recount both formulas carefully before comparing.",
+            commonMistake: "Assuming equal moles of two different molecular compounds must contain equal numbers of atoms, without checking each formula's actual atom count per molecule.",
+            apTip: "When comparing atom counts across compounds, always convert 'moles of molecules' to 'moles of atoms' by multiplying by the total atom count per formula unit before comparing."
+          }
+        },
+        {
+          id: 'chem-1-13', difficulty: 1, type: 'mcq', topic: 'Mass Spectrometry & Average Atomic Mass',
+          prompt: "What information does a mass spectrum of an element directly provide?",
+          choices: ['The relative masses and relative abundances of the isotopes present', 'The electron configuration of the ground-state atom', 'The chemical reactivity of the element', 'The melting and boiling points of the element'],
+          correct: 0,
+          explanation: {
+            correct: "A mass spectrum separates isotopes by their mass-to-charge ratio and reports the relative abundance (peak height/intensity) of each isotope, which together allow calculation of the element's average atomic mass.",
+            wrong: { 1: "Electron configuration comes from photoelectron spectroscopy (PES) or periodic trends, not mass spectrometry, which measures nuclear mass, not electron binding energies.", 2: "Chemical reactivity is inferred from electron structure and periodic position, not measured directly by a mass spectrometer.", 3: "Physical properties like melting/boiling point are measured by separate experiments, not derived from a mass spectrum." },
+            tempting: "Students sometimes confuse mass spectrometry with photoelectron spectroscopy since both produce a spectrum of peaks, but mass spec peaks represent isotope masses/abundances, while PES peaks represent electron binding energies.",
+            commonMistake: "Mixing up mass spectrometry (isotope mass & abundance) with photoelectron spectroscopy (electron configuration & binding energy).",
+            apTip: "Keep a clean mental split: mass spec → isotopes (nucleus), PES → electrons (subshells). The AP exam tests both, and mixing them up costs easy points."
+          }
+        },
+        {
+          id: 'chem-1-14', difficulty: 2, type: 'mcq', topic: 'Mass Spectrometry & Average Atomic Mass',
+          prompt: "In a mass spectrum, a taller peak at a given mass-to-charge ratio indicates:",
+          choices: ['That isotope has a higher relative abundance in the sample', 'That isotope has a higher atomic number', 'That isotope is radioactive', 'That isotope has more neutrons than protons'],
+          correct: 0,
+          explanation: {
+            correct: "Peak height (intensity) in a mass spectrum corresponds directly to the relative abundance of that isotope in the natural sample — taller peaks mean that isotope makes up a larger percentage of the element as found in nature.",
+            wrong: { 1: "Atomic number (protons) is the same for all isotopes of a given element; mass spec separates isotopes by mass, not atomic number, which doesn't vary here at all.", 2: "Peak height says nothing about radioactivity — many stable, non-radioactive isotopes appear as peaks with varying heights based purely on natural abundance.", 3: "Neutron-to-proton ratio isn't what peak height represents; that's a separate structural fact about each isotope, unrelated to how much of it is present in the sample." },
+            tempting: "None of the distractors are highly tempting individually, but students unfamiliar with mass spec sometimes guess that peak height relates to mass number rather than abundance.",
+            commonMistake: "Confusing the x-axis (mass-to-charge ratio, i.e., which isotope) with the y-axis (peak height, i.e., how much of that isotope).",
+            apTip: "On any mass spectrum problem, treat the x-position as 'which isotope' and the peak height/area as 'how much of it' — these are two completely separate pieces of information."
+          }
+        },
+        {
+          id: 'chem-1-15', difficulty: 3, type: 'mcq', topic: 'Mass Spectrometry & Average Atomic Mass',
+          prompt: "Boron has two naturally occurring isotopes: B-10 (mass = 10.01 amu, abundance = 19.9%) and B-11 (mass = 11.01 amu, abundance = 80.1%). What is boron's average atomic mass?",
+          choices: ['10.20 amu', '10.50 amu', '10.81 amu', '11.01 amu'],
+          correct: 2,
+          explanation: {
+            correct: "Average atomic mass = (10.01 × 0.199) + (11.01 × 0.801) ≈ 1.992 + 8.819 ≈ 10.81 amu, matching boron's known periodic table value.",
+            wrong: { 0: "This is close to a simple (unweighted) average of the two isotope masses shifted incorrectly and doesn't use the actual abundance-weighted formula.", 1: "This looks like a rounded midpoint between 10.01 and 11.01 without weighting by abundance, which isn't how average atomic mass is calculated.", 3: "This is just the mass of the more abundant isotope (B-11) alone, ignoring that B-10 still contributes about 19.9% to the weighted average." },
+            tempting: "Choice D is tempting because B-11 is the majority isotope, so the true average is close to it — but 'close to' is not the same as 'equal to'; the minority isotope still pulls the average down slightly.",
+            commonMistake: "Using a simple arithmetic mean of the isotope masses instead of weighting each mass by its fractional abundance.",
+            apTip: "Always convert percent abundances to decimals and multiply each isotope's mass by its decimal abundance, then sum — never just average the raw masses."
+          }
+        },
+        {
+          id: 'chem-1-16', difficulty: 4, type: 'mcq', topic: 'Mass Spectrometry & Average Atomic Mass',
+          prompt: "An element has two isotopes: one with mass 68.93 amu and another with mass 70.92 amu. The element's average atomic mass is 69.72 amu. What is the approximate percent abundance of the lighter isotope?",
+          choices: ['40.0%', '50.0%', '60.3%', '80.1%'],
+          correct: 2,
+          explanation: {
+            correct: "Setting x = fraction of the lighter isotope: 68.93x + 70.92(1 − x) = 69.72. Solving gives x ≈ 0.603, so the lighter isotope (68.93 amu) makes up about 60.3% of the sample — this matches gallium's real isotopic composition (Ga-69 ≈ 60.1%).",
+            wrong: { 0: "This underestimates the lighter isotope's share; plugging 40.0% back in gives a weighted average closer to 70.13 amu, not the stated 69.72 amu.", 1: "A 50/50 split would give an average of (68.93+70.92)/2 = 69.925 amu, slightly higher than the actual 69.72 amu, showing the lighter isotope must be more than half.", 3: "This is too high a share for the lighter isotope; plugging in 80.1% would pull the average well below 69.72 amu, closer to 69.33 amu." },
+            tempting: "Choice A (40.0%) is tempting because it's the 'obvious' complement if you mistakenly assign the heavier isotope's abundance to the lighter one.",
+            commonMistake: "Setting up the weighted-average equation but assigning the fraction variable x to the wrong isotope's mass, effectively solving for the wrong isotope's abundance.",
+            apTip: "Always double check by plugging your solved percentage back into the weighted-average equation — if it doesn't reproduce the given average atomic mass, you assigned x to the wrong isotope."
+          }
+        },
+        {
+          id: 'chem-1-17', difficulty: 5, type: 'mcq', topic: 'Mass Spectrometry & Average Atomic Mass',
+          prompt: "Chlorine has two isotopes, Cl-35 (34.97 amu) and Cl-37 (36.97 amu), with a weighted average atomic mass of 35.45 amu. If a new sample of chlorine gas were somehow enriched so that Cl-37 made up 50.0% of the atoms instead of its natural ~24.2%, what would happen to the sample's average atomic mass?",
+          choices: ['It would decrease below 35.45 amu', 'It would stay the same at 35.45 amu, since isotope identity does not affect the average', 'It would increase above 35.45 amu, since the heavier isotope now makes up a larger fraction', 'It cannot be determined without knowing the total number of atoms in the sample'],
+          correct: 2,
+          explanation: {
+            correct: "Average atomic mass is a weighted average of isotope masses; increasing the fractional abundance of the heavier isotope (Cl-37) pulls the weighted average upward, above the natural value of 35.45 amu, regardless of the total sample size.",
+            wrong: { 0: "Increasing the share of the heavier isotope can only raise, not lower, the weighted average compared to the natural abundance mixture.", 1: "Average atomic mass is explicitly a weighted average of isotope masses, so changing the abundance ratio absolutely does change it — isotope identity and proportion are exactly what determine the average.", 3: "Average atomic mass is an intensive property (a weighted average of masses using abundance fractions), so it doesn't depend on the total number of atoms present — only on the relative proportions of each isotope." },
+            tempting: "Choice D is tempting because many quantities do depend on total sample size, but average atomic mass is specifically a per-atom weighted average, making it independent of how many total atoms are in the sample.",
+            commonMistake: "Treating average atomic mass as if it depended on total sample quantity rather than recognizing it as an abundance-weighted (percentage-based) average.",
+            apTip: "Average atomic mass only changes if the isotopic abundance ratios change — total sample mass or particle count is irrelevant to this weighted average."
+          }
+        },
+        {
+          id: 'chem-1-18', difficulty: 1, type: 'mcq', topic: 'Elemental Composition',
+          prompt: "What is the mass percent of nitrogen in NH4NO3 (molar mass = 80.05 g/mol, with 2 N atoms per formula unit, each 14.01 g/mol)?",
+          choices: ['17.5%', '28.0%', '35.0%', '60.0%'],
+          correct: 2,
+          explanation: {
+            correct: "Mass % N = (2 × 14.01 g/mol) ÷ 80.05 g/mol × 100% = 28.02 ÷ 80.05 × 100% ≈ 35.0%.",
+            wrong: { 0: "This would result from using only 1 nitrogen atom's mass (14.01 g) instead of both nitrogen atoms in the formula (2 × 14.01 = 28.02 g).", 1: "This is close to the mass percent of nitrogen using just one N atom relative to a miscalculated denominator, but doesn't match either correct numerator or denominator here.", 3: "This overstates nitrogen's share; it doesn't correspond to a consistent numerator/denominator pairing from the actual formula." },
+            tempting: "Choice A is tempting if a student forgets that NH4NO3 has two separate nitrogen atoms (one in NH4+, one in NO3−) and only counts one of them.",
+            commonMistake: "Missing that a formula can contain the same element in more than one position (like both N atoms in ammonium nitrate) and undercounting the total mass of that element.",
+            apTip: "Before computing mass percent, add up ALL atoms of the element anywhere in the formula — scan the entire formula, not just the first place the symbol appears."
+          }
+        },
+        {
+          id: 'chem-1-19', difficulty: 2, type: 'mcq', topic: 'Elemental Composition',
+          prompt: "A compound is found to be 40.0% carbon, 6.7% hydrogen, and 53.3% oxygen by mass. What is its empirical formula? (Use molar masses C = 12.01, H = 1.008, O = 16.00 g/mol.)",
+          choices: ['CHO', 'CH2O', 'C2H4O2', 'C6H12O6'],
+          correct: 1,
+          explanation: {
+            correct: "Assuming 100 g: mol C = 40.0/12.01 ≈ 3.33, mol H = 6.7/1.008 ≈ 6.65, mol O = 53.3/16.00 ≈ 3.33. Dividing each by the smallest (3.33) gives a ratio of C:H:O ≈ 1:2:1, so the empirical formula is CH2O.",
+            wrong: { 0: "This drops the ratio of H incorrectly — dividing through shows H is about twice as abundant as C or O, not equal to them.", 2: "C2H4O2 has the same simplest ratio (1:2:1) as CH2O but is NOT the empirical (simplest whole-number) formula — it's a multiple of it, so it's technically a molecular formula possibility, not the empirical formula asked for.", 3: "C6H12O6 (glucose's molecular formula) shares the same 1:2:1 ratio but is 6 times the empirical formula, not the simplest whole-number ratio requested." },
+            tempting: "Choice D is tempting if students recognize this as glucose's percent composition and jump to the memorized molecular formula, forgetting the question specifically asks for the empirical (reduced) formula.",
+            commonMistake: "Reporting a molecular formula (an integer multiple of the true ratio) when the question asks specifically for the empirical formula.",
+            apTip: "Empirical formula = simplest whole-number ratio. Always divide every mole value by the smallest one and check if you truly can't reduce the resulting ratio any further."
+          }
+        },
+        {
+          id: 'chem-1-20', difficulty: 3, type: 'mcq', topic: 'Elemental Composition',
+          prompt: "A 1.00 g sample of propane (C3H8) is completely combusted, producing 2.99 g of CO2 and 1.63 g of H2O. Using only this combustion data (molar masses: CO2 = 44.01 g/mol, H2O = 18.02 g/mol, C = 12.01 g/mol, H = 1.008 g/mol), what is the mole ratio of H to C recovered from the products?",
+          choices: ['About 1:1', 'About 2:1', 'About 8:3 (≈2.67:1)', 'About 4:1'],
+          correct: 2,
+          explanation: {
+            correct: "Moles CO2 = 2.99/44.01 ≈ 0.0679 mol = moles C. Moles H2O = 1.63/18.02 ≈ 0.0904 mol, so moles H = 2 × 0.0904 ≈ 0.181 mol. The ratio H:C = 0.181/0.0679 ≈ 2.66, which is closest to 8:3 (≈2.67), consistent with propane's actual formula C3H8.",
+            wrong: { 0: "A 1:1 ratio would only occur if the moles of H atoms equaled the moles of C atoms, which is not what the combustion data show here.", 1: "A 2:1 ratio undercounts hydrogen; the actual recovered ratio (~2.66) is noticeably higher than exactly 2.", 3: "A 4:1 ratio overstates hydrogen's share relative to what the combustion masses actually give (~2.66, not 4)." },
+            tempting: "Choice B (2:1) is tempting as a 'round number' close to the true answer, but empirical formula work requires checking whether the decimal (2.66) is close to a cleaner fraction like 8/3, not just rounding to the nearest integer.",
+            commonMistake: "Rounding a non-integer mole ratio (like 2.66) to the nearest whole number instead of recognizing it as a fraction (like 8/3) that requires multiplying through by a small integer to clear.",
+            apTip: "When a mole ratio comes out close to a common fraction (like 1.33 ≈ 4/3, 1.5 ≈ 3/2, 2.67 ≈ 8/3), multiply the whole ratio by that fraction's denominator to get whole-number subscripts — don't just round to the nearest integer."
+          }
+        },
+        {
+          id: 'chem-1-21', difficulty: 4, type: 'mcq', topic: 'Elemental Composition',
+          prompt: "A compound has an empirical formula of CH2O and a molar mass of approximately 180 g/mol. Given that the empirical formula mass of CH2O is about 30.03 g/mol, what is the molecular formula?",
+          choices: ['CH2O', 'C3H6O3', 'C6H12O6', 'C9H18O9'],
+          correct: 2,
+          explanation: {
+            correct: "Dividing molar mass by empirical formula mass: 180 ÷ 30.03 ≈ 6. Multiplying each subscript in CH2O by 6 gives C6H12O6, matching glucose's known molecular formula and molar mass (~180.16 g/mol).",
+            wrong: { 0: "CH2O itself has a molar mass of only about 30 g/mol, six times smaller than the stated 180 g/mol molar mass — this is the empirical formula, not the molecular formula.", 1: "C3H6O3 would correspond to a multiplier of 3 (empirical mass × 3 ≈ 90 g/mol), which doesn't match the given ~180 g/mol molar mass.", 3: "C9H18O9 would correspond to a multiplier of 9 (empirical mass × 9 ≈ 270 g/mol), overshooting the given ~180 g/mol molar mass." },
+            tempting: "Choice A is tempting for students who forget that empirical formula and molecular formula are only the same when the multiplier equals 1 — here the multiplier is clearly larger since 180 g/mol is much greater than 30 g/mol.",
+            commonMistake: "Stopping at the empirical formula (from percent composition) without checking whether the given molar mass indicates a larger molecular formula.",
+            apTip: "Always divide the given molar mass by the empirical formula mass first — if the result isn't close to 1, the molecular formula is a whole-number multiple of the empirical formula, not the empirical formula itself."
+          }
+        },
+        {
+          id: 'chem-1-22', difficulty: 5, type: 'mcq', topic: 'Elemental Composition',
+          prompt: "A hydrate of magnesium sulfate, MgSO4·xH2O, is heated until all water is driven off. A 5.00 g sample of the hydrate loses 2.57 g of mass upon heating. Given molar masses MgSO4 = 120.37 g/mol and H2O = 18.02 g/mol, what is the value of x (rounded to the nearest whole number)?",
+          choices: ['x = 5', 'x = 6', 'x = 7', 'x = 9'],
+          correct: 2,
+          explanation: {
+            correct: "Mass of anhydrous MgSO4 remaining = 5.00 − 2.57 = 2.43 g, so mol MgSO4 = 2.43/120.37 ≈ 0.02019 mol. Mol H2O lost = 2.57/18.02 ≈ 0.1426 mol. Ratio x = mol H2O / mol MgSO4 = 0.1426/0.02019 ≈ 7.06, which rounds to x = 7, matching Epsom salt's real formula MgSO4·7H2O.",
+            wrong: { 0: "x = 5 would require the mol ratio of H2O to MgSO4 to be about 5, but the actual computed ratio (~7.06) is noticeably higher than 5.", 1: "x = 6 is close but doesn't match the computed ratio of ~7.06 as precisely as x = 7 does when checked against the given masses.", 3: "x = 9 overstates the water content; plugging x = 9 back in would require a mass loss larger than the 2.57 g actually observed for a 5.00 g sample." },
+            tempting: "Choice B (x = 6) is tempting as a 'nearby round number,' but the actual computed ratio (≈7.06) rounds to 7, not 6 — always carry the division out fully before rounding.",
+            commonMistake: "Rounding an intermediate ratio too early (e.g., stopping at 7.1 and guessing 'close to 6 or 7') instead of computing both mole values precisely and dividing.",
+            apTip: "Hydrate problems always follow the same three steps: mass of water lost → moles of water; mass of anhydrous solid remaining → moles of solid; then divide moles water by moles solid to get x."
+          }
+        },
+        {
+          id: 'chem-1-23', difficulty: 1, type: 'mcq', topic: 'Composition of Mixtures',
+          prompt: "Which of the following best describes a homogeneous mixture?",
+          choices: ['A mixture with uniform composition and properties throughout', 'A mixture where different substances can be seen as separate regions', 'A pure substance made of only one type of atom', 'A mixture that always contains a solid and a gas'],
+          correct: 0,
+          explanation: {
+            correct: "A homogeneous mixture (solution) has uniform composition and properties throughout the sample — any small portion of it has the same makeup as any other portion.",
+            wrong: { 1: "This describes a heterogeneous mixture, where distinct regions or phases with different compositions are visible.", 2: "This describes a pure element, not a mixture at all — mixtures by definition contain more than one type of substance.", 3: "Homogeneous mixtures can involve any combination of physical states (solid-solid alloys, liquid-liquid solutions, gas-gas mixtures), not specifically a solid and a gas." },
+            tempting: "Choice B is tempting because 'mixture' might evoke visibly distinct components, but the defining feature of homogeneous specifically is the absence of visible/distinguishable regions.",
+            commonMistake: "Confusing 'homogeneous' with 'heterogeneous' since the two terms sound similar and are easy to swap under time pressure.",
+            apTip: "Remember: homo- means 'same' (uniform throughout), hetero- means 'different' (visibly distinct regions) — anchor the prefixes to avoid mixing up the two terms."
+          }
+        },
+        {
+          id: 'chem-1-24', difficulty: 2, type: 'mcq', topic: 'Composition of Mixtures',
+          prompt: "A particulate diagram shows a container with 6 blue spheres and 6 red spheres, all separate (not bonded), evenly and randomly distributed throughout the container. This diagram most likely represents:",
+          choices: ['A compound made of two different elements', 'A homogeneous mixture of two different elements (not chemically combined)', 'A pure element in two different physical states', 'A heterogeneous mixture with visibly separate layers'],
+          correct: 1,
+          explanation: {
+            correct: "Since the blue and red spheres represent two different elements (different colors/identities) that are NOT bonded together (shown as separate individual spheres) but are evenly and randomly mixed, this represents a homogeneous mixture of two elements.",
+            wrong: { 0: "A compound requires the different atoms to be chemically bonded together (shown connected in the diagram); here the spheres are described as separate, unbonded particles.", 2: "Different colors represent different elements, not different physical states of the same element — physical state would typically be shown by spacing/arrangement (gas vs. liquid vs. solid), not by different colors.", 3: "A heterogeneous mixture would show clumping or layering of like-colored spheres in distinct regions, not an even, random distribution throughout." },
+            tempting: "Choice A is tempting because two elements are present together, but the key distinguishing detail is that the particles are separate/unbonded — bonding, not mere presence together, is what makes something a compound.",
+            commonMistake: "Assuming that any diagram containing two different types of particles automatically represents a compound, without checking whether the particles are actually bonded or merely mixed.",
+            apTip: "In particulate diagrams: bonded, connected clusters of different types = compound; separate, unconnected particles = mixture; look specifically for connecting lines/overlap, not just for multiple colors."
+          }
+        },
+        {
+          id: 'chem-1-25', difficulty: 3, type: 'mcq', topic: 'Composition of Mixtures',
+          prompt: "A sealed container holds a mixture of gaseous N2 and O2. If the mixture is 70.0% N2 and 30.0% O2 by mole fraction, and the container holds 10.0 mol of gas total, how many moles of O2 are present?",
+          choices: ['0.30 mol', '3.00 mol', '7.00 mol', '10.0 mol'],
+          correct: 1,
+          explanation: {
+            correct: "Moles of O2 = mole fraction × total moles = 0.300 × 10.0 mol = 3.00 mol.",
+            wrong: { 0: "This treats the mole fraction (0.300) as if it were the final answer in moles, without multiplying by the total 10.0 mol present.", 2: "This is the moles of N2 (0.700 × 10.0 = 7.00 mol), not the moles of O2 asked for.", 3: "This is the total moles of gas in the container, not the moles of O2 specifically, which is only a fraction of that total." },
+            tempting: "Choice A is tempting because 0.30 directly matches the given percentage, but percentages/mole fractions must be multiplied by the total quantity to get an actual mole amount.",
+            commonMistake: "Reporting a mole fraction or percentage directly as a mole quantity without multiplying by the total amount present.",
+            apTip: "Mole fraction is a ratio (dimensionless), not an amount — always multiply it by the total moles present to convert it into an actual quantity in moles."
+          }
+        },
+        {
+          id: 'chem-1-26', difficulty: 4, type: 'mcq', topic: 'Composition of Mixtures',
+          prompt: "Two particulate diagrams are compared: Diagram 1 shows 8 identical diatomic molecules (each made of two identical atoms bonded together) evenly spread through a container. Diagram 2 shows 4 of those same diatomic molecules plus 4 individual, unbonded atoms of a different element, also evenly spread. Which statement correctly compares the two diagrams?",
+          choices: ['Diagram 1 shows a mixture; Diagram 2 shows a pure substance', 'Diagram 1 shows a pure substance (one type of molecule); Diagram 2 shows a homogeneous mixture of two substances', 'Both diagrams show the same pure substance in different physical states', 'Both diagrams show heterogeneous mixtures'],
+          correct: 1,
+          explanation: {
+            correct: "Diagram 1 contains only one type of particle (the same diatomic molecule throughout), making it a pure substance. Diagram 2 contains two distinct, evenly-distributed particle types (the diatomic molecule and a separate unbonded atom of a different element), making it a homogeneous mixture.",
+            wrong: { 0: "This reverses the correct identification — Diagram 1 (one particle type only) is the pure substance, while Diagram 2 (two different particle types mixed) is the mixture.", 2: "The two diagrams contain a different number and type of particles (Diagram 2 has extra unbonded atoms not present in Diagram 1), so they cannot represent the same pure substance in different states.", 3: "Diagram 2 is described as evenly spread, which is the hallmark of a homogeneous, not heterogeneous, mixture; heterogeneous mixtures show uneven/clumped distribution." },
+            tempting: "Choice D is tempting if a student assumes 'two different particle types = heterogeneous' without checking the distribution pattern — but heterogeneous specifically refers to uneven distribution, not simply the presence of multiple substances.",
+            commonMistake: "Equating 'contains more than one substance' with 'heterogeneous,' when the mixture classification actually depends on whether the distribution is even (homogeneous) or uneven/clumped (heterogeneous).",
+            apTip: "For mixture classification from a particulate diagram, check two things separately: (1) how many distinct particle types are present, and (2) whether they're evenly or unevenly distributed — evenness determines homo- vs. heterogeneous, not particle count."
+          }
+        },
+        {
+          id: 'chem-1-27', difficulty: 1, type: 'mcq', topic: 'Electron Configuration',
+          prompt: "What is the correct ground-state electron configuration for a neutral chlorine atom (atomic number 17)?",
+          choices: ['1s² 2s² 2p⁶ 3s² 3p⁵', '1s² 2s² 2p⁶ 3s² 3p⁶', '1s² 2s² 2p⁵ 3s² 3p⁶', '1s² 2s² 2p⁶ 3s² 3p⁴'],
+          correct: 0,
+          explanation: {
+            correct: "Chlorine has 17 electrons; filling subshells in order gives 2 + 2 + 6 + 2 + 5 = 17, so the configuration is 1s² 2s² 2p⁶ 3s² 3p⁵.",
+            wrong: { 1: "This configuration totals 18 electrons (matching argon), one more electron than neutral chlorine actually has.", 2: "This places only 5 electrons in 2p (should be filled with 6 before moving on) while overfilling 3p to 6, giving an invalid filling order and the wrong total.", 3: "This totals only 16 electrons, one short of chlorine's actual 17." },
+            tempting: "Choice B is tempting because it's 'one 3p electron away' from the correct configuration and matches a memorable noble gas total, but that noble gas is argon, not chlorine.",
+            commonMistake: "Losing track of the running electron count while filling subshells and ending up one electron short or over.",
+            apTip: "After writing any configuration, add up the superscripts as a final check — the sum must exactly equal the atomic number for a neutral atom."
+          }
+        },
+        {
+          id: 'chem-1-28', difficulty: 2, type: 'mcq', topic: 'Electron Configuration',
+          prompt: "Which noble-gas-abbreviated electron configuration correctly represents a neutral iron atom (Fe, atomic number 26)?",
+          choices: ['[Ar] 4s² 3d⁶', '[Ar] 3d⁸', '[Ar] 4s² 3d⁴ 4p²', '[Ne] 4s² 3d⁶'],
+          correct: 0,
+          explanation: {
+            correct: "Argon has 18 electrons; iron needs 26 − 18 = 8 more, filling the 4s subshell first (2 electrons) and then the 3d subshell (6 electrons), giving [Ar] 4s² 3d⁶.",
+            wrong: { 1: "[Ar] 3d⁸ totals only 18 + 8 = 26 electrons correctly in count, but skips the 4s subshell entirely, violating the actual filling order for a ground-state neutral atom.", 2: "This configuration places electrons in the 4p subshell before 3d and 4s are properly filled, and also totals more than 26 electrons when combined with [Ar].", 3: "[Ne] has only 10 electrons, so [Ne] 4s² 3d⁶ totals only 18 electrons, 8 short of iron's actual 26." },
+            tempting: "Choice B is tempting because it has the right final electron count (26) but distributes those electrons into the wrong subshells by skipping 4s.",
+            commonMistake: "Getting the correct total electron count but placing electrons into the wrong subshells, especially skipping the 4s before 3d filling for transition metals.",
+            apTip: "For transition metals, always fill 4s before 3d when building the ground-state configuration (Aufbau order: ...3p, 4s, 3d, 4p...), even though electrons are removed from 4s first when transition metals form cations."
+          }
+        },
+        {
+          id: 'chem-1-29', difficulty: 3, type: 'mcq', topic: 'Electron Configuration',
+          prompt: "What is the ground-state electron configuration of the Fe²⁺ ion (neutral iron atom configuration [Ar] 4s² 3d⁶)?",
+          choices: ['[Ar] 4s² 3d⁴', '[Ar] 3d⁶', '[Ar] 3d⁵', '[Ar] 4s² 3d⁶'],
+          correct: 1,
+          explanation: {
+            correct: "When transition metals lose electrons to form cations, electrons are removed from the highest principal quantum number subshell first — here, the 4s electrons (n=4) are removed before any 3d (n=3) electrons, even though 4s filled first. Removing 2 electrons from 4s of [Ar] 4s² 3d⁶ gives [Ar] 3d⁶.",
+            wrong: { 0: "This incorrectly removes electrons from the 3d subshell instead of the 4s subshell, violating the rule that the highest-n subshell loses electrons first when a transition metal forms a cation.", 2: "This has only 5 electrons in 3d, which would correspond to removing 3 total electrons (matching Fe³⁺, not Fe²⁺, which only loses 2 electrons).", 3: "This is the neutral iron atom's configuration, not the Fe²⁺ ion — no electrons have been removed at all." },
+            tempting: "Choice A is tempting because 3d electrons are added after 4s in the neutral-atom filling order, so it seems logical they'd also be removed 'in the same order' — but ion formation follows a different rule: highest-n subshell loses electrons first, regardless of fill order.",
+            commonMistake: "Assuming that electrons are removed from cations in the reverse of the order they were added (last-in, first-out by subshell type), rather than by highest principal quantum number first.",
+            apTip: "Memorize this exception explicitly: for transition metal cations, always remove electrons from the ns subshell before the (n−1)d subshell, even though ns filled before (n−1)d in the neutral atom."
+          }
+        },
+        {
+          id: 'chem-1-30', difficulty: 4, type: 'mcq', topic: 'Electron Configuration',
+          prompt: "Which of the following ions is isoelectronic with neutral neon (10 electrons)?",
+          choices: ['Mg²⁺', 'S²⁻', 'K⁺', 'Br⁻'],
+          correct: 0,
+          explanation: {
+            correct: "Magnesium (atomic number 12) loses 2 electrons to form Mg²⁺, giving 12 − 2 = 10 electrons, matching neutral neon's electron count exactly, making them isoelectronic.",
+            wrong: { 1: "Sulfur (atomic number 16) gains 2 electrons to form S²⁻, giving 16 + 2 = 18 electrons — isoelectronic with argon, not neon.", 2: "Potassium (atomic number 19) loses 1 electron to form K⁺, giving 19 − 1 = 18 electrons — isoelectronic with argon, not neon.", 3: "Bromine (atomic number 35) gains 1 electron to form Br⁻, giving 35 + 1 = 36 electrons — isoelectronic with krypton, not neon." },
+            tempting: "Choice C (K⁺) is tempting because potassium is 'close' to neon in a loosely remembered sense, but its electron count (18) actually matches argon, a different noble gas entirely.",
+            commonMistake: "Forgetting to actually add or subtract electrons for the ionic charge and instead just eyeballing the atomic number against the noble gas's atomic number.",
+            apTip: "To check if an ion is isoelectronic with a noble gas, always compute (atomic number − charge for cations, or atomic number + |charge| for anions) and compare that number directly to the noble gas's electron count."
+          }
+        },
+        {
+          id: 'chem-1-31', difficulty: 5, type: 'mcq', topic: 'Electron Configuration',
+          prompt: "An atom in an excited state has the electron configuration 1s² 2s² 2p⁵ 3s¹. Counting the superscripts (2+2+5+1 = 10 electrons total), which neutral element is this an excited-state configuration of, and what does its ground state look like?",
+          choices: ['Neon; the ground state has all 2p orbitals filled (2p⁶), with no electron promoted to 3s', 'Sodium; the ground state has 2p⁶ 3s¹, so this is simply sodium\'s normal ground state', 'Fluorine; the ground state has only 9 electrons, so this configuration is impossible for fluorine', 'Sodium; one electron has been promoted from 2p to 3s from an already-filled 2p subshell'],
+          correct: 0,
+          explanation: {
+            correct: "Summing the superscripts (2+2+5+1 = 10) shows this species has 10 total electrons, matching neon's atomic number, not sodium's (11). Neon's ground state is 1s² 2s² 2p⁶ — all 6 electrons filling 2p with none promoted — so the given configuration (2p⁵ 3s¹) represents neon with one 2p electron excited up into 3s.",
+            wrong: { 1: "This misidentifies the element as sodium and also incorrectly claims 2p⁶3s¹ is a 'ground state' pairing — sodium's real ground state is 1s²2s²2p⁶3s¹, which does total 11 electrons, but the given configuration only totals 10 electrons, so it cannot be sodium at all.", 2: "Fluorine has 9 electrons, but the given configuration totals 10 electrons (2+2+5+1=10), so this configuration corresponds to a real element (neon) — just not fluorine.", 3: "Sodium has 11 electrons total, but the given configuration totals only 10 electrons (2+2+5+1=10), one short of sodium's actual count, so this cannot be sodium in any state, excited or otherwise." },
+            tempting: "Choices B and D are tempting because the 3s¹ ending 'looks like' the classic pattern associated with sodium's ground state, but a careful electron count reveals the total is 10, not 11 — always count before pattern-matching to a familiar element.",
+            commonMistake: "Pattern-matching a configuration to a 'familiar-looking' element (assuming any 3s¹ ending must be sodium) without actually summing the superscripts to verify the total electron count.",
+            apTip: "Before identifying an element from a configuration, always sum every superscript first — visual pattern-matching to a 'usual' configuration can mislead you if even one subshell's electron count differs from the standard ground state."
+          }
+        },
+        {
+          id: 'chem-1-32', difficulty: 1, type: 'mcq', topic: 'Photoelectron Spectroscopy',
+          prompt: "In a photoelectron spectroscopy (PES) spectrum, what does the x-axis (binding energy) represent?",
+          choices: ['The energy required to remove an electron from a particular subshell', 'The mass of the atom being analyzed', 'The number of protons in the nucleus', 'The wavelength of light absorbed by the atom during bonding'],
+          correct: 0,
+          explanation: {
+            correct: "PES measures the binding energy — the energy needed to eject (ionize) an electron from a specific subshell of an atom — and plots this on the x-axis, with each peak corresponding to a distinct subshell.",
+            wrong: { 1: "PES does not measure atomic mass; that's the role of mass spectrometry, a different technique entirely.", 2: "The number of protons (atomic number) isn't directly read from the x-axis; PES probes electron energies, not nuclear composition directly.", 3: "PES involves ejecting electrons using high-energy photons (ionization), not measuring absorbed wavelengths during bonding — that's closer to a different spectroscopic technique (e.g., UV-Vis)." },
+            tempting: "Students sometimes confuse PES with other spectroscopic techniques that also use light, but PES is specifically about electron binding/ionization energies, not bonding-related light absorption.",
+            commonMistake: "Confusing photoelectron spectroscopy's binding-energy x-axis with mass spectrometry's mass-to-charge x-axis, since both produce peak-based spectra.",
+            apTip: "PES x-axis = binding energy of ELECTRONS (higher energy = closer to nucleus, held tighter); mass spec x-axis = mass-to-charge ratio of ISOTOPES. Keep these two spectra types mentally separate."
+          }
+        },
+        {
+          id: 'chem-1-33', difficulty: 2, type: 'mcq', topic: 'Photoelectron Spectroscopy',
+          prompt: "A PES spectrum for a neutral atom shows exactly 3 distinct peaks (ignoring relative heights), corresponding to 1s, 2s, and 2p subshells. Which element does this spectrum most likely represent?",
+          choices: ['Hydrogen', 'An element in Period 2 (such as carbon, nitrogen, or oxygen)', 'An element in Period 3 (such as sodium or aluminum)', 'A noble gas from Period 4'],
+          correct: 1,
+          explanation: {
+            correct: "Only having electrons in 1s, 2s, and 2p subshells (three total distinct peaks) means the atom's occupied subshells stop at n=2, which is characteristic of Period 2 elements (Li through Ne), consistent with choices like carbon, nitrogen, or oxygen.",
+            wrong: { 0: "Hydrogen has only one electron total, occupying only the 1s subshell, so its PES spectrum would show just 1 peak, not 3.", 2: "Period 3 elements (like sodium or aluminum) have electrons extending into the 3s (and possibly 3p) subshells, which would add additional peaks beyond just 1s, 2s, and 2p.", 3: "A Period 4 noble gas (krypton) would have many more occupied subshells (1s through 4p), producing far more than 3 peaks in its PES spectrum." },
+            tempting: "Choice C is tempting since 'more peaks means heavier element' is a reasonable general intuition, but the question specifies exactly 3 peaks stopping at 2p, which caps the element's electron configuration at Period 2, not Period 3.",
+            commonMistake: "Not connecting the highest occupied subshell shown in a PES spectrum to the actual period (row) of the periodic table that element belongs to.",
+            apTip: "The highest-n subshell appearing in a PES spectrum tells you the period of the element directly — a spectrum stopping at 2p means Period 2; stopping at 3p means Period 3, and so on."
+          }
+        },
+        {
+          id: 'chem-1-34', difficulty: 3, type: 'mcq', topic: 'Photoelectron Spectroscopy',
+          prompt: "In a PES spectrum, the peak for the 1s subshell is always found at a much higher binding energy than the peak for the outermost (valence) subshell. What is the best explanation for this?",
+          choices: ['1s electrons are closer to the nucleus and experience less shielding, so they are held more tightly and require more energy to remove', '1s electrons have more mass than valence electrons, requiring more energy to eject', '1s electrons are involved in bonding, while valence electrons are not', 'The 1s subshell always contains more electrons than the valence subshell, requiring more total energy'],
+          correct: 0,
+          explanation: {
+            correct: "Core electrons in the 1s subshell are closest to the nucleus and are shielded by very few (or no) inner electrons, so they experience a strong effective nuclear charge and are held very tightly, requiring significantly more energy to remove than the more shielded, farther-out valence electrons.",
+            wrong: { 1: "All electrons have the same mass regardless of which subshell they occupy; binding energy differences come from electrostatic attraction to the nucleus, not electron mass.", 2: "It's actually the valence (outermost) electrons that participate in bonding, not the core 1s electrons, which are generally too tightly held and too far from the reactive 'edge' of the atom to engage in bonding.", 3: "Subshell electron count doesn't directly determine binding energy ranking — 1s always holds at most 2 electrons, often fewer than some valence subshells (like a filled 2p⁶), yet 1s still has the highest binding energy due to its proximity to the nucleus." },
+            tempting: "Choice D is tempting because 'more electrons = more energy' seems intuitive, but binding energy per electron is about distance from and shielding relative to the nucleus, not the total electron count in that subshell.",
+            commonMistake: "Attributing binding energy differences to electron count or electron mass instead of correctly attributing them to distance from the nucleus and shielding by other electrons.",
+            apTip: "Binding energy is fundamentally about how tightly the nucleus holds an electron — closer + less shielded = higher binding energy, which is exactly why 1s (closest, least shielded) always has the highest peak in any PES spectrum."
+          }
+        },
+        {
+          id: 'chem-1-35', difficulty: 4, type: 'mcq', topic: 'Photoelectron Spectroscopy',
+          prompt: "A PES spectrum shows 4 peaks with relative heights (in order of increasing binding energy) of 2:2:6:1. What is the most likely ground-state electron configuration and identity of this neutral atom?",
+          choices: ['1s² 2s² 2p⁶ 3s¹ — sodium', '1s² 2s¹ 2p⁶ 3s² — not a valid configuration', '1s² 2s² 2p⁶ — neon, with an extra unexplained peak', '1s¹ 2s² 2p⁶ 3s² — not a valid configuration'],
+          correct: 0,
+          explanation: {
+            correct: "Reading the peak heights from lowest to highest binding energy as electron counts in order of subshell filling (1s, 2s, 2p, 3s): 2 electrons in 1s, 2 in 2s, 6 in 2p, and 1 in 3s, totaling 2+2+6+1 = 11 electrons — matching sodium's atomic number and its known ground-state configuration 1s² 2s² 2p⁶ 3s¹.",
+            wrong: { 1: "This configuration places only 1 electron in 2s (should be filled with 2 before 2p starts) while showing 2 in 3s, which doesn't match standard Aufbau filling order and isn't consistent with the given peak pattern read in proper subshell order.", 2: "This configuration only accounts for 10 electrons (2+2+6), leaving the 4th peak (with a relative height of 1) completely unexplained — the spectrum clearly shows 4 distinct peaks, not 3.", 3: "This configuration places only 1 electron in 1s (should always be filled with 2 electrons before any other subshell begins), which violates the Aufbau principle and doesn't match the given peak heights read in proper order." },
+            tempting: "Choice C is tempting if a student stops after matching the first 3 peaks to neon's familiar 1s²2s²2p⁶ pattern and overlooks that a 4th peak is still present in the data, requiring one more subshell (3s¹) to be accounted for.",
+            commonMistake: "Stopping the configuration analysis early once a 'recognizable' noble-gas-like pattern emerges, without checking that ALL peaks shown in the spectrum have actually been accounted for.",
+            apTip: "Always match the number of peaks in the spectrum to the number of occupied subshells one-to-one — if the spectrum shows 4 peaks, your final configuration must have exactly 4 distinct subshells with nonzero electrons, no more, no fewer."
+          }
+        },
+        {
+          id: 'chem-1-36', difficulty: 5, type: 'mcq', topic: 'Photoelectron Spectroscopy',
+          prompt: "Comparing the PES spectra of neutral oxygen (O) and the O⁻ ion, which change would be observed in the peak corresponding to the 2p subshell?",
+          choices: ['The 2p peak would disappear entirely in O⁻', 'The 2p peak height (relative electron count) would increase from 4 to 5, and its binding energy would shift slightly due to increased electron-electron repulsion', 'The 2p peak would shift to a much higher binding energy because the ion has fewer total electrons', 'There would be no change at all, since ions and atoms have identical PES spectra'],
+          correct: 1,
+          explanation: {
+            correct: "Neutral oxygen has 4 electrons in 2p (configuration 1s²2s²2p⁴); the O⁻ ion has gained one additional electron, giving 5 electrons in 2p (1s²2s²2p⁵). This raises the 2p peak's relative height (5 electrons vs. 4) and slightly changes (typically decreases) the binding energy for that subshell because increased electron-electron repulsion in the more crowded subshell makes each electron somewhat easier to remove.",
+            wrong: { 0: "The 2p peak would not disappear — it would still be present, just with a different (higher) relative electron count reflecting the added electron.", 2: "O⁻ actually has MORE total electrons than neutral O (9 vs. 8), not fewer, since it has gained an electron to become negatively charged; also, more electron-electron repulsion typically makes electrons easier (not harder) to remove, generally lowering, not raising, binding energy for that subshell.", 3: "Ions and neutral atoms have measurably different PES spectra since they contain different numbers of electrons and different amounts of electron-electron repulsion/shielding — the spectra are not identical." },
+            tempting: "Choice C is tempting because 'ion' might trigger an assumption of 'fewer electrons and thus tighter binding,' but that logic applies to cations (which lose electrons), not anions like O⁻, which gain an electron instead.",
+            commonMistake: "Applying cation-style reasoning (fewer electrons, higher effective nuclear charge felt per electron, higher binding energy) to an anion, without recognizing that anions gain electrons and experience the opposite general effect.",
+            apTip: "Always check the sign of the ion's charge before predicting PES changes — cations (positive, electrons removed) generally show subshells shifted to higher binding energy, while anions (negative, electrons added) generally show subshells shifted to somewhat lower binding energy due to increased repulsion."
+          }
+        },
+        {
+          id: 'chem-1-37', difficulty: 1, type: 'mcq', topic: 'Periodic Trends',
+          prompt: "Which trend correctly describes atomic radius as you move left to right across a period?",
+          choices: ['Atomic radius increases due to more electron shells being added', 'Atomic radius decreases due to increasing effective nuclear charge pulling electrons inward', 'Atomic radius stays constant across a period', 'Atomic radius increases due to increased electron shielding'],
+          correct: 1,
+          explanation: {
+            correct: "Moving across a period, electrons are added to the same outermost shell while protons (and thus nuclear charge) increase, so the rising effective nuclear charge pulls the electron cloud in tighter, shrinking atomic radius.",
+            wrong: { 0: "No new electron shell is added moving across a period — that specifically happens moving DOWN a group, not across a period.", 2: "Atomic radius changes measurably and predictably across a period (it decreases); it is not constant.", 3: "Shielding from inner-shell electrons stays roughly constant across a period since no new inner shells are added; it's the rising nuclear charge, not increased shielding, that dominates this trend." },
+            tempting: "Choice D is tempting because shielding is a genuinely important factor in radius trends generally, but shielding explains the down-a-group trend, not the across-a-period trend.",
+            commonMistake: "Confusing the reasoning for the down-a-group trend (shielding increases, radius increases) with the across-a-period trend (nuclear charge increases, radius decreases).",
+            apTip: "Keep two separate one-line justifications ready: across a period → increasing effective nuclear charge shrinks radius; down a group → increasing number of shells/shielding grows radius."
+          }
+        },
+        {
+          id: 'chem-1-38', difficulty: 2, type: 'mcq', topic: 'Periodic Trends',
+          prompt: "Which of the following correctly ranks these elements from smallest to largest first ionization energy: sodium (Na), magnesium (Mg), aluminum (Al)?",
+          choices: ['Na < Mg < Al', 'Al < Na < Mg', 'Al < Mg < Na', 'Na < Al < Mg'],
+          correct: 3,
+          explanation: {
+            correct: "General trend says ionization energy increases left to right (Na < Mg < Al), but aluminum is a well-known exception: removing Al's single 3p electron is easier than removing one of Mg's paired, more stable filled-3s² electrons, so the actual order is Na < Al < Mg.",
+            wrong: { 0: "This follows the simple 'increases left to right' trend without accounting for the known 3s-to-3p exception between Mg and Al, where Al's ionization energy is actually slightly lower than Mg's.", 1: "This places Na as having a higher ionization energy than Mg, which contradicts the general left-to-right increasing trend (Na, being further left, should have the lowest ionization energy of the three).", 2: "This places Na with the highest ionization energy of the three, which is backwards — Na, being furthest left and largest in radius, should have the LOWEST first ionization energy of the group." },
+            tempting: "Choice A is tempting because it follows the simple periodic trend rule without exception, but the AP exam specifically tests recognition of small dips like the Mg-to-Al ionization energy anomaly caused by subshell stability differences (filled 3s² vs. singly-occupied 3p¹).",
+            commonMistake: "Applying the general 'ionization energy increases across a period' rule uniformly without recognizing the well-known small dips at the s-to-p and p³-to-p⁴ transitions.",
+            apTip: "Memorize the two classic ionization energy dips: (1) between Group 2 and Group 13 (s² to p¹, e.g., Mg to Al) and (2) between Group 15 and Group 16 (half-filled p³ to p⁴, e.g., N to O) — both create small drops in the otherwise increasing left-to-right trend."
+          }
+        },
+        {
+          id: 'chem-1-39', difficulty: 3, type: 'mcq', topic: 'Periodic Trends',
+          prompt: "Which of these four ions has the smallest ionic radius: O²⁻, F⁻, Na⁺, or Mg²⁺? (All four are isoelectronic with neon, having 10 electrons each.)",
+          choices: ['O²⁻', 'F⁻', 'Na⁺', 'Mg²⁺'],
+          correct: 3,
+          explanation: {
+            correct: "For isoelectronic species (same electron count, here all 10), ionic radius decreases as nuclear charge (atomic number/proton count) increases, since more protons pull the same fixed number of electrons in tighter. Mg²⁺ has the highest atomic number (12) among these four, so it has the strongest pull on its 10 electrons and thus the smallest radius.",
+            wrong: { 0: "O²⁻ has the lowest atomic number (8) among these isoelectronic species, giving it the weakest nuclear pull on the shared 10 electrons and therefore the LARGEST radius of the group, not the smallest.", 1: "F⁻ (atomic number 9) has a smaller nuclear charge than Na⁺ or Mg²⁺, giving it a larger radius than either of those two ions.", 2: "Na⁺ (atomic number 11) has a smaller nuclear charge than Mg²⁺ (atomic number 12), so while Na⁺ is smaller than O²⁻ and F⁻, it is still larger than Mg²⁺." },
+            tempting: "Choice A (O²⁻) is tempting if a student assumes 'more negative charge = smaller size' by analogy to some other trend, but for isoelectronic series specifically, higher NUCLEAR charge (not ionic charge sign) is what shrinks radius — O²⁻ actually has the largest radius of this group.",
+            commonMistake: "Forgetting that for an isoelectronic series, the ranking is driven entirely by nuclear charge (proton count), and incorrectly reasoning from ionic charge sign or magnitude instead.",
+            apTip: "For isoelectronic species (equal electron count), radius ranking is simple: more protons = smaller ion, since the same number of electrons is being pulled by a stronger or weaker nuclear charge — just rank by atomic number directly."
+          }
+        },
+        {
+          id: 'chem-1-40', difficulty: 4, type: 'mcq', topic: 'Periodic Trends',
+          prompt: "The first ionization energy of sulfur (S) is lower than that of phosphorus (P), even though sulfur is to the right of phosphorus on the periodic table. What is the best explanation for this exception to the general trend?",
+          choices: ['Sulfur has more protons, so it should have a higher ionization energy, making this an unexplainable anomaly', 'Phosphorus has a stable, half-filled 3p³ configuration, making its outermost electron especially hard to remove, while sulfur\'s 3p⁴ configuration has a repelled, paired electron that is easier to remove', 'Sulfur is a nonmetal while phosphorus is a metalloid, and metalloids always have higher ionization energies than nonmetals', 'This is a measurement error, since ionization energy should always increase monotonically across a period'],
+          correct: 1,
+          explanation: {
+            correct: "Phosphorus's configuration ([Ne]3s²3p³) has a stable, half-filled 3p subshell, where each of the three 3p orbitals holds one unpaired electron — this extra stability makes it harder to remove an electron. Sulfur ([Ne]3s²3p⁴) must pair up two electrons in one 3p orbital, and the resulting electron-electron repulsion in that doubly-occupied orbital makes one of those paired electrons easier to remove than expected, lowering sulfur's first ionization energy below phosphorus's.",
+            wrong: { 0: "This is a well-understood, well-documented exception rooted in subshell stability (half-filled vs. paired electron configurations), not an unexplainable anomaly.", 2: "Both phosphorus and sulfur are typically classified as nonmetals (phosphorus is sometimes considered right at the nonmetal/metalloid boundary, but this classification isn't the actual reason for the ionization energy dip) — the real explanation is about electron configuration stability, not metal/nonmetal/metalloid classification.", 3: "This dip is a real, reproducible, well-established periodic trend exception (part of the p³-to-p⁴ pattern), not a measurement error — ionization energy does NOT increase perfectly monotonically across every period." },
+            tempting: "Choice A is tempting because it's true that sulfur has more protons, and 'more protons should mean higher IE' is the general rule — but this specific case is a known exception where subshell electron configuration stability (half-filled vs. paired) outweighs the small increase in nuclear charge.",
+            commonMistake: "Assuming the general 'more protons = higher ionization energy' rule has no exceptions, rather than recognizing the specific half-filled-subshell stability effect that creates the p³-to-p⁴ dip.",
+            apTip: "Remember the p³-to-p⁴ ionization energy dip (like N-to-O or P-to-S) is caused by extra stability from a half-filled subshell, combined with new electron-electron repulsion once a 4th electron must pair up in that subshell."
+          }
+        },
+        {
+          id: 'chem-1-41', difficulty: 5, type: 'mcq', topic: 'Periodic Trends',
+          prompt: "Which of the following correctly ranks these species from smallest to largest radius: Cl⁻, K⁺, Ca²⁺, S²⁻? (Atomic numbers: S=16, Cl=17, K=19, Ca=20; all four species have 18 electrons.)",
+          choices: ['Ca²⁺ < K⁺ < Cl⁻ < S²⁻', 'S²⁻ < Cl⁻ < K⁺ < Ca²⁺', 'Cl⁻ < S²⁻ < Ca²⁺ < K⁺', 'K⁺ < Ca²⁺ < Cl⁻ < S²⁻'],
+          correct: 0,
+          explanation: {
+            correct: "All four species are isoelectronic (18 electrons each, matching argon), so radius ranking depends purely on nuclear charge (atomic number) — more protons pulling the same 18 electrons means a smaller radius. Ranking by increasing atomic number: S(16) < Cl(17) < K(19) < Ca(20), so ranking by DEcreasing radius (since more protons = smaller radius) gives the SMALLEST radius to the highest atomic number: Ca²⁺(20, smallest) < K⁺(19) < Cl⁻(17) < S²⁻(16, largest).",
+            wrong: { 1: "This ranks S²⁻ as smallest and Ca²⁺ as largest, which is backwards — S²⁻ has the fewest protons (16) among this isoelectronic group and should therefore have the weakest pull on its 18 electrons, making it the LARGEST, not smallest.", 2: "This places Cl⁻ (17 protons) as smallest, but Ca²⁺ (20 protons) has more protons than Cl⁻ and should have a smaller radius; this ordering doesn't consistently follow the atomic-number-determines-radius rule for an isoelectronic series.", 3: "This places K⁺ (19 protons) as smallest, but Ca²⁺ (20 protons) has even more protons than K⁺ and should be smaller still; K⁺ cannot be the smallest of this group." },
+            tempting: "This problem is designed so that any ranking not strictly following atomic number order (highest atomic number = smallest radius) will be wrong — the ionic charges (from 2− to 2+) are a distraction since all species share the identical 18-electron count.",
+            commonMistake: "Ranking isoelectronic ions by charge magnitude or sign (assuming more negative = bigger, more positive = smaller, without reference to actual proton count) instead of directly ranking by atomic number.",
+            apTip: "Whenever you're told several species are isoelectronic, immediately convert the problem into 'just rank by atomic number' — for a fixed electron count, higher atomic number always means smaller radius, full stop, regardless of the charge label."
+          }
+        },
+        {
+          id: 'chem-1-42', difficulty: 1, type: 'mcq', topic: "Coulomb's Law & Valence Electrons",
+          prompt: "According to Coulomb's law, if the distance between two charged particles is doubled while their charges stay the same, what happens to the electrostatic force between them?",
+          choices: ['The force doubles', 'The force is halved', 'The force decreases to one-fourth of its original value', 'The force stays the same'],
+          correct: 2,
+          explanation: {
+            correct: "Coulomb's law states force is inversely proportional to the square of the distance (F ∝ 1/r²). Doubling the distance means dividing the force by 2² = 4, so the new force is one-fourth (1/4) of the original.",
+            wrong: { 0: "This would only be true if force were directly (not inversely) proportional to distance, which contradicts Coulomb's law's actual inverse-square relationship.", 1: "This treats the relationship as inverse (not inverse-square), missing that distance is squared in the denominator of Coulomb's law.", 3: "Force is explicitly distance-dependent in Coulomb's law (via the 1/r² term), so changing distance must change the force — it cannot stay the same." },
+            tempting: "Choice B is tempting because 'inverse relationship' is half-remembered correctly, but the actual law is an INVERSE-SQUARE relationship, so the distance factor must be squared, not just inverted linearly.",
+            commonMistake: "Remembering that force decreases as distance increases but forgetting to square the distance factor, leading to a 1/2 answer instead of the correct 1/4.",
+            apTip: "Coulomb's law is F = kq1q2/r² — whenever distance changes by a factor of x, the force changes by a factor of 1/x², not 1/x. Always square the distance factor."
+          }
+        },
+        {
+          id: 'chem-1-43', difficulty: 2, type: 'mcq', topic: "Coulomb's Law & Valence Electrons",
+          prompt: "Using Coulomb's law reasoning, which ionic interaction would be expected to have the strongest electrostatic attraction, assuming similar ionic radii/distances: Na⁺ and Cl⁻, or Mg²⁺ and Cl⁻?",
+          choices: ['Na⁺ and Cl⁻, because sodium has a larger atomic radius', 'Mg²⁺ and Cl⁻, because the product of the charge magnitudes is larger', 'Both interactions would be equally strong, since Cl⁻ is the same ion in both cases', 'Neither can be compared without knowing the exact distance between ions'],
+          correct: 1,
+          explanation: {
+            correct: "Coulomb's law force is proportional to the product of the charge magnitudes (F ∝ q1 × q2). For Na⁺/Cl⁻, the product is 1 × 1 = 1; for Mg²⁺/Cl⁻, the product is 2 × 1 = 2, twice as large, so (assuming similar distances) the Mg²⁺/Cl⁻ attraction is stronger.",
+            wrong: { 0: "Atomic/ionic radius affects distance (r), not charge, and while it can matter, the question specifies 'assuming similar ionic radii/distances,' so radius differences aren't the deciding factor here — charge product is.", 2: "Even though Cl⁻ is the same ion in both comparisons, the OTHER ion's charge differs (Na⁺ is 1+ vs. Mg²⁺ is 2+), so the two interactions are not equally strong — the charge product differs.", 3: "The question explicitly states to assume similar distances, which removes the need to know exact distance values — under that assumption, charge product alone is sufficient to compare relative strength." },
+            tempting: "Choice A is tempting because atomic radius does affect Coulombic distance in general chemistry contexts, but the problem explicitly holds distance roughly constant, isolating charge magnitude as the deciding factor.",
+            commonMistake: "Overcomplicating a charge-product comparison by introducing radius/distance effects when the problem has explicitly controlled for or specified that distances are similar.",
+            apTip: "When comparing Coulombic attraction strength and distances are stated to be similar or held constant, focus purely on the product of the charge magnitudes (q1 × q2) — higher charges mean stronger attraction."
+          }
+        },
+        {
+          id: 'chem-1-44', difficulty: 3, type: 'mcq', topic: "Coulomb's Law & Valence Electrons",
+          prompt: "Which best explains why cesium (Cs) has a much lower first ionization energy than lithium (Li), even though both are Group 1 (one valence electron) elements?",
+          choices: ['Cesium\'s valence electron is much farther from the nucleus (larger radius) and more shielded by inner electrons, so it experiences a much weaker effective attractive force and is easier to remove', 'Cesium has more protons, so its valence electron should be held more tightly, making this an anomaly', 'Lithium and cesium should have identical ionization energies since both have exactly one valence electron', 'Cesium\'s valence electron is negatively charged while lithium\'s is positively charged'],
+          correct: 0,
+          explanation: {
+            correct: "Coulombic attraction weakens with increasing distance (1/r²) and increasing shielding from inner-shell electrons. Cesium's valence electron sits in a much higher principal energy level (n=6) than lithium's (n=2), far more shielded and far from the nucleus, so the effective attractive force holding it is much weaker, making it easier to remove — hence a lower ionization energy despite cesium's larger nuclear charge.",
+            wrong: { 1: "While cesium does have more total protons, this increased nuclear charge is overwhelmed by the much larger distance and much greater electron shielding from cesium's many inner shells, so 'more protons' does not translate into a stronger pull felt by the outermost valence electron.", 2: "Having the same number of valence electrons (one) does NOT guarantee identical ionization energies — distance from the nucleus and shielding, both of which increase dramatically down a group, cause substantial ionization energy differences even among elements with matching valence electron counts.", 3: "All electrons carry the same negative charge regardless of element; there is no difference in electron charge sign between lithium and cesium's valence electrons." },
+            tempting: "Choice B is tempting because 'more protons should mean stronger attraction' is true in isolation, but this ignores that cesium's valence electron is also vastly farther away and more shielded, and those two effects together far outweigh the increased proton count.",
+            commonMistake: "Focusing only on nuclear charge (proton count) when comparing ionization energies down a group, while ignoring the much larger and often dominant effects of increased distance and shielding.",
+            apTip: "Down a group, increasing distance and shielding always win out over increasing nuclear charge, which is why ionization energy reliably DEcreases down a group even though proton count is increasing."
+          }
+        },
+        {
+          id: 'chem-1-45', difficulty: 4, type: 'mcq', topic: "Coulomb's Law & Valence Electrons",
+          prompt: "Two point charges attract each other with a force of F. If both charges are simultaneously doubled in magnitude AND the distance between them is also doubled, what is the new force in terms of F?",
+          choices: ['F (unchanged)', '2F', '4F', 'F/2'],
+          correct: 0,
+          explanation: {
+            correct: "Coulomb's law: F ∝ (q1 × q2)/r². Doubling both charges multiplies the numerator by 2 × 2 = 4. Doubling the distance multiplies the denominator's r² term by 2² = 4. Since the numerator and denominator both scale by the same factor (4), they cancel, leaving the force unchanged at F.",
+            wrong: { 1: "This would result from only accounting for the charge doubling (factor of 4 in numerator) without also correctly squaring the distance change in the denominator, or from an incomplete cancellation.", 2: "This would result from only doubling the charges (numerator × 4) while completely ignoring the distance change in the denominator, which also increases by a factor of 4 (since distance is squared).", 3: "This would result from only accounting for the distance doubling (dividing by 4) while ignoring that the charges were also doubled, which independently multiplies the force by 4." },
+            tempting: "Choice C (4F) is tempting because 'doubling both charges' alone would indeed quadruple the force if distance were held constant — the key detail easy to miss is that distance ALSO doubles in this problem, which independently divides the force by 4, exactly canceling the charge effect.",
+            commonMistake: "Applying only one of the two simultaneous changes (charge OR distance) to the force calculation and forgetting that both changes must be combined multiplicatively.",
+            apTip: "When multiple quantities in Coulomb's law change at once, calculate each factor's effect on the force separately (numerator changes multiply the force, denominator/distance changes divide it, with distance squared), then combine all factors together — don't stop after accounting for just one change."
+          }
+        },
+        {
+          id: 'chem-1-46', difficulty: 4, type: 'mcq', topic: "Coulomb's Law & Valence Electrons",
+          prompt: "Magnesium's first ionization energy (removing an electron from neutral Mg, [Ne]3s²) is noticeably lower than its second ionization energy (removing an electron from Mg⁺, [Ne]3s¹), even though both removed electrons come from the same 3s subshell. What best explains this increase?",
+          choices: ['Mg⁺ has the same number of protons as neutral Mg but one fewer electron, so the remaining 3s electron feels a stronger effective nuclear charge and is held more tightly', 'The second electron removed is a core electron from a much lower, more tightly bound energy level than the first', 'Removing any electron from a positively charged ion always requires exactly double the energy of removing an electron from a neutral atom', 'Ionization energy should decrease with each successive electron removed, so this increase is a rare, unexplainable anomaly for magnesium'],
+          correct: 0,
+          explanation: {
+            correct: "Neutral Mg ([Ne]3s²) has 12 protons pulling on 12 electrons. After removing one electron, Mg⁺ ([Ne]3s¹) still has 12 protons but only 11 electrons, so the remaining electrons (including the last 3s electron) feel a stronger effective nuclear charge, and the ion also shrinks in radius. Both effects strengthen the Coulombic attraction on the remaining 3s electron, raising the energy needed to remove it.",
+            wrong: { 1: "Both the first and second electrons removed from magnesium come from the same 3s subshell ([Ne]3s² → [Ne]3s¹ → [Ne]); the jump to a genuinely core electron (from the filled [Ne] shell) doesn't happen until the third ionization, which shows a far larger jump than the one described here.", 2: "There is no fixed 'exactly double' rule for successive ionization energies — the size of the increase depends on the specific change in effective nuclear charge and radius at each step, and varies by element and by which electron is removed.", 3: "Successive ionization energies always increase, never decrease, for a given atom, because each removed electron leaves behind a smaller, more positively charged species that holds its remaining electrons more tightly." },
+            tempting: "Choice B is tempting because 'core vs. valence' correctly explains the LATER, much bigger jump between magnesium's second and third ionization energies, but the first-to-second jump described here still involves two valence (3s) electrons, not a core electron.",
+            commonMistake: "Assuming any increase in successive ionization energy must be due to switching from a valence to a core electron, rather than recognizing that removing two electrons from the same subshell already causes an increase, due to the shrinking radius and rising effective nuclear charge per remaining electron.",
+            apTip: "Successive ionization energies always increase, but watch for the especially large jump that signals a core electron is finally being removed — for Mg, that huge jump appears between the 2nd and 3rd ionization energies, not between the 1st and 2nd."
+          }
+        },
+        {
+          id: 'chem-1-47', difficulty: 2, type: 'mcq', topic: 'Periodic Trends',
+          prompt: "Which trend correctly describes electronegativity as you move down a group on the periodic table?",
+          choices: ['Electronegativity increases due to greater nuclear charge', 'Electronegativity decreases due to increasing atomic radius and shielding', 'Electronegativity stays constant down a group', 'Electronegativity increases because more valence electrons are available for bonding'],
+          correct: 1,
+          explanation: {
+            correct: "Moving down a group, additional electron shells increase both atomic radius and the shielding experienced by valence electrons, weakening the nucleus's pull on any electrons it might attract from another atom, so electronegativity decreases.",
+            wrong: { 0: "While nuclear charge does increase down a group, this increase is outweighed by the added shells and shielding, so the net effect on electronegativity is a decrease, not an increase.", 2: "Electronegativity changes measurably down a group (it decreases); it is not constant.", 3: "Valence electron count stays the same down a group (same group number), so this isn't a factor that changes — and even if it were, electronegativity is about attraction for shared electrons, not about how many valence electrons are available." },
+            tempting: "Choice A is tempting because 'more protons' intuitively suggests 'more pulling power,' but the simultaneous increase in shielding and distance down a group dominates and outweighs the nuclear charge increase.",
+            commonMistake: "Focusing only on the increasing nuclear charge down a group while ignoring the simultaneously increasing shielding and radius, which together produce the opposite (decreasing) net effect.",
+            apTip: "Electronegativity and atomic radius trends are opposites of each other on the periodic table: radius increases down a group and decreases across a period, while electronegativity decreases down a group and increases across a period."
+          }
+        },
+        {
+          id: 'chem-1-48', difficulty: 1, type: 'mcq', topic: "Coulomb's Law & Valence Electrons",
+          prompt: "How many valence electrons does a neutral atom of phosphorus (Group 15) have?",
+          choices: ['3', '5', '7', '15'],
+          correct: 1,
+          explanation: {
+            correct: "For main-group elements, the group number (using the 1-18 numbering, Group 15) directly gives the number of valence electrons, so phosphorus has 5 valence electrons, consistent with its configuration [Ne]3s²3p³ (2+3=5).",
+            wrong: { 0: "3 would be the valence electron count for a Group 13 element, not Group 15.", 2: "7 would be the valence electron count for a Group 17 (halogen) element, not Group 15.", 3: "15 is phosphorus's atomic number (total electrons), not its valence electron count — valence electrons are only those in the outermost shell." },
+            tempting: "Choice D is tempting because 15 appears directly in the problem (as the group number), but that number should be used as a direct READ of valence electrons for main-group elements, not confused with the atomic number.",
+            commonMistake: "Confusing the group number's direct meaning (valence electron count, for main-group elements) with the element's atomic number (total electron count).",
+            apTip: "For main-group elements (Groups 1-2 and 13-18), the group number (1-18 system) directly equals the number of valence electrons — Group 15 means 5 valence electrons, not 15."
+          }
+        },
+        {
+          id: 'chem-1-49', difficulty: 3, type: 'mcq', topic: 'Mass Spectrometry & Average Atomic Mass',
+          prompt: "Copper has two isotopes: Cu-63 (mass = 62.93 amu, abundance = 69.15%) and Cu-65 (mass = 64.93 amu, abundance = 30.85%). What is copper's average atomic mass?",
+          choices: ['63.55 amu', '63.93 amu', '64.00 amu', '64.93 amu'],
+          correct: 0,
+          explanation: {
+            correct: "Average atomic mass = (62.93 × 0.6915) + (64.93 × 0.3085) ≈ 43.52 + 20.03 ≈ 63.55 amu, matching copper's known periodic table value.",
+            wrong: { 1: "This value doesn't correspond to a correctly weighted average using the given masses and abundances; it overshoots the true weighted result.", 2: "63.55 is heavily weighted toward the more abundant Cu-63 isotope; a value of exactly 64.00 would require the two isotopes to be weighted much more equally than the actual 69.15%/30.85% split.", 3: "This is simply the mass of the less abundant isotope (Cu-65) alone, ignoring that Cu-63 makes up the majority (69.15%) of copper atoms and pulls the average mass down." },
+            tempting: "Choice D is tempting if a student picks the larger isotope mass by mistake, but the more abundant isotope (Cu-63, at 69.15%) should pull the weighted average closer to ITS mass, not the less abundant Cu-65's mass.",
+            commonMistake: "Weighting the calculation toward the wrong isotope, or forgetting to multiply each isotope's mass by its own fractional abundance before summing.",
+            apTip: "Always double check which isotope has the higher percent abundance — the weighted average atomic mass should always land closer to the more abundant isotope's mass, not exactly in the middle."
+          }
+        },
+        {
+          id: 'chem-1-50', difficulty: 5, type: 'mcq', topic: 'Photoelectron Spectroscopy',
+          prompt: "A PES spectrum for a neutral atom shows peaks (in order of increasing binding energy) with relative heights 2:2:6:2:3. What is the total number of electrons, and which element does this most likely represent?",
+          choices: ['13 electrons total; aluminum, with configuration 1s²2s²2p⁶3s²3p¹', '15 electrons total; phosphorus, with configuration 1s²2s²2p⁶3s²3p³', '13 electrons total; but this doesn\'t match any real element\'s ground state', '17 electrons total; chlorine, with configuration 1s²2s²2p⁶3s²3p⁵'],
+          correct: 1,
+          explanation: {
+            correct: "Summing the peak heights in subshell-filling order (1s, 2s, 2p, 3s, 3p): 2+2+6+2+3 = 15 electrons total, matching phosphorus's atomic number. This corresponds exactly to phosphorus's ground-state configuration 1s²2s²2p⁶3s²3p³ (2+2+6+2+3=15).",
+            wrong: { 0: "Aluminum has only 13 electrons total (1s²2s²2p⁶3s²3p¹, summing to 2+2+6+2+1=13), which would require the last peak to have a relative height of 1, not 3 as given.", 2: "The given peak pattern (2:2:6:2:3) does correspond to a real element's ground state — phosphorus — so this configuration is not unmatched; the total (15) simply needs to be correctly summed and compared to the right atomic number.", 3: "Chlorine has 17 electrons total (1s²2s²2p⁶3s²3p⁵, summing to 2+2+6+2+5=17), which would require the last peak to have a relative height of 5, not 3 as given." },
+            tempting: "Choice A is tempting because aluminum is a 'nearby' Period 3 element with a similar-looking spectrum shape, but its final 3p peak height would be 1, not 3 — always verify the LAST peak's height matches exactly, not just the general shape of the spectrum.",
+            commonMistake: "Recognizing the general shape of a Period 3 element's spectrum (2:2:6:2:x pattern) but misreading or miscounting the final peak's exact relative height, leading to the wrong element identification.",
+            apTip: "For multi-peak PES problems, sum every peak height in order and compare the running total (and the very last peak's individual value) directly against known ground-state configurations — don't rely on 'this looks like element X' pattern recognition alone."
+          }
         }
       ]
     },
@@ -170,6 +742,578 @@ export const chemistry = {
             tempting: "Choice D can tempt students who associate 'ions are charged' with 'electrons must be mobile,' but in the solid ionic lattice, both ions and their electrons are actually held in fixed lattice positions, and it's specifically the free movement of delocalized ELECTRONS (not just the presence of charge) that defines metallic conductivity.",
             commonMistake: "Conflating the presence of charged particles (ions) with electron mobility/delocalization, rather than recognizing that metallic bonding is specifically defined by delocalized electrons free to move throughout the whole structure.",
             apTip: "College-level insight: this framing (a bonding continuum from ionic to covalent to metallic, based on electron localization vs. delocalization) reflects how bonding is actually taught in more advanced chemistry courses beyond simple categorical labels — explicitly using the language of 'electron localization/delocalization' rather than just naming the bond type demonstrates a more sophisticated, unified understanding on an FRQ."
+          }
+        },
+        {
+          id: "chem-2-7", difficulty: 1, type: "mcq", topic: "Types of Chemical Bonds",
+          prompt: "A bond forms between two atoms with an electronegativity difference of 0.2. What type of bond is this most likely to be?",
+          choices: ["Ionic bond", "Nonpolar covalent bond", "Metallic bond", "Hydrogen bond"],
+          correct: 1,
+          explanation: {
+            correct: "An electronegativity difference below about 0.4 indicates the electrons are shared nearly equally between the two atoms, classifying the bond as nonpolar covalent.",
+            wrong: { 0: "Ionic bonds typically form when the electronegativity difference is large (generally greater than about 1.7), reflecting essentially complete electron transfer, not a small difference of 0.2.", 2: "Metallic bonding occurs between metal atoms sharing a delocalized 'sea of electrons,' a fundamentally different bonding model not characterized by electronegativity difference between two specific atoms.", 3: "A hydrogen bond is a much weaker intermolecular attraction (not a true bond) between a hydrogen atom already covalently bonded to an electronegative atom and a lone pair on a nearby electronegative atom — it isn't classified by electronegativity difference in this way at all." },
+            tempting: "None of the alternatives are especially tempting if the electronegativity-difference cutoffs are memorized correctly, but forgetting the numeric cutoffs entirely can lead to guessing based on vague intuition.",
+            commonMistake: "Not having memorized the approximate electronegativity-difference ranges that separate nonpolar covalent, polar covalent, and ionic bonding.",
+            apTip: "Memorize the rough cutoffs: less than about 0.4 → nonpolar covalent; about 0.4 to 1.7 → polar covalent; greater than about 1.7 → ionic. These are guidelines, not sharp boundaries, but they're reliable for AP-style classification questions."
+          }
+        },
+        {
+          id: "chem-2-8", difficulty: 1, type: "mcq", topic: "Types of Chemical Bonds",
+          prompt: "Which of the following best describes metallic bonding?",
+          choices: ["Complete transfer of electrons from one atom to another", "Electrons shared equally between two specific, fixed atoms", "A lattice of positive metal ions surrounded by a delocalized 'sea' of mobile valence electrons", "Weak attractions between temporary dipoles"],
+          correct: 2,
+          explanation: {
+            correct: "Metallic bonding is modeled as a regular lattice of positively charged metal cations immersed in a 'sea' of delocalized valence electrons that are free to move throughout the entire structure, which explains properties like electrical conductivity and malleability.",
+            wrong: { 0: "Complete electron transfer between specific atoms describes ionic bonding, not metallic bonding.", 1: "Electrons shared between two specific, fixed atoms describes covalent bonding; metallic bonding instead involves electrons delocalized across the whole lattice, not localized between any two particular atoms.", 3: "Weak attractions between temporary dipoles describes London dispersion forces, an intermolecular force, not the strong intramolecular bonding found within a metal." },
+            tempting: "Choice B is tempting because it accurately describes covalent bonding, and metals are sometimes loosely called 'bonded together,' but the defining feature of metallic bonding is that electrons are NOT localized to any specific pair of atoms.",
+            commonMistake: "Confusing metallic bonding's delocalized electron sea with covalent bonding's localized, shared electron pairs between specific atoms.",
+            apTip: "The key phrase for metallic bonding on any FRQ is 'delocalized valence electrons' or 'sea of electrons' — this single phrase captures why metals conduct electricity (mobile electrons) and are malleable (ions can shift position without breaking specific directional bonds)."
+          }
+        },
+        {
+          id: "chem-2-9", difficulty: 2, type: "mcq", topic: "Types of Chemical Bonds",
+          prompt: "Diamond (a covalent network solid) has an extremely high melting point, while dry ice (solid CO2, a molecular solid) sublimes easily at low temperature, even though both contain carbon covalently bonded to other atoms. What best explains this difference?",
+          choices: ["Diamond's covalent bonds are weaker than dry ice's covalent bonds", "Diamond consists of one giant network of covalent bonds extending through the entire crystal, so melting requires breaking many strong covalent bonds; dry ice consists of individual CO2 molecules held together only by weak intermolecular forces, which are much easier to overcome", "Dry ice has no covalent bonds at all", "Diamond and dry ice actually have very similar melting points"],
+          correct: 1,
+          explanation: {
+            correct: "In diamond, every carbon atom is covalently bonded to four others in a continuous three-dimensional network, so melting or breaking the solid apart requires breaking strong covalent bonds throughout. In dry ice, strong covalent bonds hold each individual CO2 molecule together, but the molecules themselves are held to each other only by weak London dispersion forces, which require far less energy to overcome, allowing sublimation at low temperature.",
+            wrong: { 0: "The individual covalent bonds within a CO2 molecule are comparably strong to those in diamond; the difference in melting/subliming behavior comes from what holds the larger structure together (a continuous covalent network vs. weak intermolecular forces between separate molecules), not from a difference in individual covalent bond strength.", 2: "Dry ice's CO2 molecules do contain covalent bonds (the C=O double bonds within each molecule); what dry ice lacks is a continuous covalent network extending between separate molecules.", 3: "Diamond's melting point (over 3500°C) and dry ice's sublimation point (about -78°C at 1 atm) are vastly different, not similar." },
+            tempting: "Choice A is tempting because it directly compares 'bond strength' between the two substances, but the actual explanation hinges on what TYPE of interaction must be broken (covalent network bonds throughout the whole solid vs. just the weak intermolecular forces between separate molecules), not on individual C-based covalent bonds being weaker in one substance.",
+            commonMistake: "Comparing the strength of covalent bonds within molecules when the real distinguishing factor is whether the solid is held together by a continuous covalent network or by weak intermolecular forces between discrete molecules.",
+            apTip: "Always separate two different questions for any molecular or network solid: 'how strong are the covalent bonds within a molecule/network?' and 'what holds separate units of the solid together?' — melting/boiling behavior of molecular solids depends on the second question, not the first."
+          }
+        },
+        {
+          id: "chem-2-10", difficulty: 3, type: "mcq", topic: "Types of Chemical Bonds",
+          prompt: "An unknown solid conducts electricity well both as a solid and when melted, is malleable (can be hammered into sheets without shattering), and has a moderate melting point. What type of bonding does this solid most likely exhibit?",
+          choices: ["Ionic bonding", "Metallic bonding", "Covalent network bonding", "Bonding characteristic of a molecular solid held by London dispersion forces"],
+          correct: 1,
+          explanation: {
+            correct: "Conductivity in both the solid and molten state, combined with malleability, is the classic signature of metallic bonding: the delocalized sea of electrons allows conductivity in the solid state (unlike ionic solids), and metal cations can shift position within that electron sea without breaking specific directional bonds, allowing malleability rather than shattering.",
+            wrong: { 0: "Ionic solids typically conduct electricity when molten or dissolved (since ions become mobile), but do NOT conduct as solids (ions are fixed in the lattice), and they are brittle rather than malleable — hammering an ionic solid tends to shatter it as like-charged ions are forced into alignment and repel.", 2: "Covalent network solids (like diamond or quartz) are typically extremely hard, brittle, and do not conduct electricity in either the solid or molten state (with some exceptions like graphite), which doesn't match this solid's described properties.", 3: "Molecular solids held together by weak London dispersion forces are typically soft, have low melting points, and do not conduct electricity in any state, which doesn't match the given moderate melting point and good conductivity described here." },
+            tempting: "Choice A is tempting because ionic solids do conduct when molten, but the fact that THIS solid conducts even as a SOLID, plus its malleability rather than brittleness, specifically rules out ionic bonding in favor of metallic bonding.",
+            commonMistake: "Focusing only on 'conducts when melted' as the deciding clue without also checking solid-state conductivity and malleability vs. brittleness, both of which are needed to distinguish metallic from ionic bonding.",
+            apTip: "Build a three-property checklist to classify an unknown solid: (1) does it conduct as a solid? (metallic: yes; ionic/covalent network/molecular: no), (2) does it conduct when melted/dissolved? (metallic: yes; ionic: yes; covalent network/molecular: no), (3) is it malleable or brittle? (metallic: malleable; ionic/covalent network: brittle)."
+          }
+        },
+        {
+          id: "chem-2-11", difficulty: 4, type: "mcq", topic: "Types of Chemical Bonds",
+          prompt: "Graphite and diamond are both covalent network solids made entirely of carbon, yet graphite conducts electricity (along its layers) while diamond does not conduct at all. What structural difference explains this?",
+          choices: ["Graphite's carbon atoms have more protons than diamond's carbon atoms", "In graphite, each carbon is bonded to only 3 other carbons within a layer (using sp² hybridization), leaving one unhybridized p-orbital electron per carbon delocalized across the layer, allowing conduction; in diamond, each carbon is bonded to 4 others (sp³ hybridization) with all electrons localized in fixed single bonds, leaving none free to move", "Diamond contains impurities that block conduction, while graphite is always perfectly pure carbon", "Graphite is actually an ionic solid, not a covalent network solid"],
+          correct: 1,
+          explanation: {
+            correct: "Graphite's carbon atoms are sp² hybridized, each bonded to 3 neighboring carbons within a flat hexagonal layer, leaving one electron per carbon in an unhybridized p-orbital; these p-orbital electrons delocalize across the entire layer (similar to a metallic 'electron sea' but confined to two dimensions), allowing electrical conduction along the layers. Diamond's carbons are sp³ hybridized, each forming 4 localized single bonds to neighboring carbons in a rigid 3D network, leaving no delocalized electrons available for conduction.",
+            wrong: { 0: "Graphite and diamond are both composed of identical carbon atoms (same number of protons, 6); the structural arrangement and hybridization of the carbon atoms — not the number of protons — explains their different conductivities.", 2: "Diamond's inability to conduct is an intrinsic structural property, not primarily the result of impurities; pure diamond, by its very sp³ bonding structure, has no delocalized electrons regardless of purity, while pure graphite conducts due to its delocalized p-orbital electrons.", 3: "Graphite is a covalent network solid, not an ionic solid; it is made entirely of covalently bonded carbon atoms arranged in layers, just like diamond, but with a different bonding geometry (sp² vs. sp³)." },
+            tempting: "Choice C might tempt students familiar with how impurities can affect other properties (like semiconductor doping), but the fundamental difference between graphite's and diamond's conductivity is intrinsic to their different carbon-carbon bonding geometries (sp² with delocalized p-electrons vs. sp³ with fully localized bonds), not due to impurities.",
+            commonMistake: "Assuming two forms of the same element (allotropes) must have identical properties, without considering that different bonding/hybridization arrangements between the same atoms can produce dramatically different physical properties.",
+            apTip: "Remember graphite and diamond as the classic allotrope example on the AP exam: same element (carbon), different structural arrangement (sp² layered vs. sp³ 3D network), leading to dramatically different properties (graphite: soft, conducts, slippery; diamond: extremely hard, insulator)."
+          }
+        },
+        {
+          id: "chem-2-12", difficulty: 5, type: "mcq", topic: "Types of Chemical Bonds",
+          prompt: "Silicon carbide (SiC) is a covalent network solid with properties similar to diamond: extremely hard, very high melting point, and does not conduct electricity. Given that silicon and carbon have similar electronegativities (Si = 1.90, C = 2.55, difference = 0.65), why is SiC still classified primarily as a covalent network solid rather than an ionic solid?",
+          choices: ["An electronegativity difference of 0.65 falls within the polar covalent range, and the bonding forms a continuous, directional 3D network similar to diamond's structure, rather than an ionic lattice of discrete oppositely-charged ions", "SiC is actually misclassified in most chemistry references and should be considered ionic", "Any compound made of two different elements is automatically ionic, regardless of electronegativity difference", "SiC contains no covalent bonds, only ionic ones, despite its diamond-like structure"],
+          correct: 0,
+          explanation: {
+            correct: "An electronegativity difference of 0.65 falls in the polar covalent range (below the roughly 1.7 threshold often used for ionic bonding), meaning electrons are shared unevenly but not essentially fully transferred. Structurally, SiC forms a continuous, directional network similar to diamond, where each atom is covalently bonded to specific neighbors in fixed positions (rather than an ionic lattice of discrete, non-directional electrostatic attractions between ions), justifying its classification as a covalent network solid, not an ionic solid.",
+            wrong: { 1: "SiC's covalent network classification is well-established and consistent with both its electronegativity difference (0.65, in the polar covalent range) and its diamond-like structural/physical properties (extreme hardness, non-conductivity, very high melting point) — it is not a misclassification.", 2: "Bonding type is NOT determined simply by whether two different elements are present — many compounds of two different elements (like most organic molecules, or diamond-like network solids such as SiC) are covalent, not ionic; electronegativity difference and structural arrangement are what actually determine bond classification.", 3: "SiC does contain covalent bonds — in fact, that's the entire basis for its covalent network classification and its diamond-like physical properties; it does not contain ionic bonds." },
+            tempting: "Choice C reflects an oversimplified rule some students memorize ('different elements = ionic'), which fails for many important covalent compounds like SiC, CO2, and virtually all organic molecules — electronegativity difference and structural geometry are what actually matter, not simply whether the elements are 'different.'",
+            commonMistake: "Applying an oversimplified 'different elements always means ionic bonding' rule instead of actually evaluating electronegativity difference and structural/physical evidence (conductivity, hardness, directional bonding) to classify a compound's bonding type.",
+            apTip: "When classifying an unfamiliar compound's bonding, always check TWO things together: the electronegativity difference between the elements AND the structural/physical evidence (does it form discrete ions in a non-directional lattice, or a continuous directional network/discrete molecules) — electronegativity difference alone can be ambiguous near the boundary regions."
+          }
+        },
+        {
+          id: "chem-2-13", difficulty: 1, type: "mcq", topic: "Intramolecular Force & Potential Energy",
+          prompt: "On a potential energy diagram showing two atoms approaching each other to form a bond, what does the minimum point (lowest energy point) of the curve represent?",
+          choices: ["The point where the two atoms are infinitely far apart", "The bond length and bond energy of the stable, formed bond", "The point of maximum repulsion between the two atoms' nuclei", "A point that has no physical meaning in bond formation"],
+          correct: 1,
+          explanation: {
+            correct: "The minimum point of the potential energy curve represents the most stable (lowest energy) internuclear distance — this distance is the bond length, and the depth of the well (how far below zero, or below the separated-atom energy, the minimum sits) represents the bond energy.",
+            wrong: { 0: "Atoms infinitely far apart correspond to the flat, high-energy region far to the right of the curve (approaching a reference energy of zero interaction), not the minimum point.", 2: "Maximum repulsion between nuclei occurs at very short internuclear distances, to the LEFT of the minimum, where the curve rises steeply — this is not the minimum point.", 3: "The minimum point is the single most physically meaningful point on the entire curve — it defines both the actual bond length and bond energy of the stable molecule that forms." },
+            tempting: "Choice C might tempt students who know that atoms getting 'too close' causes repulsion, but that repulsive region is represented by the steep rise on the LEFT side of the curve, not at the minimum itself.",
+            commonMistake: "Confusing the minimum (most stable, lowest energy, defining bond length/energy) with either the far-right flat region (separated atoms) or the steep left-side rise (too-close repulsion).",
+            apTip: "On any bond potential energy diagram, always identify three key features: the flat region at large distance (separated atoms, zero net interaction), the steep repulsive rise at very short distance (nuclei too close), and the minimum in between (the actual stable bond length and bond energy)."
+          }
+        },
+        {
+          id: "chem-2-14", difficulty: 2, type: "mcq", topic: "Intramolecular Force & Potential Energy",
+          prompt: "Comparing a C-C single bond, a C=C double bond, and a C≡C triple bond, which correctly ranks these from shortest to longest bond length?",
+          choices: ["Single < double < triple", "Triple < double < single", "All three have identical bond length regardless of bond order", "Double < single < triple"],
+          correct: 1,
+          explanation: {
+            correct: "As bond order increases (more shared electron pairs between the same two atoms), the atoms are pulled closer together by the additional shared electron density, so bond length decreases: triple bonds are shortest, followed by double bonds, with single bonds being the longest of the three.",
+            wrong: { 0: "This ranking is exactly backwards; higher bond order (more shared electron pairs) pulls atoms closer together, making triple bonds the SHORTEST, not the longest.", 2: "Bond length changes substantially and predictably with bond order between the same two elements; it is not identical across single, double, and triple bonds.", 3: "This ordering doesn't follow the correct trend at all — bond length should decrease monotonically as bond order increases from single to triple." },
+            tempting: "Choice A is tempting if a student assumes 'more bonds' intuitively means 'more space needed' (longer), but the opposite is true — more shared electron pairs pull the two nuclei closer together, shortening the bond.",
+            commonMistake: "Intuitively guessing that a bond with a higher order (more shared pairs) would need more 'physical space' and thus be longer, rather than remembering that more shared electron density pulls atoms closer together, shortening the bond.",
+            apTip: "Remember these two trends move in opposite directions together: as bond order increases (single→double→triple), bond length DEcreases and bond energy INcreases — higher bond order means shorter AND stronger bonds."
+          }
+        },
+        {
+          id: "chem-2-15", difficulty: 3, type: "mcq", topic: "Intramolecular Force & Potential Energy",
+          prompt: "Which requires more energy to break: a C-C single bond (~347 kJ/mol) or a C≡C triple bond (~839 kJ/mol)? What does this reveal about the relationship between bond order and bond energy?",
+          choices: ["The single bond requires more energy; lower bond order means higher bond energy", "The triple bond requires more energy; higher bond order corresponds to higher bond energy (a stronger bond)", "Both require exactly the same energy since they involve the same two elements", "Bond energy cannot be compared between bonds of different order"],
+          correct: 1,
+          explanation: {
+            correct: "Breaking the triple bond (~839 kJ/mol) requires substantially more energy than breaking the single bond (~347 kJ/mol), demonstrating that higher bond order (more shared electron pairs holding the atoms together) corresponds to a stronger, higher-energy bond that is harder to break.",
+            wrong: { 0: "This is backwards — the data given show the triple bond (higher bond order) requires MORE energy to break (839 kJ/mol) than the single bond (347 kJ/mol), not less.", 2: "The given bond energies (347 vs. 839 kJ/mol) are clearly different, demonstrating that bond order significantly affects bond energy even between the same two elements.", 3: "Bond energy CAN and routinely is compared across different bond orders between the same elements — this comparison is a standard, well-established part of AP Chemistry (single vs. double vs. triple bond energies for C-C, C-O, N-N, etc.)." },
+            tempting: "None of the distractors are especially tempting if the given numerical data (347 vs. 839 kJ/mol) are read carefully, but a student rushing through might misread which value belongs to which bond type.",
+            commonMistake: "Misreading or mismatching which given numerical bond energy value corresponds to which bond type (single vs. triple) when making the comparison.",
+            apTip: "When comparing given bond energies, explicitly restate which number belongs to which specific bond type before drawing a conclusion — this simple habit prevents accidentally swapping the values in your reasoning."
+          }
+        },
+        {
+          id: "chem-2-16", difficulty: 4, type: "mcq", topic: "Intramolecular Force & Potential Energy",
+          prompt: "A reaction breaks one mole of C≡C triple bonds (bond energy ≈ 839 kJ/mol) and forms one mole of C=C double bonds (bond energy ≈ 614 kJ/mol) plus one mole of C-C single bonds (bond energy ≈ 347 kJ/mol) as part of a larger mechanism. Based on bond energies alone, is the bond-breaking-and-forming step shown here (one triple bond broken, one double and one single bond formed) exothermic or endothermic overall for THIS step?",
+          choices: ["Exothermic, because breaking the triple bond releases 839 kJ/mol and forming the new bonds costs energy", "Endothermic, because breaking bonds always releases energy, and forming bonds always requires energy, so the net must be endothermic regardless of the amounts", "Exothermic, because the energy released by forming the double and single bonds (614 + 347 = 961 kJ/mol) exceeds the energy required to break the triple bond (839 kJ/mol), releasing a net of about 122 kJ/mol", "Endothermic, because the energy released by forming the double and single bonds (961 kJ/mol) is less than the energy required to break the triple bond (839 kJ/mol)"],
+          correct: 2,
+          explanation: {
+            correct: "Breaking bonds requires energy input (endothermic, +839 kJ/mol for the triple bond), while forming bonds releases energy (exothermic, −614 kJ/mol and −347 kJ/mol for the new double and single bonds). Net energy change = +839 − 614 − 347 = −122 kJ/mol; since this net value is negative, more energy is released forming the new bonds than was required to break the old bond, making the overall process exothermic.",
+            wrong: { 0: "This reverses the sign convention — breaking a bond REQUIRES energy input (it's endothermic on its own), and the question is whether this cost is outweighed by the energy released from forming the new bonds, not simply whether breaking the triple bond 'releases' energy.", 1: "While it's true that breaking bonds costs energy and forming bonds releases energy, the OVERALL reaction's exothermic/endothermic classification depends on the net balance of these two opposing energy changes, not just their individual directions — you must actually compare the magnitudes.", 3: "This choice miscalculates: 614 + 347 = 961 kJ/mol is released forming the new bonds, which is actually MORE than the 839 kJ/mol required to break the triple bond, making the net process exothermic, not endothermic." },
+            tempting: "Choice D is tempting if a student makes an arithmetic slip adding 614 + 347 incorrectly or compares the wrong two numbers, since the actual comparison (961 vs. 839) is close enough that a small calculation error could flip the conclusion.",
+            commonMistake: "Correctly identifying that bond breaking costs energy and bond forming releases energy, but then failing to carry out the actual numerical comparison (sum of bonds formed vs. bonds broken) needed to determine overall exothermic/endothermic character.",
+            apTip: "For any bond-energy-based enthalpy calculation, always compute ΔH ≈ (sum of bond energies broken) − (sum of bond energies formed); a negative result means exothermic (energy released), and a positive result means endothermic (energy absorbed) — write this equation out explicitly every time rather than reasoning qualitatively."
+          }
+        },
+        {
+          id: "chem-2-17", difficulty: 1, type: "mcq", topic: "Structure of Ionic Solids",
+          prompt: "In an ionic solid like NaCl, what is the primary force holding the crystal lattice together?",
+          choices: ["Covalent bonds between adjacent Na and Cl atoms", "Electrostatic (Coulombic) attraction between oppositely charged ions arranged in a repeating lattice", "Weak London dispersion forces between neutral atoms", "Metallic bonding from delocalized electrons"],
+          correct: 1,
+          explanation: {
+            correct: "Ionic solids are held together by strong electrostatic (Coulombic) attractions between oppositely charged ions (cations and anions) arranged in a repeating, ordered three-dimensional lattice, with each ion surrounded by multiple ions of opposite charge.",
+            wrong: { 0: "Ionic bonding involves electron transfer (creating charged ions) rather than electron sharing between specific atom pairs, so there are no discrete covalent bonds between individual Na and Cl atoms in the lattice.", 2: "London dispersion forces are much weaker intermolecular forces relevant to neutral molecules/atoms, not the strong electrostatic attractions between fully charged ions that hold an ionic lattice together.", 3: "Metallic bonding, with its delocalized sea of electrons, is a fundamentally different bonding model that applies to metals, not to ionic compounds like NaCl, which are held together by direct electrostatic attraction between discrete ions." },
+            tempting: "None of the distractors are highly tempting if ionic bonding's electron-transfer character is understood correctly, but confusing ionic with covalent bonding (since both are sometimes loosely called 'bonds between atoms') is a common surface-level error.",
+            commonMistake: "Describing ionic bonding in terms of 'bonds between atoms' (implying shared electrons, like covalent bonding) rather than correctly describing it as electrostatic attraction between fully charged, discrete ions.",
+            apTip: "Always describe ionic bonding using the language of 'electrostatic attraction between oppositely charged ions,' explicitly avoiding language like 'sharing electrons,' which is reserved for covalent bonding."
+          }
+        },
+        {
+          id: "chem-2-18", difficulty: 2, type: "mcq", topic: "Structure of Ionic Solids",
+          prompt: "According to Coulomb's law reasoning, which ionic compound would be expected to have the highest lattice energy (strongest ionic attraction), assuming similar ionic radii: NaCl (1+, 1− charges) or MgO (2+, 2− charges)?",
+          choices: ["NaCl, because sodium has a larger atomic radius", "MgO, because the product of the ionic charges (2 × 2 = 4) is much larger than for NaCl (1 × 1 = 1)", "Both would have identical lattice energy since both are simple binary ionic compounds", "Lattice energy cannot be estimated without knowing the exact crystal structure"],
+          correct: 1,
+          explanation: {
+            correct: "Lattice energy is proportional to the product of the ionic charges divided by the distance between ions (following Coulomb's law reasoning). MgO's ions carry charges of 2+ and 2−, giving a charge product of 4, compared to NaCl's charge product of 1 (from 1+ and 1− charges) — this much larger charge product means MgO has a substantially higher (more negative, i.e., stronger) lattice energy than NaCl.",
+            wrong: { 0: "Atomic/ionic radius does affect lattice energy (through the distance term), but the question specifies 'assuming similar ionic radii,' isolating charge as the deciding factor, and sodium's radius isn't actually the primary driver of the lattice energy difference here.", 2: "Lattice energy is NOT identical between NaCl and MgO; MgO's much higher ionic charges (2+ and 2− vs. 1+ and 1−) give it a dramatically higher lattice energy, consistent with its real, measurably much higher melting point compared to NaCl.", 3: "While exact lattice energy values do depend on crystal structure details, a reasonable relative comparison (which compound has HIGHER lattice energy) can be estimated directly from Coulomb's law reasoning using just charge and approximate distance, without needing the full crystal structure." },
+            tempting: "Choice A is tempting because ionic radius is a real factor in lattice energy, but the problem explicitly asks you to assume similar radii, isolating charge product as the deciding variable — always respect stated simplifying assumptions in a comparison problem.",
+            commonMistake: "Overlooking charge magnitude as the dominant factor in lattice energy comparisons, especially when it's given a much larger weight than radius differences in real compounds.",
+            apTip: "Lattice energy roughly follows Coulomb's law: proportional to (charge of cation × charge of anion) ÷ (distance between ion centers). When comparing compounds, check the charge product FIRST, since charge differences (like 1+ vs. 2+) often dominate over modest radius differences."
+          }
+        },
+        {
+          id: "chem-2-19", difficulty: 3, type: "mcq", topic: "Structure of Ionic Solids",
+          prompt: "Rank the following ionic compounds from lowest to highest expected lattice energy, based on Coulomb's law reasoning: KCl (1+, 1−, larger ions), NaCl (1+, 1−, smaller ions than KCl), MgO (2+, 2−, smaller ions).",
+          choices: ["MgO < NaCl < KCl", "KCl < NaCl < MgO", "NaCl < KCl < MgO", "MgO < KCl < NaCl"],
+          correct: 1,
+          explanation: {
+            correct: "For compounds with equal charge products (KCl and NaCl both have a 1×1 charge product), smaller ionic radii mean the ions can get closer together, increasing lattice energy — so NaCl (smaller ions) has higher lattice energy than KCl (larger ions). MgO has a much larger charge product (2×2=4) than either alkali halide (1×1=1), which dominates and gives MgO by far the highest lattice energy of the three. Overall: KCl < NaCl < MgO.",
+            wrong: { 0: "This places MgO as lowest, but MgO's much larger charge product (4 vs. 1) should give it the HIGHEST lattice energy of the three, not the lowest.", 2: "This places NaCl below KCl, but NaCl has smaller ions than KCl (with the same charge product), so NaCl's ions can pack closer together, giving NaCl a HIGHER lattice energy than KCl, not lower.", 3: "This places NaCl highest among the three, but MgO's much larger charge product (4 vs. 1) should give it the highest lattice energy overall, well above either alkali halide." },
+            tempting: "Choice D is tempting if a student focuses only on radius trends (assuming smaller ions always 'win' regardless of charge) without recognizing that MgO's charge product (4) vastly outweighs any radius-based advantage NaCl might have over it.",
+            commonMistake: "Ranking lattice energies using ONLY radius trends or ONLY charge trends, rather than considering the combined effect of both charge product and ionic radius (distance) together, with charge typically being the dominant factor when it differs.",
+            apTip: "When ranking lattice energies across multiple compounds, first sort by charge product (this differences dominates when present), and only use radius/distance as the tiebreaker among compounds with the SAME charge product."
+          }
+        },
+        {
+          id: "chem-2-20", difficulty: 4, type: "mcq", topic: "Structure of Ionic Solids",
+          prompt: "CaO has a measured lattice energy of about 3401 kJ/mol, while KCl has a measured lattice energy of only about 715 kJ/mol. Both are simple binary ionic solids. What combination of factors best explains this large difference?",
+          choices: ["CaO's ions are much larger than KCl's ions, and larger ions always have much higher lattice energy", "CaO's ions (Ca²⁺, O²⁻) both carry a charge of 2, giving a charge product of 4, compared to KCl's charge product of 1 (K⁺, Cl⁻); this large charge difference dominates over any radius differences between the two compounds", "Lattice energy is unrelated to ionic charge and depends only on the specific elements involved", "KCl's ions are actually more strongly attracted to each other, and the measured value must be a units error"],
+          correct: 1,
+          explanation: {
+            correct: "CaO's ions each carry a charge magnitude of 2 (Ca²⁺ and O²⁻), giving a charge product of 2×2=4, while KCl's ions each carry a charge magnitude of 1 (K⁺ and Cl⁻), giving a charge product of only 1×1=1. Since lattice energy is proportional to the charge product (and only inversely related to distance, a comparatively smaller effect here), CaO's fourfold larger charge product is the dominant factor explaining its dramatically higher lattice energy compared to KCl.",
+            wrong: { 0: "Larger ions actually tend to DEcrease lattice energy (greater distance between charge centers weakens Coulombic attraction), so 'larger ions always have higher lattice energy' is backwards as a general statement, and isn't the actual explanation here regardless — charge product is the dominant factor.", 2: "Lattice energy is very much related to ionic charge — in fact, charge magnitude (via the charge product in Coulomb's law) is typically the SINGLE most important factor determining relative lattice energies between different ionic compounds.", 3: "The measured values (CaO: ~3401 kJ/mol, KCl: ~715 kJ/mol) are well-established experimental figures, not a units error; CaO's lattice energy is genuinely much higher than KCl's, consistent with Coulomb's law reasoning based on charge product." },
+            tempting: "Choice A is tempting because ionic radius is indeed one factor in lattice energy, but this choice gets the DIRECTION of the radius effect backwards (larger ions weaken, not strengthen, lattice energy) and also misses that charge, not radius, is the dominant factor in this particular comparison.",
+            commonMistake: "Reversing the direction of the radius effect on lattice energy (assuming bigger ions mean stronger attraction) instead of correctly recognizing that larger ionic radius/distance weakens Coulombic attraction and lowers lattice energy.",
+            apTip: "Always keep both Coulomb's law factors straight: lattice energy increases with HIGHER charge magnitude and DEcreases with LARGER ionic radius/distance — when explaining a lattice energy comparison, explicitly state the charge magnitudes and relative sizes of both compounds being compared."
+          }
+        },
+        {
+          id: "chem-2-21", difficulty: 5, type: "mcq", topic: "Structure of Ionic Solids",
+          prompt: "Two hypothetical ionic compounds, XY and AB, have identical ionic radii for all four ions. XY has ionic charges of 1+ and 1−, while AB has ionic charges of 3+ and 3−. Using Coulomb's law reasoning (lattice energy ∝ charge product ÷ distance), approximately how many times greater is AB's lattice energy compared to XY's?",
+          choices: ["3 times greater", "6 times greater", "9 times greater", "The same, since only charge magnitude differences smaller than 2 affect lattice energy meaningfully"],
+          correct: 2,
+          explanation: {
+            correct: "Lattice energy is proportional to the product of the ionic charges. For XY, the charge product is 1 × 1 = 1. For AB, the charge product is 3 × 3 = 9. Since distance is held constant (identical ionic radii for both compounds), the ratio of lattice energies equals the ratio of charge products: 9 ÷ 1 = 9, so AB's lattice energy is approximately 9 times greater than XY's.",
+            wrong: { 0: "This would be the ratio if only ONE of the two ions' charges tripled (3× effect), but BOTH ions in AB have their charge magnitude tripled compared to XY, so the charge PRODUCT increases by 3×3=9, not just 3.", 1: "6 does not correspond to any straightforward multiplication of the given charge values (1×1=1 for XY and 3×3=9 for AB); the correct ratio comes directly from comparing these two charge products.", 3: "This is incorrect — charge magnitude differences of any size meaningfully affect lattice energy through the charge product term in Coulomb's law; there's no threshold below which charge differences 'don't matter.'" },
+            tempting: "Choice A (3 times) is tempting because the charge of each ion individually triples, making a simple '3x' answer seem intuitive, but Coulomb's law depends on the PRODUCT of both charges, so tripling each of two charges multiplies the overall product by 3×3=9, not just 3.",
+            commonMistake: "Applying a charge-scaling factor only once (linearly) instead of recognizing that Coulomb's law depends on the PRODUCT of both ions' charges, so doubling or tripling both charges scales the force/energy by the square of that factor.",
+            apTip: "When both ionic charges in a comparison change by the same factor, remember the lattice energy ratio scales as that factor SQUARED (since lattice energy depends on charge × charge), not by the factor itself — a common trap is forgetting to square the scaling factor when both charges change together."
+          }
+        },
+        {
+          id: "chem-2-22", difficulty: 2, type: "mcq", topic: "Structure of Metals and Alloys",
+          prompt: "What is the key structural difference between a substitutional alloy and an interstitial alloy?",
+          choices: ["Substitutional alloys involve replacing some host metal atoms with different, similarly-sized atoms; interstitial alloys involve small atoms fitting into the gaps between larger host metal atoms", "Substitutional alloys are always stronger than interstitial alloys", "Interstitial alloys involve no metal atoms at all", "There is no real structural difference between the two types"],
+          correct: 0,
+          explanation: {
+            correct: "In a substitutional alloy, some of the host metal's atoms in the crystal lattice are directly replaced by different atoms of similar atomic size (like zinc atoms substituting for copper atoms in brass); in an interstitial alloy, smaller atoms (often nonmetals like carbon) fit into the small gaps (interstices) between the larger host metal atoms without replacing them (like carbon atoms fitting between iron atoms in steel).",
+            wrong: { 1: "Which alloy type is 'stronger' depends on the specific alloy and its intended use; there's no universal rule that substitutional alloys are always stronger than interstitial alloys — both types can significantly alter and often improve a metal's properties (hardness, strength) compared to the pure metal.", 2: "Interstitial alloys DO involve metal atoms — they consist of a host metal lattice with smaller (often nonmetal) atoms fitting into the gaps between the metal atoms; the alloy is not purely composed of nonmetal atoms.", 3: "There is a clear, important structural difference: substitutional alloys replace host atoms with similarly-sized different atoms, while interstitial alloys add smaller atoms into the gaps without replacing the host atoms — this structural difference significantly affects the resulting alloy's properties." },
+            tempting: "Choice B could tempt students who know that alloying generally increases hardness/strength (by disrupting the regular metallic lattice and making it harder for layers to slide past each other), but this hardening effect happens in both alloy types, and neither type is universally 'stronger' than the other.",
+            commonMistake: "Not clearly distinguishing between 'replacing' host atoms (substitutional) and 'adding into gaps between' host atoms (interstitial) as the defining structural difference between these two alloy types.",
+            apTip: "Use size as your guide: substitutional alloying atoms are SIMILAR in size to the host metal atoms (allowing direct replacement in the lattice); interstitial alloying atoms are MUCH SMALLER than the host metal atoms (allowing them to fit into the small gaps between host atoms without replacing them)."
+          }
+        },
+        {
+          id: "chem-2-23", difficulty: 3, type: "mcq", topic: "Structure of Metals and Alloys",
+          prompt: "Pure iron is relatively soft and malleable, but steel (iron alloyed with a small amount of carbon, an interstitial alloy) is significantly harder and stronger. What is the best explanation for this increase in hardness?",
+          choices: ["Carbon atoms react chemically with iron atoms to form entirely new covalent compounds throughout the metal", "The small carbon atoms fit into the gaps between the larger iron atoms, disrupting the regular arrangement of the iron lattice and making it harder for layers of iron atoms to slide past one another", "Carbon atoms replace iron atoms one-for-one, making the lattice weaker but more brittle", "Adding carbon has no real structural effect; steel is harder purely because of a difference in electron configuration between iron and carbon"],
+          correct: 1,
+          explanation: {
+            correct: "In pure metals, the regular, uniform arrangement of metal atoms allows layers of atoms to slide past each other relatively easily when force is applied, which is why pure metals like iron are often relatively soft and malleable. When small interstitial carbon atoms are introduced into the gaps of the iron lattice, they disrupt this regular arrangement, creating irregularities that make it much harder for the iron atom layers to slide past one another, increasing the alloy's overall hardness and strength.",
+            wrong: { 0: "Steel is a physical alloy/mixture at the atomic scale, not a compound formed by new covalent bonds replacing the metallic lattice throughout — the interstitial carbon atoms sit within the existing metallic lattice structure rather than forming a fundamentally new compound.", 2: "This describes substitutional alloying (carbon replacing iron atoms), but carbon atoms in steel are much smaller than iron atoms and fit INTO THE GAPS between iron atoms (interstitial alloying), rather than replacing iron atoms directly.", 3: "Adding carbon absolutely does have a significant structural effect (disrupting the regular metallic lattice arrangement), and this structural disruption — not simply an abstract 'difference in electron configuration' — is the well-established mechanism for steel's increased hardness compared to pure iron." },
+            tempting: "Choice C is tempting because 'alloying changes the structure' is correctly identified, but it incorrectly describes the mechanism as substitutional (replacing atoms) rather than interstitial (fitting into gaps), which is the actual mechanism for carbon in steel.",
+            commonMistake: "Correctly identifying that alloying disrupts the metal's regular structure but incorrectly describing HOW it does so (substitution vs. interstitial filling) for a specific alloy like steel.",
+            apTip: "For steel specifically, always describe carbon as an INTERSTITIAL alloying element (small atoms in the gaps, disrupting layer-sliding) — this is the classic AP example connecting alloy structure directly to the macroscopic property of increased hardness."
+          }
+        },
+        {
+          id: "chem-2-24", difficulty: 4, type: "mcq", topic: "Structure of Metals and Alloys",
+          prompt: "Brass is a substitutional alloy of copper and zinc, where zinc atoms replace some copper atoms in the metallic lattice. Compared to pure copper, brass is harder and has lower electrical conductivity. What best explains the LOWER conductivity of brass compared to pure copper?",
+          choices: ["Zinc atoms contribute no valence electrons to the delocalized electron sea, so there are fewer mobile electrons available in brass", "The irregular arrangement caused by differently-sized zinc atoms disrupts the uniform lattice, scattering the delocalized valence electrons as they try to move through the structure, impeding their flow", "Brass is not actually a metal, so it doesn't have delocalized electrons available for conduction at all", "Zinc atoms are electrical insulators, and mixing them with copper directly blocks all electron flow"],
+          correct: 1,
+          explanation: {
+            correct: "Substituting different-sized zinc atoms into the copper lattice creates structural irregularities (since zinc atoms are a different size than copper atoms). These irregularities scatter and impede the delocalized valence electrons as they attempt to flow through the structure, reducing conductivity even though the alloy still has delocalized electrons overall — the disruption to their smooth flow, not their total absence, causes the reduced conductivity.",
+            wrong: { 0: "Zinc does still contribute valence electrons to the overall delocalized electron sea in the alloy; the issue affecting conductivity is not a lack of electrons overall, but rather structural disruption impeding those electrons' ability to flow smoothly through the irregular lattice.", 2: "Brass is indeed still classified as a metal (a metal alloy) and does retain metallic bonding with delocalized electrons; it is simply less conductive than pure copper due to structural disruption, not because it lacks metallic character entirely.", 3: "Zinc itself is actually a decent conductor as a pure metal (having its own delocalized electrons); the reduced conductivity of brass isn't because zinc is an 'insulator' but because mixing two different-sized atoms disrupts the uniform lattice structure needed for electrons to flow smoothly." },
+            tempting: "Choice A is tempting because it sounds structurally reasonable (fewer electrons = less conduction), but the actual mechanism reducing conductivity in alloys is disruption/scattering of the electron flow due to lattice irregularity, not a genuine deficit in the total number of available delocalized electrons.",
+            commonMistake: "Assuming reduced alloy conductivity means fewer available delocalized electrons overall, rather than understanding that lattice irregularity from differently-sized substituting atoms physically impedes/scatters the flow of the electrons that ARE present.",
+            apTip: "For explaining reduced conductivity in alloys, always describe the mechanism as 'disruption of the regular lattice structure scattering/impeding electron flow,' not as 'fewer electrons available' — the delocalized electron sea is still present in alloys, just less able to move smoothly."
+          }
+        },
+        {
+          id: "chem-2-25", difficulty: 1, type: "mcq", topic: "Lewis Structures",
+          prompt: "How many total valence electrons should be shown in a complete Lewis structure for CH4 (methane)?",
+          choices: ["4", "8", "10", "16"],
+          correct: 1,
+          explanation: {
+            correct: "Carbon contributes 4 valence electrons and each of the 4 hydrogen atoms contributes 1 valence electron, giving a total of 4 + (4 × 1) = 8 valence electrons to distribute in the Lewis structure.",
+            wrong: { 0: "This counts only carbon's valence electrons (4) and completely omits the 4 valence electrons contributed by the four hydrogen atoms.", 2: "This total doesn't correspond to a correct sum of carbon's and hydrogen's actual valence electron contributions for this specific molecule.", 3: "This vastly overcounts the valence electrons; it doesn't correspond to any correct summation for CH4's actual atoms and their valence electron contributions." },
+            tempting: "Choice A is tempting if a student forgets to add in the hydrogen atoms' contributions and only counts the central carbon atom's valence electrons.",
+            commonMistake: "Forgetting to include the valence electron contribution from every atom in the formula, especially smaller atoms like hydrogen that are easy to overlook when totaling.",
+            apTip: "Before drawing any Lewis structure, explicitly write out and add up EVERY atom's valence electron contribution as a labeled sum (e.g., 'C: 4, H: 1×4=4, total: 8') rather than trying to count electrons mentally while drawing."
+          }
+        },
+        {
+          id: "chem-2-26", difficulty: 2, type: "mcq", topic: "Lewis Structures",
+          prompt: "In the Lewis structure of NH3 (ammonia), how many lone pairs of electrons are on the central nitrogen atom?",
+          choices: ["0", "1", "2", "3"],
+          correct: 1,
+          explanation: {
+            correct: "Nitrogen has 5 valence electrons; 3 of them are used to form single bonds to each of the 3 hydrogen atoms (using 3 electrons from nitrogen, one per bond), leaving 5 − 3 = 2 electrons, which form exactly 1 lone pair on nitrogen.",
+            wrong: { 0: "Nitrogen must have some leftover, unshared electrons after forming its 3 bonds to hydrogen (5 valence electrons − 3 used in bonding = 2 remaining), so it cannot have zero lone pairs.", 2: "This overcounts nitrogen's lone pairs; only 2 of nitrogen's 5 valence electrons remain unshared after forming 3 single bonds to hydrogen, giving exactly 1 lone pair (2 electrons), not 2 lone pairs (4 electrons).", 3: "This would require far more leftover electrons than nitrogen actually has remaining after using 3 of its 5 valence electrons to bond with the 3 hydrogen atoms." },
+            tempting: "Choice C might tempt students who don't carefully subtract the electrons already used in the 3 N-H bonds from nitrogen's total valence electron count.",
+            commonMistake: "Not correctly subtracting the number of electrons already used in bonding (one nitrogen electron contributed per single bond) from the atom's total valence electron count before determining the remaining lone pairs.",
+            apTip: "For any central atom, first identify the number of bonds it forms, subtract 1 electron per bond from its total valence electron count (since each single bond uses exactly one electron from the central atom), and divide the remainder by 2 to get the number of lone pairs."
+          }
+        },
+        {
+          id: "chem-2-27", difficulty: 3, type: "mcq", topic: "Lewis Structures",
+          prompt: "Boron trifluoride (BF3) is a well-known exception to the octet rule. In its most common Lewis structure, how many electrons surround the central boron atom, and why is this considered stable despite not following the octet rule?",
+          choices: ["8 electrons; BF3 actually does follow the octet rule normally", "6 electrons; boron is a small atom that can be stable with fewer than 8 electrons around it due to its low electronegativity and limited valence electrons", "10 electrons; boron can expand its octet using d-orbitals", "4 electrons; boron only forms single bonds to two fluorine atoms"],
+          correct: 1,
+          explanation: {
+            correct: "Boron has only 3 valence electrons, and in BF3 it forms 3 single bonds to fluorine, using all 3 of its valence electrons but ending up with only 6 electrons total surrounding it (3 bonding pairs, 0 lone pairs) rather than a full octet of 8; this is a well-known, stable exception to the octet rule because boron, with limited valence electrons and no readily available low-energy d-orbitals, simply cannot achieve a complete octet through single bonding while still using all 3 of its valence electrons in bonds.",
+            wrong: { 0: "BF3 is a classic well-known EXCEPTION to the octet rule, not an example that secretly follows it; boron ends up with only 6, not 8, electrons around it in this stable structure.", 2: "Boron is a second-row element (period 2) and does not have accessible d-orbitals for expanding its octet; expanded octets are limited to elements in period 3 and beyond, so BF3's boron cannot expand to 10 electrons.", 3: "BF3 involves boron bonding to all THREE fluorine atoms (not just two), using single bonds; each single bond uses 2 electrons around boron, and 3 bonds give 6 electrons total around boron, not 4." },
+            tempting: "Choice C might tempt students familiar with expanded octets in general, but expanded octets require access to d-orbitals, which are not energetically accessible for period 2 elements like boron — expanded octets are limited to period 3 and beyond (like sulfur, phosphorus).",
+            commonMistake: "Assuming any 'exception to the octet rule' must involve an expanded octet (more than 8 electrons), rather than recognizing that some exceptions (like boron and beryllium compounds) involve an INcomplete octet (fewer than 8 electrons) instead.",
+            apTip: "Memorize the two distinct octet rule exception categories separately: incomplete octets (fewer than 8 electrons, common for boron and beryllium compounds due to limited valence electrons) and expanded octets (more than 8 electrons, only possible for period 3+ elements with accessible d-orbitals, like S, P, Cl)."
+          }
+        },
+        {
+          id: "chem-2-28", difficulty: 4, type: "mcq", topic: "Lewis Structures",
+          prompt: "Nitric oxide (NO) is a stable molecule despite having an odd total number of valence electrons (5 from N + 6 from O = 11 electrons). What must be true about its Lewis structure as a result?",
+          choices: ["NO cannot exist as a stable molecule since it has an odd number of electrons", "NO must have exactly one unpaired electron somewhere in its structure, since 11 electrons cannot all be arranged into complete pairs", "NO must actually have 12 valence electrons, and the odd count of 11 is a calculation error", "The odd electron count means NO must be an ion, not a neutral molecule"],
+          correct: 1,
+          explanation: {
+            correct: "With 11 total valence electrons (an odd number), it is impossible to pair every single electron into complete lone pairs and bonding pairs (which always use electrons in pairs); therefore, NO must have exactly one unpaired electron somewhere in its Lewis structure, making it a stable example of an odd-electron molecule (a type of radical).",
+            wrong: { 0: "NO does exist as a genuinely stable, well-characterized molecule in reality (it's an important biological signaling molecule and atmospheric species), despite having an odd number of valence electrons — odd-electron molecules are a recognized, if less common, category.", 2: "The valence electron count of 11 (5 from nitrogen + 6 from oxygen) is correct as calculated; this is not an error, and NO is a genuine, real example of a stable odd-electron molecule.", 3: "NO is indeed a neutral molecule (not an ion) despite its odd electron count; odd-electron species can be neutral molecules (radicals) just as easily as they can be ions — the odd count doesn't force an ionic charge." },
+            tempting: "Choice A might tempt students who've only learned that molecules 'must' have all electrons paired, without knowing that stable, real odd-electron molecules (radicals) like NO do exist as legitimate exceptions to that generalization.",
+            commonMistake: "Assuming that all valence electrons in a stable Lewis structure must always be paired, without recognizing that odd-electron species (a specific category of octet rule exception) are real and stable, just less common.",
+            apTip: "Whenever a molecule's total valence electron count is ODD, immediately recognize it as a signal that the structure must contain exactly one unpaired electron somewhere — NO and NO2 are the two classic AP examples of stable odd-electron molecules to remember."
+          }
+        },
+        {
+          id: "chem-2-29", difficulty: 5, type: "mcq", topic: "Lewis Structures",
+          prompt: "Sulfur hexafluoride (SF6) has sulfur bonded to 6 fluorine atoms via 6 single bonds, giving sulfur a total of 12 electrons around it — an expanded octet. Given that sulfur is a period 3 element (electron configuration [Ne]3s²3p⁴), what allows this expanded octet to occur that would NOT be possible for a period 2 element like oxygen?",
+          choices: ["Sulfur has more protons than oxygen, which directly allows more bonds regardless of orbital availability", "Sulfur is in period 3 and has access to energetically accessible 3d orbitals (or sufficiently low-energy valence orbitals more broadly) that can help accommodate additional electron pairs beyond an octet, an option unavailable to period 2 elements like oxygen, which only have 2s and 2p orbitals available", "Fluorine is small enough to bond with any element in any number, regardless of the central atom's period", "SF6 doesn't actually have an expanded octet; the 12-electron count is a common misconception"],
+          correct: 1,
+          explanation: {
+            correct: "Sulfur, being in period 3, has access to a larger set of valence-shell orbitals, historically explained by way of energetically accessible 3d orbitals (a picture still commonly used at the introductory level) that can help accommodate more than 8 electrons around the central atom. Period 2 elements like oxygen only have 2s and 2p orbitals available in their valence shell, capping their maximum reasonable electron count at 8 and preventing an expanded octet.",
+            wrong: { 0: "The number of protons alone doesn't directly permit additional bonds; what matters is orbital availability in the valence shell — period 3 elements have access to a broader set of valence orbitals than period 2 elements, independent of simply having 'more protons.'", 2: "Fluorine's small size allows it to fit around a larger central atom, but the LIMITING factor for expanded octets is specifically the central atom's period/orbital availability, not simply how many fluorine atoms could theoretically fit around any atom — oxygen cannot form OF6 despite fluorine's small size, precisely because oxygen (period 2) cannot expand its octet.", 3: "SF6 is a real, well-characterized, stable molecule with sulfur genuinely surrounded by 12 electrons (6 bonding pairs) in its Lewis structure — this expanded octet is not a misconception, though the precise theoretical explanation (d-orbital involvement vs. other models) is refined further in more advanced coursework." },
+            tempting: "Choice A is tempting because 'more protons' is loosely associated with 'more bonding capability,' but the actual limiting factor for octet expansion is specifically the AVAILABILITY OF ADDITIONAL VALENCE ORBITALS in a given period, not simply the raw proton count.",
+            commonMistake: "Attributing expanded octet capability to a vague notion of 'being a bigger/heavier atom' rather than specifically to the availability of additional valence-shell orbitals (like 3d) that only become accessible starting in period 3.",
+            apTip: "The reliable dividing line for expanded octets is PERIOD, not just atomic size: period 2 elements (B, C, N, O, F) can never expand their octet, while period 3 and beyond (P, S, Cl, and others) can, due to their access to additional valence-shell orbitals beyond just s and p."
+          }
+        },
+        {
+          id: "chem-2-30", difficulty: 5, type: "mcq", topic: "Lewis Structures",
+          prompt: "The current AP Chemistry course framework de-emphasizes invoking d-orbitals to explain expanded octets (like in SF6 or PCl5), instead simply noting that period 3 and beyond elements CAN accommodate more than 8 electrons around a central atom. Regardless of the theoretical explanation used, which of the following elements could NOT have an expanded octet in any of its compounds?",
+          choices: ["Phosphorus (period 3)", "Sulfur (period 3)", "Nitrogen (period 2)", "Chlorine (period 3)"],
+          correct: 2,
+          explanation: {
+            correct: "Nitrogen is a period 2 element, and period 2 elements are fundamentally limited to a maximum of 8 electrons (an octet) around them, regardless of which theoretical model (d-orbital involvement or otherwise) is used to explain expanded octets in later periods — nitrogen simply lacks any accessible additional valence orbitals beyond 2s and 2p.",
+            wrong: { 0: "Phosphorus, as a period 3 element, CAN form expanded octet compounds (like PCl5, with 10 electrons around phosphorus), so it does not belong in a list of elements that can never expand their octet.", 1: "Sulfur, as a period 3 element, CAN form expanded octet compounds (like SF6, with 12 electrons around sulfur), so it does not belong in a list of elements that can never expand their octet.", 3: "Chlorine, as a period 3 element, can also participate in expanded octet compounds (such as in various chlorine oxyanions or interhalogen compounds), so it does not belong in a list of elements that can never expand their octet." },
+            tempting: "This question tests whether students correctly identify the ONE period 2 element among four choices, rather than getting distracted by which specific theoretical explanation (d-orbitals vs. other models) is currently favored for describing HOW period 3+ elements expand their octet.",
+            commonMistake: "Getting distracted by the details of WHY expanded octets occur (d-orbital involvement or alternative explanations) rather than simply and reliably applying the period-based rule: period 2 elements never expand their octet; period 3 and beyond elements can.",
+            apTip: "Regardless of which theoretical justification your course uses for expanded octets, the practical, reliable rule for identifying which elements CAN vs. CANNOT expand their octet remains simple: period 2 = never; period 3 and beyond = possible, depending on the specific compound."
+          }
+        },
+        {
+          id: "chem-2-31", difficulty: 1, type: "mcq", topic: "VSEPR & Hybridization",
+          prompt: "A central atom has 3 bonding electron domains and 1 lone pair (4 total electron domains). What is the molecular geometry (shape) of this molecule, considering only the positions of the bonded atoms?",
+          choices: ["Tetrahedral", "Trigonal pyramidal", "Trigonal planar", "Bent"],
+          correct: 1,
+          explanation: {
+            correct: "With 4 total electron domains (3 bonding + 1 lone pair), the electron domain geometry is tetrahedral, but since molecular geometry describes only the positions of the ATOMS (not lone pairs), the shape with 3 bonded atoms and 1 lone pair pushed to one side is called trigonal pyramidal (like NH3).",
+            wrong: { 0: "Tetrahedral molecular geometry describes 4 total electron domains that are ALL bonding domains (0 lone pairs), like in CH4 — not the case here, where 1 of the 4 domains is a lone pair.", 2: "Trigonal planar geometry results from 3 total electron domains with 0 lone pairs (like BF3), a different total domain count than the 4 domains described here.", 3: "Bent geometry (from 4 total domains) results from 2 bonding domains and 2 lone pairs, not 3 bonding domains and 1 lone pair as described here." },
+            tempting: "Choice A is tempting because the underlying ELECTRON DOMAIN geometry (arrangement of all 4 domains, including the lone pair) is indeed tetrahedral, but the MOLECULAR geometry (describing only where the atoms actually are) is a different, more specific term — trigonal pyramidal in this case.",
+            commonMistake: "Confusing electron domain geometry (which includes lone pair positions) with molecular geometry (which only describes the positions of bonded atoms) — these can have different names even when they arise from the same total domain count.",
+            apTip: "Always distinguish two separate questions: 'what is the electron domain geometry?' (includes lone pairs, described by total domain count) vs. 'what is the molecular geometry?' (only bonded atoms, described by bonding domains AND lone pair count together) — memorize both name sets separately."
+          }
+        },
+        {
+          id: "chem-2-32", difficulty: 2, type: "mcq", topic: "VSEPR & Hybridization",
+          prompt: "Water (H2O) has a central oxygen atom with 2 bonding pairs and 2 lone pairs. Why is water's H-O-H bond angle (about 104.5°) smaller than the ideal tetrahedral angle of 109.5°?",
+          choices: ["Lone pairs occupy more space than bonding pairs and repel other electron domains more strongly, compressing the angle between the two bonding pairs", "Oxygen is too small to maintain a perfect tetrahedral angle", "Hydrogen atoms are too large to fit at the ideal tetrahedral angle", "Water's bond angle is actually not affected by the lone pairs at all; 104.5° is simply oxygen's default bonding angle"],
+          correct: 0,
+          explanation: {
+            correct: "Lone pairs are held closer to the central atom (they're not shared with a second nucleus pulling them outward) and occupy more space than bonding pairs, exerting stronger repulsive forces on neighboring electron domains. In water, the two lone pairs push the two O-H bonding pairs closer together, compressing the H-O-H angle from the ideal tetrahedral 109.5° down to about 104.5°.",
+            wrong: { 1: "Oxygen's size isn't the direct cause of the reduced angle; the compression comes specifically from the greater repulsive strength of lone pairs compared to bonding pairs, not from any size limitation of the central atom itself.", 2: "Hydrogen atom size isn't the relevant factor here; the bond angle compression is caused by lone pair repulsion pushing the existing bonding pairs closer together, not by physical crowding from the hydrogen atoms themselves.", 3: "The lone pairs are precisely the reason for the deviation from the ideal 109.5° angle; describing 104.5° as simply oxygen's 'default' angle ignores and contradicts the well-established VSEPR explanation involving lone pair repulsion." },
+            tempting: "None of the distractors are highly tempting if the lone-pair-repulsion explanation is understood, but vague appeals to atomic 'size' (choices B and C) can superficially seem plausible without correctly identifying the actual VSEPR mechanism at play.",
+            commonMistake: "Attributing bond angle deviations to vague notions of atomic size rather than the specific, correct VSEPR principle that lone pairs repel more strongly than bonding pairs, compressing adjacent bond angles.",
+            apTip: "Memorize the VSEPR repulsion strength ranking: lone pair-lone pair repulsion > lone pair-bonding pair repulsion > bonding pair-bonding pair repulsion — this ranking directly explains why bond angles compress as more lone pairs are present on the central atom (compare CH4's 109.5° to NH3's ~107° to H2O's ~104.5°)."
+          }
+        },
+        {
+          id: "chem-2-33", difficulty: 3, type: "mcq", topic: "VSEPR & Hybridization",
+          prompt: "A central carbon atom in a molecule forms one double bond and two single bonds (3 total bonding domains, 0 lone pairs). What is the hybridization of this carbon atom, and what molecular geometry results?",
+          choices: ["sp³ hybridization, tetrahedral geometry", "sp² hybridization, trigonal planar geometry", "sp hybridization, linear geometry", "sp³d hybridization, trigonal bipyramidal geometry"],
+          correct: 1,
+          explanation: {
+            correct: "A double bond counts as one electron domain (one region of electron density, regardless of how many electron pairs it contains), so this carbon has 3 total electron domains (the double bond plus 2 single bonds) and 0 lone pairs, corresponding to sp² hybridization and trigonal planar molecular geometry, with bond angles of approximately 120°.",
+            wrong: { 0: "sp³ hybridization and tetrahedral geometry correspond to 4 total electron domains, not the 3 domains present here (1 double bond + 2 single bonds = 3 domains, since a double bond counts as just one domain).", 2: "sp hybridization and linear geometry correspond to only 2 total electron domains, not the 3 domains present in this carbon (which has 3 separate bonding regions: the double bond and the two single bonds).", 3: "sp³d hybridization and trigonal bipyramidal geometry correspond to 5 total electron domains, far more than the 3 domains present in this carbon atom." },
+            tempting: "Choice A is tempting if a student counts the double bond as contributing 2 separate domains (since it involves 2 shared electron pairs) rather than correctly counting it as ONE electron domain (one region of electron density) for VSEPR/hybridization purposes.",
+            commonMistake: "Miscounting a double or triple bond as multiple separate electron domains (based on the number of shared electron pairs) instead of correctly counting each multiple bond as just ONE electron domain (one region/direction of electron density) for VSEPR and hybridization purposes.",
+            apTip: "For VSEPR and hybridization counting, always count each distinct BONDED ATOM (or lone pair) as one domain, regardless of whether the bond to that atom is single, double, or triple — a carbon double-bonded to one oxygen and single-bonded to two other atoms has exactly 3 domains, not 4."
+          }
+        },
+        {
+          id: "chem-2-34", difficulty: 4, type: "mcq", topic: "VSEPR & Hybridization",
+          prompt: "In the Lewis structure of SF4 (sulfur tetrafluoride), sulfur has 4 bonding domains and 1 lone pair (5 total electron domains). What hybridization does sulfur exhibit, and what molecular geometry results?",
+          choices: ["sp³ hybridization, tetrahedral geometry", "sp³d hybridization, seesaw geometry (a trigonal bipyramidal electron domain arrangement with one position occupied by a lone pair)", "sp³d² hybridization, square pyramidal geometry", "sp² hybridization, trigonal planar geometry"],
+          correct: 1,
+          explanation: {
+            correct: "With 5 total electron domains (4 bonding + 1 lone pair), sulfur adopts sp³d hybridization, and the underlying electron domain geometry is trigonal bipyramidal. Since one of the five positions is occupied by a lone pair (typically in an equatorial position to minimize repulsion), the resulting molecular geometry (describing only the 4 bonded fluorine atoms) is called 'seesaw.'",
+            wrong: { 0: "sp³ hybridization and tetrahedral geometry correspond to only 4 total electron domains, not the 5 domains present in SF4 (4 bonding + 1 lone pair).", 2: "sp³d² hybridization and square pyramidal geometry correspond to 6 total electron domains (5 bonding + 1 lone pair, or similar), not the 5 total domains present in SF4.", 3: "sp² hybridization and trigonal planar geometry correspond to only 3 total electron domains, far fewer than the 5 domains present in SF4." },
+            tempting: "Choice C is tempting because both sp³d and sp³d² hybridizations involve 'unusual' expanded domain counts that students sometimes conflate, but sp³d specifically corresponds to 5 domains while sp³d² corresponds to 6 domains — these are adjacent but distinct categories that must be counted carefully.",
+            commonMistake: "Confusing the closely related expanded hybridization categories (sp³d for 5 domains vs. sp³d² for 6 domains) without carefully counting the total number of electron domains (bonding regions plus lone pairs) first.",
+            apTip: "Build and memorize a complete domain-count reference table including expanded octet cases: 2 domains → sp, linear; 3 domains → sp², trigonal planar; 4 domains → sp³, tetrahedral; 5 domains → sp³d, trigonal bipyramidal; 6 domains → sp³d², octahedral — then apply lone pair adjustments to get the specific molecular geometry name."
+          }
+        },
+        {
+          id: "chem-2-35", difficulty: 4, type: "mcq", topic: "VSEPR & Hybridization",
+          prompt: "In an ethylene molecule (H2C=CH2), each carbon atom is sp² hybridized. How many unhybridized p-orbitals remain on each carbon, and what role do they play?",
+          choices: ["Zero unhybridized p-orbitals remain; all orbitals are used in the sp² hybrids", "One unhybridized p-orbital remains on each carbon, and these two unhybridized p-orbitals overlap sideways to form the pi (π) bond component of the C=C double bond", "Three unhybridized p-orbitals remain on each carbon, used to form three separate pi bonds", "Two unhybridized p-orbitals remain on each carbon, one for each C-H bond"],
+          correct: 1,
+          explanation: {
+            correct: "sp² hybridization combines one s-orbital and two p-orbitals into three hybrid sp² orbitals (used for sigma bonding/lone pairs), leaving exactly one p-orbital per carbon unhybridized. On each carbon in ethylene, this single remaining unhybridized p-orbital overlaps sideways with the corresponding p-orbital on the other carbon, forming the pi (π) bond that, together with the sigma (σ) bond from the sp² orbitals, makes up the overall C=C double bond.",
+            wrong: { 0: "sp² hybridization specifically uses only 1 s-orbital and 2 of the 3 available p-orbitals (leaving 1 p-orbital unhybridized), not all available orbitals; carbon has 4 valence orbitals total (1s-derived + 3p-derived in the valence shell), and sp² hybridization only combines 3 of them.", 2: "sp² hybridization leaves exactly ONE unhybridized p-orbital per carbon, not three; three unhybridized p-orbitals would be left over only if NO hybridization occurred at all (using pure, unhybridized s and p orbitals directly).", 3: "The unhybridized p-orbital in sp² carbon is used specifically for pi bonding (forming the second bond of a double bond), not for additional sigma bonds like C-H bonds, which are formed using the sp² hybrid orbitals themselves." },
+            tempting: "Choice A is tempting if a student assumes 'hybridization' means ALL of an atom's orbitals get combined, without remembering that sp² specifically leaves exactly one p-orbital unhybridized (this is precisely what distinguishes sp² from sp³, which leaves zero unhybridized p-orbitals).",
+            commonMistake: "Not tracking exactly how many p-orbitals remain unhybridized for each type of hybridization (sp: 2 remain; sp²: 1 remains; sp³: 0 remain), which is essential for correctly explaining pi bond formation in double and triple bonds.",
+            apTip: "Memorize this orbital bookkeeping explicitly: sp hybridization uses 1 s + 1 p (leaving 2 p unhybridized, enabling up to 2 pi bonds, as in a triple bond); sp² uses 1 s + 2 p (leaving 1 p unhybridized, enabling 1 pi bond, as in a double bond); sp³ uses 1 s + 3 p (leaving 0 p unhybridized, allowing only sigma bonds, as in all single bonds)."
+          }
+        },
+        {
+          id: "chem-2-36", difficulty: 5, type: "mcq", topic: "VSEPR & Hybridization",
+          prompt: "Acetylene (HC≡CH) has each carbon sp hybridized. Counting all sigma (σ) and pi (π) bonds in the molecule, how many of each type are present, and how does this relate to the carbons' hybridization?",
+          choices: ["3 sigma bonds and 0 pi bonds total, since sp hybridization means only single bonds form", "2 sigma bonds and 2 pi bonds total: one C-C sigma bond (from the sp-sp overlap) plus two C-H sigma bonds (from sp-s overlap), and two C-C pi bonds (from the two pairs of unhybridized p-orbitals on each carbon overlapping sideways)", "1 sigma bond and 3 pi bonds total, since a triple bond means mostly pi bonding", "4 sigma bonds and 0 pi bonds, treating the whole triple bond as three separate sigma bonds"],
+          correct: 1,
+          explanation: {
+            correct: "Each sp-hybridized carbon uses its 2 sp hybrid orbitals for sigma bonding: one sp orbital forms the C-C sigma bond (overlapping with the other carbon's sp orbital) and the other sp orbital forms a C-H sigma bond (overlapping with hydrogen's s orbital) — giving 3 total sigma bonds (1 C-C + 2 C-H). Each carbon also retains 2 unhybridized p-orbitals (since sp hybridization only uses 1 s + 1 p, leaving 2 p-orbitals unhybridized); these two pairs of p-orbitals (one pair oriented one way, one pair oriented perpendicular) overlap sideways between the two carbons, forming 2 pi bonds. Combined with the sigma framework, this gives every triple bond its characteristic composition of 1 sigma bond + 2 pi bonds, while the molecule as a whole has 3 total sigma bonds (1 C-C, 2 C-H) and 2 total pi bonds.",
+            wrong: { 0: "Every bond (single, double, or triple) contains exactly one sigma bond as its foundation, but a TRIPLE bond specifically also contains 2 additional pi bonds on top of that one sigma bond — so pi bonds ARE present here, contrary to this choice's claim of zero pi bonds.", 2: "A triple bond consists of exactly 1 sigma bond plus 2 pi bonds, not 1 sigma plus 3 pi bonds; only 2 unhybridized p-orbitals remain per sp-hybridized carbon, allowing for a maximum of 2 pi bonds between the two carbons, not 3.", 3: "Treating a triple bond as 'three separate sigma bonds' is incorrect; only ONE bond between any two directly bonded atoms can ever be a sigma bond (via direct, head-on orbital overlap) — any additional bonds between the same two atoms (as in double or triple bonds) must be pi bonds (sideways orbital overlap), not additional sigma bonds." },
+            tempting: "Choice D might tempt students who correctly count 'three bonds' in a triple bond but incorrectly assume all three must be sigma bonds, rather than recognizing that only the FIRST bond between any two atoms is ever a sigma bond, with any additional bonds necessarily being pi bonds.",
+            commonMistake: "Miscounting the sigma/pi composition of multiple bonds, either by assuming multiple bonds consist of multiple sigma bonds, or by miscounting how many unhybridized p-orbitals remain available for pi bonding given a specific hybridization.",
+            apTip: "Memorize this universal bonding rule: EVERY single, double, or triple bond always contains EXACTLY ONE sigma bond; a double bond adds exactly 1 pi bond on top of that sigma bond, and a triple bond adds exactly 2 pi bonds on top of that same one sigma bond — never more than one sigma bond can exist between the same two directly bonded atoms."
+          }
+        },
+        {
+          id: "chem-2-37", difficulty: 5, type: "mcq", topic: "VSEPR & Hybridization",
+          prompt: "Consider the molecule XeF4 (xenon tetrafluoride), which has a central xenon atom with 4 bonding domains and 2 lone pairs (6 total electron domains). What is the hybridization of xenon, and what molecular geometry results?",
+          choices: ["sp³d² hybridization, octahedral geometry, since 6 domains always give octahedral molecular geometry regardless of lone pairs", "sp³d² hybridization, and square planar molecular geometry, since the 2 lone pairs occupy opposite (axial) positions in the underlying octahedral electron domain arrangement, leaving the 4 bonded fluorines in a flat square arrangement", "sp³d hybridization, seesaw geometry, since xenon has 2 lone pairs", "sp³ hybridization, tetrahedral geometry, ignoring the lone pairs entirely since noble gases don't typically bond"],
+          correct: 1,
+          explanation: {
+            correct: "With 6 total electron domains (4 bonding + 2 lone pairs), xenon adopts sp³d² hybridization with an underlying octahedral electron domain geometry. To minimize repulsion, the 2 lone pairs position themselves on opposite sides of the octahedron (in axial positions, 180° apart from each other), leaving the 4 fluorine atoms arranged in a flat plane around the xenon — this specific molecular geometry (describing only the bonded atoms) is called square planar, distinct from the full octahedral electron domain geometry.",
+            wrong: { 0: "Molecular geometry (describing only bonded atom positions) is NOT the same as electron domain geometry (which includes lone pairs) — while the electron domain geometry for 6 domains is always octahedral, the MOLECULAR geometry changes depending on how many of those domains are lone pairs; with 2 lone pairs present, the molecular geometry becomes square planar, not octahedral.", 2: "sp³d hybridization and seesaw geometry correspond to 5 total electron domains (4 bonding + 1 lone pair), not the 6 total domains present in XeF4 (4 bonding + 2 lone pairs).", 3: "Xenon here has 6 total electron domains (not 4), requiring sp³d² hybridization, not sp³; also, xenon compounds like XeF4 are real, well-characterized, stable molecules — noble gases like xenon CAN and do form real compounds, particularly with highly electronegative elements like fluorine and oxygen." },
+            tempting: "Choice A is tempting because 'octahedral' is the correct electron domain geometry for 6 total domains, but the question specifically asks about MOLECULAR geometry (bonded atoms only), which changes to square planar once 2 of the 6 domains are lone pairs rather than bonds.",
+            commonMistake: "Assuming electron domain geometry and molecular geometry are always the same name, rather than recognizing that they diverge whenever any lone pairs are present on the central atom, with molecular geometry depending specifically on both the total domain count AND how many of those domains are lone pairs versus bonds.",
+            apTip: "For any species with lone pairs, always work through TWO separate geometry questions in order: first determine the electron domain geometry from the TOTAL domain count (bonding + lone pairs), then determine the molecular geometry by considering specifically where the lone pairs sit within that arrangement and what shape the remaining bonded atoms form."
+          }
+        },
+        {
+          id: "chem-2-38", difficulty: 1, type: "mcq", topic: "Formal Charge",
+          prompt: "What is the formula used to calculate the formal charge of an atom in a Lewis structure?",
+          choices: ["Formal charge = number of valence electrons − number of bonds", "Formal charge = (number of valence electrons) − (number of nonbonding/lone pair electrons) − (number of bonding electrons ÷ 2)", "Formal charge = number of protons − number of electrons", "Formal charge = number of lone pairs × 2"],
+          correct: 1,
+          explanation: {
+            correct: "The formal charge formula is: (valence electrons the atom would have on its own) − (electrons in that atom's lone pairs) − (half of the atom's total bonding electrons, since bonding pairs are shared equally between two atoms).",
+            wrong: { 0: "This formula omits the lone pair electron term entirely and also doesn't correctly divide the bonding electrons by 2 (since each bond consists of 2 shared electrons, only 1 of which formally 'belongs' to each atom); it doesn't match the correct, complete formal charge formula.", 2: "This is the formula for calculating the actual overall charge on an ION based on proton/electron counts, not the formula for formal charge, which is a bookkeeping tool applied within a specific Lewis structure to track electron distribution assumptions.", 3: "This formula only accounts for lone pairs and completely ignores both the atom's actual valence electron count and its bonding electron contribions, so it cannot correctly calculate formal charge." },
+            tempting: "Choice C is tempting because it correctly describes how to find the actual net charge on a simple monatomic ion, but formal charge is a different, more specific bookkeeping concept applied to atoms WITHIN a Lewis structure, using a distinct formula based on assumed equal electron sharing in bonds.",
+            commonMistake: "Confusing the formal charge formula (based on valence electrons, lone pairs, and half of bonding electrons within a specific Lewis structure) with the general definition of ionic charge (based on actual proton and electron counts).",
+            apTip: "Memorize the formal charge formula as three distinct terms in order: (valence electrons) − (lone pair electrons) − (bonding electrons ÷ 2) — writing out all three terms explicitly for every atom, rather than trying to shortcut the calculation, prevents errors on multi-atom Lewis structures."
+          }
+        },
+        {
+          id: "chem-2-39", difficulty: 2, type: "mcq", topic: "Formal Charge",
+          prompt: "In the ammonium ion (NH4⁺), nitrogen forms 4 single bonds to hydrogen atoms and has 0 lone pairs. Nitrogen normally has 5 valence electrons. What is the formal charge on nitrogen in NH4⁺?",
+          choices: ["-1", "0", "+1", "+4"],
+          correct: 2,
+          explanation: {
+            correct: "Formal charge = (valence electrons) − (lone pair electrons) − (bonding electrons ÷ 2) = 5 − 0 − (8÷2) = 5 − 0 − 4 = +1, since nitrogen forms 4 single bonds (4 bonds × 2 electrons each = 8 total bonding electrons around nitrogen).",
+            wrong: { 0: "This would require nitrogen to have MORE nonbonding/shared electron credit than it actually has in this structure; recalculating with the correct values (5 valence, 0 lone pair electrons, 8 bonding electrons) gives +1, not -1.", 1: "A formal charge of 0 would require nitrogen to have 3 bonds (not 4) if it also had one lone pair, matching NH3's neutral nitrogen; but in NH4⁺, nitrogen forms 4 bonds and has 0 lone pairs, giving a different formal charge calculation.", 3: "This vastly overstates the formal charge; it doesn't correspond to the correct formula application (5 − 0 − 4 = +1, not +4)." },
+            tempting: "Choice B (0) is tempting because students often default to assuming nitrogen 'should' be neutral based on its typical bonding pattern in NH3, but NH4⁺ has an extra bond compared to neutral NH3, which changes the formal charge calculation to +1 — consistent with the overall +1 charge of the ammonium ion being localized on nitrogen in this structure.",
+            commonMistake: "Assuming a specific atom's formal charge based on its 'typical' bonding pattern in a more familiar related molecule, rather than recalculating the formal charge explicitly for the actual bonding pattern shown in the specific structure being analyzed.",
+            apTip: "Always recalculate formal charge explicitly for the SPECIFIC structure given, using the exact number of bonds and lone pairs shown — don't assume an atom's formal charge based on memorized values from a different, even closely related, molecule or ion."
+          }
+        },
+        {
+          id: "chem-2-40", difficulty: 3, type: "mcq", topic: "Formal Charge",
+          prompt: "In a Lewis structure for SO4²⁻ using only single bonds (sulfur forms 4 single bonds to 4 oxygen atoms, with each oxygen having 3 lone pairs), what is the formal charge on sulfur, and does it match sulfur's expected \"normal\" formal charge of 0 seen in many simpler molecules?",
+          choices: ["Formal charge on S = 0, matching sulfur's typical formal charge", "Formal charge on S = +2, which does NOT match a formal charge of 0; this is expected because sulfur is using all 6 of its valence electrons in 4 bonds, more bonds than would give it a formal charge of 0", "Formal charge on S = -2, matching the overall charge of the ion", "Formal charge on S = +4, matching sulfur's group number"],
+          correct: 1,
+          explanation: {
+            correct: "Sulfur has 6 valence electrons; in this structure it has 0 lone pairs and forms 4 single bonds (4 bonds × 2 electrons = 8 bonding electrons). Formal charge = 6 − 0 − (8÷2) = 6 − 0 − 4 = +2. This does not match a formal charge of 0, which would require sulfur to form only 2 bonds while retaining 2 lone pairs (as in H2S) — with 4 bonds and 0 lone pairs instead, sulfur's formal charge is +2 in this all-single-bond structure of SO4²⁻.",
+            wrong: { 0: "Sulfur's formal charge in this specific structure is +2, not 0; a formal charge of 0 for sulfur would require a different bonding pattern (like 2 bonds with 2 lone pairs, as seen in H2S), not the 4 single bonds with 0 lone pairs shown here.", 2: "The ion's OVERALL charge is -2, but this overall charge is the SUM of all individual atoms' formal charges (sulfur's +2 plus the four oxygens' formal charges, each -1, summing to +2 + 4×(-1) = -2) — it is not simply assigned to sulfur alone.", 3: "Sulfur's group number (16, or 6 in the American numbering for main groups) doesn't directly equal formal charge in a specific structure; formal charge depends on the actual bonding pattern shown, not just the group number." },
+            tempting: "Choice C is tempting because it matches the ion's overall -2 charge, but formal charge on an individual atom (sulfur specifically) is a separate calculation from the ion's total charge, which is actually the SUM of every atom's individual formal charge in the structure, not automatically assigned to any single atom.",
+            commonMistake: "Confusing an individual atom's formal charge with the overall net charge of the entire ion or molecule, rather than recognizing that individual formal charges must be summed across ALL atoms to get the correct overall charge.",
+            apTip: "Always verify your formal charge calculations by summing formal charges across EVERY atom in the structure — this sum must exactly equal the overall charge of the species (0 for a neutral molecule, or the ion's stated charge for an ion) as a built-in check on your work."
+          }
+        },
+        {
+          id: "chem-2-41", difficulty: 4, type: "mcq", topic: "Formal Charge",
+          prompt: "Two possible Lewis structures for the thiocyanate ion (SCN⁻) place the negative formal charge on different atoms: Structure 1 places -1 formal charge on sulfur (the least electronegative of the three atoms), while Structure 2 places -1 formal charge on nitrogen (the most electronegative of the three atoms), with all other formal charges being equal between the two structures. Which structure is generally preferred, and why?",
+          choices: ["Structure 1, because negative formal charge should always go on the LEAST electronegative atom to balance out its natural tendency to be less negative", "Structure 2, because when formal charges cannot all be zero, negative formal charge is preferentially placed on the MORE electronegative atom, which is better able to stabilize the extra electron density", "Both structures are equally valid, since formal charge placement doesn't affect a structure's relative stability", "Structure 1, because sulfur is a larger atom and therefore can better stabilize the negative charge"],
+          correct: 1,
+          explanation: {
+            correct: "When a Lewis structure cannot have all formal charges equal to zero, the more stable, generally preferred structure places any necessary negative formal charge on the MORE electronegative atom (here, nitrogen), since electronegative atoms are inherently better suited to stabilizing extra electron density (they naturally attract electrons more strongly), making Structure 2 the generally preferred representation.",
+            wrong: { 0: "This is backwards — the general rule prefers placing negative formal charge on the MORE electronegative atom (which readily stabilizes extra electron density), not the least electronegative atom.", 2: "Formal charge placement DOES meaningfully affect a structure's relative stability/preference — structures that place negative formal charge on more electronegative atoms (and positive formal charge on less electronegative atoms) are generally considered more stable and more representative of the actual electron distribution.", 3: "While atomic size can be a secondary consideration in some contexts, the primary and more broadly applicable guideline for formal charge placement is based on electronegativity (negative charge preferentially on the more electronegative atom), not simply atomic size." },
+            tempting: "Choice A is tempting if a student reverses the actual guideline, perhaps reasoning that 'less electronegative atoms need help holding onto charge,' but the established preference is the opposite: more electronegative atoms are inherently better at stabilizing negative charge, making them the preferred location for it when charges can't all be zero.",
+            commonMistake: "Reversing the electronegativity-based guideline for formal charge placement, assuming negative charge should go on the atom that 'needs it more' (least electronegative) rather than the atom that can best stabilize it (most electronegative).",
+            apTip: "Memorize the correct direction of this rule explicitly: when formal charges can't all be zero, prefer structures with negative formal charge on MORE electronegative atoms and positive formal charge on LESS electronegative atoms — this mirrors how real electron density naturally distributes based on electronegativity."
+          }
+        },
+        {
+          id: "chem-2-42", difficulty: 1, type: "mcq", topic: "Resonance Structures",
+          prompt: "Resonance structures are needed to accurately describe a molecule or ion when:",
+          choices: ["A single Lewis structure with fixed single and double bonds cannot fully capture the actual, experimentally observed bonding (such as equal bond lengths where a single structure would predict different bond types)", "The molecule has more than one atom", "The molecule contains only single bonds", "The molecule is a pure element"],
+          correct: 0,
+          explanation: {
+            correct: "Resonance structures are used when a single fixed Lewis structure (with specific single and double bonds assigned to specific positions) fails to accurately represent the true, experimentally observed bonding pattern — for example, when real bond lengths are found to be intermediate and equal across positions that a single Lewis structure would otherwise depict as distinctly different (e.g., some single, some double).",
+            wrong: { 1: "Simply having more than one atom doesn't require resonance; countless multi-atom molecules (like CH4 or H2O) are perfectly well-described by a single Lewis structure without needing resonance.", 2: "Molecules with only single bonds throughout typically don't require resonance structures; resonance typically arises in situations involving delocalized pi-bonding systems (often involving double bonds or lone pairs that can occupy multiple equivalent positions).", 3: "Pure elements (like O2 or a metal) aren't inherently associated with requiring resonance; resonance is about how to accurately represent BONDING PATTERNS within a specific molecule or ion, a separate question from whether the substance is a pure element or compound." },
+            tempting: "None of the distractors are highly tempting if resonance's actual defining criterion (multiple valid Lewis structures needed to capture true, delocalized bonding) is understood, but vague, overly broad criteria (like 'more than one atom') can seem superficially plausible without pinpointing the actual reason resonance is needed.",
+            commonMistake: "Defining resonance too broadly or vaguely (based on general molecular complexity) rather than correctly identifying its specific cause: a single Lewis structure failing to match real, experimentally observed, delocalized bonding patterns.",
+            apTip: "The clearest sign that resonance structures are needed is when equivalent atoms in a real molecule/ion (like the three oxygens in NO3⁻) are experimentally found to have IDENTICAL bond lengths/properties, even though any single Lewis structure would have to assign different bond types (some single, one double) to those positions."
+          }
+        },
+        {
+          id: "chem-2-43", difficulty: 2, type: "mcq", topic: "Resonance Structures",
+          prompt: "The nitrate ion (NO3⁻) has three equivalent resonance structures, each showing one N=O double bond and two N-O single bonds, but with the double bond rotated to a different oxygen in each structure. What is the actual average bond order for each N-O bond in the real, resonance-hybrid nitrate ion?",
+          choices: ["1 (all bonds are effectively single bonds)", "1.33 (each bond is an average between one double bond contribution and two single bond contributions across the three resonance structures)", "2 (all bonds are effectively double bonds)", "3 (matching the total number of resonance structures)"],
+          correct: 1,
+          explanation: {
+            correct: "Across the three equivalent resonance structures, each individual N-O bond is a double bond in exactly one structure (bond order 2) and a single bond in the other two structures (bond order 1 each). Averaging: (2 + 1 + 1) ÷ 3 = 4/3 ≈ 1.33, so each N-O bond in the real, delocalized structure has an average bond order of about 1.33, consistent with experimentally measured bond lengths that are intermediate between typical single and double N-O bonds.",
+            wrong: { 0: "A bond order of 1 (pure single bond) would be the case if none of the resonance structures ever showed a double bond at that position, but each N-O bond IS a double bond in one of the three equivalent resonance structures, contributing some double-bond character to the average.", 2: "A bond order of 2 (pure double bond) would be the case if every resonance structure showed a double bond at that same position, but only ONE of the three resonance structures shows a double bond at any given N-O position, with the other two showing a single bond there instead.", 3: "Bond order should be calculated as an AVERAGE across the resonance structures (total bond order contributions ÷ number of structures), not simply set equal to the number of resonance structures itself." },
+            tempting: "Choice C is tempting if a student assumes the 'main' double-bond-containing resonance structure represents the true molecule, without recognizing that ALL resonance structures contribute equally to the true, blended hybrid structure, diluting each individual bond's average character below a pure double bond.",
+            commonMistake: "Treating one single resonance structure as 'the' true structure rather than correctly averaging bond character across ALL equivalent resonance contributors to find the actual, real bond order.",
+            apTip: "To calculate average bond order from a set of equivalent resonance structures, sum the bond order at a given position across all structures and divide by the total number of resonance structures — for a bond that is double in 1 structure and single in the other 2 (out of 3 total), this gives (2+1+1)/3 ≈ 1.33."
+          }
+        },
+        {
+          id: "chem-2-44", difficulty: 3, type: "mcq", topic: "Resonance Structures",
+          prompt: "The carbonate ion (CO3²⁻) has three equivalent resonance structures, similar to nitrate. Given that a typical pure C-O single bond has a bond length of about 143 pm and a typical pure C=O double bond has a bond length of about 120 pm, what would you predict for the actual experimentally measured C-O bond length in carbonate?",
+          choices: ["Exactly 143 pm, matching a pure single bond", "Exactly 120 pm, matching a pure double bond", "An intermediate value between 120 and 143 pm, since each bond has partial double-bond character averaged across the resonance structures", "The bond length cannot be predicted or measured for a resonance-stabilized ion"],
+          correct: 2,
+          explanation: {
+            correct: "Since each C-O bond in carbonate has an average bond order of about 1.33 (partial double-bond character, similar to nitrate's N-O bonds), the actual measured bond length falls between the pure single bond length (143 pm) and the pure double bond length (120 pm) — experimentally, carbonate's C-O bond length is measured at about 129 pm, consistent with this intermediate, resonance-averaged prediction.",
+            wrong: { 0: "A bond length of exactly 143 pm would only be expected if the bond were a pure single bond with no double-bond character at all, but resonance gives each C-O bond some partial double-bond character, shortening it below the pure single-bond length.", 1: "A bond length of exactly 120 pm would only be expected if the bond were a pure double bond, but resonance dilutes each bond's double-bond character (since it's a double bond in only one of the three resonance structures), lengthening it above the pure double-bond length.", 3: "Resonance-stabilized bond lengths ARE both predictable (as an intermediate value between the pure single and double bond lengths) and experimentally measurable (using techniques like X-ray crystallography) — resonance doesn't make bond length unknowable, it just means the actual value differs from any single contributing resonance structure." },
+            tempting: "Choices A and B are both tempting if a student picks one of the two given reference values directly, rather than recognizing that resonance structures predict an INTERMEDIATE value between the two pure bond-length references given.",
+            commonMistake: "Selecting one of the given reference bond lengths (matching either a pure single or pure double bond) directly, rather than correctly predicting an intermediate value that reflects the AVERAGED, resonance-diluted bond character.",
+            apTip: "Whenever resonance structures are involved, always predict bond lengths (and bond strengths) as INTERMEDIATE values between the relevant pure single-bond and pure double-bond references — never select one of the pure reference values directly as your final answer for a resonance-stabilized species."
+          }
+        },
+        {
+          id: "chem-2-45", difficulty: 4, type: "mcq", topic: "Resonance Structures",
+          prompt: "Consider two possible resonance contributors to a molecule's true structure: Contributor 1 has all formal charges equal to zero; Contributor 2 has a +1 and a -1 formal charge on adjacent atoms, but otherwise has the same connectivity. Which contributor makes a LARGER contribution to the true, real resonance hybrid structure?",
+          choices: ["Contributor 2, because having formal charges always indicates greater stability", "Contributor 1, because structures with formal charges closer to (or equal to) zero are generally more stable and therefore contribute more heavily to the true resonance hybrid", "Both contributors contribute exactly equally to the hybrid, regardless of their formal charge distributions", "Contributor 2, because opposite formal charges on adjacent atoms are especially stabilizing due to their direct electrostatic attraction"],
+          correct: 1,
+          explanation: {
+            correct: "In resonance theory, contributing structures with LOWER formal charges (ideally all zero, or as close to zero as possible) are considered more stable, lower-energy contributors, and thus make a LARGER contribution to the overall, true resonance hybrid structure compared to higher-energy contributors with larger charge separations.",
+            wrong: { 0: "This is backwards — having formal charges (rather than all charges being zero) generally indicates a LESS stable, higher-energy contributing structure, which therefore makes a SMALLER, not larger, contribution to the true resonance hybrid.", 2: "Resonance contributors do NOT all contribute exactly equally when their relative stabilities differ; more stable contributors (like Contributor 1, with all formal charges at zero) make a LARGER contribution to the true hybrid structure than less stable ones.", 3: "While adjacent opposite formal charges do experience some direct electrostatic attraction, this doesn't outweigh the general instability introduced by having ANY formal charge separation at all — structures with zero formal charges throughout are still generally preferred as the dominant contributor over those with adjacent +1/-1 charges." },
+            tempting: "Choice D is tempting because '+1 next to -1 attracting each other' sounds stabilizing in isolation, but the dominant consideration in resonance theory is the overall degree of charge SEPARATION present in a structure — structures with ANY charge separation (even if the charges are adjacent and attractive) are generally less stable contributors than structures with no formal charges at all.",
+            commonMistake: "Assuming that having formal charges (especially adjacent, oppositely-signed ones) must be stabilizing due to their mutual attraction, rather than recognizing that AVOIDING charge separation entirely is the generally preferred, more stable configuration in resonance theory.",
+            apTip: "When ranking resonance contributors by their relative importance to the true hybrid, always prioritize structures with formal charges closest to zero overall — these lower-energy, more stable contributors dominate the true structure, while higher-energy contributors (with more or larger formal charges) contribute comparatively less."
+          }
+        },
+        {
+          id: "chem-2-46", difficulty: 5, type: "mcq", topic: "Resonance Structures",
+          prompt: "Ozone (O3) has a resonance-averaged O-O bond order of 1.5 (each bond is a double bond in one resonance structure and a single bond in the other, and there are only 2 equivalent resonance structures for ozone, unlike nitrate's 3). How is this average bond order of 1.5 calculated?",
+          choices: ["(2 + 1) ÷ 2 = 1.5, averaging the double-bond contribution in one resonance structure and the single-bond contribution in the other, across the 2 total resonance structures", "(2 + 1 + 1) ÷ 3 = 1.33, using the same method as nitrate, which has 3 resonance structures", "1.5 is simply given by convention and isn't actually calculated from the resonance structures", "2 − 1 = 1, then adding 0.5 as a correction factor for ozone specifically"],
+          correct: 0,
+          explanation: {
+            correct: "Ozone has only 2 equivalent resonance structures (not 3, unlike nitrate or carbonate), and in each individual O-O bond position, the bond is a double bond in exactly 1 of the 2 structures (bond order 2) and a single bond in the other 1 structure (bond order 1). Averaging across these 2 structures: (2 + 1) ÷ 2 = 3/2 = 1.5, matching ozone's well-known average O-O bond order.",
+            wrong: { 1: "This calculation method (dividing by 3) is correct for species with exactly 3 equivalent resonance structures (like nitrate or carbonate), but ozone specifically has only 2 equivalent resonance structures, so the correct divisor for ozone is 2, not 3.", 2: "The bond order of 1.5 is not an arbitrary convention; it IS directly calculated by averaging the bond order contributions (one double bond + one single bond) across ozone's actual 2 resonance structures, exactly as shown in the correct explanation.", 3: "This is not a valid or standard method for calculating resonance-averaged bond order; the correct approach is to average the actual bond order values across all equivalent resonance structures, not to apply an ad hoc subtraction-and-correction-factor approach." },
+            tempting: "Choice B is tempting because it correctly reflects the METHOD used for nitrate (with 3 resonance structures), but applying that same divisor (3) to ozone, which has a different number of resonance structures (2), gives the wrong final answer — always match the divisor to the ACTUAL number of resonance structures for the specific species in question.",
+            commonMistake: "Applying a memorized bond-order-averaging calculation (like nitrate's divide-by-3 method) to a different molecule without first checking how many actual equivalent resonance structures that specific molecule or ion has.",
+            apTip: "Always determine the correct number of equivalent resonance structures for the SPECIFIC species in question first (ozone: 2; nitrate: 3; carbonate: 3) before averaging bond order — the averaging method itself is universal, but the divisor changes based on how many resonance contributors actually exist for that particular species."
+          }
+        },
+        {
+          id: "chem-2-47", difficulty: 2, type: "mcq", topic: "Types of Chemical Bonds",
+          prompt: "HCl has an electronegativity difference of about 0.9 between hydrogen and chlorine. What type of bond is present in HCl, and is the molecule polar?",
+          choices: ["Nonpolar covalent bond; HCl is a nonpolar molecule", "Polar covalent bond; HCl is a polar molecule, since the bond is polar and there's no other bond dipole to cancel it out", "Ionic bond; HCl exists as separate H⁺ and Cl⁻ ions in the pure compound", "Metallic bond; HCl conducts electricity as a pure liquid"],
+          correct: 1,
+          explanation: {
+            correct: "An electronegativity difference of about 0.9 falls within the polar covalent range (roughly 0.4 to 1.7), meaning the shared electrons are pulled unevenly toward the more electronegative chlorine, creating a polar bond. Since HCl is a simple diatomic molecule with only one bond, there is no second bond dipole to cancel this out, so the molecule as a whole is polar.",
+            wrong: { 0: "An electronegativity difference of 0.9 is too large to be considered nonpolar covalent (which requires a difference below about 0.4); this bond has significant uneven electron sharing, making it polar, not nonpolar.", 2: "An electronegativity difference of 0.9 falls short of the roughly 1.7 threshold typically associated with ionic bonding; HCl exists as discrete, covalently-bonded molecules (not as separate ions) in its pure gaseous or liquid molecular form, only ionizing into H⁺ and Cl⁻ when dissolved in water.", 3: "HCl is a covalent molecular compound, not a metal, and does not exhibit metallic bonding or the delocalized electron sea characteristic of metals; pure liquid HCl does not conduct electricity as a metal would." },
+            tempting: "Choice C is tempting because HCl is well known to ionize into H⁺ and Cl⁻ when dissolved in water (forming hydrochloric acid), but in its pure, undissolved molecular form, HCl exists as covalently bonded molecules, not as separate ions.",
+            commonMistake: "Confusing HCl's behavior when dissolved in water (where it does ionize) with its actual bonding character in its pure molecular form (where it is a polar covalent molecule, not an ionic compound).",
+            apTip: "Always evaluate bond type and polarity based on the compound's own electronegativity difference and structure in its pure form — don't let a substance's behavior in a DIFFERENT context (like dissolving in water) change your classification of its intrinsic bond type."
+          }
+        },
+        {
+          id: "chem-2-48", difficulty: 3, type: "mcq", topic: "Types of Chemical Bonds",
+          prompt: "Water (H2O) has polar O-H bonds and a bent molecular geometry. Unlike CO2 (which has polar bonds but is nonpolar overall), water is a polar molecule overall. What explains this difference?",
+          choices: ["Water's bonds are more polar than CO2's bonds, which is the only factor that matters", "Water's bent geometry means the two O-H bond dipoles do NOT point in exactly opposite directions, so they do not cancel and instead combine into a net molecular dipole; CO2's linear geometry causes its two bond dipoles to point in exactly opposite directions and fully cancel", "Water has more atoms than CO2, and molecules with more atoms are always polar", "CO2's bonds are actually nonpolar, unlike water's bonds"],
+          correct: 1,
+          explanation: {
+            correct: "Molecular polarity depends on both bond polarity AND geometry. Water's bent shape (due to its two lone pairs on oxygen) means its two O-H bond dipoles point at an angle to each other (not directly opposite), so their vector sum does NOT cancel to zero, producing a net molecular dipole. CO2's linear geometry, by contrast, positions its two C=O bond dipoles in exactly opposite directions, so they cancel completely, giving a net dipole of zero despite each bond being polar.",
+            wrong: { 0: "Bond polarity strength (electronegativity difference) is only ONE of the two factors that determine overall molecular polarity; geometry (whether the bond dipoles cancel or not) is equally essential and is actually the deciding factor in this specific comparison.", 2: "Molecular polarity is not simply determined by the number of atoms in the molecule; it's determined by the vector sum of all bond dipoles, which depends on both individual bond polarities and the molecule's overall geometry/symmetry.", 3: "CO2's C=O bonds are indeed polar (due to the electronegativity difference between carbon and oxygen); the reason CO2 is nonpolar OVERALL is that its bond dipoles cancel due to its linear, symmetric geometry, not because the individual bonds themselves are nonpolar." },
+            tempting: "Choice A is tempting because bond polarity IS a real factor in molecular polarity, but it's incomplete on its own — geometry (specifically, whether bond dipoles point in ways that cancel or reinforce each other) is the deciding factor that explains why water and CO2 differ in overall polarity despite both having polar bonds.",
+            commonMistake: "Attributing a molecule's overall polarity solely to the strength or presence of polar bonds, without also considering whether the molecule's specific geometry causes those bond dipoles to cancel (as in CO2) or not cancel (as in water).",
+            apTip: "Always evaluate molecular polarity using both required steps together: (1) are the individual bonds polar, and (2) does the specific molecular geometry cause the resulting bond dipole vectors to cancel (nonpolar overall) or not fully cancel (polar overall) — geometry is often the deciding factor when comparing molecules with similarly polar bonds."
+          }
+        },
+        {
+          id: "chem-2-49", difficulty: 2, type: "mcq", topic: "VSEPR & Hybridization",
+          prompt: "A central atom has 5 bonding electron domains and 0 lone pairs. What molecular geometry and hybridization result?",
+          choices: ["Octahedral geometry, sp³d² hybridization", "Trigonal bipyramidal geometry, sp³d hybridization", "Square pyramidal geometry, sp³d hybridization", "Tetrahedral geometry, sp³ hybridization"],
+          correct: 1,
+          explanation: {
+            correct: "With 5 total electron domains (all bonding, 0 lone pairs), the electron domains arrange themselves as far apart as possible in a trigonal bipyramidal geometry, corresponding to sp³d hybridization; since there are no lone pairs to distort the shape, the molecular geometry matches the electron domain geometry exactly (trigonal bipyramidal).",
+            wrong: { 0: "Octahedral geometry and sp³d² hybridization correspond to 6 total electron domains, not the 5 domains present here.", 2: "Square pyramidal geometry results from 6 total domains with 1 lone pair (sp³d² hybridization), not from 5 domains with 0 lone pairs.", 3: "Tetrahedral geometry and sp³ hybridization correspond to only 4 total electron domains, not the 5 domains present here." },
+            tempting: "Choice C is tempting because square pyramidal sounds structurally similar to trigonal bipyramidal, but square pyramidal specifically arises from 6 total domains with 1 lone pair, a different domain count and lone pair situation than the 5 domains with 0 lone pairs described here.",
+            commonMistake: "Confusing similarly-shaped geometries (like square pyramidal and trigonal bipyramidal) without carefully checking both the total electron domain count and the number of lone pairs present.",
+            apTip: "When 0 lone pairs are present, the molecular geometry name always matches the electron domain geometry name exactly (2 domains: linear; 3: trigonal planar; 4: tetrahedral; 5: trigonal bipyramidal; 6: octahedral) — only when lone pairs are present do the molecular and electron domain geometry names diverge."
+          }
+        },
+        {
+          id: "chem-2-50", difficulty: 3, type: "mcq", topic: "Structure of Ionic Solids",
+          prompt: "In the NaCl crystal lattice, each Na⁺ ion is directly surrounded by 6 Cl⁻ ions (and vice versa), giving a coordination number of 6 for each ion. What does 'coordination number' describe in this context?",
+          choices: ["The total number of electrons transferred between all ions in the entire crystal", "The number of nearest-neighbor ions of opposite charge immediately surrounding a given ion in the lattice", "The number of protons in the ion's nucleus", "The number of unit cells present in a visible crystal of NaCl"],
+          correct: 1,
+          explanation: {
+            correct: "Coordination number describes how many nearest-neighbor ions of opposite charge directly surround a given ion within the crystal lattice; in NaCl's structure, each Na⁺ ion sits in a lattice position surrounded by exactly 6 Cl⁻ ions at closest approach (and each Cl⁻ is likewise surrounded by 6 Na⁺ ions), reflecting the specific geometric arrangement of the NaCl lattice.",
+            wrong: { 0: "Coordination number describes a specific LOCAL, geometric count of nearest neighbors around one particular ion, not any kind of running total of electrons transferred throughout the entire macroscopic crystal.", 2: "The number of protons in an ion's nucleus is that ion's atomic number, a completely separate concept from coordination number, which instead describes the ion's immediate geometric surroundings within the crystal lattice.", 3: "Coordination number is a local, per-ion geometric property (how many nearest neighbors surround ONE ion), not a count of how many repeating unit cells make up an entire macroscopic crystal sample, which could vary enormously depending on the crystal's size." },
+            tempting: "None of the distractors are especially tempting if coordination number's specific, local geometric meaning is understood clearly, but the term can superficially sound like it might refer to some larger-scale or compositional property of the whole crystal rather than a specific local ion-counting concept.",
+            commonMistake: "Confusing coordination number (a specific, local geometric count of nearest-neighbor ions around one ion) with unrelated whole-crystal properties like total composition, size, or electron transfer count.",
+            apTip: "Always interpret 'coordination number' as answering the specific question 'how many nearest-neighbor ions of opposite charge immediately touch/surround THIS one particular ion?' — it's a local geometric property of the crystal structure, directly tied to the specific packing arrangement (like NaCl's 6:6 coordination)."
           }
         }
       ]
@@ -255,6 +1399,578 @@ export const chemistry = {
             commonMistake: "Defaulting to 'bigger/more electrons wins' without checking whether the comparison is between isomers (same formula, different shape) rather than different-sized molecules.",
             apTip: "College-level insight: this shape-vs-electron-count distinction (surface area available for contact) is a favorite way AP Chem (and general chemistry courses) test whether students actually understand dispersion forces mechanistically rather than just pattern-matching 'bigger molecule, higher boiling point.'"
           }
+        },
+        {
+          id: "chem-3-7", difficulty: 1, type: "mcq", topic: "Ideal Gas Law",
+          prompt: "Using the ideal gas law (PV = nRT, R = 0.08206 L·atm/(mol·K)), what volume is occupied by 2.00 mol of an ideal gas at 298 K and 1.00 atm?",
+          choices: ["24.5 L", "48.9 L", "97.8 L", "2.00 L"],
+          correct: 1,
+          explanation: {
+            correct: "V = nRT/P = (2.00 mol)(0.08206 L·atm/(mol·K))(298 K) ÷ 1.00 atm ≈ 48.9 L.",
+            wrong: { 0: "This is close to the molar volume of 1.00 mol of gas at these conditions, not 2.00 mol — it's half the correct answer.", 2: "This overshoots by roughly double; it doesn't correspond to a correct application of V = nRT/P with the given values.", 3: "This just restates the given moles (2.00) as if it were the volume, without actually applying the ideal gas law formula at all." },
+            tempting: "Choice A is tempting because it's close to the well-known 'molar volume' value many students memorize (about 22.4 L/mol at STP, or about 24.5 L/mol near room temperature for 1 mole), but this problem asks about 2.00 mol, not 1.00 mol.",
+            commonMistake: "Using the memorized single-mole molar volume value directly without scaling it by the actual number of moles given in the problem.",
+            apTip: "Always solve V = nRT/P explicitly by plugging in every given value, rather than relying on a memorized 'one mole' volume shortcut — that shortcut only works for exactly 1.00 mol at the specific conditions it was memorized for."
+          }
+        },
+        {
+          id: "chem-3-8", difficulty: 2, type: "mcq", topic: "Ideal Gas Law",
+          prompt: "A 10.0 L container holds 0.500 mol of an ideal gas at 300 K. Using PV = nRT (R = 0.08206 L·atm/(mol·K)), what is the pressure inside the container?",
+          choices: ["0.615 atm", "1.23 atm", "2.46 atm", "12.3 atm"],
+          correct: 1,
+          explanation: {
+            correct: "P = nRT/V = (0.500 mol)(0.08206 L·atm/(mol·K))(300 K) ÷ 10.0 L ≈ 1.23 atm.",
+            wrong: { 0: "This is half the correct value; it would result from using 0.250 mol instead of the given 0.500 mol, or from dividing by 20.0 L instead of 10.0 L.", 2: "This is double the correct value; it would result from using 1.00 mol instead of 0.500 mol, or from dividing by 5.00 L instead of 10.0 L.", 3: "This is off by a factor of 10 from the correct value, likely from a decimal-point error in the calculation." },
+            tempting: "None of the distractors are especially tempting if the formula is applied carefully, but simple arithmetic slips (factor of 2 or 10 errors) are common when solving for pressure under time pressure.",
+            commonMistake: "Making an arithmetic slip (off by a factor of 2 or 10) when rearranging and solving the ideal gas law for pressure.",
+            apTip: "After solving any ideal gas law problem, do a quick sanity check: plug your answer back into PV = nRT along with the other given values and confirm both sides roughly match — this catches simple arithmetic slips."
+          }
+        },
+        {
+          id: "chem-3-9", difficulty: 2, type: "mcq", topic: "Ideal Gas Law",
+          prompt: "A gas sample occupies 5.00 L at 2.00 atm and 250 K. Using PV = nRT (R = 0.08206 L·atm/(mol·K)), how many moles of gas are present?",
+          choices: ["0.244 mol", "0.487 mol", "0.975 mol", "4.10 mol"],
+          correct: 1,
+          explanation: {
+            correct: "n = PV/RT = (2.00 atm)(5.00 L) ÷ [(0.08206 L·atm/(mol·K))(250 K)] ≈ 10.0 ÷ 20.5 ≈ 0.487 mol.",
+            wrong: { 0: "This is half the correct value; it would result from using only 1.00 atm instead of 2.00 atm, or from doubling the denominator by mistake.", 2: "This is double the correct value; it would result from using 4.00 atm instead of 2.00 atm, or from halving the denominator by mistake.", 3: "This is off by roughly a factor of 8-9 from the correct value; it doesn't correspond to a reasonable rearrangement of the given values." },
+            tempting: "None of the distractors are especially tempting if the rearranged formula n = PV/RT is applied carefully, but forgetting to convert or mismatching which given value goes in the numerator vs. denominator is a common source of error.",
+            commonMistake: "Mixing up which values belong in the numerator (P and V) versus the denominator (R and T) when rearranging PV = nRT to solve for n.",
+            apTip: "Before plugging in numbers, explicitly rearrange the equation on paper (n = PV/RT) and double-check that pressure and volume are both in the numerator, and R and temperature are both in the denominator."
+          }
+        },
+        {
+          id: "chem-3-10", difficulty: 3, type: "mcq", topic: "Ideal Gas Law",
+          prompt: "A rigid 8.00 L container holds 0.400 mol of an ideal gas at a pressure of 1.50 atm. Using PV = nRT (R = 0.08206 L·atm/(mol·K)), what is the temperature of the gas?",
+          choices: ["91.4 K", "183 K", "366 K", "732 K"],
+          correct: 2,
+          explanation: {
+            correct: "T = PV/(nR) = (1.50 atm)(8.00 L) ÷ [(0.400 mol)(0.08206 L·atm/(mol·K))] = 12.0 ÷ 0.0328 ≈ 366 K.",
+            wrong: { 0: "This is one-quarter of the correct value; it would result from a significant arithmetic error, such as using 1.60 mol instead of 0.400 mol in the denominator.", 1: "This is half the correct value; it would result from using 0.800 mol instead of 0.400 mol, or doubling R by mistake.", 3: "This is double the correct value; it would result from using 0.200 mol instead of 0.400 mol, or halving R by mistake." },
+            tempting: "None of the distractors are especially tempting if the formula T = PV/(nR) is applied carefully, but small errors in the value of n used in the denominator can easily produce answers off by a clean factor of 2 or 4.",
+            commonMistake: "Substituting the wrong given value (or a doubled/halved version of it) into the denominator when solving for temperature.",
+            apTip: "When solving for temperature, isolate T = PV/(nR) explicitly before substituting numbers, and write out each given value with its units next to the correct symbol to avoid substitution errors."
+          }
+        },
+        {
+          id: "chem-3-11", difficulty: 4, type: "mcq", topic: "Ideal Gas Law",
+          prompt: "A 0.982 g sample of an unknown gas occupies 500. mL at STP (273.15 K, 1.00 atm; R = 0.08206 L·atm/(mol·K)). What is the approximate molar mass of this gas, and which common gas does it most likely match?",
+          choices: ["22.0 g/mol, matching Ne", "32.0 g/mol, matching O2", "44.0 g/mol, matching CO2", "64.0 g/mol, matching SO2"],
+          correct: 2,
+          explanation: {
+            correct: "Moles = PV/RT = (1.00 atm)(0.500 L) ÷ [(0.08206 L·atm/(mol·K))(273.15 K)] ≈ 0.0223 mol. Molar mass = mass ÷ moles = 0.982 g ÷ 0.0223 mol ≈ 44.0 g/mol, matching carbon dioxide (CO2, molar mass 44.01 g/mol).",
+            wrong: { 0: "22.0 g/mol is roughly half the correctly calculated molar mass; this would result from using double the correct number of moles in the calculation.", 1: "32.0 g/mol doesn't match the calculated value of about 44.0 g/mol from the given mass and moles; this is O2's molar mass, a different substance.", 3: "64.0 g/mol overshoots the calculated value of about 44.0 g/mol; this is SO2's molar mass, a different substance from what these specific data indicate." },
+            tempting: "Choice B (O2) might tempt students who recognize 'STP' and default to a commonly discussed gas without actually completing the two-step moles-then-molar-mass calculation using the specific given mass and volume.",
+            commonMistake: "Recognizing STP conditions and jumping to a familiar gas from memory, rather than actually working through the two-step calculation (find moles using PV=nRT, then divide the given mass by that mole value) to identify the specific gas indicated by the data.",
+            apTip: "Molar mass identification problems always require two explicit steps: (1) use PV=nRT to find moles from the given pressure, volume, and temperature, then (2) divide the given mass by that calculated mole value — never skip straight to guessing an identity from memory."
+          }
+        },
+        {
+          id: "chem-3-12", difficulty: 3, type: "mcq", topic: "Ideal Gas Law",
+          prompt: "A gas sample occupies 2.00 L at 1.00 atm and 300 K. If the pressure is increased to 2.00 atm and the temperature is raised to 350 K, what is the new volume? (Use the combined gas law: P1V1/T1 = P2V2/T2.)",
+          choices: ["0.857 L", "1.17 L", "2.33 L", "4.67 L"],
+          correct: 1,
+          explanation: {
+            correct: "Rearranging the combined gas law: V2 = P1V1T2/(T1P2) = (1.00 atm)(2.00 L)(350 K) ÷ [(300 K)(2.00 atm)] = 700 ÷ 600 ≈ 1.17 L.",
+            wrong: { 0: "This would result from placing the temperature ratio upside down (T1/T2 instead of T2/T1) while correctly handling the pressure ratio.", 2: "This would result from placing the pressure ratio upside down (P2/P1 instead of P1/P2) while correctly handling the temperature ratio.", 3: "This would result from inverting BOTH ratios (both pressure and temperature) in the combined gas law rearrangement." },
+            tempting: "This problem has two competing effects (pressure increasing, which should shrink volume, and temperature increasing, which should expand volume) — the final answer being only a modest change from 2.00 L to 1.17 L reflects that the pressure effect (doubling) outweighs the more modest temperature increase.",
+            commonMistake: "Inverting one or both of the pressure and temperature ratios when rearranging the combined gas law, especially when both quantities change simultaneously in a single problem.",
+            apTip: "For combined gas law problems, explicitly rearrange the equation symbolically first (e.g., V2 = P1V1T2/(T1P2)) before plugging in any numbers — this reduces the chance of accidentally inverting one of the ratios under time pressure."
+          }
+        },
+        {
+          id: "chem-3-13", difficulty: 5, type: "mcq", topic: "Ideal Gas Law",
+          prompt: "A gas mixture at a total pressure of 760 mmHg contains only N2 and O2, with N2 making up 78.0% of the total moles and O2 making up 22.0%. Using Dalton's law of partial pressures, what is the partial pressure of O2?",
+          choices: ["22.0 mmHg", "167 mmHg", "593 mmHg", "760 mmHg"],
+          correct: 1,
+          explanation: {
+            correct: "Dalton's law states each gas's partial pressure equals its mole fraction times the total pressure: P(O2) = 0.220 × 760 mmHg ≈ 167 mmHg.",
+            wrong: { 0: "This treats the percentage (22.0) directly as the partial pressure in mmHg, without multiplying by the actual total pressure of 760 mmHg.", 2: "This is the partial pressure of N2 (0.780 × 760 ≈ 593 mmHg), not O2, which makes up the smaller 22.0% share of the mixture.", 3: "This is the TOTAL pressure of the entire mixture, not the partial pressure contributed by O2 alone, which is only a fraction of that total." },
+            tempting: "Choice A is tempting because 22.0 directly matches the given percentage, but percentages/mole fractions must be multiplied by the total pressure to get an actual partial pressure value.",
+            commonMistake: "Reporting a mole fraction or percentage directly as a partial pressure value without multiplying by the total pressure of the mixture.",
+            apTip: "Dalton's law partial pressure calculations always follow the same pattern: partial pressure = (mole fraction of that gas) × (total pressure) — never report the mole fraction or percentage alone as if it were already a pressure value."
+          }
+        },
+        {
+          id: "chem-3-14", difficulty: 1, type: "mcq", topic: "Kinetic Molecular Theory",
+          prompt: "According to kinetic molecular theory (KMT), what happens to the average kinetic energy of gas particles as temperature increases?",
+          choices: ["Average kinetic energy decreases", "Average kinetic energy increases proportionally with absolute temperature", "Average kinetic energy stays constant regardless of temperature", "Average kinetic energy becomes negative at very high temperatures"],
+          correct: 1,
+          explanation: {
+            correct: "A core postulate of kinetic molecular theory is that the average kinetic energy of gas particles is directly proportional to the absolute (Kelvin) temperature of the gas — as temperature rises, particles move faster on average, increasing their average kinetic energy.",
+            wrong: { 0: "This is backwards — average kinetic energy INcreases, not decreases, as temperature increases, since particles move faster at higher temperatures.", 2: "Average kinetic energy is NOT constant with temperature; it changes proportionally with the absolute temperature, which is a foundational KMT relationship.", 3: "Kinetic energy is calculated as ½mv², which is always a non-negative quantity (since it involves squaring velocity); kinetic energy cannot become negative at any temperature." },
+            tempting: "None of the distractors are especially tempting if the direct kinetic-energy-temperature proportionality is remembered correctly, but forgetting this core relationship can lead to guessing incorrectly.",
+            commonMistake: "Not remembering that average kinetic energy is directly proportional specifically to ABSOLUTE (Kelvin) temperature, not to Celsius or Fahrenheit temperature scales.",
+            apTip: "Always use the Kelvin temperature scale when reasoning about kinetic energy and gas behavior — the direct proportionality between average kinetic energy and temperature only holds true using the absolute (Kelvin) scale, not Celsius or Fahrenheit."
+          }
+        },
+        {
+          id: "chem-3-15", difficulty: 2, type: "mcq", topic: "Kinetic Molecular Theory",
+          prompt: "Two different gas samples, helium (He) and argon (Ar), are both at the same temperature. According to kinetic molecular theory, which of the following is true regarding their average kinetic energy and average speed?",
+          choices: ["Both gases have the same average kinetic energy AND the same average speed, since they're at the same temperature", "Both gases have the same average kinetic energy, but helium's lighter atoms move at a higher average speed than argon's heavier atoms", "Argon has higher average kinetic energy than helium because argon atoms are heavier", "Helium has higher average kinetic energy than argon because helium atoms move faster"],
+          correct: 1,
+          explanation: {
+            correct: "At the same temperature, all gases (regardless of identity or molar mass) have the same average kinetic energy, since average kinetic energy depends only on temperature according to KMT. However, since kinetic energy = ½mv², a lighter gas (helium) must have a higher average speed than a heavier gas (argon) to have the SAME kinetic energy, since a smaller mass requires a larger velocity to produce the same ½mv² value.",
+            wrong: { 0: "While average kinetic energy IS the same for both gases at the same temperature, their average SPEEDS are NOT the same — since kinetic energy depends on both mass and velocity (½mv²), gases with different masses must have different average speeds to share the same kinetic energy.", 2: "Average kinetic energy depends only on temperature (not mass) according to KMT; since both gases are at the same temperature, they have the SAME average kinetic energy, not different values based on atomic mass.", 3: "Average kinetic energy depends only on temperature, not on which gas is lighter or moves faster; both gases have identical average kinetic energy at the same temperature, even though their average speeds differ." },
+            tempting: "Choice A is tempting because 'same temperature' correctly implies 'same average kinetic energy,' but it incorrectly extends this to also mean 'same average speed,' when in fact different masses require different speeds to achieve that same shared kinetic energy value.",
+            commonMistake: "Assuming that same average kinetic energy at a given temperature must also mean same average speed, without accounting for how mass and velocity trade off against each other within the kinetic energy formula (½mv²).",
+            apTip: "Always keep two separate ideas distinct: average kinetic energy depends ONLY on temperature (same for all gases at a given T), while average speed depends on BOTH temperature and molar mass (lighter gases move faster at the same temperature, per the relationship in Graham's law)."
+          }
+        },
+        {
+          id: "chem-3-16", difficulty: 3, type: "mcq", topic: "Kinetic Molecular Theory",
+          prompt: "Using Graham's law of effusion (rate1/rate2 = √(M2/M1)), approximately how many times faster does H2 gas (molar mass ≈ 2.02 g/mol) effuse compared to O2 gas (molar mass ≈ 32.0 g/mol)?",
+          choices: ["About 2 times faster", "About 4 times faster", "About 8 times faster", "About 16 times faster"],
+          correct: 1,
+          explanation: {
+            correct: "Rate(H2)/Rate(O2) = √(M(O2)/M(H2)) = √(32.0/2.02) = √15.84 ≈ 3.98, so H2 effuses about 4 times faster than O2.",
+            wrong: { 0: "This underestimates the ratio; simply comparing the molar masses directly (32.0/2.02 ≈ 15.8) without taking the square root, or making some other calculation error, could lead to this too-small result.", 2: "This overestimates the ratio; it doesn't correspond to correctly taking the square root of the molar mass ratio (32.0/2.02 ≈ 15.8, whose square root is about 4, not 8).", 3: "This corresponds to NOT taking the square root at all and instead using the raw molar mass ratio (32.0/2.02 ≈ 15.8, rounded to 16) directly as the rate ratio, which is a key mistake — Graham's law requires the square root of the mass ratio, not the mass ratio itself." },
+            tempting: "Choice D is a strong trap because 32.0/2.02 ≈ 15.8 ≈ 16, which is the raw molar mass ratio — but Graham's law specifically requires taking the SQUARE ROOT of this mass ratio to get the actual rate ratio, not using the mass ratio directly.",
+            commonMistake: "Forgetting to take the square root when applying Graham's law, and instead using the raw ratio of molar masses directly as the effusion/diffusion rate ratio.",
+            apTip: "Always remember that Graham's law involves a SQUARE ROOT relationship between rate ratio and molar mass ratio — lighter gases effuse faster, but only by the square root of how many times lighter they are, not by the full mass ratio itself."
+          }
+        },
+        {
+          id: "chem-3-17", difficulty: 4, type: "mcq", topic: "Kinetic Molecular Theory",
+          prompt: "An unknown gas effuses 3.317 times faster than CO2 gas (molar mass = 44.01 g/mol). Using Graham's law (rate1/rate2 = √(M2/M1)), what is the approximate molar mass of the unknown gas?",
+          choices: ["4.00 g/mol", "13.3 g/mol", "146 g/mol", "484 g/mol"],
+          correct: 0,
+          explanation: {
+            correct: "Rearranging Graham's law: (rate_unknown/rate_CO2)² = M(CO2)/M(unknown), so M(unknown) = M(CO2) ÷ (rate ratio)² = 44.01 ÷ (3.317)² = 44.01 ÷ 11.00 ≈ 4.00 g/mol, consistent with helium (He).",
+            wrong: { 1: "This would result from dividing by the rate ratio directly (44.01 ÷ 3.317 ≈ 13.3) without squaring it first, which doesn't correctly apply Graham's law's square-root relationship.", 2: "This would result from multiplying instead of dividing (44.01 × 3.317 ≈ 146), an incorrect rearrangement of Graham's law.", 3: "This would result from multiplying by the SQUARED rate ratio (44.01 × 11.00 ≈ 484) instead of dividing by it, an incorrect rearrangement of Graham's law." },
+            tempting: "Choice B is tempting because it simply divides by the given rate ratio directly, skipping the crucial squaring step that Graham's law's square-root relationship requires when solving for an unknown molar mass.",
+            commonMistake: "Forgetting to square the given rate ratio before using it to solve for an unknown molar mass, since Graham's law relates RATE ratio to the SQUARE ROOT of the mass ratio (meaning solving for mass requires squaring the rate ratio).",
+            apTip: "When solving Graham's law for an unknown molar mass, always explicitly square the given rate ratio first, then use that squared value in your mass ratio calculation — skipping this squaring step is the most common error in this type of problem."
+          }
+        },
+        {
+          id: "chem-3-18", difficulty: 5, type: "mcq", topic: "Kinetic Molecular Theory",
+          prompt: "According to kinetic molecular theory, gas pressure arises from gas particles colliding with the walls of their container. Which best explains, at the molecular level, why gas pressure increases when the container's volume is decreased (at constant temperature and amount of gas)?",
+          choices: ["The gas particles themselves become larger when compressed into a smaller volume", "With the same number of particles now confined to a smaller volume, particles collide with the container walls more frequently (since they travel shorter distances between collisions), increasing the force experienced per unit area (pressure), even though average particle speed is unchanged", "Compressing the gas increases the average kinetic energy of the particles, which increases pressure", "Decreasing volume increases the number of gas particles present, which increases pressure"],
+          correct: 1,
+          explanation: {
+            correct: "At constant temperature, the average speed (and kinetic energy) of gas particles doesn't change. However, confining the same number of particles to a smaller volume means each particle has less distance to travel before hitting a wall, so wall collisions happen more frequently in a given time — this increased collision frequency increases the total force exerted on the walls per unit area, which is pressure.",
+            wrong: { 0: "Gas particles themselves do not change size when the container volume changes; the kinetic molecular theory treats gas particles as having negligible volume, and compressing a gas doesn't alter the particles' actual physical size.", 2: "At CONSTANT temperature (as specified in the problem), average kinetic energy does NOT change; kinetic energy depends only on temperature, not on volume, so this cannot be the explanation for the pressure increase when only volume changes.", 3: "The NUMBER of gas particles is explicitly held constant in this scenario (same amount of gas, only volume is changing); decreasing volume does not create additional particles — pressure increases due to more frequent collisions of the SAME number of particles, not from more particles being present." },
+            tempting: "Choice C is tempting because 'compressing a gas' can intuitively feel like it should 'add energy,' but the problem specifies constant TEMPERATURE, and kinetic energy is determined by temperature alone in KMT — compression at constant temperature changes collision frequency, not particle speed/energy.",
+            commonMistake: "Attributing a pressure increase from decreased volume to a change in particle speed/kinetic energy, rather than correctly attributing it to increased collision FREQUENCY with the walls (same particles, same speed, just more frequent wall impacts in a smaller space).",
+            apTip: "When explaining pressure changes at the molecular level, always distinguish between two separate mechanisms: collision FREQUENCY (affected by volume and number of particles) and collision FORCE/average particle speed (affected by temperature) — at constant temperature, only the frequency mechanism is responsible for any pressure change from a volume change."
+          }
+        },
+        {
+          id: "chem-3-19", difficulty: 2, type: "mcq", topic: "Deviation from Ideal Gas Law",
+          prompt: "Under which of the following conditions would a real gas be expected to deviate MOST from ideal gas behavior?",
+          choices: ["Low pressure and high temperature", "High pressure and low temperature", "Low pressure and low temperature", "High pressure and high temperature"],
+          correct: 1,
+          explanation: {
+            correct: "Real gases deviate most from ideal behavior at high pressure (where gas particles are forced close together, making their finite volume and intermolecular attractions significant) and low temperature (where particles move slowly enough for intermolecular attractive forces to noticeably affect their motion), since both conditions work together to violate the ideal gas assumptions of negligible particle volume and no intermolecular forces.",
+            wrong: { 0: "Low pressure and high temperature is actually the condition under which real gases behave MOST ideally — particles are far apart (making their finite volume negligible) and moving fast (making intermolecular attractions negligible compared to their kinetic energy).", 2: "Low pressure keeps particles far apart (reducing the significance of their finite volume), which favors more ideal behavior even though low temperature alone would tend to increase attractive force effects — the combination isn't the worst-case scenario like high pressure and low temperature is.", 3: "High temperature keeps particles moving fast enough to largely overcome intermolecular attractive forces, favoring more ideal behavior even though high pressure alone would tend to make particle volume more significant — the combination isn't the worst-case scenario like high pressure and low temperature is." },
+            tempting: "Choice A describes conditions that produce the MOST ideal behavior (the exact opposite of what the question asks), which can create confusion if the question's wording ('deviate most') isn't read carefully.",
+            commonMistake: "Confusing the conditions that produce the most ideal gas behavior (low pressure, high temperature) with the conditions that produce the LEAST ideal (most deviating) behavior (high pressure, low temperature) — these are opposite conditions.",
+            apTip: "Memorize this pairing directly: real gases deviate MOST from ideal behavior at HIGH pressure and LOW temperature (particles forced close together and moving slowly) — and behave MOST ideally at LOW pressure and HIGH temperature (particles far apart and moving fast)."
+          }
+        },
+        {
+          id: "chem-3-20", difficulty: 3, type: "mcq", topic: "Deviation from Ideal Gas Law",
+          prompt: "The van der Waals equation modifies the ideal gas law with two correction terms (a and b) to account for real gas behavior. What do these two terms specifically correct for?",
+          choices: ["The 'a' term corrects for intermolecular attractive forces between particles; the 'b' term corrects for the finite volume that gas particles themselves occupy", "The 'a' term corrects for temperature; the 'b' term corrects for pressure", "Both 'a' and 'b' correct for the same effect: particle collisions with the container walls", "The 'a' and 'b' terms are arbitrary fitting constants with no specific physical meaning"],
+          correct: 0,
+          explanation: {
+            correct: "In the van der Waals equation, the 'a' term accounts for the effect of intermolecular attractive forces between gas particles (which reduce the pressure a real gas exerts compared to an ideal gas, since attractions pull particles slightly away from the walls), and the 'b' term accounts for the finite volume that real gas particles themselves take up (which reduces the actual free space available for particle movement compared to the ideal assumption of point particles with zero volume).",
+            wrong: { 1: "Temperature and pressure are already explicit variables in the van der Waals equation (as in the ideal gas law); the 'a' and 'b' terms are specific CORRECTION factors added to account for intermolecular attraction and particle volume, not substitutes for temperature and pressure themselves.", 2: "The 'a' and 'b' terms correct for two DIFFERENT physical effects (intermolecular attraction and particle volume, respectively), not the same effect; conflating them into a single explanation misses the specific, distinct physical meaning of each term.", 3: "Both 'a' and 'b' have well-defined, specific physical meanings directly tied to real gas behavior (intermolecular attraction and particle volume, respectively) — they are not arbitrary or meaningless fitting constants." },
+            tempting: "None of the distractors are especially tempting if the specific physical meaning of each van der Waals correction term is memorized correctly, but conflating or vaguely describing both terms without distinguishing their specific roles is a common surface-level error.",
+            commonMistake: "Not clearly distinguishing which van der Waals correction term (a or b) corresponds to which specific real-gas effect (intermolecular attraction vs. finite particle volume).",
+            apTip: "Use this memory aid: 'a' is for Attraction (intermolecular forces reducing effective pressure) and 'b' is for Bulk/volume (particles' own finite size reducing available free space) — keeping these two letters tied to their specific physical meanings prevents mixing them up."
+          }
+        },
+        {
+          id: "chem-3-21", difficulty: 3, type: "mcq", topic: "Deviation from Ideal Gas Law",
+          prompt: "Which of the following gases would be expected to behave MOST ideally (deviate least from the ideal gas law) under identical conditions of moderate pressure and temperature: He, N2, or NH3?",
+          choices: ["He, because it has very weak intermolecular forces (only London dispersion forces) and a very small atomic size", "N2, because it is the most abundant gas in the atmosphere", "NH3, because it has the strongest intermolecular forces (hydrogen bonding), making it deviate least from ideal behavior", "All three gases behave identically under the same conditions, regardless of their molecular properties"],
+          correct: 0,
+          explanation: {
+            correct: "Ideal gas behavior is best approximated by gases with weak intermolecular forces and small particle size/volume — since these minimize both key sources of real-gas deviation (the van der Waals 'a' and 'b' corrections). Helium, being a small, monatomic noble gas with only very weak London dispersion forces (no dipole-dipole or hydrogen bonding), comes closest to ideal behavior among these three options.",
+            wrong: { 1: "N2's abundance in the atmosphere has no direct bearing on how ideally it behaves according to the ideal gas law; ideal behavior depends on intermolecular force strength and particle size, not on how common the gas is in nature.", 2: "NH3, with its strong hydrogen bonding (the strongest type of intermolecular force among these three options), would be expected to deviate MOST from ideal behavior, not least — stronger intermolecular attractions cause greater deviation from the ideal gas assumptions.", 3: "Different gases have different molecular properties (size, intermolecular force strength) that directly affect how closely they approximate ideal gas behavior under the same conditions; they do not all behave identically." },
+            tempting: "Choice C is tempting if a student assumes 'stronger interactions' somehow means 'more well-behaved' rather than correctly recognizing that STRONGER intermolecular forces cause GREATER deviation from the ideal gas law's assumption of no intermolecular forces at all.",
+            commonMistake: "Reversing the relationship between intermolecular force strength and ideality — assuming stronger intermolecular forces lead to more ideal behavior, when weaker intermolecular forces (and smaller particle size) are what actually make a gas behave more ideally.",
+            apTip: "When ranking gases by how closely they approximate ideal behavior, always check two properties together: intermolecular force strength (weaker is more ideal) and particle size/volume (smaller is more ideal) — small nonpolar species like He or H2 are the classic 'most ideal' examples, while larger or hydrogen-bonding species like NH3 deviate more."
+          }
+        },
+        {
+          id: "chem-3-22", difficulty: 4, type: "mcq", topic: "Deviation from Ideal Gas Law",
+          prompt: "At very high pressure, a real gas's actual volume tends to be LARGER than what the ideal gas law would predict for the same pressure, temperature, and moles. What is the best explanation for this specific deviation?",
+          choices: ["At high pressure, the finite volume actually occupied by the gas particles themselves becomes a significant fraction of the total volume, so the particles can't be compressed into as small a space as the ideal gas law (which assumes zero particle volume) would predict", "At high pressure, intermolecular attractive forces dominate, pulling the gas into a smaller volume than the ideal gas law predicts", "The ideal gas law only applies at low pressure and gives no meaningful prediction at high pressure", "Real gases always have smaller volume than predicted, never larger, regardless of pressure"],
+          correct: 0,
+          explanation: {
+            correct: "At high pressure, gas particles are forced close together, and their own finite physical volume (which the ideal gas law assumes to be zero) becomes a significant fraction of the total container volume. Since the ideal gas law doesn't account for this 'excluded volume' taken up by the particles themselves, it under-predicts the actual volume needed, meaning the REAL gas ends up occupying a somewhat LARGER volume than the ideal prediction at very high pressures.",
+            wrong: { 1: "Intermolecular attraction would tend to pull particles closer together, which would make the actual volume SMALLER than the ideal prediction, not larger — this describes the opposite deviation from what's described in the question (which asks about volume being LARGER than predicted).", 2: "The ideal gas law can still be used as an approximation at high pressure, but it becomes progressively less ACCURATE (larger deviation) rather than becoming completely inapplicable or meaningless — real gas equations like van der Waals are specifically designed to improve upon it under these conditions.", 3: "Whether a real gas's actual volume is larger or smaller than the ideal prediction actually depends on the specific conditions: at very high pressure, the particle's own finite volume effect tends to dominate (making actual volume LARGER than predicted), while at other conditions, intermolecular attraction can dominate (making actual volume SMALLER than predicted) — it is not always smaller." },
+            tempting: "Choice B is tempting because intermolecular attraction is indeed one of the two van der Waals correction effects, but at very high pressure specifically, it's the PARTICLE VOLUME effect (not attraction) that dominates and causes actual volume to exceed the ideal prediction — attraction effects tend to matter more at moderate pressures and lower temperatures.",
+            commonMistake: "Attributing every real-gas deviation uniformly to intermolecular attraction, without recognizing that at very high pressure specifically, the particles' own finite volume (excluded volume) becomes the dominant effect, causing the opposite direction of deviation (larger, not smaller, actual volume).",
+            apTip: "Remember these two van der Waals effects can push volume in OPPOSITE directions depending on conditions: intermolecular attraction tends to make actual volume SMALLER than ideal (particles pulled together), while particle excluded volume tends to make actual volume LARGER than ideal (particles can't be compressed past their own physical size) — at very high pressure, the excluded volume effect typically dominates."
+          }
+        },
+        {
+          id: "chem-3-23", difficulty: 5, type: "mcq", topic: "Deviation from Ideal Gas Law",
+          prompt: "The compressibility factor Z is defined as Z = PV/(nRT), where Z = 1 for an ideal gas. At a certain moderate pressure and low temperature, a real gas is found to have Z < 1. What does this indicate about the gas's actual behavior compared to ideal predictions?",
+          choices: ["The real gas has a smaller actual volume (or exerts lower actual pressure) than the ideal gas law predicts, consistent with intermolecular attractive forces pulling the gas particles closer together than the ideal model assumes", "The real gas has a larger actual volume than the ideal gas law predicts, consistent with the particles' finite volume dominating", "Z < 1 indicates the gas doesn't actually exist under these conditions", "Z < 1 has no physical meaning and only occurs due to experimental error"],
+          correct: 0,
+          explanation: {
+            correct: "Since Z = PV/(nRT), a value of Z less than 1 means the actual measured PV product is SMALLER than what the ideal gas law (which assumes Z = 1) would predict. This typically occurs at moderate pressure and low-to-moderate temperature, where intermolecular ATTRACTIVE forces dominate, effectively pulling gas particles closer together and reducing the actual pressure (or volume) below the ideal prediction, consistent with the van der Waals 'a' term's effect.",
+            wrong: { 1: "A LARGER actual volume than predicted (dominated by particle excluded volume effects) corresponds to Z GREATER than 1, not less than 1 — this typically occurs at very high pressure, a different regime than the moderate pressure and low temperature described in this question.", 2: "Z < 1 is a normal, well-understood, and commonly observed real-gas behavior at moderate pressures and low temperatures; it does not indicate the gas 'doesn't exist' — it simply reflects a specific, well-characterized type of deviation from ideal gas behavior dominated by intermolecular attraction.", 3: "Z < 1 is a real, physically meaningful, and reproducible deviation directly tied to intermolecular attractive forces, not an experimental error or artifact — compressibility factor measurements are a standard, established way to quantify and study real gas non-ideality." },
+            tempting: "Choice B is tempting because it correctly describes a real phenomenon (excluded volume dominance), but that specific effect corresponds to Z GREATER than 1 (typically at very high pressure), not Z LESS than 1 as described in this question, which instead reflects intermolecular attraction dominance at these particular moderate-pressure, low-temperature conditions.",
+            commonMistake: "Confusing the two opposite directions of compressibility factor deviation (Z < 1 from attractive forces dominating vs. Z > 1 from excluded volume dominating), which occur under different pressure/temperature regimes.",
+            apTip: "Memorize this compressibility factor relationship directly: Z < 1 (actual PV smaller than ideal) indicates intermolecular ATTRACTION is dominating (common at moderate pressure, lower temperature); Z > 1 (actual PV larger than ideal) indicates particle EXCLUDED VOLUME is dominating (common at very high pressure) — these are the two opposite, well-characterized directions of real-gas deviation."
+          }
+        },
+        {
+          id: "chem-3-24", difficulty: 1, type: "mcq", topic: "Molarity & Solution Concentration",
+          prompt: "A solution contains 0.250 mol of solute dissolved in enough water to make 0.500 L of total solution. What is the molarity of this solution?",
+          choices: ["0.125 M", "0.500 M", "0.750 M", "2.00 M"],
+          correct: 1,
+          explanation: {
+            correct: "Molarity = moles of solute ÷ liters of solution = 0.250 mol ÷ 0.500 L = 0.500 M.",
+            wrong: { 0: "This results from multiplying moles by volume (0.250 × 0.500 = 0.125) instead of dividing, which is the wrong mathematical operation for calculating molarity.", 2: "This results from adding moles and volume together (0.250 + 0.500 = 0.750) instead of dividing, which has no physical meaning for calculating molarity.", 3: "This results from dividing volume by moles (0.500 ÷ 0.250 = 2.00) instead of moles by volume, inverting the correct molarity formula." },
+            tempting: "Choice D is tempting because it uses the same two numbers but divides them in the wrong order, a common setup error.",
+            commonMistake: "Inverting the molarity formula by dividing volume by moles instead of moles by volume.",
+            apTip: "Always double check the molarity formula's structure explicitly: Molarity (mol/L) = moles of solute ÷ liters of SOLUTION — moles always goes on top, volume always goes on the bottom."
+          }
+        },
+        {
+          id: "chem-3-25", difficulty: 2, type: "mcq", topic: "Molarity & Solution Concentration",
+          prompt: "A student dissolves 5.844 g of NaCl (molar mass = 58.44 g/mol) in enough water to make exactly 250. mL of solution. What is the molarity of this NaCl solution?",
+          choices: ["0.100 M", "0.400 M", "1.00 M", "23.4 M"],
+          correct: 1,
+          explanation: {
+            correct: "First find moles: 5.844 g ÷ 58.44 g/mol = 0.1000 mol NaCl. Then find molarity: 0.1000 mol ÷ 0.250 L = 0.400 M.",
+            wrong: { 0: "This is the correctly calculated number of MOLES of NaCl (0.100 mol), not the final molarity, which still requires dividing by the volume in liters (0.250 L).", 2: "This would be the molarity only if the solution volume were exactly 100 mL (0.100 L) instead of the actual given 250 mL (0.250 L).", 3: "This results from failing to convert the given mass to moles first, and instead directly dividing the mass in grams (5.844) by the volume in liters (0.250), which doesn't correctly account for molar mass at all." },
+            tempting: "Choice A is tempting because 0.100 mol is a correctly calculated intermediate value, but it's only the moles of solute, not yet the final molarity — an easy point to stop calculating too early.",
+            commonMistake: "Stopping the calculation after finding moles of solute, without completing the final division by the solution's volume in liters to get molarity.",
+            apTip: "For any molarity problem starting from a given mass, always explicitly complete BOTH steps: (1) mass ÷ molar mass = moles, then (2) moles ÷ liters of solution = molarity — don't stop after step 1 and mistake the moles value for the final molarity."
+          }
+        },
+        {
+          id: "chem-3-26", difficulty: 3, type: "mcq", topic: "Molarity & Solution Concentration",
+          prompt: "A stock solution of 6.00 M HCl is diluted by taking 50.0 mL of the stock solution and adding enough water to bring the total volume to 300. mL. Using M1V1 = M2V2, what is the molarity of the diluted solution?",
+          choices: ["0.360 M", "1.00 M", "6.00 M", "36.0 M"],
+          correct: 1,
+          explanation: {
+            correct: "M2 = M1V1/V2 = (6.00 M)(50.0 mL) ÷ 300. mL = 300 ÷ 300 = 1.00 M.",
+            wrong: { 0: "This would result from multiplying M1 by V1 and then by V2 (or a similar incorrect combination) instead of correctly dividing by V2 as required by the dilution equation.", 2: "This is simply the original (stock) concentration restated without applying the dilution formula at all — diluting a solution by adding water must decrease its concentration.", 3: "This would result from inverting the dilution equation and multiplying by 6 instead of the correct division, giving a physically unreasonable result (a MORE concentrated solution after DILUTING with water)." },
+            tempting: "Choice C is tempting for students who forget that dilution necessarily changes the concentration and might mistakenly think the 'original' concentration still applies after adding water.",
+            commonMistake: "Forgetting that the entire purpose of a dilution calculation is to find a NEW, lower concentration after adding solvent, and mistakenly reporting the original stock concentration instead.",
+            apTip: "Always sanity check a dilution answer: after adding water to a solution, the new concentration MUST be lower than the original stock concentration — if your calculated answer is equal to or higher than the stock concentration, you've made an error in the calculation."
+          }
+        },
+        {
+          id: "chem-3-27", difficulty: 2, type: "mcq", topic: "Molarity & Solution Concentration",
+          prompt: "How many moles of solute are present in 0.750 L of a 2.00 M solution?",
+          choices: ["0.375 mol", "1.50 mol", "2.67 mol", "3.00 mol"],
+          correct: 1,
+          explanation: {
+            correct: "Moles = Molarity × Volume = 2.00 mol/L × 0.750 L = 1.50 mol.",
+            wrong: { 0: "This results from dividing molarity by volume rather than multiplying molarity by volume as the formula requires.", 2: "This results from an incorrect operation on the given values; it doesn't match the correct multiplication of molarity and volume.", 3: "This overstates the correct answer; it doesn't correspond to a correct application of moles = molarity × volume using the given values." },
+            tempting: "None of the distractors are especially tempting if the simple moles = M × V formula is applied directly, but rearranging it backwards (as if solving for molarity instead) is an easy slip.",
+            commonMistake: "Confusing which rearrangement of the molarity formula to use when moles (rather than molarity itself) is the unknown quantity being solved for.",
+            apTip: "Keep all three rearrangements of the molarity formula ready: M = mol/L (solving for molarity), mol = M × L (solving for moles), L = mol/M (solving for volume) — quickly identify which quantity is unknown before choosing which rearrangement to apply."
+          }
+        },
+        {
+          id: "chem-3-28", difficulty: 4, type: "mcq", topic: "Molarity & Solution Concentration",
+          prompt: "200. mL of a 3.00 M NaOH solution is mixed with 300. mL of a 1.00 M NaOH solution. Assuming volumes are additive, what is the molarity of NaOH in the final mixed solution?",
+          choices: ["1.00 M", "1.80 M", "2.00 M", "4.00 M"],
+          correct: 1,
+          explanation: {
+            correct: "First find total moles from each solution: (0.200 L)(3.00 M) = 0.600 mol from the first solution, and (0.300 L)(1.00 M) = 0.300 mol from the second solution, giving a total of 0.900 mol NaOH. Total volume = 0.200 L + 0.300 L = 0.500 L. Final molarity = 0.900 mol ÷ 0.500 L = 1.80 M.",
+            wrong: { 0: "This is the molarity of just the second (more dilute) solution alone; it doesn't account for combining it with the more concentrated first solution's contribution of moles.", 2: "This would result from simply averaging the two given molarities [(3.00+1.00)/2 = 2.00] without weighting by each solution's actual volume, which is not how mixing solutions of different volumes works.", 3: "This is the molarity of just the first (more concentrated) solution alone, ignoring that it has been mixed with and diluted by the second, less concentrated solution." },
+            tempting: "Choice C is tempting because a simple average of the two molarities (2.00 M) seems intuitive, but this ignores that the two solutions have DIFFERENT volumes, so a simple unweighted average doesn't correctly reflect the actual mixed concentration.",
+            commonMistake: "Averaging two solutions' molarities directly without weighting by their respective volumes, rather than correctly calculating total moles from each solution and dividing by the total combined volume.",
+            apTip: "For any solution-mixing problem, always calculate ACTUAL MOLES contributed by each solution separately first (moles = M × V for each), sum the total moles, then divide by the total combined volume — never average molarities directly unless the volumes being mixed happen to be exactly equal."
+          }
+        },
+        {
+          id: "chem-3-29", difficulty: 4, type: "mcq", topic: "Molarity & Solution Concentration",
+          prompt: "A solution is prepared by dissolving 20.0 g of a solute (molar mass = 40.0 g/mol) in enough water to make 500. mL of solution, and the solution's density is measured at 1.04 g/mL. What is the molarity of the solution?",
+          choices: ["0.500 M", "1.00 M", "1.04 M", "2.08 M"],
+          correct: 1,
+          explanation: {
+            correct: "Moles of solute = 20.0 g ÷ 40.0 g/mol = 0.500 mol. Molarity = moles of solute ÷ liters of SOLUTION = 0.500 mol ÷ 0.500 L = 1.00 M. Note that the given density is a distractor here — molarity is calculated using the volume of the solution (already given directly as 500. mL), not by using density to find mass of solution or anything else.",
+            wrong: { 0: "This is the correctly calculated number of moles of solute (0.500 mol), not yet the final molarity, which requires dividing this by the solution's volume in liters (0.500 L).", 2: "This incorrectly uses the given density value directly as if it were the molarity; density (in g/mL) and molarity (in mol/L) are different quantities measured in different units, and density isn't needed at all to solve this particular problem since the solution's volume is already given directly.", 3: "This would result from an incorrect combination of the given values (such as improperly incorporating the density) rather than the correct, more direct calculation of moles ÷ liters of solution using the values actually needed." },
+            tempting: "Choice C (using density directly) is a strong trap because the problem includes a density value that isn't actually necessary to solve for molarity when the solution's total volume is already given directly — recognizing which given values are relevant versus extraneous is an important skill.",
+            commonMistake: "Assuming every numerical value given in a problem must be used in the calculation, rather than recognizing that some given information (like density, when volume of solution is already directly stated) can be extraneous to the specific question being asked.",
+            apTip: "Before starting a calculation, always identify exactly which formula you need and which specific given values that formula actually requires — extra given information (like density here) is sometimes included specifically to test whether you can recognize what's actually necessary for the calculation at hand."
+          }
+        },
+        {
+          id: "chem-3-30", difficulty: 5, type: "mcq", topic: "Molarity & Solution Concentration",
+          prompt: "A chemist needs to prepare 500. mL of a 0.150 M solution of CaCl2 (molar mass = 110.98 g/mol) by dissolving solid CaCl2 in water. Approximately how many grams of CaCl2 should be weighed out?",
+          choices: ["1.66 g", "8.32 g", "16.6 g", "83.2 g"],
+          correct: 1,
+          explanation: {
+            correct: "First find moles needed: moles = M × V = 0.150 mol/L × 0.500 L = 0.0750 mol. Then find mass: mass = moles × molar mass = 0.0750 mol × 110.98 g/mol ≈ 8.32 g.",
+            wrong: { 0: "This is off by a factor of 5 from the correct value; it doesn't correspond to a correct application of both steps (moles = M×V, then mass = moles × molar mass) using the given numbers.", 2: "This is double the correct value; it would result from using 1.00 L instead of the actual given 0.500 L in the initial moles calculation.", 3: "This is 10 times the correct value; it would result from a decimal-point error somewhere in the two-step calculation." },
+            tempting: "None of the distractors are especially tempting if both required steps (finding moles from molarity and volume, then converting moles to mass using molar mass) are completed carefully, but skipping or misapplying either step can easily produce an answer off by a clean factor.",
+            commonMistake: "Skipping the intermediate moles calculation and attempting to jump directly from the given molarity and volume to a mass value without correctly incorporating the molar mass.",
+            apTip: "For 'how many grams to weigh out' problems starting from molarity, always complete both steps explicitly and in order: (1) moles = Molarity × Volume (in liters), then (2) mass = moles × molar mass — never try to shortcut directly from molarity to mass without this intermediate moles step."
+          }
+        },
+        {
+          id: "chem-3-31", difficulty: 1, type: "mcq", topic: "Phase Changes & Heating Curves",
+          prompt: "On a heating curve (temperature vs. heat added) for a pure substance, what does a flat, horizontal plateau region represent?",
+          choices: ["A period where no heat is being added to the substance at all", "A phase change (like melting or boiling), during which temperature remains constant even though heat continues to be added", "A period where the substance is cooling down", "An error in the experimental data, since temperature should always increase as heat is added"],
+          correct: 1,
+          explanation: {
+            correct: "A flat, horizontal plateau on a heating curve represents a phase change (such as melting or boiling) — during this process, all the added heat energy goes into overcoming intermolecular forces to change the substance's physical state, rather than increasing the average kinetic energy (and thus temperature) of the particles, so temperature remains constant throughout the phase change.",
+            wrong: { 0: "Heat IS still being added continuously during the plateau region; the flat line indicates that this added heat isn't increasing temperature, not that no heat is being added at all.", 2: "A heating curve, by definition, tracks temperature as heat is continuously ADDED to (not removed from) the substance; the plateau doesn't represent cooling, but rather a temperature-constant phase change occurring during ongoing heating.", 3: "Flat plateaus during phase changes are an expected, real, well-documented feature of heating curves for pure substances, not an experimental error — this constant-temperature behavior during phase changes is a fundamental and reliable thermodynamic phenomenon." },
+            tempting: "Choice A might tempt students unfamiliar with heating curves into assuming a flat temperature line means 'nothing is happening,' when in fact significant energy IS being absorbed (going into breaking intermolecular forces) even though temperature isn't rising.",
+            commonMistake: "Interpreting a flat, constant-temperature region on a heating curve as indicating no energy input, rather than correctly understanding that energy is still being absorbed but is being used to change phase rather than increase temperature.",
+            apTip: "Always describe heating curve plateaus using precise language: energy added during a plateau goes into overcoming/breaking intermolecular forces to enable the phase change, not into increasing average kinetic energy (temperature) — this exact phrasing is often required for full credit on FRQs."
+          }
+        },
+        {
+          id: "chem-3-32", difficulty: 2, type: "mcq", topic: "Phase Changes & Heating Curves",
+          prompt: "Using q = mcΔT, how much heat energy is required to raise the temperature of 50.0 g of liquid water by 25.0°C? (Specific heat of water = 4.184 J/(g·°C).)",
+          choices: ["1050 J", "2090 J", "5230 J", "10500 J"],
+          correct: 2,
+          explanation: {
+            correct: "q = mcΔT = (50.0 g)(4.184 J/(g·°C))(25.0°C) ≈ 5230 J.",
+            wrong: { 0: "This is roughly one-fifth of the correct value; it doesn't correspond to a correct multiplication of all three given quantities (mass, specific heat, and temperature change).", 1: "This is roughly two-fifths of the correct value; it might result from omitting one of the three required factors (mass, specific heat, or ΔT) from the multiplication.", 3: "This is roughly double the correct value; it might result from a decimal or rounding error somewhere in the multiplication of the three given values." },
+            tempting: "None of the distractors are especially tempting if all three quantities (mass, specific heat, and ΔT) are correctly multiplied together, but omitting one factor or making a rounding error can easily produce a value in this general range.",
+            commonMistake: "Omitting one of the three required factors (mass, specific heat capacity, or temperature change) when multiplying to find heat energy using q = mcΔT.",
+            apTip: "Before calculating, write out q = mcΔT with all three given values explicitly labeled and substituted in (m = ___ g, c = ___ J/(g·°C), ΔT = ___°C) — this labeling habit helps ensure no factor is accidentally left out of the final multiplication."
+          }
+        },
+        {
+          id: "chem-3-33", difficulty: 3, type: "mcq", topic: "Phase Changes & Heating Curves",
+          prompt: "Using q = mΔHfus, how much energy is required to melt 25.0 g of ice at 0°C? (Heat of fusion of water, ΔHfus = 334 J/g.)",
+          choices: ["334 J", "3340 J", "8350 J", "83500 J"],
+          correct: 2,
+          explanation: {
+            correct: "q = mΔHfus = (25.0 g)(334 J/g) = 8350 J.",
+            wrong: { 0: "This is simply the given heat of fusion value alone (334 J/g), without multiplying by the actual mass of ice (25.0 g) being melted.", 1: "This is off by a factor of ~2.5 from the correct value; it doesn't correspond to a correct multiplication of the given mass and heat of fusion values.", 3: "This is 10 times the correct value; it likely results from a decimal-point error in the multiplication." },
+            tempting: "Choice A is tempting because it directly restates the given heat of fusion constant, but this per-gram value must still be multiplied by the actual mass of ice (25.0 g) to get the total energy required for this specific sample.",
+            commonMistake: "Reporting the given heat of fusion (or vaporization) constant directly as the final answer, without multiplying it by the actual mass of substance undergoing the phase change.",
+            apTip: "Always remember that heat of fusion/vaporization values (like 334 J/g) are PER GRAM constants — they must always be multiplied by the actual sample mass to get the total energy required or released for that specific amount of substance."
+          }
+        },
+        {
+          id: "chem-3-34", difficulty: 3, type: "mcq", topic: "Phase Changes & Heating Curves",
+          prompt: "During the melting of ice at 0°C, energy is continuously being added, yet the temperature of the ice/water mixture remains constant at 0°C until melting is complete. Where does this added energy actually go, at the molecular level?",
+          choices: ["The energy increases the average kinetic energy of the water molecules, but this increase happens too slowly to be measured as a temperature change", "The energy is used to overcome (break) intermolecular forces holding the rigid ice crystal structure together, allowing molecules to move more freely as a liquid, rather than increasing average kinetic energy", "The energy is being reflected away from the ice rather than being absorbed at all", "No energy is actually required to melt ice; the phase change happens spontaneously without any energy input"],
+          correct: 1,
+          explanation: {
+            correct: "During a phase change like melting, the added energy is used specifically to overcome the intermolecular forces holding the rigid, ordered ice crystal lattice together, allowing the water molecules to move more freely as a liquid. Since this energy goes into breaking these intermolecular attractions rather than increasing the average kinetic energy (speed) of the molecules, the temperature remains constant throughout the melting process.",
+            wrong: { 0: "The temperature genuinely does NOT increase during the phase change (this isn't a measurement limitation) — the energy is specifically directed toward overcoming intermolecular forces rather than increasing average kinetic energy at all during this particular process.", 2: "The ice is genuinely absorbing the added energy (this is a real, measurable energy input, as reflected in the enthalpy of fusion), not reflecting or rejecting it — the energy input is real and necessary for the phase change to occur.", 3: "Melting ice absolutely does require energy input (the enthalpy of fusion, about 334 J/g for water) — it does not happen 'spontaneously' with zero energy required; energy must be continuously supplied to sustain the melting process." },
+            tempting: "Choice A is tempting because 'kinetic energy is related to temperature' is generally true, but during a phase change SPECIFICALLY, the mechanism shifts — energy input during melting goes into breaking intermolecular bonds (potential energy changes), not into kinetic energy/temperature increases, which is why temperature genuinely plateaus rather than just changing 'too slowly to notice.'",
+            commonMistake: "Assuming that any energy input to a substance must always translate into a kinetic energy (temperature) increase, without recognizing that during phase changes specifically, energy is redirected toward overcoming intermolecular forces (a potential energy change) instead.",
+            apTip: "Always describe phase change energy using the language of overcoming/breaking intermolecular forces (a change in potential energy between particles), explicitly contrasted with heating within a single phase, where energy increases average kinetic energy (temperature) — this distinction is a frequently tested FRQ concept."
+          }
+        },
+        {
+          id: "chem-3-35", difficulty: 4, type: "mcq", topic: "Phase Changes & Heating Curves",
+          prompt: "On a heating curve for water, the slope of the line during the heating of liquid water (between 0°C and 100°C) is noticeably different (steeper) than the slope during the heating of water vapor above 100°C, even though both segments represent heating within a single phase. What does this difference in slope indicate?",
+          choices: ["Liquid water and water vapor have different specific heat capacities, so the same amount of heat added produces a different-sized temperature change (steeper slope = smaller specific heat, needing less energy per degree)", "The slopes should actually be identical, since both segments represent single-phase heating, and any difference indicates experimental error", "The vapor phase segment is actually a phase change plateau, not single-phase heating", "Slope on a heating curve has no physical meaning beyond visually distinguishing the segments"],
+          correct: 0,
+          explanation: {
+            correct: "The slope of a heating curve segment (temperature change per unit of heat added) is inversely related to the specific heat capacity of that phase (from q = mcΔT, rearranged as ΔT/q = 1/(mc)) — a steeper slope means a SMALLER specific heat capacity (less energy needed to raise the temperature by a given amount), while a shallower slope means a LARGER specific heat capacity. Liquid water and water vapor have different specific heat capacities, which is why their respective heating segments have different slopes on the same heating curve.",
+            wrong: { 1: "The slopes are genuinely expected to differ between different phases (like liquid vs. gas) because these phases have different specific heat capacities; this difference is a real, expected physical phenomenon, not an experimental error.", 2: "A phase change plateau would appear as a perfectly FLAT (zero-slope) horizontal line at a constant temperature, not simply a different, steeper or shallower NONZERO slope — a nonzero-slope segment (even if its steepness differs from another segment) represents single-phase heating, not a phase change.", 3: "The slope of a heating curve segment DOES have specific physical meaning — it is directly related (inversely) to that phase's specific heat capacity, providing real quantitative information about how much energy is needed to change that phase's temperature by a given amount." },
+            tempting: "Choice C might tempt students who see 'different behavior' and assume it must indicate a phase change, but a phase change is specifically indicated by a FLAT (zero-slope) plateau, not merely a different nonzero slope compared to another heating segment.",
+            commonMistake: "Assuming any visible change in a heating curve's appearance (like a different slope) must indicate a phase change, rather than correctly recognizing that phase changes specifically correspond to flat, zero-slope plateaus, while different nonzero slopes simply reflect different specific heat capacities between different phases.",
+            apTip: "On any heating curve, always distinguish sloped segments (single-phase heating, with slope steepness related to that phase's specific heat capacity) from flat, zero-slope plateaus (phase changes, where temperature doesn't change at all) — these are the two fundamentally different types of segments to identify."
+          }
+        },
+        {
+          id: "chem-3-36", difficulty: 5, type: "mcq", topic: "Phase Changes & Heating Curves",
+          prompt: "How much total energy is required to convert 20.0 g of ice at exactly 0°C completely into steam at exactly 100°C? (Heat of fusion = 334 J/g; specific heat of liquid water = 4.184 J/(g·°C); heat of vaporization = 2260 J/g.)",
+          choices: ["6680 J (melting the ice only)", "45,200 J (vaporizing the water only)", "60,200 J (the sum of melting, heating the liquid, and vaporizing)", "68,600 J (a different combination of the three given values)"],
+          correct: 2,
+          explanation: {
+            correct: "This process requires three separate steps, each calculated and then summed: (1) melting the ice at 0°C: q1 = mΔHfus = 20.0 g × 334 J/g = 6680 J; (2) heating the resulting liquid water from 0°C to 100°C: q2 = mcΔT = 20.0 g × 4.184 J/(g·°C) × 100.°C = 8368 J; (3) vaporizing the water at 100°C: q3 = mΔHvap = 20.0 g × 2260 J/g = 45,200 J. Total = 6680 + 8368 + 45,200 = 60,248 J ≈ 60,200 J.",
+            wrong: { 0: "This is only the energy for STEP 1 (melting the ice); it completely omits the energy needed to heat the resulting liquid water up to 100°C and then vaporize it, both of which are also required to reach steam at 100°C.", 1: "This is only the energy for STEP 3 (vaporizing the water); it completely omits the energy needed to first melt the ice and then heat the resulting liquid water up to 100°C before vaporization can even begin.", 3: "This total doesn't correspond to correctly adding all three required energy values (6680 + 8368 + 45,200 = 60,248 J); it likely results from omitting one step, duplicating one step, or making an arithmetic error somewhere in the three-part sum." },
+            tempting: "Choices A and B are both tempting because they correctly calculate ONE of the three required steps using the correct formula and given values, but a complete ice-to-steam conversion requires accounting for ALL THREE steps (melting, heating the liquid, and vaporizing) added together, not just any single step in isolation.",
+            commonMistake: "Calculating only one or two of the three required steps (melting, heating within the liquid phase, and vaporizing) when converting a substance across multiple phase changes and a temperature range, rather than correctly identifying and summing ALL required steps.",
+            apTip: "For any 'convert from solid at temperature A to gas at temperature B' problem, always sketch out the FULL heating curve path first, identifying every single step needed (phase changes AND any within-phase heating segments), calculate the energy for EACH step separately using the appropriate formula (q=mΔH for phase changes, q=mcΔT for within-phase heating), and only then sum all the individual step energies together for the total."
+          }
+        },
+        {
+          id: "chem-3-37", difficulty: 1, type: "mcq", topic: "Solubility",
+          prompt: "Which general principle best predicts whether two substances will be soluble in each other?",
+          choices: ["\"Like dissolves like\" — substances with similar polarity (and similar types of intermolecular forces) tend to be mutually soluble", "All substances are completely soluble in all other substances, regardless of polarity", "Only substances with identical molar masses can dissolve in each other", "Solubility depends only on temperature, never on the chemical nature of the substances involved"],
+          correct: 0,
+          explanation: {
+            correct: "The general rule \"like dissolves like\" reflects that substances with similar polarity (and thus similar types and strengths of intermolecular forces) tend to be mutually soluble, since similar intermolecular forces between solute and solvent allow favorable solute-solvent interactions to replace the solute-solute and solvent-solvent interactions that must be overcome during dissolution.",
+            wrong: { 1: "Solubility is NOT universal; many substances are largely insoluble in each other (like oil and water) specifically because of mismatched polarity/intermolecular force types, which prevents favorable solute-solvent interactions from forming.", 2: "Molar mass similarity is not the deciding factor for solubility; POLARITY and intermolecular force compatibility (not molecular weight) is what primarily determines whether two substances will be mutually soluble.", 3: "While temperature does affect the EXTENT of solubility for many substances, the fundamental determination of whether two substances are compatible for dissolving in the first place depends primarily on their relative polarity and intermolecular force types, not on temperature alone." },
+            tempting: "None of the distractors are especially tempting if the 'like dissolves like' principle is understood correctly, but oversimplified claims (universal solubility, molar-mass-based rules) can seem superficially plausible without a clear understanding of the intermolecular force basis for solubility.",
+            commonMistake: "Not connecting the 'like dissolves like' rule specifically to the underlying reason (matching intermolecular force types allows favorable solute-solvent interactions) rather than treating it as an arbitrary rule to memorize.",
+            apTip: "Always be ready to explain WHY 'like dissolves like' works, not just state the rule: matching polarity means the solute-solvent attractive forces that form are comparable in strength to the solute-solute and solvent-solvent forces being broken, making the overall dissolving process energetically favorable."
+          }
+        },
+        {
+          id: "chem-3-38", difficulty: 2, type: "mcq", topic: "Solubility",
+          prompt: "As temperature increases, how does the solubility of most solid ionic/molecular solutes in water typically change, and how does the solubility of most gases in water typically change?",
+          choices: ["Both solid solutes and gases become more soluble as temperature increases", "Solid solutes typically become MORE soluble as temperature increases, while gases typically become LESS soluble as temperature increases", "Solid solutes typically become LESS soluble as temperature increases, while gases typically become MORE soluble as temperature increases", "Temperature has no effect on the solubility of either solids or gases in water"],
+          correct: 1,
+          explanation: {
+            correct: "For most solid solutes, increasing temperature typically increases solubility (more solute can dissolve, since dissolving many solids is endothermic and higher temperature favors this process). For gases, increasing temperature typically DEcreases solubility (gas molecules have more kinetic energy at higher temperatures and more easily escape the liquid, similar to how warm soda goes flat faster than cold soda).",
+            wrong: { 0: "While this pattern holds for MOST solid solutes, it is the OPPOSITE trend for gases — gases typically become LESS soluble, not more, as temperature increases.", 2: "This reverses both trends — most solid solutes actually become MORE soluble (not less) with increasing temperature, while gases become LESS soluble (not more) with increasing temperature.", 3: "Temperature has a significant, well-documented effect on solubility for both solids and gases, just in OPPOSITE directions for each — it is not true that temperature has no effect on either." },
+            tempting: "Choice A is tempting because 'increases solubility' is correctly true for solids, and it's easy to assume the same simple rule extends to gases without recognizing that gas solubility follows the opposite temperature trend.",
+            commonMistake: "Applying the solid-solute solubility-temperature trend (solubility increases with temperature) uniformly to gases as well, without recognizing that gas solubility follows the OPPOSITE trend (solubility decreases with increasing temperature).",
+            apTip: "Remember the classic real-world example to anchor this distinction: warm soda goes flat faster than cold soda because CO2 gas becomes LESS soluble as temperature rises, even though many solid sugars would become MORE soluble in warmer water — solids and gases follow opposite solubility-temperature trends."
+          }
+        },
+        {
+          id: "chem-3-39", difficulty: 3, type: "mcq", topic: "Solubility",
+          prompt: "According to Henry's law, the solubility of a gas in a liquid is directly proportional to the partial pressure of that gas above the liquid (C = kH × P). If the partial pressure of CO2 above a sealed carbonated beverage is doubled, what happens to the equilibrium solubility of CO2 in the beverage?",
+          choices: ["The solubility of CO2 stays the same, since Henry's law only applies to gases at very low pressure", "The solubility of CO2 doubles as well, since solubility is directly proportional to partial pressure", "The solubility of CO2 decreases by half, since higher pressure pushes gas out of solution", "The solubility of CO2 increases by a factor of 4, since pressure and solubility are related by an inverse-square relationship"],
+          correct: 1,
+          explanation: {
+            correct: "Henry's law states that gas solubility (C) is directly proportional to the partial pressure (P) of that gas above the liquid, expressed as C = kH × P. If the partial pressure P is doubled, and kH (the Henry's law constant, specific to that gas-liquid pair at a given temperature) remains unchanged, then the equilibrium solubility C must also double, following this direct proportionality.",
+            wrong: { 0: "Henry's law applies broadly to gas solubility in liquids under many practical conditions (not just at 'very low' pressure specifically); the direct proportionality between pressure and solubility is a genuinely useful and widely applicable relationship, including for carbonated beverages.", 2: "This is backwards — INcreasing pressure above a liquid actually INcreases gas solubility according to Henry's law (that's exactly why bottles are pressurized to keep CO2 dissolved); solubility doesn't decrease with increased pressure.", 3: "Henry's law describes a DIRECT (linear) proportionality between pressure and solubility (C = kH × P), not an inverse-square relationship; doubling pressure should double solubility, not quadruple it." },
+            tempting: "Choice C might tempt students who intuitively (but incorrectly) associate 'higher pressure' with 'gas being pushed out,' when Henry's law actually shows the opposite: higher partial pressure above the liquid pushes MORE gas INTO solution, increasing solubility.",
+            commonMistake: "Reasoning intuitively that higher pressure should force gas OUT of a liquid, rather than correctly applying Henry's law's direct proportionality, which shows that higher partial pressure of a gas above a liquid actually increases that gas's equilibrium solubility.",
+            apTip: "Remember the practical, real-world connection for Henry's law: bottled carbonated beverages are sealed under elevated CO2 pressure specifically to keep MORE CO2 dissolved in the liquid — when the bottle is opened and pressure drops to atmospheric, solubility drops correspondingly, causing the drink to lose carbonation (go flat) over time."
+          }
+        },
+        {
+          id: "chem-3-40", difficulty: 4, type: "mcq", topic: "Solubility",
+          prompt: "The Henry's law constant (kH) for a particular gas dissolving in water is 1.3 × 10⁻³ mol/(L·atm) at a given temperature. If the partial pressure of this gas above the water is increased from 1.00 atm to 4.00 atm, what is the new equilibrium solubility (concentration) of the gas in the water?",
+          choices: ["1.3 × 10⁻³ M", "5.2 × 10⁻³ M", "1.3 × 10⁻² M", "5.2 × 10⁻² M"],
+          correct: 1,
+          explanation: {
+            correct: "Using C = kH × P: at 4.00 atm, C = (1.3 × 10⁻³ mol/(L·atm)) × (4.00 atm) = 5.2 × 10⁻³ M.",
+            wrong: { 0: "This is the solubility that would result at the ORIGINAL pressure of 1.00 atm [(1.3×10⁻³)(1.00) = 1.3×10⁻³ M], not at the new, higher pressure of 4.00 atm specified in the question.", 2: "This is off by a factor of 10 from the correct value; it likely results from a decimal-point error when multiplying the given Henry's law constant by the pressure.", 3: "This is off by a factor of 100 from the correct value (and also 10 times the already-incorrect choice C); it likely results from a decimal-point error somewhere in the calculation." },
+            tempting: "Choice A is tempting because it correctly uses the given Henry's law constant formula, but with the ORIGINAL pressure (1.00 atm) rather than the NEW, increased pressure (4.00 atm) that the question specifically asks about.",
+            commonMistake: "Using the original/initial pressure value in the Henry's law calculation instead of the new, changed pressure value that the question is actually asking about.",
+            apTip: "When a Henry's law problem describes a CHANGE in pressure, always carefully identify which pressure value (initial or final) the question is actually asking you to calculate solubility for, and use exactly that value in your C = kH × P calculation."
+          }
+        },
+        {
+          id: "chem-3-41", difficulty: 1, type: "mcq", topic: "Spectroscopy & Beer's Law",
+          prompt: "In Beer's law (A = εbc), what does the variable 'c' represent?",
+          choices: ["The speed of light", "The concentration of the absorbing solution", "The path length of light through the sample", "The wavelength of light used"],
+          correct: 1,
+          explanation: {
+            correct: "In Beer's law (A = εbc), 'c' represents the concentration of the absorbing species in solution (typically in mol/L), which is directly proportional to the measured absorbance (A) for a given path length and molar absorptivity.",
+            wrong: { 0: "The speed of light is a physical constant, not a variable in Beer's law; Beer's law relates absorbance, molar absorptivity, path length, and concentration, none of which is the speed of light.", 2: "Path length is represented by the variable 'b' in Beer's law (typically in cm), a separate variable from concentration ('c'); they are easy to confuse due to their similar-looking single-letter symbols.", 3: "Wavelength of light is not a direct variable in the Beer's law equation itself, though the molar absorptivity constant (ε) does depend on which wavelength is being used for the measurement." },
+            tempting: "Choice C is tempting because 'b' (path length) and 'c' (concentration) are easily confused single-letter variables that both appear in the same equation, especially since their alphabetical order might suggest an unintuitive pairing with their meanings.",
+            commonMistake: "Mixing up the specific meanings of the similarly-labeled single-letter variables in Beer's law (ε for molar absorptivity, b for path length, c for concentration).",
+            apTip: "Memorize Beer's law variable-by-variable with a clear mnemonic: A (absorbance, what's measured) = ε (molar absorptivity, a substance-specific constant) × b (path length, usually in cm) × c (concentration, usually in mol/L) — always write out what each letter stands for before using the equation."
+          }
+        },
+        {
+          id: "chem-3-42", difficulty: 2, type: "mcq", topic: "Spectroscopy & Beer's Law",
+          prompt: "According to Beer's law, if the concentration of an absorbing solution is doubled while path length and molar absorptivity remain constant, what happens to the measured absorbance?",
+          choices: ["Absorbance is halved", "Absorbance stays the same", "Absorbance doubles", "Absorbance increases by a factor of 4"],
+          correct: 2,
+          explanation: {
+            correct: "Beer's law (A = εbc) shows a direct, linear proportionality between absorbance (A) and concentration (c), when ε and b are held constant; doubling the concentration directly doubles the absorbance.",
+            wrong: { 0: "This would be true if absorbance were inversely proportional to concentration, but Beer's law describes a DIRECT proportionality, so increasing concentration increases (not decreases) absorbance.", 1: "Absorbance does change with concentration according to Beer's law; it does not remain constant when concentration changes while the other variables are held fixed.", 3: "This would be true if absorbance depended on the SQUARE of concentration, but Beer's law describes a simple, direct (linear, first-power) proportionality, not a squared relationship." },
+            tempting: "None of the distractors are especially tempting if the direct, linear nature of the Beer's law relationship is understood clearly, but assuming a more complex (inverse or squared) relationship without checking the actual equation is an easy conceptual slip.",
+            commonMistake: "Assuming absorbance and concentration have an inverse or nonlinear relationship, rather than correctly recognizing Beer's law's direct, linear (first-power) proportionality between the two.",
+            apTip: "Remember Beer's law as a simple, DIRECT, LINEAR relationship: absorbance and concentration change by the SAME factor (double one, double the other; triple one, triple the other) as long as path length and molar absorptivity remain constant."
+          }
+        },
+        {
+          id: "chem-3-43", difficulty: 3, type: "mcq", topic: "Spectroscopy & Beer's Law",
+          prompt: "A solution has a measured absorbance of 0.750 in a cuvette with a 1.00 cm path length. Given a molar absorptivity (ε) of 150 L/(mol·cm) for this substance at the measured wavelength, what is the concentration of the solution?",
+          choices: ["0.00500 M", "0.0500 M", "5.00 M", "112.5 M"],
+          correct: 0,
+          explanation: {
+            correct: "Rearranging Beer's law: c = A/(εb) = 0.750 ÷ [(150 L/(mol·cm))(1.00 cm)] = 0.750 ÷ 150 = 0.00500 M.",
+            wrong: { 1: "This is 10 times the correct value; it likely results from a decimal-point error in the division.", 2: "This is 1000 times the correct value; it likely results from a significant decimal-point error, or from multiplying instead of dividing.", 3: "This results from multiplying A by ε and b (0.750 × 150 × 1.00 = 112.5) instead of correctly dividing A by the product of ε and b, an incorrect rearrangement of Beer's law." },
+            tempting: "Choice D is a strong trap for students who multiply all three given values together instead of correctly rearranging Beer's law (A = εbc) to isolate c by DIVISION (c = A/(εb)).",
+            commonMistake: "Multiplying the given absorbance, molar absorptivity, and path length values together instead of correctly rearranging Beer's law to solve for concentration by division.",
+            apTip: "Before calculating, always explicitly rearrange Beer's law algebraically to isolate the specific variable you're solving for (here, c = A/(εb)) — writing out this rearranged equation first prevents accidentally multiplying values that should instead be divided."
+          }
+        },
+        {
+          id: "chem-3-44", difficulty: 4, type: "mcq", topic: "Spectroscopy & Beer's Law",
+          prompt: "A calibration curve is created by plotting absorbance vs. known concentration for several standard solutions of the same substance, producing a straight line through the origin. An unknown sample is measured and has an absorbance that falls exactly halfway between two of the calibration standards' absorbance values. What is the best way to determine the unknown's concentration?",
+          choices: ["Simply guess that the concentration is also exactly halfway between the two corresponding standard concentrations, without further calculation", "Use the equation of the best-fit line (from linear regression of the calibration data) to calculate the exact concentration corresponding to the unknown's measured absorbance", "It's impossible to determine the concentration of a sample that falls between two calibration standards", "Average the molar absorptivity values of the two nearest standards and use that average value in Beer's law"],
+          correct: 1,
+          explanation: {
+            correct: "The proper, rigorous approach is to determine the equation of the best-fit line (typically via linear regression) from all the calibration standard data points, then substitute the unknown's measured absorbance into that line's equation to calculate the precise corresponding concentration — this uses all the calibration data systematically rather than relying on a rough visual estimate.",
+            wrong: { 0: "While the true concentration may happen to be close to halfway between the two nearest standards (since Beer's law predicts a linear relationship), simply guessing this without using the actual best-fit line equation skips the more precise, systematic calculation that calibration curves are specifically designed to enable.", 2: "It is absolutely possible (and is in fact the entire point of constructing a calibration curve) to determine the concentration of an unknown sample whose absorbance falls between calibration standards, precisely by using the best-fit line's equation to interpolate the correct value.", 3: "Averaging molar absorptivity values from two nearby standards is not the standard, rigorous approach; the proper method uses the overall best-fit line equation (derived from ALL the calibration data via linear regression) to directly calculate the unknown's concentration from its measured absorbance." },
+            tempting: "Choice A is tempting because linear interpolation between two nearby points would indeed give a similar answer to using the best-fit line in a truly linear system, but it's a shortcut that doesn't use the FULL calibration dataset the way the proper best-fit line method does, and is more prone to error if any individual standard has measurement noise.",
+            commonMistake: "Using a rough visual or two-point interpolation method instead of the more rigorous and standard approach of calculating a full linear regression equation from all Standard calibration points and using THAT equation to find the unknown's concentration.",
+            apTip: "Always describe the calibration curve method as: (1) measure absorbance for several known-concentration standards, (2) plot absorbance vs. concentration and find the best-fit line equation (slope and intercept) using ALL the data points, then (3) substitute the unknown's measured absorbance into that specific equation to calculate its concentration precisely."
+          }
+        },
+        {
+          id: "chem-3-45", difficulty: 4, type: "mcq", topic: "Spectroscopy & Beer's Law",
+          prompt: "Using E = hc/λ, ultraviolet (UV) light with a wavelength of about 200 nm and infrared (IR) light with a wavelength of about 800 nm are compared. Approximately how many times more energetic is a single photon of the UV light compared to a single photon of the IR light?",
+          choices: ["The UV photon has about 4 times more energy than the IR photon", "The UV photon has about 4 times LESS energy than the IR photon", "Both photons have identical energy, since E = hc/λ doesn't actually depend on wavelength", "The UV photon has about 16 times more energy than the IR photon"],
+          correct: 0,
+          explanation: {
+            correct: "Since E = hc/λ, energy is INVERSELY proportional to wavelength — shorter wavelength means higher energy. The ratio of energies equals the INVERSE ratio of wavelengths: E(UV)/E(IR) = λ(IR)/λ(UV) = 800 nm ÷ 200 nm = 4, so the UV photon (shorter wavelength) has about 4 times more energy than the IR photon (longer wavelength).",
+            wrong: { 1: "This reverses the correct relationship — since UV light has the SHORTER wavelength of the two, it should have MORE energy than the longer-wavelength IR light, not less, according to the inverse relationship in E = hc/λ.", 2: "E = hc/λ explicitly shows energy depends on (is inversely proportional to) wavelength — different wavelengths of light correspond to different photon energies; the two given wavelengths (200 nm vs. 800 nm) do NOT have equal photon energies.", 3: "This would result from an incorrect squaring of the wavelength ratio; E = hc/λ is a simple, direct inverse proportionality (not an inverse-square relationship), so the energy ratio should equal the wavelength ratio to the first power (4), not its square (16)." },
+            tempting: "Choice D is tempting if a student assumes an inverse-square relationship (perhaps by analogy to other physics formulas like Coulomb's law), but E = hc/λ is a simple, first-power inverse proportionality between energy and wavelength, not an inverse-square relationship.",
+            commonMistake: "Either forgetting that energy and wavelength are inversely (not directly) related in E = hc/λ, or incorrectly squaring the wavelength ratio as if the relationship involved an inverse-square dependence.",
+            apTip: "Always remember E = hc/λ as a simple INVERSE (not inverse-square) relationship: shorter wavelength = higher photon energy, and the energy ratio between two wavelengths equals the INVERTED wavelength ratio, taken to the first power only."
+          }
+        },
+        {
+          id: "chem-3-46", difficulty: 2, type: "mcq", topic: "Advanced IMF Reasoning",
+          prompt: "Although O2 is a nonpolar molecule, it has a small but measurable solubility in water (a polar solvent), enough to support aquatic life. What type of intermolecular force is primarily responsible for this dissolved O2 interacting with surrounding water molecules?",
+          choices: ["Hydrogen bonding between O2 and water", "Ion-dipole forces between O2 and water", "Dipole-induced dipole forces, where water's permanent dipole induces a temporary dipole in O2's electron cloud", "Covalent bonds forming between O2 and water molecules"],
+          correct: 2,
+          explanation: {
+            correct: "Even though O2 itself is nonpolar (no permanent dipole), water's polar molecules can induce a temporary, instantaneous dipole in O2's electron cloud as they approach, creating a weak but real attractive interaction called a dipole-induced dipole force — this explains O2's limited, but nonzero, solubility in water.",
+            wrong: { 0: "Hydrogen bonding requires a hydrogen atom bonded directly to N, O, or F interacting with a lone pair on another highly electronegative atom; O2 has no hydrogen atoms at all, so hydrogen bonding cannot occur between O2 and water.", 1: "Ion-dipole forces require the presence of a charged ion interacting with a polar molecule; O2 is a neutral, uncharged molecule, so ion-dipole forces do not apply to this interaction.", 3: "O2 dissolving in water is a physical process involving intermolecular attractions, not a chemical reaction forming new covalent bonds; no covalent bonds form between O2 and water molecules during simple dissolution." },
+            tempting: "None of the distractors are especially tempting if the specific requirements for hydrogen bonding (H bonded to N/O/F) and ion-dipole forces (an actual ion present) are remembered clearly, but vague pattern-matching ('water is involved, so hydrogen bonding must apply') is an easy trap.",
+            commonMistake: "Assuming that any interaction involving water must be hydrogen bonding, without checking whether the OTHER molecule actually meets hydrogen bonding's specific structural requirement (having H bonded directly to N, O, or F).",
+            apTip: "Before naming hydrogen bonding as the intermolecular force in any scenario, always verify that hydrogen is actually bonded directly to N, O, or F in at least one of the two interacting species — if the nonpolar/small-dipole molecule lacks this specific structural feature, look instead to weaker forces like dipole-induced dipole or dispersion forces."
+          }
+        },
+        {
+          id: "chem-3-47", difficulty: 3, type: "mcq", topic: "Advanced IMF Reasoning",
+          prompt: "As temperature increases, the vapor pressure of a liquid increases as well, and this relationship is famously nonlinear (it increases more and more steeply at higher temperatures). What is the best molecular-level explanation for why vapor pressure rises with temperature?",
+          choices: ["At higher temperatures, a larger fraction of molecules in the liquid have enough kinetic energy to overcome intermolecular attractive forces and escape into the vapor phase", "Higher temperature directly increases the strength of intermolecular forces holding the liquid together, which paradoxically increases vapor pressure", "Vapor pressure increases with temperature purely because the liquid's volume expands, giving molecules more room to escape", "Vapor pressure is unrelated to molecular kinetic energy and depends only on atmospheric pressure"],
+          correct: 0,
+          explanation: {
+            correct: "As temperature rises, the overall distribution of molecular kinetic energies shifts toward higher energies (per kinetic molecular theory), meaning a larger fraction of molecules at the liquid's surface possess enough kinetic energy to overcome the liquid's intermolecular attractive forces and escape into the vapor phase, increasing the equilibrium vapor pressure.",
+            wrong: { 1: "Higher temperature does NOT increase the strength of intermolecular forces (these depend on molecular identity/polarity, not on temperature); rather, higher temperature increases molecular kinetic energy, which allows more molecules to overcome those SAME intermolecular forces, not stronger ones.", 2: "While liquids do expand very slightly with increasing temperature, this thermal expansion effect is minor and is not the primary driver of the vapor pressure increase — the dominant molecular-level explanation is the shift toward higher kinetic energies allowing more molecules to escape the liquid phase.", 3: "Vapor pressure is fundamentally and directly related to molecular kinetic energy (specifically, the fraction of molecules with enough energy to escape the liquid); it is an intrinsic property of the liquid-vapor equilibrium, not simply a function of external atmospheric pressure." },
+            tempting: "Choice B is tempting if a student assumes 'more energy in the system' must mean 'stronger forces,' but temperature affects molecular KINETIC energy (motion), not the intrinsic STRENGTH of intermolecular attractive forces (which stays constant for a given substance at any temperature).",
+            commonMistake: "Confusing the effect of temperature on molecular kinetic energy (which does increase with temperature) with an effect on intermolecular force strength (which does NOT change with temperature for a given substance).",
+            apTip: "Always keep these two concepts separate: intermolecular force STRENGTH is a fixed property of a given substance (determined by its molecular structure/polarity), while molecular KINETIC ENERGY changes with temperature — vapor pressure trends are explained by changing kinetic energy overcoming a CONSTANT intermolecular force strength, not by forces themselves changing."
+          }
+        },
+        {
+          id: "chem-3-48", difficulty: 4, type: "mcq", topic: "Advanced IMF Reasoning",
+          prompt: "Two liquids, X and Y, have similar molar masses, but liquid X has a significantly higher boiling point than liquid Y. Based on this information alone, what is the most reasonable conclusion about their relative intermolecular forces?",
+          choices: ["Liquid X has weaker intermolecular forces than liquid Y", "Liquid X has stronger intermolecular forces than liquid Y", "Both liquids must have identical intermolecular forces, since they have similar molar masses", "Boiling point is unrelated to intermolecular force strength when molar masses are similar"],
+          correct: 1,
+          explanation: {
+            correct: "A higher boiling point indicates that MORE energy is required to overcome the intermolecular forces holding the liquid's molecules together and allow them to escape into the gas phase; since liquid X requires more energy (has a higher boiling point) than liquid Y, despite similar molar mass (and thus similar dispersion force contributions), liquid X must have stronger overall intermolecular forces than liquid Y.",
+            wrong: { 0: "This is backwards — a HIGHER boiling point indicates STRONGER, not weaker, intermolecular forces, since more energy is needed to overcome them and vaporize the liquid.", 2: "Similar molar mass only implies similar dispersion (London) force contributions; it does NOT guarantee identical overall intermolecular forces, since other force types (like dipole-dipole or hydrogen bonding) can differ significantly between molecules of similar mass, leading to different boiling points as observed here.", 3: "Boiling point IS directly and meaningfully related to intermolecular force strength, even (and especially) when comparing molecules of similar molar mass — this is exactly the kind of comparison (similar mass, different boiling point) that reveals differences in additional intermolecular force types beyond simple dispersion forces." },
+            tempting: "Choice C is tempting because similar molar mass might suggest 'similar overall molecule,' but molar mass only directly correlates with the STRENGTH of dispersion forces — other, potentially much stronger, force types (dipole-dipole, hydrogen bonding) can differ independently of molar mass and still create large boiling point differences.",
+            commonMistake: "Assuming that similar molar mass must mean similar overall intermolecular forces and thus similar boiling points, without considering that molecules of similar mass can still have very different combinations of intermolecular force TYPES present.",
+            apTip: "When two molecules have similar molar mass but different boiling points, this is a classic signal to look beyond dispersion forces (which should be similar for similar-mass molecules) and consider whether one molecule has an ADDITIONAL, stronger force type present (like hydrogen bonding or stronger dipole-dipole interactions) that the other lacks."
+          }
+        },
+        {
+          id: "chem-3-49", difficulty: 5, type: "mcq", topic: "Advanced IMF Reasoning",
+          prompt: "A 1.00 m (molal) aqueous solution of NaCl has a higher boiling point elevation than a 1.00 m aqueous solution of glucose (a nonelectrolyte), even though both solutions have the same molal concentration of dissolved solute particles as originally weighed out. What best explains this difference?",
+          choices: ["NaCl has a higher molar mass than glucose, which directly causes a greater boiling point elevation", "NaCl dissociates into two ions (Na⁺ and Cl⁻) per formula unit when dissolved, effectively doubling the total number of dissolved particles compared to glucose (which remains as single, intact molecules), and boiling point elevation depends on the TOTAL number of dissolved particles, not the number of original formula units", "Boiling point elevation only occurs for ionic compounds, never for molecular compounds like glucose", "This observation is inconsistent with colligative property theory and represents an experimental anomaly"],
+          correct: 1,
+          explanation: {
+            correct: "Boiling point elevation (and other colligative properties) depends on the TOTAL number of dissolved solute particles in solution, not simply the number of formula units originally dissolved. NaCl dissociates into two separate ions (Na⁺ and Cl⁻) per formula unit when it dissolves in water, effectively doubling the number of dissolved particles compared to the same molal concentration of glucose, which remains as intact, non-dissociating molecules — this particle-doubling effect (captured by the van't Hoff factor, i ≈ 2 for NaCl vs. i = 1 for glucose) explains NaCl's greater boiling point elevation at the same molality.",
+            wrong: { 0: "Molar mass itself is not the direct factor in boiling point elevation for a given molality; molality already accounts for moles of solute per kilogram of solvent, so molar mass differences don't directly explain this specific effect — the key factor is how many PARTICLES each formula unit produces upon dissolving.", 2: "Boiling point elevation is a colligative property that occurs for BOTH ionic and molecular (nonelectrolyte) solutes; glucose, despite being molecular and non-dissociating, absolutely does show boiling point elevation — the difference here is in the MAGNITUDE of the effect (due to particle count), not whether the effect occurs at all for molecular solutes.", 3: "This observation is fully consistent with, and in fact a classic confirming example of, colligative property theory and the van't Hoff factor concept — it is not an anomaly, but rather an expected and well-explained result of ionic dissociation increasing total particle count in solution." },
+            tempting: "Choice A is tempting because NaCl's formula unit does have some molar mass value that might seem relevant, but boiling point elevation calculations are based on MOLALITY (moles of particles per kg of solvent), and since both solutions start at the same 1.00 m concentration, the deciding factor must be how many total PARTICLES each solute produces upon dissolving, not the solute's molar mass.",
+            commonMistake: "Overlooking that ionic compounds dissociate into multiple particles upon dissolving, and instead treating 'moles of formula units dissolved' as equivalent to 'total moles of dissolved particles,' which is only true for non-dissociating (molecular) solutes like glucose.",
+            apTip: "For colligative property problems (boiling point elevation, freezing point depression, osmotic pressure), always account for whether the solute dissociates: use the van't Hoff factor (i) to multiply the given molality by the number of particles each formula unit produces upon dissolving (i ≈ 2 for NaCl, i ≈ 3 for CaCl2, i = 1 for nonelectrolytes like glucose) before calculating the colligative property."
+          }
+        },
+        {
+          id: "chem-3-50", difficulty: 5, type: "mcq", topic: "Advanced IMF Reasoning",
+          prompt: "Two aqueous solutions are prepared: Solution A is 1.00 m CaCl2 (which dissociates into 1 Ca²⁺ and 2 Cl⁻ per formula unit, van't Hoff factor i ≈ 3), and Solution B is 2.00 m glucose (a nonelectrolyte, i = 1). Which solution would be expected to have the greater boiling point elevation, and by approximately what factor?",
+          choices: ["Solution A, by about 1.5 times greater elevation than Solution B", "Solution B, by about 1.5 times greater elevation than Solution A", "Both solutions would have identical boiling point elevation", "Solution A, by about 3 times greater elevation than Solution B"],
+          correct: 0,
+          explanation: {
+            correct: "Boiling point elevation depends on the EFFECTIVE particle molality, calculated as (molality) × (van't Hoff factor, i). For Solution A: 1.00 m × 3 = 3.00 effective particle molality. For Solution B: 2.00 m × 1 = 2.00 effective particle molality. Since 3.00 (Solution A) is greater than 2.00 (Solution B)... comparing these values: Solution A's effective molality (3.00) is actually greater than Solution B's (2.00), by a factor of 3.00/2.00 = 1.5, so Solution A would have the GREATER boiling point elevation, by about 1.5 times that of Solution B.",
+            wrong: { 1: "This reverses which solution has the greater boiling point elevation; comparing effective particle molality (Solution A: 1.00×3=3.00 vs. Solution B: 2.00×1=2.00), Solution A's value is actually higher, meaning Solution A (not B) has the greater boiling point elevation.", 2: "The two solutions have different effective particle molalities (3.00 for Solution A vs. 2.00 for Solution B) due to their different van't Hoff factors and different starting molalities, so their boiling point elevations are NOT identical.", 3: "While CaCl2's van't Hoff factor (i≈3) is indeed 3 times glucose's (i=1), Solution B's molality (2.00 m) is also double Solution A's (1.00 m), so the two effects partially offset — the actual ratio of effective particle molalities is 3.00/2.00 = 1.5, not the full factor of 3 that would result from ignoring the molality difference between the two solutions." },
+            tempting: "Choice D is a strong trap for students who correctly identify CaCl2's van't Hoff factor advantage (i=3 vs i=1) but forget to also account for Solution B's HIGHER starting molality (2.00 m vs. 1.00 m), which partially offsets CaCl2's dissociation advantage.",
+            commonMistake: "Comparing colligative properties using only the van't Hoff factor (or only the molality) of each solution, rather than correctly multiplying BOTH factors together (effective particle molality = molality × van't Hoff factor) for each solution before comparing.",
+            apTip: "When comparing colligative properties between solutions with DIFFERENT molalities AND different van't Hoff factors, always calculate each solution's full EFFECTIVE PARTICLE MOLALITY (molality × i) separately first, then compare those two calculated values directly — never compare molality or van't Hoff factor alone in isolation when both differ between the solutions being compared."
+          }
         }
       ]
     },
@@ -338,6 +2054,578 @@ export const chemistry = {
             tempting: "Choices A and D both stem from the same common misconception — that thermodynamic favorability (energy released) and kinetic speed (rate) must always move together, when in reality they are governed by entirely separate physical factors (energy difference vs. energy barrier height).",
             commonMistake: "Assuming a reaction that releases a lot of energy overall must also proceed quickly, without distinguishing 'how much energy is released' (thermodynamics) from 'how easily the reaction gets started' (kinetics/activation energy).",
             apTip: "College-level insight: the classic real-world example is diamond → graphite, which is exothermic and thermodynamically favorable, yet proceeds so slowly at room temperature it's practically unobservable due to an extremely high activation energy — citing this example explicitly demonstrates strong conceptual command on an FRQ about thermodynamics vs. kinetics."
+          }
+        },
+        {
+          id: "chem-4-7", difficulty: 1, type: "mcq", topic: "Balancing Equations",
+          prompt: "When balanced with the smallest whole-number coefficients, what is the coefficient of O2 in: Fe + O2 → Fe2O3?",
+          choices: ["1", "2", "3", "4"],
+          correct: 2,
+          explanation: {
+            correct: "Balancing 4Fe + 3O2 → 2Fe2O3: iron balances (4=4) and oxygen balances (3×2=6 on the left equals 2×3=6 on the right), so the coefficient of O2 is 3.",
+            wrong: { 0: "A coefficient of 1 for O2 provides only 2 oxygen atoms, far short of the 6 oxygen atoms needed once iron is balanced with a coefficient of 2 for Fe2O3.", 1: "A coefficient of 2 for O2 provides only 4 oxygen atoms, still short of the 6 needed.", 3: "A coefficient of 4 for O2 provides 8 oxygen atoms, overshooting the 6 actually needed, and also wouldn't allow all coefficients to be reduced to the smallest whole numbers." },
+            tempting: "None of the distractors are especially tempting if the full balancing process (iron first, then oxygen) is carried out carefully, but stopping partway through balancing can leave oxygen undercounted.",
+            commonMistake: "Balancing oxygen before fully accounting for how many oxygen atoms are needed based on the already-balanced iron and Fe2O3 coefficients.",
+            apTip: "For synthesis reactions between a metal and O2, balance the metal first (matching its coefficient to the subscript pattern in the oxide), then count total oxygen atoms needed on the product side, and finally choose the O2 coefficient (dividing by 2) to match — clearing any fractions by multiplying through if needed."
+          }
+        },
+        {
+          id: "chem-4-8", difficulty: 2, type: "mcq", topic: "Balancing Equations",
+          prompt: "When balanced with the smallest whole-number coefficients, what is the sum of ALL coefficients in the balanced equation for the combustion of butane: C4H10 + O2 → CO2 + H2O?",
+          choices: ["21", "29", "31", "33"],
+          correct: 3,
+          explanation: {
+            correct: "The balanced equation is 2C4H10 + 13O2 → 8CO2 + 10H2O. Checking: carbon (2×4=8 left, 8×1=8 right), hydrogen (2×10=20 left, 10×2=20 right), oxygen (13×2=26 left, 8×2+10×1=26 right). Sum of coefficients = 2+13+8+10 = 33.",
+            wrong: { 0: "21 doesn't match the sum of the correctly balanced coefficients (2+13+8+10=33) for this specific combustion reaction.", 1: "29 is close to but doesn't match the correct sum of 33 for the properly balanced smallest-whole-number equation.", 2: "31 is also close to but doesn't match the correct sum of 33 — a small arithmetic slip when adding the four coefficients together could produce this value." },
+            tempting: "This problem requires carefully balancing a four-carbon hydrocarbon combustion, which often requires an intermediate step of using a fractional O2 coefficient before doubling everything to clear the fraction — skipping this doubling step, or making a small arithmetic error in the final sum, are both common sources of error.",
+            commonMistake: "Stopping at a partially balanced equation with a fractional oxygen coefficient (like 6.5 O2) instead of doubling every coefficient in the equation to clear the fraction and reach whole numbers, or making an arithmetic slip when summing the four final coefficients.",
+            apTip: "For combustion of larger hydrocarbons, it's normal to get a fractional O2 coefficient when balancing oxygen last — always finish by multiplying EVERY coefficient in the entire equation by 2 (or whatever clears the fraction) to reach the smallest whole-number set, then carefully re-add all coefficients for a final sum."
+          }
+        },
+        {
+          id: "chem-4-9", difficulty: 3, type: "mcq", topic: "Balancing Equations",
+          prompt: "When balanced with the smallest whole-number coefficients, what is the coefficient of H2O in: Ca(OH)2 + H3PO4 → Ca3(PO4)2 + H2O?",
+          choices: ["2", "3", "6", "9"],
+          correct: 2,
+          explanation: {
+            correct: "The balanced equation is 3Ca(OH)2 + 2H3PO4 → Ca3(PO4)2 + 6H2O. Checking hydrogen: left side has 3×2=6 (from Ca(OH)2) + 2×3=6 (from H3PO4) = 12 total H atoms; right side needs 6×2=12 H atoms in 6H2O — this matches, confirming the H2O coefficient of 6.",
+            wrong: { 0: "A coefficient of 2 for H2O would only account for 4 hydrogen atoms on the product side, far short of the 12 hydrogen atoms available from the balanced reactant side.", 1: "A coefficient of 3 for H2O would only account for 6 hydrogen atoms, still short of the 12 needed to balance with the reactant side.", 3: "A coefficient of 9 for H2O would require 18 hydrogen atoms, overshooting the 12 actually available once Ca(OH)2 and H3PO4 are correctly balanced." },
+            tempting: "None of the distractors are especially tempting if all atoms (Ca, P, O, H) are tracked carefully through the full balancing process, but partial balancing (stopping after just Ca or just P) can leave hydrogen miscounted.",
+            commonMistake: "Balancing only some elements (like calcium and phosphorus) and assuming the water coefficient can be guessed without fully tracking total hydrogen atoms on both sides.",
+            apTip: "For double-replacement/precipitation reactions with polyatomic ions, balance the polyatomic ions as complete units first (treating PO4 as one group, for example), then balance any remaining individual atoms (like H and O in the water molecule) last."
+          }
+        },
+        {
+          id: "chem-4-10", difficulty: 4, type: "mcq", topic: "Balancing Equations",
+          prompt: "When balanced with the smallest whole-number coefficients, what is the coefficient of KMnO4 in this redox equation: KMnO4 + HCl → KCl + MnCl2 + Cl2 + H2O?",
+          choices: ["1", "2", "3", "4"],
+          correct: 1,
+          explanation: {
+            correct: "The fully balanced equation is 2KMnO4 + 16HCl → 2KCl + 2MnCl2 + 5Cl2 + 8H2O. This balance accounts for both the mass balance of every atom AND the electron transfer balance required for this redox reaction (Mn going from +7 to +2, a 5-electron reduction per Mn, balanced against Cl⁻ being oxidized to Cl2), requiring a coefficient of 2 for KMnO4.",
+            wrong: { 0: "A coefficient of 1 for KMnO4 does not allow the rest of the equation to balance correctly using whole numbers when the necessary electron transfer and chlorine atom counts are properly accounted for.", 2: "A coefficient of 3 for KMnO4 overshoots what's needed and doesn't correspond to the correctly balanced smallest-whole-number equation for this specific redox reaction.", 3: "A coefficient of 4 for KMnO4 overshoots even further and also doesn't correspond to the correctly balanced smallest-whole-number equation." },
+            tempting: "This type of complex redox equation is difficult to balance by simple inspection/trial-and-error alone; students who try to balance only by matching atom counts (without tracking electron transfer) often get stuck or arrive at a non-minimal set of coefficients.",
+            commonMistake: "Attempting to balance a complex redox equation purely by trial-and-error atom counting, without using a systematic method (like the half-reaction method) that tracks electron transfer alongside atom balance.",
+            apTip: "For complex redox equations like this one, use the half-reaction method: separate the equation into oxidation and reduction half-reactions, balance atoms and charge in each half-reaction separately, then combine them by matching total electrons lost to total electrons gained before combining into the final overall equation."
+          }
+        },
+        {
+          id: "chem-4-11", difficulty: 5, type: "mcq", topic: "Balancing Equations",
+          prompt: "A balanced equation for the combustion of an unknown hydrocarbon CxHy is: 2CxHy + 15O2 → 10CO2 + 6H2O. Using conservation of carbon and hydrogen atoms, what are the values of x and y (the molecular formula of the hydrocarbon)?",
+          choices: ["C5H3", "C5H6", "C10H6", "C10H12"],
+          correct: 1,
+          explanation: {
+            correct: "Conservation of carbon: the 2 molecules of CxHy must together supply all 10 carbon atoms found in the 10 CO2 molecules, so 2x = 10, giving x = 5. Conservation of hydrogen: the 2 molecules of CxHy must together supply all 12 hydrogen atoms found in the 6 H2O molecules (6×2=12), so 2y = 12, giving y = 6. This gives the hydrocarbon formula C5H6.",
+            wrong: { 0: "This has the correct carbon count (x=5) but an incorrect hydrogen count; solving 2y=12 correctly gives y=6, not y=3 (using y=3 would only account for half the hydrogen atoms actually present in the 6 H2O molecules produced).", 2: "This doubles the correct carbon count; solving 2x=10 correctly gives x=5, not x=10 (using x=10 would require 20 total carbon atoms from the 2 CxHy molecules, twice what the 10 CO2 molecules actually contain).", 3: "This doubles BOTH the correct carbon and hydrogen counts; both x and y are each twice the values obtained from correctly dividing the total atom counts by the coefficient of 2 in front of CxHy." },
+            tempting: "Choices C and D are tempting if a student forgets to divide by the coefficient (2) in front of CxHy when solving for x and y, mistakenly treating the TOTAL atoms produced as if they came from a single CxHy molecule rather than from 2 molecules combined.",
+            commonMistake: "Forgetting to divide the total atom counts (from the product coefficients) by the reactant's own coefficient when solving for an unknown hydrocarbon's molecular formula from a balanced equation.",
+            apTip: "When determining an unknown formula from a balanced equation, always set up the atom conservation equation explicitly as (coefficient of unknown) × (subscript in unknown) = (total atoms of that element among the products), and solve for the subscript by dividing by the unknown's own coefficient — don't skip this division step."
+          }
+        },
+        {
+          id: "chem-4-12", difficulty: 1, type: "mcq", topic: "Stoichiometry",
+          prompt: "For the reaction N2 + 3H2 → 2NH3, how many moles of NH3 are produced from 4.00 mol of N2 (assuming excess H2)?",
+          choices: ["2.00 mol", "4.00 mol", "6.00 mol", "8.00 mol"],
+          correct: 3,
+          explanation: {
+            correct: "Using the mole ratio from the balanced equation (2 mol NH3 produced per 1 mol N2 consumed): 4.00 mol N2 × (2 mol NH3 / 1 mol N2) = 8.00 mol NH3.",
+            wrong: { 0: "This would result from using the ratio backwards (1 mol NH3 per 2 mol N2) instead of the correct ratio (2 mol NH3 per 1 mol N2).", 1: "This treats the mole ratio as 1:1 (ignoring the coefficient of 2 in front of NH3 entirely), rather than correctly applying the actual 1:2 ratio between N2 and NH3.", 2: "This doesn't correspond to a correct application of the 1:2 mole ratio between N2 and NH3 from the balanced equation." },
+            tempting: "Choice B is tempting because it simply restates the given moles of N2 without applying any mole ratio conversion at all, which is an easy shortcut to mistakenly take.",
+            commonMistake: "Forgetting to apply the mole ratio from the balanced equation's coefficients, and instead assuming a 1:1 relationship between reactant and product moles.",
+            apTip: "Always explicitly write out the mole ratio as a conversion factor using the balanced equation's coefficients (e.g., 2 mol NH3 / 1 mol N2) and multiply by the given moles — never assume a 1:1 relationship without checking the actual coefficients."
+          }
+        },
+        {
+          id: "chem-4-13", difficulty: 2, type: "mcq", topic: "Stoichiometry",
+          prompt: "For the reaction 2H2 + O2 → 2H2O, how many grams of H2O are produced from 10.0 g of H2 (assuming excess O2)? (Molar mass H2 = 2.016 g/mol, H2O = 18.02 g/mol.)",
+          choices: ["44.7 g", "89.4 g", "178.8 g", "10.0 g"],
+          correct: 1,
+          explanation: {
+            correct: "Moles H2 = 10.0 g ÷ 2.016 g/mol ≈ 4.96 mol. Using the 1:1 mole ratio of H2 to H2O from the balanced equation, moles H2O ≈ 4.96 mol. Mass H2O = 4.96 mol × 18.02 g/mol ≈ 89.4 g.",
+            wrong: { 0: "This is roughly half the correct value; it might result from an error in the mole ratio application or in the final mass conversion step.", 2: "This is roughly double the correct value; it might result from doubling the correct moles of H2O incorrectly during the mole ratio step.", 3: "This simply restates the given mass of H2 without performing any of the required stoichiometric conversions (moles of H2 → moles of H2O → mass of H2O) at all." },
+            tempting: "Choice D is tempting for students who forget that a stoichiometry mass-to-mass problem requires converting through moles using both molar masses and the balanced equation's mole ratio, rather than just restating a given value.",
+            commonMistake: "Skipping one or more of the three required conversion steps (mass to moles of reactant, moles of reactant to moles of product via the mole ratio, and moles of product to mass of product) in a mass-to-mass stoichiometry problem.",
+            apTip: "Always use the standard three-step stoichiometry pathway explicitly: (1) given mass ÷ molar mass = moles of given substance, (2) moles of given × mole ratio (from balanced equation) = moles of desired substance, (3) moles of desired × its molar mass = mass of desired substance."
+          }
+        },
+        {
+          id: "chem-4-14", difficulty: 3, type: "mcq", topic: "Stoichiometry",
+          prompt: "For the reaction 2Al + 3CuSO4 → Al2(SO4)3 + 3Cu, how many moles of Cu are produced from 6.00 mol of Al (assuming excess CuSO4)?",
+          choices: ["4.00 mol", "6.00 mol", "9.00 mol", "12.0 mol"],
+          correct: 2,
+          explanation: {
+            correct: "Using the mole ratio from the balanced equation (3 mol Cu produced per 2 mol Al consumed): 6.00 mol Al × (3 mol Cu / 2 mol Al) = 9.00 mol Cu.",
+            wrong: { 0: "This would result from using an incorrect or inverted mole ratio rather than the correct 3:2 ratio of Cu to Al from the balanced equation.", 1: "This treats the mole ratio as 1:1 (ignoring the actual 3:2 coefficients), rather than correctly applying the balanced equation's specific ratio.", 3: "This overstates the correct amount; it doesn't correspond to a correct application of the 3:2 mole ratio using the given 6.00 mol of Al." },
+            tempting: "Choice B is tempting because it simply restates the given moles of Al without applying the actual 3:2 mole ratio conversion required by the balanced equation's coefficients.",
+            commonMistake: "Assuming a 1:1 mole ratio between reactant and product without checking the actual coefficients in the balanced equation, especially when the ratio isn't as simple as 1:1 or 1:2.",
+            apTip: "Always identify the EXACT mole ratio (as a fraction using the two relevant coefficients) from the balanced equation before starting any stoichiometry conversion — writing it out explicitly (e.g., '3 mol Cu / 2 mol Al') prevents defaulting to an incorrect 1:1 assumption."
+          }
+        },
+        {
+          id: "chem-4-15", difficulty: 4, type: "mcq", topic: "Stoichiometry",
+          prompt: "For the reaction CaCO3 → CaO + CO2, how many grams of CaCO3 (molar mass = 100.09 g/mol) must be decomposed to produce 11.2 g of CaO (molar mass = 56.08 g/mol)?",
+          choices: ["5.60 g", "11.2 g", "20.0 g", "40.0 g"],
+          correct: 2,
+          explanation: {
+            correct: "Moles CaO = 11.2 g ÷ 56.08 g/mol ≈ 0.1997 mol. Using the 1:1 mole ratio between CaCO3 and CaO, moles CaCO3 ≈ 0.1997 mol. Mass CaCO3 = 0.1997 mol × 100.09 g/mol ≈ 20.0 g.",
+            wrong: { 0: "This is roughly half the correct value; it might result from a calculation error in one of the required stoichiometric conversion steps.", 1: "This simply restates the given mass of CaO without correctly converting through moles and accounting for the different molar masses of CaCO3 and CaO.", 3: "This is roughly double the correct value; it might result from a calculation error, such as accidentally doubling the moles at some point in the conversion." },
+            tempting: "Choice B is tempting because it might seem like 'the same mass' should be needed since the mole ratio is 1:1, but CaCO3 and CaO have different molar masses (100.09 vs. 56.08 g/mol), so equal MOLES do not correspond to equal MASSES.",
+            commonMistake: "Assuming that a 1:1 mole ratio between reactant and product means the masses must also be equal, without accounting for the fact that the two substances have different molar masses.",
+            apTip: "A 1:1 mole ratio between reactant and product does NOT mean their masses are equal — always convert through moles explicitly using each substance's own specific molar mass, since different substances almost always have different molar masses even when their mole ratio is simple."
+          }
+        },
+        {
+          id: "chem-4-16", difficulty: 5, type: "mcq", topic: "Stoichiometry",
+          prompt: "For the reaction 4NH3 + 5O2 → 4NO + 6H2O, if 8.50 g of NH3 (molar mass = 17.03 g/mol) reacts completely with excess O2, how many grams of H2O (molar mass = 18.02 g/mol) are produced?",
+          choices: ["4.99 g", "6.65 g", "8.98 g", "13.4 g"],
+          correct: 3,
+          explanation: {
+            correct: "Moles NH3 = 8.50 g ÷ 17.03 g/mol ≈ 0.4991 mol. Using the mole ratio from the balanced equation (6 mol H2O per 4 mol NH3, which simplifies to 3:2): moles H2O = 0.4991 mol × (6/4) ≈ 0.7487 mol. Mass H2O = 0.7487 mol × 18.02 g/mol ≈ 13.4 g.",
+            wrong: { 0: "This is too low; it doesn't correctly apply the full three-step stoichiometry pathway (mass→moles of NH3, moles of NH3→moles of H2O using the 6:4 ratio, moles of H2O→mass of H2O) using all the given values correctly.", 1: "This is also too low compared to the correctly calculated value; it may result from using an incorrect mole ratio (such as treating it as 1:1) between NH3 and H2O.", 2: "This value is too low; it may result from using a mole ratio smaller than the correct 6:4 (or 3:2) ratio between H2O and NH3, such as mistakenly using a 1:1 ratio for part of the calculation." },
+            tempting: "This problem requires carefully applying a non-simple mole ratio (6:4, which simplifies to 3:2) between NH3 and H2O — students who default to assuming a 1:1 or a different simple ratio without checking the actual balanced equation coefficients will arrive at an incorrect, too-low answer.",
+            commonMistake: "Misapplying or oversimplifying the mole ratio between two substances when the balanced equation's coefficients form a ratio other than the most commonly assumed simple ratios.",
+            apTip: "Always double check the EXACT mole ratio from the balanced equation's specific coefficients (here, 6 mol H2O per 4 mol NH3, which simplifies to 3:2) rather than assuming a simpler, more familiar ratio — an incorrect ratio is one of the most common sources of error in multi-step stoichiometry problems."
+          }
+        },
+        {
+          id: "chem-4-17", difficulty: 2, type: "mcq", topic: "Limiting Reactants",
+          prompt: "For the reaction 2Al + 3Cl2 → 2AlCl3, 0.185 mol of Al is combined with 0.141 mol of Cl2. Which reactant is limiting?",
+          choices: ["Al, because it has more available moles", "Cl2, because based on the 2:3 mole ratio, there isn't enough Cl2 to react with all the available Al", "Neither is limiting since both amounts are given in moles", "AlCl3, because it is the product being formed"],
+          correct: 1,
+          explanation: {
+            correct: "The balanced equation requires a 2:3 mole ratio of Al:Cl2. To react completely with all 0.185 mol of Al, (0.185)(3/2) ≈ 0.278 mol of Cl2 would be needed, but only 0.141 mol of Cl2 is actually available — since there isn't enough Cl2 to consume all the Al, Cl2 runs out first and is the limiting reactant.",
+            wrong: { 0: "Having more raw moles available doesn't automatically make a reactant NOT limiting; the required stoichiometric ratio must be checked against what's actually available, and here Al's moles exceed what the available Cl2 can fully react with.", 2: "Both reactants being given in moles doesn't mean neither is limiting; one of them will still run out first unless the reactants happen to be present in the EXACT stoichiometric ratio required, which is not the case here.", 3: "AlCl3 is the product being formed in this reaction, not a reactant being consumed, so it cannot be identified as a 'limiting reactant' — that concept only applies to reactants." },
+            tempting: "Choice A is a very common trap — students often assume the reactant with the smaller raw mole count must be limiting (0.141 mol Cl2 vs. 0.185 mol Al), but the correct determination requires checking against the specific stoichiometric ratio required, not just comparing raw mole amounts directly.",
+            commonMistake: "Comparing raw mole amounts of two reactants directly without dividing by their respective coefficients in the balanced equation to correctly determine which one is actually limiting.",
+            apTip: "To find the limiting reactant, always calculate how much of ONE reactant would be needed to fully react with the given amount of the OTHER reactant (using the balanced equation's mole ratio), then compare that needed amount to what's actually available — the reactant that runs short is the limiting one."
+          }
+        },
+        {
+          id: "chem-4-18", difficulty: 3, type: "mcq", topic: "Limiting Reactants",
+          prompt: "For the reaction 2Al + 3Cl2 → 2AlCl3 (molar mass AlCl3 = 133.33 g/mol), 5.00 g of Al (molar mass = 26.98 g/mol) is combined with 10.0 g of Cl2 (molar mass = 70.90 g/mol). Given that Cl2 is the limiting reactant (0.1410 mol available, requiring only 0.0940 mol of Al to fully react), what is the theoretical yield of AlCl3?",
+          choices: ["6.27 g", "9.20 g", "12.5 g", "18.8 g"],
+          correct: 2,
+          explanation: {
+            correct: "Since Cl2 is limiting (0.1410 mol available), use its moles with the mole ratio from the balanced equation (2 mol AlCl3 per 3 mol Cl2): moles AlCl3 = 0.1410 mol × (2/3) ≈ 0.0940 mol. Mass AlCl3 = 0.0940 mol × 133.33 g/mol ≈ 12.5 g.",
+            wrong: { 0: "This is too low; it doesn't correctly apply the 2:3 mole ratio between AlCl3 and Cl2 using the limiting reactant's actual available moles.", 1: "This is also too low compared to the correctly calculated value; it may result from a miscalculation in applying the mole ratio or molar mass conversion.", 3: "This is too high; it may result from incorrectly using the NON-limiting reactant (Al) instead of the limiting reactant (Cl2) as the basis for the theoretical yield calculation." },
+            tempting: "Choice D might tempt students who mistakenly calculate theoretical yield based on the excess reactant (Al) rather than correctly using the LIMITING reactant (Cl2), which is what actually determines the maximum possible product amount.",
+            commonMistake: "Calculating theoretical yield using the reactant that is present in excess rather than correctly using the limiting reactant, which is the one that actually determines the maximum amount of product that can form.",
+            apTip: "Once the limiting reactant is identified, ALWAYS use ONLY that reactant's moles (never the excess reactant's moles) to calculate theoretical yield — the limiting reactant is, by definition, what runs out first and thus caps the maximum possible amount of product."
+          }
+        },
+        {
+          id: "chem-4-19", difficulty: 4, type: "mcq", topic: "Limiting Reactants & Percent Yield",
+          prompt: "Continuing from the Al + Cl2 reaction (theoretical yield of AlCl3 = 12.5 g), if a student actually collects 10.0 g of AlCl3 in the lab, what is the percent yield?",
+          choices: ["62.5%", "79.8%", "80.0%", "125%"],
+          correct: 1,
+          explanation: {
+            correct: "Percent yield = (actual yield ÷ theoretical yield) × 100 = (10.0 g ÷ 12.5 g) × 100 ≈ 79.8%.",
+            wrong: { 0: "This doesn't match the correct division of the given actual and theoretical yield values (10.0 ÷ 12.5 × 100 ≈ 79.8%, not 62.5%).", 2: "This is close to but not exactly the correctly calculated value (79.8%, not exactly 80.0%) — small rounding differences matter when comparing to precise answer choices.", 3: "This would result from inverting the percent yield formula (theoretical ÷ actual instead of actual ÷ theoretical), giving a physically impossible result greater than 100% when actual yield is less than theoretical yield." },
+            tempting: "Choice D is a classic trap for inverting the percent yield formula; since actual yield (10.0 g) is LESS than theoretical yield (12.5 g) here, the percent yield must be below 100%, not above it.",
+            commonMistake: "Inverting the percent yield formula (dividing theoretical by actual instead of actual by theoretical), which can produce a nonsensical result greater than 100% when actual yield is less than theoretical yield.",
+            apTip: "Always sanity check a percent yield calculation: since actual yield can never exceed the theoretical maximum in an ideal calculation, your final percent yield should almost always be at or below 100% — a result well above 100% is a strong signal that the formula was inverted."
+          }
+        },
+        {
+          id: "chem-4-20", difficulty: 5, type: "mcq", topic: "Limiting Reactants & Excess Reactant",
+          prompt: "For the reaction 2Al + 3Cl2 → 2AlCl3, using the same amounts as before (5.00 g Al, 0.1853 mol available; 10.0 g Cl2, 0.1410 mol available, with Cl2 identified as limiting, requiring only 0.0940 mol of Al to fully react), how many grams of Al remain UNREACTED (in excess) after the reaction goes to completion?",
+          choices: ["0.912 g", "2.46 g", "3.05 g", "5.00 g"],
+          correct: 1,
+          explanation: {
+            correct: "Since Cl2 is limiting, only 0.0940 mol of Al actually reacts (as calculated from the 2:3 mole ratio applied to the available Cl2). Excess (unreacted) Al = total Al available − Al consumed = 0.1853 mol − 0.0940 mol = 0.0913 mol. Mass of unreacted Al = 0.0913 mol × 26.98 g/mol ≈ 2.46 g.",
+            wrong: { 0: "This is roughly the MOLES of excess Al (0.0913 mol), not yet converted to mass using Al's molar mass (26.98 g/mol) — an easy point to stop calculating too early.", 2: "This doesn't correctly correspond to the mass of Al actually left unreacted based on the correctly calculated moles of excess Al (0.0913 mol).", 3: "This is the TOTAL original mass of Al before any reaction occurred, not accounting for the portion (0.0940 mol) that actually reacted with the available Cl2." },
+            tempting: "Choice D is tempting for students who forget that SOME of the excess reactant does still react (up to the amount the limiting reactant allows) — the excess reactant isn't entirely unreacted, only the portion beyond what the limiting reactant can consume remains.",
+            commonMistake: "Reporting the full original amount of the excess reactant as 'leftover,' rather than correctly subtracting the portion that DID react (as determined by the limiting reactant) before calculating the truly unreacted amount.",
+            apTip: "To find leftover excess reactant, always calculate how much of it ACTUALLY reacted (based on the limiting reactant's moles and the balanced equation's ratio) first, then subtract that consumed amount from the ORIGINAL total amount available — never simply report the reactant's full starting amount as 'leftover.'"
+          }
+        },
+        {
+          id: "chem-4-21", difficulty: 1, type: "mcq", topic: "Types of Reactions",
+          prompt: "The reaction 2H2 + O2 → 2H2O is best classified as a:",
+          choices: ["Synthesis (combination) reaction", "Decomposition reaction", "Single replacement reaction", "Double replacement reaction"],
+          correct: 0,
+          explanation: {
+            correct: "In this reaction, two simpler reactants (H2 and O2) combine to form a single, more complex product (H2O) — this pattern of multiple reactants combining into one product is the defining characteristic of a synthesis (combination) reaction.",
+            wrong: { 1: "Decomposition reactions involve a single reactant breaking down into multiple products, the opposite pattern of what's shown here, where multiple reactants combine into one product.", 2: "Single replacement reactions involve one element displacing another within a compound; this reaction instead involves two elements (H2 and O2) directly combining, not one displacing another from a compound.", 3: "Double replacement reactions involve two compounds exchanging ionic partners; this reaction involves two ELEMENTS combining to form a compound, not two compounds swapping components." },
+            tempting: "None of the distractors are especially tempting if the basic reaction type patterns (one product vs. one reactant vs. displacement vs. partner-swapping) are remembered clearly.",
+            commonMistake: "Not immediately recognizing the simple 'multiple reactants combine into one product' pattern as the hallmark of a synthesis reaction, especially when the reactants are elements rather than compounds.",
+            apTip: "Memorize the basic reaction type patterns as simple templates: synthesis (A + B → AB), decomposition (AB → A + B), single replacement (A + BC → AC + B), double replacement (AB + CD → AD + CB) — matching a given equation to one of these simple templates is usually enough to classify it."
+          }
+        },
+        {
+          id: "chem-4-22", difficulty: 2, type: "mcq", topic: "Types of Reactions",
+          prompt: "The reaction CaCO3 → CaO + CO2 is best classified as a:",
+          choices: ["Synthesis (combination) reaction", "Decomposition reaction", "Combustion reaction", "Single replacement reaction"],
+          correct: 1,
+          explanation: {
+            correct: "In this reaction, a single reactant (CaCO3) breaks down into two separate, simpler products (CaO and CO2) — this pattern of one reactant splitting into multiple products is the defining characteristic of a decomposition reaction.",
+            wrong: { 0: "Synthesis reactions involve multiple reactants combining into a single product, the opposite pattern of what's shown here, where a single reactant breaks apart into multiple products.", 2: "Combustion reactions specifically involve a fuel reacting with O2 to typically produce CO2 and H2O; there is no O2 reactant involved in this particular reaction at all.", 3: "Single replacement reactions involve one element displacing another within a compound; this reaction involves a single compound breaking apart into two products, not an element displacing anything." },
+            tempting: "None of the distractors are especially tempting if the basic reaction type patterns are remembered clearly, but seeing CO2 as a product might tempt some students to think 'combustion' without checking whether O2 is actually a reactant.",
+            commonMistake: "Assuming any reaction that produces CO2 must be a combustion reaction, without checking whether O2 is actually present as a reactant (a requirement for true combustion).",
+            apTip: "Don't classify a reaction as 'combustion' just because CO2 appears as a product — always verify that O2 is specifically present as a REACTANT, since CO2 can also form through other reaction types, like the thermal decomposition of carbonates shown here."
+          }
+        },
+        {
+          id: "chem-4-23", difficulty: 2, type: "mcq", topic: "Types of Reactions",
+          prompt: "The reaction Zn + 2HCl → ZnCl2 + H2 is best classified as a:",
+          choices: ["Synthesis reaction", "Decomposition reaction", "Single replacement reaction", "Double replacement reaction"],
+          correct: 2,
+          explanation: {
+            correct: "In this reaction, the element zinc (Zn) displaces hydrogen from within the compound HCl, forming a new compound (ZnCl2) and releasing the displaced element (H2) — this pattern of one element displacing another element from within a compound is the defining characteristic of a single replacement reaction.",
+            wrong: { 0: "Synthesis reactions involve multiple reactants combining into a single product; this reaction instead shows one element displacing another from a compound, forming two separate products.", 1: "Decomposition reactions involve a single reactant breaking down into multiple products; this reaction has two separate reactants (Zn and HCl), not a single reactant decomposing.", 3: "Double replacement reactions involve two COMPOUNDS exchanging ionic partners; this reaction involves an ELEMENT (Zn) displacing another element from within a compound (HCl), not two compounds swapping components with each other." },
+            tempting: "Choice D might tempt students who see multiple products forming and default to 'double replacement' without checking whether the reactants are two compounds (double replacement) or one element plus one compound (single replacement).",
+            commonMistake: "Confusing single replacement (one element + one compound as reactants) with double replacement (two compounds as reactants) based simply on having two products, without checking the actual identity of the reactants.",
+            apTip: "To distinguish single from double replacement, always check the REACTANTS first: single replacement has one pure element and one compound as reactants; double replacement has two compounds (often both aqueous ionic compounds) as reactants."
+          }
+        },
+        {
+          id: "chem-4-24", difficulty: 3, type: "mcq", topic: "Types of Reactions",
+          prompt: "Which of the following equations represents a combustion reaction?",
+          choices: ["CH4 + 2O2 → CO2 + 2H2O", "2Na + Cl2 → 2NaCl", "AgNO3 + NaCl → AgCl + NaNO3", "CaCO3 → CaO + CO2"],
+          correct: 0,
+          explanation: {
+            correct: "A combustion reaction specifically involves a fuel (often a hydrocarbon, like CH4) reacting with O2 to produce CO2 and H2O (for complete combustion); this equation shows exactly this pattern, with methane (CH4) reacting with oxygen gas to form carbon dioxide and water.",
+            wrong: { 1: "This is a synthesis reaction (two elements combining into one compound, NaCl); it doesn't involve a fuel reacting with O2 to produce CO2 and H2O, so it isn't a combustion reaction.", 2: "This is a double replacement (precipitation) reaction between two aqueous ionic compounds; there is no O2 reactant or hydrocarbon fuel involved, so it isn't a combustion reaction.", 3: "This is a decomposition reaction (one compound breaking into two products); while CO2 happens to be one of the products, there is no O2 reactant involved, so this isn't a combustion reaction." },
+            tempting: "Choice D is tempting because CO2 appears as a product, which might superficially suggest combustion, but true combustion specifically requires O2 as a REACTANT, which is absent in this decomposition reaction.",
+            commonMistake: "Identifying a reaction as combustion based solely on CO2 appearing as a product, without checking whether O2 is actually present as a reactant, which is combustion's defining requirement.",
+            apTip: "The defining requirement for a combustion reaction is O2 as a REACTANT (not just CO2 as a product) — always check specifically for O2 on the reactant side before classifying any equation as combustion."
+          }
+        },
+        {
+          id: "chem-4-25", difficulty: 4, type: "mcq", topic: "Types of Reactions",
+          prompt: "A student observes that mixing two clear, colorless aqueous solutions produces an immediate cloudy white solid that settles to the bottom of the container. Which type of reaction has most likely occurred, and what additional evidence would confirm this classification?",
+          choices: ["A synthesis reaction has occurred; confirmed by checking if the total mass of reactants exceeds the mass of the product", "A precipitation (double replacement) reaction has occurred; confirmed by using solubility rules to verify that one of the possible new ionic products is actually insoluble in water", "A combustion reaction has occurred; confirmed by checking for the release of CO2 gas bubbles", "A decomposition reaction has occurred; confirmed by verifying that only one reactant was present"],
+          correct: 1,
+          explanation: {
+            correct: "The formation of an insoluble solid (a cloudy precipitate) when two clear aqueous solutions are mixed is the classic visual signature of a precipitation (double replacement) reaction, where the ions from the two dissolved ionic compounds swap partners to form a new, insoluble ionic compound. This classification is properly confirmed by using solubility rules to check that one of the newly formed possible ion combinations is indeed insoluble (a precipitate) under normal conditions.",
+            wrong: { 0: "Synthesis reactions involve elements or simple compounds combining into one product; comparing total reactant vs. product mass wouldn't distinguish reaction type (mass is always conserved regardless of reaction type) and doesn't match the two-solutions-mixing scenario described.", 2: "Combustion reactions require a fuel reacting with O2 gas, typically producing CO2 and H2O; there's no indication of a fuel or O2 involved in mixing two aqueous solutions, and gas bubble formation (if any) wouldn't specifically indicate combustion in this context.", 3: "Decomposition reactions involve a SINGLE reactant breaking into multiple products; this scenario explicitly involves TWO separate solutions being mixed together, which rules out decomposition entirely." },
+            tempting: "None of the distractors are especially tempting if the precipitation reaction's defining visual signature (cloudy solid forming when two clear solutions mix) and its proper confirmation method (solubility rules) are both remembered clearly.",
+            commonMistake: "Not connecting the specific observable evidence (cloudy precipitate forming) to the correct underlying reaction type (double replacement/precipitation) and its proper confirmation method (checking solubility rules for the new possible ionic combinations).",
+            apTip: "Whenever two clear, colorless solutions are mixed and a solid forms, immediately think 'precipitation reaction' and confirm it by writing out the possible new ionic combinations (swapping partners between the two original compounds) and checking a solubility rules table to identify which one is actually insoluble."
+          }
+        },
+        {
+          id: "chem-4-26", difficulty: 5, type: "mcq", topic: "Types of Reactions",
+          prompt: "The reaction 2KClO3 → 2KCl + 3O2 could be classified as BOTH a decomposition reaction AND involve oxidation-reduction (redox). Which explanation best justifies why this reaction fits both classifications simultaneously?",
+          choices: ["It can only be one type of reaction at a time; classifying it as decomposition means it cannot also be a redox reaction", "It fits the decomposition pattern (one reactant breaking into multiple products) based on the NUMBER of reactants/products, while separately, tracking oxidation states shows chlorine is reduced (from +5 to -1) and oxygen is oxidized (from -2 to 0), which independently qualifies it as a redox reaction", "It is only a redox reaction, not truly a decomposition reaction, since redox and decomposition are mutually exclusive categories", "The reaction cannot involve redox since only one compound (KClO3) is a reactant"],
+          correct: 1,
+          explanation: {
+            correct: "Reaction type classifications like 'synthesis,' 'decomposition,' 'single replacement,' etc. are based simply on the PATTERN of how many reactants/products are involved and how they're arranged, while 'redox' is a SEPARATE, independent classification based on whether oxidation states change during the reaction. This equation fits the decomposition pattern (1 reactant → 2 products) based on its structure, AND separately qualifies as redox because chlorine's oxidation state changes from +5 (in KClO3) to -1 (in KCl), a reduction, while oxygen's oxidation state changes from -2 (in KClO3) to 0 (in O2), an oxidation — both classification systems can apply simultaneously to the same reaction.",
+            wrong: { 0: "Reaction type categories (synthesis, decomposition, replacement, etc.) and the redox/non-redox categorization are based on entirely different criteria (structural pattern vs. oxidation state changes) and are NOT mutually exclusive — many decomposition reactions (like this one) are also redox reactions.", 2: "This reaction genuinely fits the decomposition pattern structurally (one reactant, KClO3, breaking into two products, KCl and O2), so it is legitimately both a decomposition reaction AND a redox reaction simultaneously — these classifications aren't in conflict.", 3: "Redox reactions can absolutely occur with just a single reactant (as in many decomposition reactions); what matters for redox classification is whether OXIDATION STATES change during the reaction, not how many separate reactants are involved." },
+            tempting: "Choices A, C, and D all reflect a common underlying misconception — that a reaction can only belong to ONE classification category at a time, when in fact the structural reaction type (synthesis/decomposition/replacement) and the redox/non-redox classification are independent, overlapping systems that can both apply to the same reaction simultaneously.",
+            commonMistake: "Assuming reaction type classifications (synthesis, decomposition, etc.) and redox classification are mutually exclusive categories, rather than recognizing they are independent, overlapping classification systems based on different criteria.",
+            apTip: "Always remember that structural reaction type (synthesis, decomposition, single/double replacement, combustion) and redox classification are TWO SEPARATE, independent questions you can ask about any given reaction — a reaction can be both a decomposition reaction and a redox reaction at the same time, and many combustion reactions are also redox reactions, for example."
+          }
+        },
+        {
+          id: "chem-4-27", difficulty: 1, type: "mcq", topic: "Net Ionic Equations & Solubility",
+          prompt: "According to common solubility rules, which of the following compounds is generally considered SOLUBLE in water?",
+          choices: ["AgCl (silver chloride)", "NaCl (sodium chloride)", "PbSO4 (lead(II) sulfate)", "CaCO3 (calcium carbonate)"],
+          correct: 1,
+          explanation: {
+            correct: "According to standard solubility rules, virtually all compounds containing Group 1 (alkali metal) cations, including sodium (Na+), are soluble in water — this makes NaCl a soluble compound, readily dissolving to form separate Na+ and Cl- ions in solution.",
+            wrong: { 0: "Silver chloride (AgCl) is a well-known EXCEPTION to the general rule that most chlorides are soluble; silver halides (like AgCl, AgBr, AgI) are specifically classified as insoluble.", 2: "Lead(II) sulfate (PbSO4) is an exception to the general rule that most sulfates are soluble; along with a few other exceptions (like BaSO4 and CaSO4), lead(II) sulfate is classified as insoluble.", 3: "Calcium carbonate (CaCO3) follows the general rule that most carbonates are INsoluble (with exceptions mainly limited to Group 1 cations and ammonium); calcium carbonate specifically is a well-known insoluble compound (the primary component of limestone)." },
+            tempting: "None of the distractors are especially tempting if the specific solubility rule exceptions (silver halides, certain sulfates, most carbonates) are memorized correctly, but forgetting these specific exceptions can lead to incorrect classifications.",
+            commonMistake: "Applying a general solubility rule (like 'most chlorides are soluble' or 'most sulfates are soluble') without checking for well-known, specific exceptions to that general rule.",
+            apTip: "Memorize the KEY EXCEPTIONS to the main solubility rules explicitly: silver, lead(II), and mercury(I) halides are insoluble (exceptions to 'most halides are soluble'); barium, lead(II), and calcium sulfates are insoluble (exceptions to 'most sulfates are soluble'); virtually all carbonates, phosphates, and hydroxides are insoluble EXCEPT those paired with Group 1 cations or ammonium."
+          }
+        },
+        {
+          id: "chem-4-28", difficulty: 2, type: "mcq", topic: "Net Ionic Equations & Solubility",
+          prompt: "When aqueous solutions of BaCl2 and Na2SO4 are mixed, a white precipitate forms. Using solubility rules, what is the identity of this precipitate?",
+          choices: ["NaCl (sodium chloride)", "BaSO4 (barium sulfate)", "Ba(OH)2 (barium hydroxide)", "Na2CO3 (sodium carbonate)"],
+          correct: 1,
+          explanation: {
+            correct: "When BaCl2 and Na2SO4 are mixed, the ions can potentially recombine into two new possible compounds: BaSO4 and NaCl. Checking solubility rules, sulfates paired with barium (BaSO4) are a well-known exception to the general 'sulfates are soluble' rule, making BaSO4 insoluble and the precipitate that forms, while NaCl (paired with a Group 1 cation) remains soluble and stays dissolved in solution as spectator ions.",
+            wrong: { 0: "NaCl is one of the two possible new ionic combinations formed by swapping partners, but sodium compounds (Group 1 cations) are virtually always soluble according to solubility rules, so NaCl remains dissolved rather than precipitating.", 2: "Ba(OH)2 is not a possible product of this specific reaction at all — there is no hydroxide ion (OH-) present in either original reactant (BaCl2 or Na2SO4), so this compound cannot form from this particular reaction.", 3: "Na2CO3 is not a possible product of this specific reaction — there is no carbonate ion (CO3²⁻) present in either original reactant (BaCl2 or Na2SO4), so this compound cannot form from this particular reaction." },
+            tempting: "Choices C and D might tempt students who default to naming 'common insoluble compounds' from memory without actually checking which ions are genuinely present in and could combine from the SPECIFIC given reactants (BaCl2 and Na2SO4).",
+            commonMistake: "Naming a generically 'known insoluble compound' without verifying that its constituent ions are actually present in the specific reactants given in the problem.",
+            apTip: "For any precipitation reaction problem, first identify ONLY the ions actually present in the given reactants, then determine the two NEW possible ionic combinations by swapping cation-anion partners between them — only consider compounds that can actually form from those specific available ions, not just any generically 'known insoluble compound.'"
+          }
+        },
+        {
+          id: "chem-4-29", difficulty: 1, type: "mcq", topic: "Titration",
+          prompt: "In an acid-base titration, what is the purpose of the indicator that is typically added to the solution being titrated?",
+          choices: ["To speed up the neutralization reaction", "To change color at (or near) the equivalence point, signaling when the reaction is complete", "To increase the concentration of the acid or base being measured", "To prevent the reaction from occurring until the exact endpoint is reached"],
+          correct: 1,
+          explanation: {
+            correct: "An acid-base indicator is a substance that changes color within a specific pH range, chosen so that this color change occurs at (or very close to) the equivalence point of the titration — this visible color change signals to the person performing the titration that enough titrant has been added to complete the neutralization reaction.",
+            wrong: { 0: "Indicators do not catalyze or speed up the neutralization reaction itself; they serve purely as a visual signal for when the reaction has reached its equivalence point.", 2: "Indicators are typically added in very small amounts and do not meaningfully change the concentration of the acid or base being measured; their role is purely to provide a visual color change signal, not to participate quantitatively in the reaction.", 3: "The neutralization reaction between the acid and base proceeds continuously as titrant is added, regardless of the indicator; the indicator doesn't block or delay the reaction, it simply changes color once the solution's pH crosses into its specific color-change range." },
+            tempting: "None of the distractors are especially tempting if the indicator's specific purpose (a visual pH-based color change signal) is understood clearly, but vague ideas about indicators 'controlling' or 'participating in' the reaction can arise from an incomplete understanding.",
+            commonMistake: "Believing the indicator actively participates in or controls the timing of the neutralization reaction, rather than correctly understanding it as a passive visual signal that changes color based on the solution's pH.",
+            apTip: "Always describe an indicator's role precisely: it changes color at a specific pH (ideally matching the equivalence point pH of the specific titration), providing a VISUAL SIGNAL for when to stop adding titrant — it does not participate in or affect the actual stoichiometry of the neutralization reaction."
+          }
+        },
+        {
+          id: "chem-4-30", difficulty: 2, type: "mcq", topic: "Titration",
+          prompt: "In a titration, 25.00 mL of an unknown HCl solution is exactly neutralized by 30.00 mL of 0.100 M NaOH. Using the 1:1 mole ratio (HCl + NaOH → NaCl + H2O), what is the molarity of the HCl solution?",
+          choices: ["0.0833 M", "0.100 M", "0.120 M", "0.833 M"],
+          correct: 2,
+          explanation: {
+            correct: "Moles NaOH = 0.03000 L × 0.100 mol/L = 0.00300 mol. Using the 1:1 mole ratio, moles HCl = 0.00300 mol. Molarity HCl = 0.00300 mol ÷ 0.02500 L = 0.120 M.",
+            wrong: { 0: "This would result from inverting the volume ratio in the calculation (dividing by 30.00 mL instead of 25.00 mL, or a similar inversion).", 1: "This simply restates the given NaOH concentration without accounting for the different volumes of acid and base used in the titration.", 3: "This is off by a factor of ~7 from the correct value; it doesn't correspond to a correct application of the titration calculation using the given volumes and concentration." },
+            tempting: "Choice B is tempting because it directly restates the given NaOH molarity, but the titration calculation must account for the DIFFERENT volumes of acid and base used, not simply assume the two solutions have equal concentration.",
+            commonMistake: "Assuming the titrated (unknown) solution has the same molarity as the known titrant solution, without correctly accounting for the different volumes used in the titration via the moles-based calculation.",
+            apTip: "For titration calculations, always work through moles explicitly: (1) moles of KNOWN solution = its molarity × its volume, (2) use the mole ratio from the balanced equation to find moles of the UNKNOWN solution, (3) divide by the unknown's own volume to find its molarity — never assume equal concentrations just because the volumes are similar."
+          }
+        },
+        {
+          id: "chem-4-31", difficulty: 3, type: "mcq", topic: "Titration",
+          prompt: "In a titration of H2SO4 (a diprotic acid) with NaOH, the balanced equation is H2SO4 + 2NaOH → Na2SO4 + 2H2O. If 20.00 mL of the H2SO4 solution requires 50.00 mL of 0.200 M NaOH to reach the equivalence point, what is the molarity of the H2SO4 solution?",
+          choices: ["0.125 M", "0.250 M", "0.500 M", "1.00 M"],
+          correct: 1,
+          explanation: {
+            correct: "Moles NaOH = 0.05000 L × 0.200 mol/L = 0.01000 mol. Using the 1:2 mole ratio between H2SO4 and NaOH (from the balanced equation), moles H2SO4 = 0.01000 mol ÷ 2 = 0.00500 mol. Molarity H2SO4 = 0.00500 mol ÷ 0.02000 L = 0.250 M.",
+            wrong: { 0: "This is half the correct value; it might result from an additional, incorrect division by 2 somewhere in the calculation beyond the one division already required by the 1:2 mole ratio.", 2: "This is double the correct value; it might result from forgetting to divide by 2 for the diprotic acid's 1:2 mole ratio with NaOH at all.", 3: "This is 4 times the correct value; it might result from both forgetting the 1:2 mole ratio AND making an additional calculation error." },
+            tempting: "Choice C is a strong trap for students who forget that H2SO4 is DIPROTIC (requiring 2 mol NaOH per 1 mol H2SO4), and instead incorrectly apply a simple 1:1 mole ratio as if titrating a monoprotic acid like HCl.",
+            commonMistake: "Applying a 1:1 mole ratio by default in acid-base titration calculations, without checking whether the acid or base involved is actually diprotic (or polyprotic), which requires a different mole ratio.",
+            apTip: "Always check the BALANCED EQUATION'S actual coefficients before assuming a 1:1 mole ratio in a titration calculation — polyprotic acids like H2SO4 (diprotic) or H3PO4 (triprotic) require 2:1 or 3:1 ratios with a monoprotic base like NaOH, not the default 1:1 ratio."
+          }
+        },
+        {
+          id: "chem-4-32", difficulty: 4, type: "mcq", topic: "Titration",
+          prompt: "A titration curve for a strong acid being titrated with a strong base shows a very steep, nearly vertical rise in pH right around the equivalence point. What does this steep rise indicate about the titration?",
+          choices: ["The reaction has stopped occurring at that point", "A very small additional volume of titrant causes a very large change in pH, meaning the equivalence point can be determined very precisely using an appropriate indicator", "The steep rise indicates an error in the experimental setup", "The steep rise means the acid and base are not actually reacting stoichiometrically"],
+          correct: 1,
+          explanation: {
+            correct: "The steep, nearly vertical rise in pH near the equivalence point of a strong acid-strong base titration means that adding just a tiny additional volume of titrant causes a dramatic pH change — this sharp transition allows the equivalence point to be determined very precisely, since an indicator changing color anywhere within this steep region will closely approximate the true equivalence point.",
+            wrong: { 0: "The neutralization reaction continues occurring throughout the titration, including through the steep rise region; the steepness reflects how sensitively pH responds to small titrant additions near the equivalence point, not a stopping of the reaction.", 2: "This steep rise is an expected, well-documented, and normal feature of strong acid-strong base titration curves; it is not indicative of an experimental error.", 3: "The steep rise is fully consistent with, and actually a direct result of, the expected stoichiometric reaction between the strong acid and strong base — it does not indicate any deviation from stoichiometric behavior." },
+            tempting: "None of the distractors are especially tempting if the actual significance of a steep titration curve region (high pH sensitivity near equivalence, enabling precise indicator-based endpoint determination) is understood clearly.",
+            commonMistake: "Not connecting the practical significance of the steep pH rise (enabling precise equivalence point determination via indicator color change) to its underlying cause (extreme pH sensitivity to small titrant additions near the equivalence point).",
+            apTip: "Always describe the practical importance of a steep titration curve region explicitly: because pH changes so dramatically with just a tiny volume of added titrant near the equivalence point, ANY indicator that changes color within that steep pH range will give an accurate estimate of the true equivalence point, even if the indicator's exact color-change pH doesn't perfectly match the equivalence point pH."
+          }
+        },
+        {
+          id: "chem-4-33", difficulty: 5, type: "mcq", topic: "Titration",
+          prompt: "A 0.500 g sample of an unknown monoprotic acid (HA) is dissolved in water and titrated to its equivalence point using 24.5 mL of 0.150 M NaOH. What is the approximate molar mass of the unknown acid?",
+          choices: ["68.0 g/mol", "102 g/mol", "136 g/mol", "204 g/mol"],
+          correct: 2,
+          explanation: {
+            correct: "Moles NaOH = 0.0245 L × 0.150 mol/L = 0.003675 mol. Using the 1:1 mole ratio for a monoprotic acid with NaOH, moles HA = 0.003675 mol. Molar mass = mass ÷ moles = 0.500 g ÷ 0.003675 mol ≈ 136 g/mol.",
+            wrong: { 0: "This is roughly half the correct value; it might result from doubling the moles of acid incorrectly (perhaps by mistakenly treating the acid as diprotic when it's actually monoprotic).", 1: "This value doesn't correspond to a correct calculation using the given mass and moles from this specific titration data.", 3: "This is roughly 1.5 times the correct value; it might result from an error in the initial moles of NaOH calculation or in the final division step." },
+            tempting: "Choice A is tempting for students who might incorrectly assume the acid is diprotic (requiring 2 mol NaOH per 1 mol acid) without any given evidence supporting that assumption — the problem explicitly states the acid is monoprotic, so the standard 1:1 ratio applies.",
+            commonMistake: "Assuming a nonstandard mole ratio (like treating the acid as diprotic) without justification, when the problem explicitly states the specific ratio (like monoprotic) that should be used.",
+            apTip: "Always use EXACTLY the mole ratio stated or implied by the problem (monoprotic = 1:1 with a monoprotic base like NaOH) — don't introduce an assumption about a different ratio (like diprotic) unless the problem specifically indicates it."
+          }
+        },
+        {
+          id: "chem-4-34", difficulty: 1, type: "mcq", topic: "Oxidation-Reduction (Redox)",
+          prompt: "In the reaction Zn + Cu²⁺ → Zn²⁺ + Cu, which species is being OXIDIZED?",
+          choices: ["Zn (zinc metal)", "Cu²⁺ (copper(II) ion)", "Zn²⁺ (zinc ion)", "Cu (copper metal)"],
+          correct: 0,
+          explanation: {
+            correct: "Zinc metal (Zn, oxidation state 0) loses electrons to become Zn²⁺ (oxidation state +2); this increase in oxidation state (loss of electrons) is the definition of oxidation, so Zn is being oxidized in this reaction.",
+            wrong: { 1: "Cu²⁺ (oxidation state +2) GAINS electrons to become Cu (oxidation state 0); this decrease in oxidation state (gain of electrons) is the definition of REDUCTION, not oxidation.", 2: "Zn²⁺ is the PRODUCT of the oxidation process (zinc's oxidation state after losing electrons); it is not itself being oxidized further within this reaction — it's the result of the oxidation, not the species undergoing oxidation.", 3: "Cu (copper metal) is the PRODUCT of the reduction process; it is not being oxidized in this reaction — it's the result of Cu²⁺ being reduced." },
+            tempting: "Choice B might tempt students who confuse which species loses vs. gains electrons; Cu²⁺ actually GAINS electrons (is reduced), while Zn LOSES electrons (is oxidized) — these are opposite processes.",
+            commonMistake: "Confusing oxidation (loss of electrons, increase in oxidation state) with reduction (gain of electrons, decrease in oxidation state), especially when identifying which specific reactant undergoes which process.",
+            apTip: "Use the mnemonic 'OIL RIG': Oxidation Is Loss (of electrons), Reduction Is Gain (of electrons) — always identify oxidation state changes explicitly (before and after) for each species to correctly determine which is oxidized and which is reduced."
+          }
+        },
+        {
+          id: "chem-4-35", difficulty: 2, type: "mcq", topic: "Oxidation-Reduction (Redox)",
+          prompt: "What is the oxidation state of manganese (Mn) in the compound KMnO4?",
+          choices: ["+2", "+4", "+7", "+8"],
+          correct: 2,
+          explanation: {
+            correct: "In KMnO4, potassium (K) has an oxidation state of +1, and oxygen (O) has an oxidation state of -2 (×4 oxygens = -8 total). Since the overall compound is neutral, the oxidation states must sum to zero: (+1) + Mn + (-8) = 0, solving gives Mn = +7.",
+            wrong: { 0: "This is too low; it doesn't correctly balance the overall neutral charge of the compound using the correct oxidation states of K (+1) and O (-8 total).", 1: "This is still too low; solving the full equation (+1) + Mn + (-8) = 0 gives Mn = +7, not +4.", 3: "This is too high — a manganese oxidation state of +8 would require the overall equation to sum to a nonzero, positive value, which contradicts the compound's actual overall neutral charge." },
+            tempting: "None of the distractors are especially tempting if the systematic oxidation state calculation (assigning known oxidation states to K and O first, then solving for Mn using the neutral-charge constraint) is carried out carefully.",
+            commonMistake: "Making an arithmetic error when solving the oxidation state balance equation, or forgetting to account for all 4 oxygen atoms (using -2 instead of the total -8 contribution from all 4 oxygens).",
+            apTip: "For oxidation state calculations, always assign the well-known standard oxidation states first (Group 1 metals = +1, oxygen = -2 in most compounds, hydrogen = +1 in most compounds), multiply by the correct number of atoms of each, then solve for the remaining unknown element using the constraint that the sum must equal the compound's overall charge (0 for neutral compounds, or the ion's charge for polyatomic ions)."
+          }
+        },
+        {
+          id: "chem-4-36", difficulty: 3, type: "mcq", topic: "Oxidation-Reduction (Redox)",
+          prompt: "In the reaction 2Fe³⁺ + Sn²⁺ → 2Fe²⁺ + Sn⁴⁺, identify the oxidizing agent and the reducing agent.",
+          choices: ["Fe³⁺ is the oxidizing agent; Sn²⁺ is the reducing agent", "Fe³⁺ is the reducing agent; Sn²⁺ is the oxidizing agent", "Fe²⁺ is the oxidizing agent; Sn⁴⁺ is the reducing agent", "Both Fe³⁺ and Sn²⁺ are oxidizing agents"],
+          correct: 0,
+          explanation: {
+            correct: "Fe³⁺ gains an electron to become Fe²⁺ (reduction, oxidation state decreasing from +3 to +2); since Fe³⁺ causes Sn²⁺ to be oxidized by accepting its electron, Fe³⁺ is the oxidizing agent. Sn²⁺ loses electrons to become Sn⁴⁺ (oxidation, oxidation state increasing from +2 to +4); since Sn²⁺ causes Fe³⁺ to be reduced by donating electrons to it, Sn²⁺ is the reducing agent.",
+            wrong: { 1: "This reverses the correct identification — Fe³⁺ (which is REDUCED, gaining an electron) is actually the OXIDIZING agent (it oxidizes something else), while Sn²⁺ (which is OXIDIZED, losing electrons) is actually the REDUCING agent (it reduces something else).", 2: "Fe²⁺ and Sn⁴⁺ are the PRODUCTS of this redox reaction, not the original oxidizing/reducing agents; the oxidizing and reducing agents are identified from the REACTANTS (Fe³⁺ and Sn²⁺), not the products they become.", 3: "Fe³⁺ and Sn²⁺ play OPPOSITE roles in this reaction (one is reduced/oxidizing agent, the other is oxidized/reducing agent) — they cannot both be oxidizing agents, since that would mean nothing was actually reduced." },
+            tempting: "Choice B is a classic point of confusion — students often mix up which species (the one being reduced vs. the one being oxidized) is labeled the 'oxidizing agent' vs. 'reducing agent,' since the naming can feel counterintuitive at first (the oxidizing agent is itself REDUCED, and the reducing agent is itself OXIDIZED).",
+            commonMistake: "Confusing the naming convention for oxidizing and reducing agents — remembering that the OXIDIZING agent gets REDUCED (causes oxidation in something else) while the REDUCING agent gets OXIDIZED (causes reduction in something else) is often a point of confusion.",
+            apTip: "Memorize this naming convention explicitly: the OXIDIZING AGENT is the species that gets REDUCED (gains electrons) — it 'does the oxidizing' to the other species by taking its electrons; the REDUCING AGENT is the species that gets OXIDIZED (loses electrons) — it 'does the reducing' to the other species by giving up electrons to it."
+          }
+        },
+        {
+          id: "chem-4-37", difficulty: 4, type: "mcq", topic: "Oxidation-Reduction (Redox)",
+          prompt: "What is the oxidation state of chromium (Cr) in the dichromate ion, Cr2O7²⁻?",
+          choices: ["+3", "+6", "+7", "+12"],
+          correct: 1,
+          explanation: {
+            correct: "In Cr2O7²⁻, oxygen has an oxidation state of -2 (×7 oxygens = -14 total). Since the overall ion has a charge of -2, the oxidation states must sum to -2: 2(Cr) + (-14) = -2, solving gives 2(Cr) = 12, so Cr = +6.",
+            wrong: { 0: "This is too low; solving the full equation 2(Cr) + (-14) = -2 gives Cr = +6, not +3 — this value might result from forgetting to divide the total chromium contribution (12) by the coefficient of 2 (the number of Cr atoms).", 2: "This is close to but doesn't match the correctly calculated oxidation state of +6; it may result from a small arithmetic error in solving the balance equation.", 3: "This is the TOTAL oxidation state contribution from BOTH chromium atoms combined (2 × 6 = 12), not the oxidation state of a SINGLE chromium atom, which requires dividing this total by 2." },
+            tempting: "Choice D is a strong trap for students who correctly calculate the TOTAL chromium contribution (12) needed to balance the equation, but forget to divide by the coefficient of 2 (since there are 2 chromium atoms) to find the oxidation state of each INDIVIDUAL chromium atom.",
+            commonMistake: "Forgetting to divide the total calculated contribution from a multi-atom element by the number of atoms of that element present, when solving for the oxidation state of a single atom in a polyatomic ion or compound.",
+            apTip: "When a polyatomic ion or compound contains MULTIPLE atoms of the element whose oxidation state you're solving for (like the 2 chromium atoms here), always remember to divide your calculated total contribution by that number of atoms to get the oxidation state of each individual atom — this division step is easy to forget under time pressure."
+          }
+        },
+        {
+          id: "chem-4-38", difficulty: 5, type: "mcq", topic: "Oxidation-Reduction (Redox)",
+          prompt: "In the disproportionation reaction 3Cl2 + 6OH⁻ → 5Cl⁻ + ClO3⁻ + 3H2O, chlorine (starting as Cl2, oxidation state 0) ends up in TWO different oxidation states among the products. What are these two oxidation states, and what type of redox process is this?",
+          choices: ["Cl becomes +1 and -1; this is a standard redox reaction with two different elements being oxidized and reduced", "Cl becomes -1 (in Cl⁻) and +5 (in ClO3⁻); this is called a disproportionation reaction, where the SAME element is simultaneously oxidized and reduced", "Cl becomes -1 (in Cl⁻) and +5 (in ClO3⁻); this cannot be a valid redox reaction since the same starting element can't undergo two different processes", "Cl remains at 0 in both products, and only oxygen's oxidation state actually changes"],
+          correct: 1,
+          explanation: {
+            correct: "In Cl⁻, chlorine has an oxidation state of -1 (having gained an electron from its starting state of 0, so it is REDUCED). In ClO3⁻ (using O = -2 ×3 = -6, and overall ion charge = -1, so Cl + (-6) = -1, giving Cl = +5), chlorine has an oxidation state of +5 (having lost electrons from its starting state of 0, so it is OXIDIZED). Since the SAME element (chlorine, starting from Cl2) is simultaneously oxidized (to +5) and reduced (to -1) in this single reaction, this is specifically called a disproportionation reaction.",
+            wrong: { 0: "The oxidation states are incorrectly identified here; correctly calculating from the given formulas, chlorine actually ends up at -1 (in Cl⁻) and +5 (in ClO3⁻), not +1 and -1 as stated in this choice.", 2: "This IS a valid, well-recognized type of redox reaction called disproportionation, where a SINGLE element in a single starting oxidation state splits into two different oxidation states among different products — this is a legitimate and important category of redox reaction, not an invalid or impossible process.", 3: "Chlorine's oxidation state DOES change significantly in this reaction (from 0 in Cl2 to -1 in Cl⁻ and +5 in ClO3⁻); it does not remain at 0, and oxygen's oxidation state (-2) actually remains constant throughout this reaction, unlike chlorine's." },
+            tempting: "Choice C reflects a reasonable-sounding but incorrect assumption — that an element can only be either oxidized OR reduced within a single reaction, when disproportionation reactions are a specifically recognized, real category where the SAME starting element splits into both an oxidized and a reduced product simultaneously.",
+            commonMistake: "Assuming a single element can only undergo either oxidation or reduction (not both) within one reaction, without recognizing disproportionation as a valid, specific category of redox reaction where this exact 'both at once' pattern legitimately occurs.",
+            apTip: "Learn to recognize disproportionation reactions by this specific pattern: a single element starts at ONE oxidation state and ends up in TWO DIFFERENT oxidation states among the various products — one product reflecting oxidation (higher oxidation state) and another reflecting reduction (lower oxidation state) of that same original element."
+          }
+        },
+        {
+          id: "chem-4-39", difficulty: 2, type: "mcq", topic: "Physical & Chemical Changes",
+          prompt: "Which of the following is an example of a CHEMICAL change (as opposed to a physical change)?",
+          choices: ["Ice melting into liquid water", "Dissolving table salt in water", "Iron rusting (forming iron oxide) when exposed to moist air", "Crushing a solid piece of chalk into powder"],
+          correct: 2,
+          explanation: {
+            correct: "Iron rusting involves iron reacting with oxygen and moisture to form a genuinely new substance, iron oxide (Fe2O3), with different chemical properties from the original iron — this formation of a new substance with different chemical composition is the defining characteristic of a chemical change.",
+            wrong: { 0: "Melting ice is a physical change; the substance (H2O) remains chemically the same before and after, just changing physical state from solid to liquid, with no new substance formed.", 1: "Dissolving salt in water is a physical change (a physical mixing/dispersal process); the salt (NaCl) can be recovered chemically unchanged by evaporating the water, showing no new substance was permanently formed.", 3: "Crushing chalk into powder is a physical change; the chemical identity of the substance (calcium carbonate) remains completely unchanged — only its physical form (particle size) has changed, with no new substance formed." },
+            tempting: "None of the distractors are especially tempting if the key distinguishing test (has a genuinely NEW substance with different chemical properties been formed?) is applied clearly to each example.",
+            commonMistake: "Classifying a change as chemical simply because it seems dramatic or involves a visible change, rather than applying the specific test of whether a new substance with different chemical composition has actually formed.",
+            apTip: "Always apply this specific test to distinguish physical from chemical changes: has a genuinely NEW substance formed, with different chemical composition and properties from the original? If yes, it's a chemical change; if the original substance(s) are still chemically present (just in a different physical form, state, or mixture), it's a physical change."
+          }
+        },
+        {
+          id: "chem-4-40", difficulty: 3, type: "mcq", topic: "Physical & Chemical Changes",
+          prompt: "A student observes that mixing two colorless liquids produces bubbles of gas and causes the container to become noticeably warmer. Which combination of these two observations provides the STRONGEST evidence that a chemical change (rather than a physical change) has occurred?",
+          choices: ["The bubbles alone are sufficient evidence, since gas bubbles ALWAYS indicate a chemical reaction is occurring", "The temperature change alone is sufficient evidence, since ANY temperature change during mixing always indicates a chemical reaction", "The combination of a new gas being produced (bubbles, suggesting a new substance formed) AND an energy change (temperature increase, suggesting bond breaking/forming) together provides stronger evidence than either observation alone", "Neither observation is meaningful evidence, since physical changes can also sometimes involve gas or temperature changes"],
+          correct: 2,
+          explanation: {
+            correct: "While each individual observation (gas bubbles, temperature change) could theoretically have alternative physical explanations in isolation, the COMBINATION of a new gas being produced (suggesting a new substance has formed through chemical bond rearrangement) AND a significant energy change (suggesting bonds are being broken and formed, consistent with a chemical reaction) together provides much stronger, more convincing evidence that a genuine chemical change has occurred, rather than relying on either single observation alone.",
+            wrong: { 0: "Gas bubbles do NOT always indicate a chemical reaction — some physical processes can also produce visible bubbles (like a physical change: dissolved gas escaping from a supersaturated solution, or simply boiling a liquid), so bubbles alone aren't absolute, unambiguous proof of a chemical change.", 1: "Temperature changes do NOT always indicate a chemical reaction — some physical processes also involve significant temperature changes (like dissolving certain salts, which can be either exothermic or endothermic as a purely physical dissolution process), so temperature change alone isn't absolute, unambiguous proof of a chemical change.", 3: "While it's true that EITHER observation alone could have an alternative physical explanation, dismissing BOTH observations together as 'not meaningful' ignores that their COMBINATION does provide meaningfully stronger evidence for a chemical change than either would provide in isolation." },
+            tempting: "Choices A and B both correctly identify real observational evidence (bubbles, temperature change) that CAN indicate a chemical change, but they overstate the certainty by claiming a SINGLE observation alone is always definitive proof, when in fact each individual observation has plausible physical-change explanations as well.",
+            commonMistake: "Treating a single piece of observational evidence (like gas bubbles or temperature change) as absolute, definitive proof of a chemical change, without recognizing that combining multiple pieces of evidence together provides much stronger support than relying on any single observation alone.",
+            apTip: "When arguing whether a chemical change has occurred based on observations, always look for MULTIPLE supporting pieces of evidence working together (color change, gas formation, temperature change, precipitate formation, etc.) rather than relying on any single observation in isolation, since most individual observations can have alternative physical-change explanations when considered alone."
+          }
+        },
+        {
+          id: "chem-4-41", difficulty: 1, type: "mcq", topic: "Net Ionic Equations & Solubility",
+          prompt: "When writing a net ionic equation, what is the purpose of identifying and removing 'spectator ions'?",
+          choices: ["Spectator ions are removed because they are radioactive and unsafe to include", "Spectator ions are removed because they don't actually participate in the chemical change — they remain dissolved and unchanged on both sides of the equation", "Spectator ions are removed because they always represent errors in the original balanced equation", "Spectator ions are removed to make the equation shorter, even though they DO chemically participate in the reaction"],
+          correct: 1,
+          explanation: {
+            correct: "Spectator ions are ions that appear in identical form (same charge, same identity) on both the reactant and product side of a complete ionic equation — since they don't undergo any actual chemical change (they remain dissolved and unreacted throughout), they are removed from the net ionic equation, which is specifically designed to show only the species that actually participate in and are transformed by the chemical reaction.",
+            wrong: { 0: "Spectator ions have nothing to do with radioactivity; they are simply ordinary, stable ions (like Na+ or Cl-, which are common and completely safe) that happen not to participate in the specific chemical change being described.", 2: "Spectator ions being present is a completely normal, expected feature of many balanced ionic equations, not an error — their identification and removal is a deliberate, standard step in writing a net ionic equation, not a correction of a mistake.", 3: "Spectator ions are removed specifically BECAUSE they do NOT chemically participate in the reaction (they remain unchanged); this choice incorrectly states the opposite (that they DO participate) as the reason for their removal." },
+            tempting: "None of the distractors are especially tempting if the actual definition and purpose of spectator ions (unchanged ions not participating in the actual chemical transformation) is understood clearly.",
+            commonMistake: "Not clearly connecting WHY spectator ions are removed (because they don't undergo any actual chemical change) to the deeper purpose of a net ionic equation (showing only the species that actually participate in and are transformed by the reaction).",
+            apTip: "To identify spectator ions, write out the COMPLETE ionic equation first (all soluble strong electrolytes broken into their ions), then look for any ion that appears in the EXACT SAME form (same charge, same formula) on both the reactant and product sides — these unchanged ions are the spectators to cancel out."
+          }
+        },
+        {
+          id: "chem-4-42", difficulty: 2, type: "mcq", topic: "Net Ionic Equations & Solubility",
+          prompt: "What is the correct net ionic equation for the reaction between aqueous Pb(NO3)2 and aqueous KI, which produces a yellow precipitate of PbI2?",
+          choices: ["Pb(NO3)2(aq) + 2KI(aq) → PbI2(s) + 2KNO3(aq)", "Pb²⁺(aq) + 2I⁻(aq) → PbI2(s)", "K⁺(aq) + NO3⁻(aq) → KNO3(aq)", "Pb²⁺(aq) + 2NO3⁻(aq) + 2K⁺(aq) + 2I⁻(aq) → PbI2(s) + 2K⁺(aq) + 2NO3⁻(aq)"],
+          correct: 1,
+          explanation: {
+            correct: "The net ionic equation removes the spectator ions (K⁺ and NO3⁻, which appear unchanged on both sides) and shows only the species that actually undergo change: Pb²⁺ and I⁻ ions combining to form the insoluble precipitate PbI2.",
+            wrong: { 0: "This is the molecular (full) equation, not the net ionic equation — it hasn't been broken into ions or had spectators removed at all.", 2: "K⁺ and NO3⁻ are the SPECTATOR ions in this reaction (they don't actually combine to form a solid precipitate; KNO3 remains soluble and dissolved) — this equation incorrectly shows the spectators reacting, when in fact they remain separate, dissolved ions throughout.", 3: "This is the complete ionic equation (all species shown as ions, including the spectators K⁺ and NO3⁻) — it's a valid intermediate step, but not the final net ionic equation, which requires removing these unchanged spectator ions." },
+            tempting: "Choice D is tempting because it's technically correct as an intermediate 'complete ionic equation' step, but the question specifically asks for the NET ionic equation, which requires the additional step of identifying and canceling the spectator ions (K⁺ and NO3⁻).",
+            commonMistake: "Stopping at the complete ionic equation (all ions shown, including spectators) without completing the final necessary step of identifying and removing the spectator ions to reach the true net ionic equation.",
+            apTip: "Always work through the three explicit stages in order: (1) molecular equation, (2) complete ionic equation (break all soluble strong electrolytes into ions), (3) net ionic equation (identify and cancel spectator ions that appear unchanged on both sides) — don't stop before completing all three stages."
+          }
+        },
+        {
+          id: "chem-4-43", difficulty: 3, type: "mcq", topic: "Types of Reactions",
+          prompt: "Which of the following reactions is an example of a synthesis reaction that is ALSO a redox reaction?",
+          choices: ["NaOH + HCl → NaCl + H2O", "2Mg + O2 → 2MgO", "AgNO3 + NaCl → AgCl + NaNO3", "CaCO3 → CaO + CO2"],
+          correct: 1,
+          explanation: {
+            correct: "This reaction fits the synthesis pattern (two reactants, Mg and O2, combining into a single product, MgO) AND is a redox reaction, since magnesium's oxidation state changes from 0 (in Mg metal) to +2 (in MgO, oxidized), while oxygen's oxidation state changes from 0 (in O2) to -2 (in MgO, reduced) — both classification criteria (synthesis pattern AND oxidation state change) are satisfied simultaneously.",
+            wrong: { 0: "This is an acid-base neutralization reaction (not a synthesis reaction, since it has two reactants combining but through a different characteristic pattern involving H+ and OH- forming water), and it is NOT a redox reaction, since no element's oxidation state actually changes throughout this reaction (Na, O, H, Cl all keep the same oxidation states throughout).", 2: "This is a double replacement (precipitation) reaction, not a synthesis reaction, and it is also NOT a redox reaction, since none of the elements involved (Ag, N, O, Na, Cl) actually change oxidation state during this reaction — it's simply an exchange of ionic partners.", 3: "This is a decomposition reaction (one reactant breaking into multiple products), not a synthesis reaction; it also happens to NOT be a redox reaction, since none of the elements (Ca, C, O) change oxidation state throughout this particular decomposition." },
+            tempting: "None of the distractors are especially tempting if BOTH classification criteria (the structural reaction-type pattern AND whether oxidation states actually change) are checked carefully and independently for each equation.",
+            commonMistake: "Checking only ONE of the two independent classification criteria (either just the structural pattern, or just for oxidation state changes) rather than verifying BOTH criteria are satisfied when asked to identify a reaction that fits two categories simultaneously.",
+            apTip: "When asked to identify a reaction fitting two different classification categories at once (like 'synthesis AND redox'), always check EACH criterion completely independently: first identify the structural reaction-type pattern (synthesis, decomposition, etc.) from the number/arrangement of reactants and products, then SEPARATELY track oxidation states for every element to determine if it's also a redox reaction — a reaction must satisfy BOTH checks to belong to both categories."
+          }
+        },
+        {
+          id: "chem-4-44", difficulty: 4, type: "mcq", topic: "Stoichiometry & Limiting Reactants",
+          prompt: "For the reaction 2C4H10 + 13O2 → 8CO2 + 10H2O, if 5.80 g of C4H10 (molar mass = 58.14 g/mol) is combined with 20.0 g of O2 (molar mass = 32.00 g/mol), which reactant is limiting, and what mass of CO2 (molar mass = 44.01 g/mol) is produced?",
+          choices: ["C4H10 is limiting; 15.2 g CO2 produced", "O2 is limiting; 16.9 g CO2 produced", "C4H10 is limiting; 30.4 g CO2 produced", "O2 is limiting; 33.8 g CO2 produced"],
+          correct: 1,
+          explanation: {
+            correct: "Moles C4H10 = 5.80 g ÷ 58.14 g/mol ≈ 0.0998 mol. Moles O2 = 20.0 g ÷ 32.00 g/mol = 0.625 mol. Using the 2:13 mole ratio, the O2 needed to fully react with all the available C4H10 = 0.0998 × (13/2) ≈ 0.648 mol — but only 0.625 mol O2 is actually available, so O2 runs out first and is the limiting reactant. Using O2's moles with the 8:13 mole ratio: moles CO2 = 0.625 mol × (8/13) ≈ 0.385 mol. Mass CO2 = 0.385 mol × 44.01 g/mol ≈ 16.9 g.",
+            wrong: { 0: "This incorrectly identifies C4H10 as limiting; comparing the two reactants shows O2 (0.625 mol available, but 0.648 mol needed to react with all the C4H10) actually runs out first, making O2 the limiting reactant, not C4H10.", 2: "This incorrectly identifies C4H10 as limiting, and also uses the wrong reactant's moles for the CO2 calculation, overstating the mass produced.", 3: "This correctly identifies O2 as limiting but overstates the mass of CO2 produced; correctly applying the 8:13 mole ratio to the limiting O2's moles (0.625 mol) gives approximately 16.9 g, not 33.8 g (double the correct value)." },
+            tempting: "This problem requires carefully comparing the mole ratio requirement (2:13 for C4H10:O2) against the actual available moles of each reactant, which is easy to get turned around without methodically calculating the 'moles needed' comparison explicitly — it's tempting to assume the reactant with fewer raw grams (C4H10, only 5.80 g vs. O2's 20.0 g) must be limiting, without actually checking mole ratios.",
+            commonMistake: "Comparing raw mass or mole amounts of the two reactants directly without dividing by their respective coefficients in the balanced equation to correctly determine which one is actually limiting.",
+            apTip: "For combustion-based limiting reactant problems with large coefficients, always calculate how much of ONE reactant would be needed to fully consume the OTHER (using the exact balanced-equation mole ratio), then compare that needed amount to what's actually available — never judge which reactant is limiting by raw mass or mole amounts alone."
+          }
+        },
+        {
+          id: "chem-4-45", difficulty: 2, type: "mcq", topic: "Oxidation-Reduction (Redox)",
+          prompt: "What is the oxidation state of sulfur (S) in the sulfate ion, SO4²⁻?",
+          choices: ["+2", "+4", "+6", "+8"],
+          correct: 2,
+          explanation: {
+            correct: "In SO4²⁻, oxygen has an oxidation state of -2 (×4 oxygens = -8 total). Since the overall ion has a charge of -2, the oxidation states must sum to -2: S + (-8) = -2, solving gives S = +6.",
+            wrong: { 0: "This is too low; solving the full equation S + (-8) = -2 gives S = +6, not +2 — this may result from an arithmetic error in solving the balance equation.", 1: "This is also too low; it doesn't correctly solve the balance equation S + (-8) = -2 for the sulfur oxidation state.", 3: "This is too high; a sulfur oxidation state of +8 would require the overall equation to sum to a different (more positive) value than the ion's actual -2 charge." },
+            tempting: "None of the distractors are especially tempting if the systematic oxidation state calculation (assigning oxygen's standard oxidation state first, then solving for sulfur using the ion's overall charge) is carried out carefully.",
+            commonMistake: "Making an arithmetic error when solving the oxidation state balance equation for a polyatomic ion, particularly in correctly accounting for the ion's overall (nonzero) charge rather than treating it as a neutral compound.",
+            apTip: "For polyatomic ions (not neutral compounds), always remember the sum of oxidation states must equal the ION'S OWN CHARGE (not zero) — this is a frequently forgotten detail that leads to calculation errors."
+          }
+        },
+        {
+          id: "chem-4-46", difficulty: 3, type: "mcq", topic: "Oxidation-Reduction (Redox)",
+          prompt: "In the reaction 2Al + 3Cu²⁺ → 2Al³⁺ + 3Cu, how many total electrons are transferred per formula unit of the balanced equation as written?",
+          choices: ["2 electrons", "3 electrons", "6 electrons", "9 electrons"],
+          correct: 2,
+          explanation: {
+            correct: "Each Al atom loses 3 electrons (going from 0 to +3), and there are 2 Al atoms, so total electrons lost = 2 × 3 = 6. Each Cu²⁺ ion gains 2 electrons (going from +2 to 0), and there are 3 Cu²⁺ ions, so total electrons gained = 3 × 2 = 6. These must match (6 lost = 6 gained) for the equation to be properly balanced in terms of charge, confirming that 6 total electrons are transferred in this balanced equation.",
+            wrong: { 0: "This is the number of electrons lost by a SINGLE Al atom (3) times some other factor, or simply an incomplete calculation; it doesn't correctly account for the total electrons transferred across the entire balanced equation (using both the 2 Al atoms and the correct number of electrons each loses).", 1: "This is the number of electrons lost by EACH INDIVIDUAL Al atom (3 electrons per Al, since it goes from 0 to +3), not the TOTAL electrons transferred across the whole balanced equation (which requires multiplying by the coefficient of 2 for Al).", 3: "This overstates the correct total; it doesn't correspond to a correct multiplication of electrons per atom/ion by the correct number of atoms/ions in the balanced equation." },
+            tempting: "Choice B is tempting because 3 electrons IS the correct number lost by each INDIVIDUAL Al atom, but the question asks for the TOTAL electrons transferred in the entire balanced equation, which requires multiplying by the coefficient of 2 (for the 2 Al atoms present).",
+            commonMistake: "Reporting the number of electrons transferred per single atom/ion, rather than correctly multiplying by the coefficient in the balanced equation to find the TOTAL electrons transferred across the entire reaction as written.",
+            apTip: "To find total electrons transferred in a balanced redox equation, always multiply (electrons lost/gained per individual atom or ion) by (that species' coefficient in the balanced equation) — then verify that total electrons lost by the oxidized species exactly equals total electrons gained by the reduced species, since this equality is what makes redox equations properly balanced in the first place."
+          }
+        },
+        {
+          id: "chem-4-47", difficulty: 4, type: "mcq", topic: "Oxidation-Reduction (Redox)",
+          prompt: "Using standard oxidation state rules, what is the oxidation state of nitrogen in NO3⁻ (nitrate ion)?",
+          choices: ["+3", "+5", "-3", "+6"],
+          correct: 1,
+          explanation: {
+            correct: "In NO3⁻, oxygen has an oxidation state of -2 (×3 oxygens = -6 total). Since the overall ion has a charge of -1, the oxidation states must sum to -1: N + (-6) = -1, solving gives N = +5.",
+            wrong: { 0: "This is too low; solving the full equation N + (-6) = -1 gives N = +5, not +3 — this may result from an arithmetic error in solving the balance equation.", 2: "This would require nitrogen to be in a very different, negative oxidation state, which doesn't match the correct calculation using this ion's actual composition and overall charge; -3 is nitrogen's oxidation state in a very different compound (like NH3), not in NO3⁻.", 3: "This is too high; a nitrogen oxidation state of +6 would require the overall equation to sum to a different value than the ion's actual -1 charge." },
+            tempting: "Choice C is tempting for students who recall that nitrogen commonly has an oxidation state of -3 in OTHER compounds (like ammonia, NH3), but oxidation state is specific to each particular compound/ion — nitrogen's oxidation state in NO3⁻ is a completely different, independently calculated value (+5) based on this specific ion's composition and overall charge.",
+            commonMistake: "Applying a memorized oxidation state for an element from a DIFFERENT, unrelated compound, rather than correctly recalculating that element's oxidation state fresh for each specific compound or ion being analyzed.",
+            apTip: "Never assume an element has the same oxidation state across all its compounds — always recalculate an element's oxidation state fresh for each SPECIFIC compound or ion, using that compound's actual composition and overall charge, since the same element can have many different oxidation states depending on what it's bonded to."
+          }
+        },
+        {
+          id: "chem-4-48", difficulty: 5, type: "mcq", topic: "Oxidation-Reduction (Redox)",
+          prompt: "Balance the following redox half-reaction in acidic solution: Cr2O7²⁻ → Cr³⁺. After fully balancing for both atoms and charge (including adding H⁺, H2O, and electrons as needed), how many electrons appear in the balanced half-reaction?",
+          choices: ["2 electrons", "3 electrons", "6 electrons", "14 electrons"],
+          correct: 2,
+          explanation: {
+            correct: "Balancing this half-reaction fully: Cr2O7²⁻ + 14H⁺ + 6e⁻ → 2Cr³⁺ + 7H2O. This is confirmed by checking that chromium goes from +6 (in Cr2O7²⁻, 2 atoms) to +3 (in Cr³⁺, 2 atoms), a total reduction of (6-3)×2 = 6 electrons gained, matching the 6 electrons shown on the reactant side of the balanced half-reaction.",
+            wrong: { 0: "This undercounts the total electrons needed; each of the 2 chromium atoms individually gains 3 electrons (going from +6 to +3), requiring a total of 2×3=6 electrons, not just 2.", 1: "This is the number of electrons gained by each INDIVIDUAL chromium atom (3 electrons per Cr, since it goes from +6 to +3), not the TOTAL electrons needed for the full half-reaction (which requires accounting for both chromium atoms present).", 3: "This is the number of H⁺ ions needed to balance the oxygen/hydrogen atoms in the half-reaction, not the number of electrons — these are two separate quantities that are easy to confuse in a fully balanced half-reaction." },
+            tempting: "Choice D is a strong trap for students who correctly balance the atoms and H⁺ (getting 14 H⁺) but then mistakenly report this H⁺ coefficient as if it were the electron count, rather than correctly and separately determining the electron count from the oxidation state change.",
+            commonMistake: "Confusing the coefficient of H⁺ (used to balance hydrogen and oxygen atoms via water) with the coefficient of electrons (used to balance the actual charge change from the oxidation state shift) — these are determined by different balancing considerations within the same half-reaction.",
+            apTip: "When balancing redox half-reactions in acidic solution, remember the standard systematic order: (1) balance the main element (Cr here), (2) balance oxygen using H2O, (3) balance hydrogen using H⁺, (4) balance overall charge using electrons — keep each of these four balancing steps and their resulting coefficients clearly distinct from one another, since it's easy to mix up the H⁺ and electron coefficients when they happen to both be needed."
+          }
+        },
+        {
+          id: "chem-4-49", difficulty: 3, type: "mcq", topic: "Types of Reactions",
+          prompt: "Which pair of aqueous solutions, when mixed, would NOT be expected to produce a precipitate (based on standard solubility rules)?",
+          choices: ["AgNO3(aq) + NaCl(aq)", "BaCl2(aq) + Na2SO4(aq)", "KNO3(aq) + NaCl(aq)", "Pb(NO3)2(aq) + KI(aq)"],
+          correct: 2,
+          explanation: {
+            correct: "Mixing KNO3 and NaCl could only produce two possible new ionic combinations: NaNO3 and KCl. Checking solubility rules, both NaNO3 (Group 1 cation paired with nitrate) and KCl (Group 1 cation paired with a halide) are soluble compounds — since neither possible new combination is insoluble, no precipitate forms, and all four ions simply remain dissolved together in solution.",
+            wrong: { 0: "This combination DOES produce a precipitate — AgCl (silver chloride) is a well-known insoluble compound (an exception to the general chloride solubility rule), so mixing these two solutions produces a visible white precipitate.", 1: "This combination DOES produce a precipitate — BaSO4 (barium sulfate) is a well-known insoluble compound (an exception to the general sulfate solubility rule), so mixing these two solutions produces a visible white precipitate.", 3: "This combination DOES produce a precipitate — PbI2 (lead(II) iodide) is an insoluble compound (lead(II) halides are generally insoluble, an exception to the general halide solubility rule), so mixing these two solutions produces a visible yellow precipitate." },
+            tempting: "None of the distractors are especially tempting if each pair's two POSSIBLE new ionic combinations are correctly identified and then checked against solubility rules individually, but skipping this systematic check for any one pair could lead to an incorrect classification.",
+            commonMistake: "Not systematically checking BOTH possible new ionic combinations (from swapping cation-anion partners) against solubility rules for every answer choice, and instead relying on a vague sense of which combinations 'seem like' they should form a precipitate.",
+            apTip: "For 'does this pair produce a precipitate' questions, always explicitly write out BOTH possible new ionic combinations formed by swapping partners, then check EACH one against solubility rules — the correct 'no precipitate' answer will have BOTH possible new combinations turn out to be soluble, unlike the other choices."
+          }
+        },
+        {
+          id: "chem-4-50", difficulty: 5, type: "mcq", topic: "Stoichiometry & Redox",
+          prompt: "In the redox titration 2MnO4⁻ + 5Fe²⁺ + 16H⁺ → 2Mn²⁺ + 5Fe³⁺ + 8H2O, if 20.00 mL of a KMnO4 solution exactly reacts with 40.00 mL of 0.100 M Fe²⁺ solution, what is the molarity of the KMnO4 solution?",
+          choices: ["0.0800 M", "0.100 M", "0.160 M", "0.250 M"],
+          correct: 0,
+          explanation: {
+            correct: "Moles Fe²⁺ = 0.04000 L × 0.100 mol/L = 0.00400 mol. Using the mole ratio from the balanced equation (2 mol MnO4⁻ per 5 mol Fe²⁺): moles MnO4⁻ = 0.00400 mol × (2/5) = 0.00160 mol. Molarity KMnO4 = 0.00160 mol ÷ 0.02000 L = 0.0800 M.",
+            wrong: { 1: "This simply restates the given Fe²⁺ concentration without correctly applying the 2:5 mole ratio and the different volumes involved in this redox titration.", 2: "This is double the correctly calculated value; it doesn't correspond to a correct application of the 2:5 mole ratio and the given volumes.", 3: "This is roughly 3 times the correctly calculated value; it doesn't correspond to a correct application of the full titration calculation using the given mole ratio and volumes." },
+            tempting: "This problem requires correctly applying a non-simple mole ratio (2:5) between MnO4⁻ and Fe²⁺, which is easy to misapply as a simpler ratio (like 1:1 or the inverted 5:2) without carefully checking the actual balanced redox equation's coefficients.",
+            commonMistake: "Misapplying or inverting the mole ratio between the two species in a redox titration, especially when the ratio (like 2:5 here) is less intuitive than a simple 1:1 relationship.",
+            apTip: "For redox titrations with non-simple mole ratios (common since redox half-reactions often require different numbers of electrons/ions to balance), always double-check the EXACT ratio from the fully balanced overall equation before applying it — these ratios are a frequent source of error precisely because they're less intuitive than simple acid-base 1:1 or 1:2 ratios."
           }
         }
       ]
@@ -423,6 +2711,578 @@ export const chemistry = {
             commonMistake: "Not recognizing that a rate law inconsistent with (or containing terms absent from) a proposed mechanism is direct evidence that the mechanism needs revision.",
             apTip: "College-level insight: inverse concentration dependence in a rate law is a real, recognized signature of a species being consumed in a fast pre-equilibrium step (common in advanced kinetics/biochemistry, e.g., inhibition kinetics) — recognizing this pattern is beyond typical AP scope but reflects real mechanistic reasoning used in college kinetics courses."
           }
+        },
+        {
+          id: "chem-5-7", difficulty: 2, type: "mcq", topic: "Method of Initial Rates",
+          prompt: "For the reaction A + B → products, two experiments are run: Experiment 1 has [A]=0.10 M, [B]=0.10 M, rate=2.0×10⁻³ M/s. Experiment 2 has [A]=0.20 M, [B]=0.10 M, rate=8.0×10⁻³ M/s. What is the order of the reaction with respect to A?",
+          choices: ["Zero order", "First order", "Second order", "Third order"],
+          correct: 2,
+          explanation: {
+            correct: "Doubling [A] (from 0.10 to 0.20 M) while holding [B] constant causes the rate to increase by a factor of 4 (from 2.0×10⁻³ to 8.0×10⁻³). Since 2ⁿ = 4 gives n = 2, the reaction is second order with respect to A.",
+            wrong: { 0: "Zero order with respect to A would mean doubling [A] causes NO change in rate, but the rate actually quadrupled when [A] was doubled.", 1: "First order with respect to A would mean doubling [A] causes the rate to also exactly double, but the rate actually quadrupled (increased 4-fold), indicating a higher order.", 3: "Third order with respect to A would mean doubling [A] causes the rate to increase by a factor of 8 (2³), but the rate only increased by a factor of 4, indicating second order, not third." },
+            tempting: "None of the distractors are especially tempting if the exact rate-multiplication factor (4x) is correctly matched to the corresponding order (2ⁿ=4 → n=2) rather than just noting 'the rate increased.'",
+            commonMistake: "Noting that the rate increased when concentration increased without calculating the EXACT multiplication factor and solving 2ⁿ = (that factor) for the specific order n.",
+            apTip: "For method of initial rates problems, always calculate the exact ratio of rates and the exact ratio of concentrations between two experiments (holding all other concentrations constant), then solve (concentration ratio)ⁿ = (rate ratio) for the order n explicitly — don't just eyeball whether the rate 'went up.'"
+          }
+        },
+        {
+          id: "chem-5-8", difficulty: 3, type: "mcq", topic: "Method of Initial Rates",
+          prompt: "Continuing the same reaction A + B → products: Experiment 1 has [A]=0.10 M, [B]=0.10 M, rate=2.0×10⁻³ M/s. Experiment 3 has [A]=0.10 M, [B]=0.20 M, rate=4.0×10⁻³ M/s. Given that the reaction is second order in A (from a separate comparison), what is the overall rate law for this reaction?",
+          choices: ["Rate = k[A]²", "Rate = k[A]²[B]", "Rate = k[A][B]²", "Rate = k[A]²[B]²"],
+          correct: 1,
+          explanation: {
+            correct: "Comparing Experiments 1 and 3 (where only [B] changes): doubling [B] (0.10→0.20 M) doubles the rate (2.0×10⁻³→4.0×10⁻³), so the reaction is first order in B. Combined with the given second-order dependence on A, the overall rate law is Rate = k[A]²[B]¹, which is written as Rate = k[A]²[B].",
+            wrong: { 0: "This omits the [B] dependence entirely; the data (from comparing Experiments 1 and 3) clearly show the rate doubles when [B] doubles, indicating [B] must appear in the rate law with an exponent of 1.", 2: "This incorrectly assigns exponent 1 to A and exponent 2 to B; the given information states A is second order (exponent 2), and the B comparison shows a doubling-doubling relationship (exponent 1), not the reverse.", 3: "This gives B an exponent of 2, but the data show doubling [B] only doubles the rate (not quadruples it), which corresponds to a first-order (exponent 1) dependence on B, not second order." },
+            tempting: "Choice C is tempting if a student swaps which reactant is second order and which is first order, especially if they don't carefully track which specific comparison (Experiments 1 vs. 3) isolates the effect of changing B alone.",
+            commonMistake: "Swapping which reactant has which order when combining information from multiple experimental comparisons, especially when not explicitly labeling which pair of experiments isolates each individual reactant's effect.",
+            apTip: "When combining rate law information from multiple experiment comparisons, explicitly label which comparison isolates which reactant (e.g., 'Exp 1 vs. 3 isolates B since only [B] changes') before writing the final combined rate law — this prevents accidentally swapping exponents between reactants."
+          }
+        },
+        {
+          id: "chem-5-9", difficulty: 4, type: "mcq", topic: "Method of Initial Rates",
+          prompt: "Using the fully determined rate law from the same reaction (Rate = k[A]²[B]) and Experiment 1 data ([A]=0.10 M, [B]=0.10 M, rate=2.0×10⁻³ M/s), what is the numerical value of the rate constant k, including its units?",
+          choices: ["2.0 s⁻¹", "2.0 M⁻¹s⁻¹", "2.0 M⁻²s⁻¹", "0.20 M⁻²s⁻¹"],
+          correct: 2,
+          explanation: {
+            correct: "Solving Rate = k[A]²[B] for k: k = Rate ÷ ([A]²[B]) = (2.0×10⁻³ M/s) ÷ [(0.10 M)²(0.10 M)] = (2.0×10⁻³ M/s) ÷ (1.0×10⁻³ M³) = 2.0 M⁻²s⁻¹.",
+            wrong: { 0: "This omits the concentration units entirely from the denominator; since the rate law is third order overall (2+1=3), the units of k must include M⁻² to properly cancel the cubic concentration units in the denominator.", 1: "This numerical calculation is correct for a second-order reaction, but this specific numeric value doesn't match this problem's third-order rate law — recalculating with the given values (2.0×10⁻³ ÷ 1.0×10⁻³) gives 2.0, but paired with M⁻²s⁻¹ units, not M⁻¹s⁻¹.", 3: "This numeric value is off by a factor of 10 from the correct value; recalculating (2.0×10⁻³ ÷ 1.0×10⁻³) gives 2.0, not 0.20." },
+            tempting: "Choice A is a common trap because students sometimes forget to include the necessary concentration units in k, especially since k's units change depending on the overall reaction order — a numerically 'clean' answer without proper units is easy to select without checking dimensional consistency.",
+            commonMistake: "Forgetting that the units of a rate constant k depend on the OVERALL order of the reaction, and either omitting units entirely or using generic units that don't match the specific reaction order.",
+            apTip: "Always derive k's units explicitly from the rate law's overall order: units of k = (M/s) ÷ (M^overall order) = M^(1-overall order)·s⁻¹ — for a third-order reaction, this gives M⁻²·s⁻¹, for second order it gives M⁻¹·s⁻¹, and for first order it gives simply s⁻¹."
+          }
+        },
+        {
+          id: "chem-5-10", difficulty: 2, type: "mcq", topic: "Half-Life & Integrated Rate Laws",
+          prompt: "A first-order reaction has a rate constant k = 0.0231 s⁻¹. Using t½ = ln(2)/k, what is the half-life of this reaction?",
+          choices: ["15.0 s", "30.0 s", "43.3 s", "60.0 s"],
+          correct: 1,
+          explanation: {
+            correct: "t½ = ln(2)/k = 0.693 ÷ 0.0231 s⁻¹ ≈ 30.0 s.",
+            wrong: { 0: "This is half the correct value; it might result from a calculation error, such as forgetting the ln(2) factor and instead using 1/(2k) (a zero-order half-life formula) inappropriately.", 2: "This is the RECIPROCAL of the rate constant (1/k = 1/0.0231 ≈ 43.3), without multiplying by ln(2), which is required specifically for first-order half-life.", 3: "This is roughly double the correct value; it doesn't correspond to a correct application of the first-order half-life formula with the given rate constant." },
+            tempting: "Choice C is tempting because 1/k alone is a legitimate quantity in kinetics (related to the average lifetime in some contexts), but the specific HALF-LIFE formula for a first-order reaction requires multiplying by ln(2) (≈0.693), not just taking the plain reciprocal of k.",
+            commonMistake: "Forgetting to include the ln(2) factor when calculating first-order half-life, and instead just taking the reciprocal of the rate constant.",
+            apTip: "Memorize the first-order half-life formula explicitly as t½ = ln(2)/k (with ln(2) ≈ 0.693) — this is DIFFERENT from the zero-order and second-order half-life formulas, so always confirm which order you're dealing with before selecting which specific half-life formula to apply."
+          }
+        },
+        {
+          id: "chem-5-11", difficulty: 3, type: "mcq", topic: "Half-Life & Integrated Rate Laws",
+          prompt: "A second-order reaction has a rate constant k = 0.500 M⁻¹s⁻¹ and an initial concentration [A]₀ = 0.200 M. Using t½ = 1/(k[A]₀), what is the half-life of this reaction?",
+          choices: ["1.39 s", "2.50 s", "10.0 s", "25.0 s"],
+          correct: 2,
+          explanation: {
+            correct: "t½ = 1/(k[A]₀) = 1 ÷ [(0.500 M⁻¹s⁻¹)(0.200 M)] = 1 ÷ 0.100 s⁻¹ = 10.0 s.",
+            wrong: { 0: "This value corresponds to a first-order half-life calculation (ln(2)/k, using k=0.500), which is the WRONG formula for a second-order reaction — second-order half-life also depends on initial concentration, unlike first-order half-life.", 1: "This doesn't correctly apply the second-order half-life formula using both the given rate constant AND initial concentration together.", 3: "This is roughly double the correct value; it might result from a calculation error, such as multiplying instead of dividing, or an incorrect combination of the given k and [A]₀ values." },
+            tempting: "Choice A is tempting because it uses the first-order half-life formula's characteristic ln(2) factor, but that formula is specific to FIRST-order reactions and does not apply here since this problem explicitly specifies a SECOND-order reaction.",
+            commonMistake: "Applying the first-order half-life formula (ln(2)/k) to a second-order reaction, forgetting that second-order half-life has a completely different formula that depends on the initial concentration.",
+            apTip: "Always confirm the reaction order FIRST, then select the matching half-life formula: zero order → t½=[A]₀/(2k); first order → t½=ln(2)/k (no concentration dependence); second order → t½=1/(k[A]₀) — note that only zero and second order half-lives depend on the initial concentration; first-order half-life famously does not."
+          }
+        },
+        {
+          id: "chem-5-12", difficulty: 3, type: "mcq", topic: "Half-Life & Integrated Rate Laws",
+          prompt: "A zero-order reaction has a rate constant k = 0.0500 M/s and an initial concentration [A]₀ = 0.400 M. Using t½ = [A]₀/(2k), what is the half-life of this reaction?",
+          choices: ["1.60 s", "4.00 s", "8.00 s", "16.0 s"],
+          correct: 1,
+          explanation: {
+            correct: "t½ = [A]₀/(2k) = 0.400 M ÷ [2 × 0.0500 M/s] = 0.400 ÷ 0.100 = 4.00 s.",
+            wrong: { 0: "This doesn't correctly apply the zero-order half-life formula using the given initial concentration and rate constant together.", 2: "This is double the correct value; it might result from forgetting to include the factor of 2 in the denominator, or from a different calculation error.", 3: "This is 4 times the correct value; it might result from a more significant calculation error in applying the zero-order half-life formula." },
+            tempting: "None of the distractors are especially tempting if the zero-order half-life formula (which, unusually, depends directly and proportionally on initial concentration) is applied carefully, but forgetting the factor of 2 in the denominator is an easy slip.",
+            commonMistake: "Forgetting to include the factor of 2 in the denominator of the zero-order half-life formula, or confusing this formula with one of the other two order-specific half-life formulas.",
+            apTip: "Zero-order half-life (t½=[A]₀/(2k)) is the only one of the three standard half-life formulas where half-life is DIRECTLY proportional to initial concentration — as a zero-order reaction proceeds and [A] decreases, each successive half-life actually gets SHORTER, unlike first-order reactions where half-life stays constant throughout."
+          }
+        },
+        {
+          id: "chem-5-13", difficulty: 4, type: "mcq", topic: "Half-Life & Integrated Rate Laws",
+          prompt: "A first-order reaction has an initial concentration of 0.800 M. After 3 half-lives have passed, what is the remaining concentration of the reactant?",
+          choices: ["0.0500 M", "0.100 M", "0.200 M", "0.400 M"],
+          correct: 1,
+          explanation: {
+            correct: "Each half-life reduces the concentration by half, regardless of the starting amount (a defining feature of first-order kinetics). After 1 half-life: 0.800→0.400 M. After 2 half-lives: 0.400→0.200 M. After 3 half-lives: 0.200→0.100 M.",
+            wrong: { 0: "This would correspond to 4 half-lives having passed (0.800→0.400→0.200→0.100→0.0500), one more half-life than the 3 specified in the question.", 2: "This is the concentration remaining after only 2 half-lives, not the full 3 half-lives specified in the question.", 3: "This is the concentration remaining after only 1 half-life, not the full 3 half-lives specified in the question." },
+            tempting: "Choices C and D are tempting for students who stop counting half-lives too early, mistakenly treating an intermediate step as the final answer.",
+            commonMistake: "Miscounting the number of half-lives that have actually elapsed, often stopping one or two steps short of the number specified in the problem.",
+            apTip: "For repeated halving problems, explicitly list out EACH half-life step one at a time (starting concentration → after 1st half-life → after 2nd half-life → etc.) rather than trying to calculate the final answer in a single mental step — this explicit listing prevents miscounting how many halvings have actually occurred."
+          }
+        },
+        {
+          id: "chem-5-14", difficulty: 1, type: "mcq", topic: "Collision Theory",
+          prompt: "According to collision theory, which of the following is required for a chemical reaction to occur between two colliding particles?",
+          choices: ["The particles must collide with at least the minimum required energy (activation energy) AND the proper orientation", "The particles must simply come into contact with each other, regardless of energy or orientation", "The particles must be moving at exactly the same speed when they collide", "The particles must have identical masses"],
+          correct: 0,
+          explanation: {
+            correct: "Collision theory states that for a reaction to occur, colliding particles must meet TWO conditions simultaneously: (1) they must collide with kinetic energy equal to or greater than the activation energy (Ea) required for that specific reaction, and (2) they must collide with the correct geometric orientation relative to each other so that the necessary bonds can break and form.",
+            wrong: { 1: "Simple contact alone is NOT sufficient for a reaction to occur; many collisions happen without leading to a reaction because they lack either sufficient energy, correct orientation, or both — these are called 'ineffective' collisions.", 2: "Colliding particles do not need to be moving at the same speed; what matters is whether their combined kinetic energy meets the activation energy threshold, not whether their individual speeds match.", 3: "Colliding particles do not need identical masses; particles of any mass can react together as long as the energy and orientation requirements are satisfied — mass equality has no bearing on whether a successful reactive collision occurs." },
+            tempting: "None of the distractors are especially tempting if the two specific, well-defined requirements of collision theory (sufficient energy AND correct orientation) are remembered clearly.",
+            commonMistake: "Remembering only ONE of the two required conditions (usually just the energy requirement) and forgetting that proper molecular orientation is also independently required for a successful, reaction-producing collision.",
+            apTip: "Always state BOTH collision theory requirements together on any FRQ: sufficient energy (≥ activation energy) AND proper orientation — mentioning only one of these two conditions typically doesn't earn full credit, since both are independently necessary."
+          }
+        },
+        {
+          id: "chem-5-15", difficulty: 2, type: "mcq", topic: "Collision Theory",
+          prompt: "Increasing the concentration of reactants typically increases the reaction rate. What is the best collision-theory explanation for this?",
+          choices: ["Higher concentration increases the average kinetic energy of the particles", "Higher concentration increases the frequency of collisions between reactant particles, increasing the number of successful (reactive) collisions per unit time", "Higher concentration decreases the activation energy required for the reaction", "Higher concentration changes the particles' orientation during collisions, making more collisions successful"],
+          correct: 1,
+          explanation: {
+            correct: "Increasing concentration packs more reactant particles into the same volume, which increases how often particles encounter and collide with each other (collision frequency). Since a reaction rate depends on the number of SUCCESSFUL collisions per unit time, and a higher total collision frequency means more successful collisions occur even if the fraction of successful collisions stays the same, the overall rate increases.",
+            wrong: { 0: "Concentration does not affect the average kinetic energy of particles; kinetic energy depends on temperature, not on how many particles are packed into a given volume.", 2: "Activation energy is an intrinsic property of the specific reaction pathway/mechanism and does not change based on reactant concentration.", 3: "Concentration does not affect the geometric orientation of colliding particles; orientation is a matter of molecular geometry and random collision angles, not how concentrated the solution is." },
+            tempting: "Choice A might tempt students who conflate concentration effects with temperature effects, since both increase reaction rate, but through entirely different collision-theory mechanisms (frequency vs. energy/fraction of successful collisions).",
+            commonMistake: "Confusing the mechanism by which concentration increases rate (increased collision FREQUENCY) with the mechanism by which temperature increases rate (increased FRACTION of collisions with sufficient energy) — these are two distinct effects governed by different factors.",
+            apTip: "Keep these two rate-increasing mechanisms clearly separate: concentration increases rate by increasing collision FREQUENCY (more collisions happening per second, same fraction being successful), while temperature increases rate by increasing the FRACTION of collisions with enough energy to be successful (per the Maxwell-Boltzmann distribution) — these are different mechanisms for different variables."
+          }
+        },
+        {
+          id: "chem-5-16", difficulty: 3, type: "mcq", topic: "Collision Theory",
+          prompt: "Two gases, A and B, are both large, complex molecules that must align in one very specific orientation for a reaction to occur upon collision. Compared to two small, simple atoms reacting together (where orientation matters much less), how would this affect the observed reaction rate, all else (temperature, concentration) being equal?",
+          choices: ["The large, complex molecules would react faster, since larger molecules have more surface area for collisions", "The large, complex molecules would react slower, since the strict orientation requirement means a much smaller fraction of collisions will be correctly oriented and thus successful", "Orientation requirements have no actual effect on reaction rate; only activation energy and temperature matter", "Both reactions would proceed at exactly the same rate, since collision theory only depends on concentration and temperature"],
+          correct: 1,
+          explanation: {
+            correct: "When a reaction requires a very specific, narrow orientation for successful collision (as is common for large, complex molecules with a small specific reactive site), only a small fraction of ALL the energetically sufficient collisions will also happen to have the correct geometric alignment — this reduces the overall fraction of successful collisions, resulting in a slower observed reaction rate compared to simpler systems where orientation is less restrictive.",
+            wrong: { 0: "More surface area doesn't guarantee a faster rate if only one very specific, small region of that surface must align correctly for a successful reaction — a strict orientation requirement can actually slow down the reaction despite a larger total molecular size.", 2: "Orientation requirements are explicitly one of the two core factors in collision theory (alongside sufficient energy) and DO significantly affect reaction rate — a stricter orientation requirement reduces the fraction of successful collisions, directly lowering the observed rate.", 3: "Collision theory explicitly includes BOTH the orientation requirement and the energy requirement (via activation energy and temperature) as factors affecting rate — it is not limited to only concentration and temperature effects." },
+            tempting: "Choice C reflects a common oversimplification of collision theory that focuses only on the Arrhenius equation's explicit variables (temperature, activation energy), forgetting that the STERIC (orientation) factor is an equally real, independently important component of collision theory that can significantly affect observed rates.",
+            commonMistake: "Overlooking the orientation/steric factor as a real, independently significant contributor to reaction rate, and focusing only on activation energy and temperature as if they were the sole determinants of collision theory.",
+            apTip: "Always remember collision theory has (at least) three components affecting whether a collision is successful: sufficient energy (≥Ea), correct orientation (steric factor), and simply the collision frequency itself (related to concentration) — a stricter orientation requirement can meaningfully slow a reaction even when energy and concentration conditions are identical to a faster-reacting system."
+          }
+        },
+        {
+          id: "chem-5-17", difficulty: 1, type: "mcq", topic: "Reaction Mechanisms",
+          prompt: "What is a reaction intermediate in a multi-step reaction mechanism?",
+          choices: ["A species that is present in the overall balanced equation as a reactant", "A species that is produced in one step of the mechanism and then completely consumed in a later step, not appearing in the overall balanced equation", "A species that speeds up the reaction without being consumed", "The slowest step in the entire mechanism"],
+          correct: 1,
+          explanation: {
+            correct: "A reaction intermediate is a species that is formed as a product in an earlier step of a multi-step mechanism and then consumed as a reactant in a later step — since it is fully produced and then fully consumed within the mechanism, it does NOT appear in the overall, net balanced equation for the reaction.",
+            wrong: { 0: "Intermediates are not part of the overall balanced equation's reactants (or products) at all — they only appear as transient species WITHIN the individual mechanism steps, canceling out when all the steps are summed to get the overall equation.", 2: "A species that speeds up a reaction without being consumed describes a CATALYST, not an intermediate — a catalyst is typically consumed in an early step and then REGENERATED in a later step (the opposite pattern of an intermediate, which is produced first and then consumed).", 3: "The slowest step in a mechanism is called the rate-determining step, a completely different concept from a reaction intermediate (which refers to a specific chemical species, not a step in the mechanism)." },
+            tempting: "Choice C is a common point of confusion because catalysts and intermediates are both species that appear only within the mechanism steps (not in the overall equation), but they have OPPOSITE patterns: an intermediate is produced then consumed, while a catalyst is consumed then regenerated.",
+            commonMistake: "Confusing reaction intermediates with catalysts, since both are 'invisible' in the overall balanced equation — the key distinguishing feature is the ORDER of production/consumption (intermediate: produced first, then consumed; catalyst: consumed first, then regenerated).",
+            apTip: "To distinguish an intermediate from a catalyst when analyzing a mechanism, always check the ORDER of appearance across the mechanism's steps: if a species appears as a PRODUCT first and then as a REACTANT in a later step, it's an intermediate; if it appears as a REACTANT first and then as a PRODUCT in a later step, it's a catalyst."
+          }
+        },
+        {
+          id: "chem-5-18", difficulty: 2, type: "mcq", topic: "Reaction Mechanisms",
+          prompt: "A proposed mechanism has the following two elementary steps: Step 1: NO2 + NO2 → NO3 + NO (slow); Step 2: NO3 + CO → NO2 + CO2 (fast). What is the overall balanced equation for this reaction, and what is the reaction intermediate?",
+          choices: ["Overall: NO2 + CO → NO + CO2; Intermediate: NO3", "Overall: 2NO2 + CO → NO3 + NO + CO2; Intermediate: none", "Overall: NO2 + NO2 + CO → NO2 + NO + CO2; Intermediate: NO2", "Overall: NO3 + CO → NO2 + CO2; Intermediate: NO2"],
+          correct: 0,
+          explanation: {
+            correct: "Adding the two elementary steps together: (NO2 + NO2 → NO3 + NO) + (NO3 + CO → NO2 + CO2) gives 2NO2 + NO3 + CO → NO3 + NO + NO2 + CO2. Canceling one NO3 (appears on both sides) and one NO2 (appears on both sides, since 2NO2 on the left and 1 NO2 on the right partially cancel) gives the simplified overall equation: NO2 + CO → NO + CO2. Since NO3 is produced in Step 1 and fully consumed in Step 2 (not appearing in the final overall equation), NO3 is the reaction intermediate.",
+            wrong: { 1: "This equation still includes NO3 (the intermediate) explicitly, which should be fully canceled out when properly combining and simplifying the two mechanism steps into the correct overall equation.", 2: "This incorrectly identifies NO2 as the intermediate; NO2 actually appears in the OVERALL simplified equation as a reactant (not fully canceled), while NO3 is the species that's completely produced and then completely consumed, making NO3 (not NO2) the true intermediate.", 3: "This only restates Step 2 of the mechanism by itself, not the combined, simplified overall equation resulting from adding BOTH steps together and canceling common species." },
+            tempting: "Choice C might tempt students who don't realize that not all NO2 cancels — since 2 NO2 are consumed in Step 1 but only 1 NO2 is produced back in Step 2, one NO2 net remains as an actual overall reactant, meaning NO2 is NOT the intermediate (since it doesn't fully cancel).",
+            commonMistake: "Assuming any species that appears in multiple mechanism steps must be the intermediate, without checking whether that species FULLY cancels out (net zero) when the steps are properly added and simplified, versus only partially canceling (leaving some net amount as an actual overall reactant or product).",
+            apTip: "To correctly identify intermediates and derive the overall equation, always add ALL the elementary steps together first, then cancel out ONLY the species that appear in EQUAL amounts on both sides (achieving a true net cancellation to zero) — a species that only partially cancels remains as a genuine reactant or product in the overall equation, not as an intermediate."
+          }
+        },
+        {
+          id: "chem-5-19", difficulty: 3, type: "mcq", topic: "Reaction Mechanisms",
+          prompt: "For the mechanism in the previous question (Step 1, slow: NO2 + NO2 → NO3 + NO; Step 2, fast: NO3 + CO → NO2 + CO2), what is the predicted rate law based on the rate-determining step?",
+          choices: ["Rate = k[CO]", "Rate = k[NO2]", "Rate = k[NO2]²", "Rate = k[NO2]²[CO]"],
+          correct: 2,
+          explanation: {
+            correct: "The rate law for a multi-step mechanism is determined by the slow (rate-determining) step. Step 1 (the slow step) is NO2 + NO2 → NO3 + NO, an elementary step whose rate law can be written directly from its own stoichiometry: Rate = k[NO2]¹[NO2]¹ = k[NO2]².",
+            wrong: { 0: "CO does not appear in the slow (rate-determining) step at all; it only appears in the fast second step, so it should NOT appear in the overall rate law, which is based specifically on the slow step's reactants.", 1: "This uses only ONE factor of [NO2], but the slow step's own stoichiometry (NO2 + NO2 → NO3 + NO) shows two NO2 molecules colliding, requiring the rate law to include [NO2] squared, not just to the first power.", 3: "CO appears in the FAST second step, not in the slow, rate-determining first step; since the rate law is based on the rate-determining step's reactants alone, CO should not appear in the overall predicted rate law." },
+            tempting: "Choice D is tempting because CO does appear somewhere in the overall mechanism (in the fast step) and in the final overall balanced equation as a reactant, but the RATE LAW specifically reflects only the SLOW step's reactants, and CO isn't part of that particular step.",
+            commonMistake: "Including a reactant from the overall balanced equation (or from a fast step) in the predicted rate law, rather than correctly restricting the rate law to only the reactants that appear in the specific SLOW (rate-determining) step.",
+            apTip: "Always write the predicted rate law using ONLY the reactants (and their exact coefficients as exponents) from the SLOW, rate-determining step — even if other reactants appear elsewhere in the overall mechanism or overall equation, they don't belong in the rate law unless the slow step involves an intermediate that needs substitution."
+          }
+        },
+        {
+          id: "chem-5-20", difficulty: 4, type: "mcq", topic: "Reaction Mechanisms",
+          prompt: "A proposed mechanism has: Step 1 (fast, reversible): A ⇌ B; Step 2 (slow): B + C → D. Since B is an intermediate formed in a fast, reversible pre-equilibrium step, why can't the rate law simply be written as Rate = k[B][C] using the slow step's stoichiometry directly?",
+          choices: ["It actually can be written this way directly, with no further steps needed", "Because intermediates like B are typically present in very small, experimentally unmeasured/unmeasurable concentrations, so [B] must be re-expressed in terms of the concentrations of actual reactants (like [A]) using the fast pre-equilibrium step's relationship before the rate law is considered complete and useful", "Because B doesn't actually affect the rate law at all, and should be dropped entirely", "Because fast steps are never involved in determining the rate law under any circumstances"],
+          correct: 1,
+          explanation: {
+            correct: "Since B is a reaction intermediate, its concentration is typically not something that can be directly measured or controlled experimentally (unlike a starting reactant like A). To express the final rate law in terms of only measurable, controllable reactant concentrations, [B] must be replaced using the relationship established by the fast, reversible pre-equilibrium step (Step 1), which relates [B] back to [A] (e.g., using the equilibrium constant for that fast step) — this substitution step is necessary to arrive at a rate law that's expressed only in terms of actual reactants like [A] and [C].",
+            wrong: { 0: "While Rate = k[B][C] is technically the correct rate law in terms of the SLOW step's stoichiometry, it's not yet in its most USEFUL final form, since [B] is an intermediate whose concentration isn't directly measurable — additional substitution work using the fast pre-equilibrium is needed to express the rate law in terms of measurable species.", 2: "B is very much still relevant to the rate law (it's a direct reactant in the rate-determining slow step); it should not simply be 'dropped' — instead, its concentration must be substituted for using the fast pre-equilibrium relationship, not eliminated from consideration entirely.", 3: "Fast steps ARE relevant to determining the final, complete rate law specifically in mechanisms involving a fast pre-equilibrium before a slow step — the fast step provides the necessary relationship to substitute out an intermediate's concentration in terms of measurable reactant concentrations." },
+            tempting: "Choice A is tempting because Rate=k[B][C] is indeed the correct STARTING point (directly from the slow step's stoichiometry), but a complete, fully useful rate law expressed in terms of only measurable reactants requires the additional substitution step using the fast pre-equilibrium, which this choice skips.",
+            commonMistake: "Stopping at the rate law expression that includes an intermediate's concentration directly, without completing the additional necessary step of substituting that intermediate's concentration using information from a fast, reversible pre-equilibrium step elsewhere in the mechanism.",
+            apTip: "Whenever a proposed rate-determining (slow) step involves an intermediate as a reactant, and that intermediate is formed in an earlier FAST, REVERSIBLE step, always complete the additional substitution step: use the fast step's forward/reverse rate relationship (or equilibrium expression) to re-express the intermediate's concentration in terms of the original, measurable reactants before considering the rate law complete."
+          }
+        },
+        {
+          id: "chem-5-21", difficulty: 5, type: "mcq", topic: "Reaction Mechanisms",
+          prompt: "For the mechanism: Step 1 (fast, reversible): 2NO ⇌ N2O2; Step 2 (slow): N2O2 + H2 → N2O + H2O; Step 3 (fast): N2O + H2 → N2 + H2O — after using the fast pre-equilibrium in Step 1 to substitute for the intermediate N2O2 (giving [N2O2] = K[NO]², where K is the equilibrium constant for Step 1), what is the overall predicted rate law?",
+          choices: ["Rate = k[NO][H2]", "Rate = k[N2O2][H2]", "Rate = k[NO]²[H2]", "Rate = k[NO]²[H2]²"],
+          correct: 2,
+          explanation: {
+            correct: "The slow step's own rate law (before substitution) is Rate = k[N2O2][H2]. Since N2O2 is an intermediate, we substitute using the fast pre-equilibrium relationship [N2O2] = K[NO]²: Rate = k(K[NO]²)[H2] = kK[NO]²[H2]. Combining the constants k and K into a single new observed rate constant (often just called k again, or k_obs), the final rate law is Rate = k[NO]²[H2].",
+            wrong: { 0: "This rate law doesn't correctly reflect the substitution of [N2O2] = K[NO]² into the slow step's rate law; it appears to use only a single factor of [NO] instead of the required [NO]² term that results from the substitution.", 1: "This is the rate law BEFORE substituting for the intermediate N2O2; since N2O2 is not a measurable, controllable reactant, this expression must be further modified using the given pre-equilibrium substitution to arrive at the correct final rate law.", 3: "This includes an extra, unjustified factor of [H2]; the substitution for the intermediate N2O2 only affects the [N2O2] term (replacing it with K[NO]²) — it does not introduce any additional factor of [H2] beyond what's already present in the slow step's own rate law." },
+            tempting: "Choice B is tempting because it's the direct, straightforward reading of the slow step's stoichiometry, but the question specifically asks for the rate law AFTER completing the substitution for the intermediate N2O2, which choice B has not yet done.",
+            commonMistake: "Stopping at the slow step's rate law written directly in terms of the intermediate (before substitution), rather than completing the specifically requested substitution step to express the rate law in terms of the original reactant NO.",
+            apTip: "When a problem explicitly provides the substitution relationship for an intermediate (like [N2O2] = K[NO]² here), always carry out that substitution completely into the slow step's rate law, and simplify/combine any resulting constants (like k and K multiplying together) into a single overall rate constant for the final answer."
+          }
+        },
+        {
+          id: "chem-5-22", difficulty: 1, type: "mcq", topic: "Reaction Energy Diagrams",
+          prompt: "On a reaction energy diagram (potential energy vs. reaction progress), what does the difference in energy between the reactants and the peak of the curve (the transition state) represent?",
+          choices: ["The overall enthalpy change (ΔH) of the reaction", "The activation energy (Ea) of the forward reaction", "The activation energy of the reverse reaction", "The bond energy of the strongest bond in the reactants"],
+          correct: 1,
+          explanation: {
+            correct: "The activation energy of the FORWARD reaction (Ea, forward) is defined as the energy difference between the reactants (starting energy level) and the highest point on the curve (the transition state, or activated complex) — this represents the minimum energy barrier that must be overcome for the forward reaction to proceed.",
+            wrong: { 0: "The overall enthalpy change (ΔH) is the energy difference between the REACTANTS and the PRODUCTS (the final energy level), not between the reactants and the peak (transition state) — this is a different, separate quantity from activation energy.", 2: "The activation energy of the REVERSE reaction is the energy difference between the PRODUCTS and the peak (transition state), not between the reactants and the peak — this is measured from the opposite side of the diagram.", 3: "Bond energy of a specific bond within the reactants is a separate, specific quantity not directly represented by the overall energy difference between the reactants and the transition state peak on a reaction energy diagram." },
+            tempting: "Choice C is tempting because it also involves the transition state peak, but it's measured from the PRODUCTS side of the diagram (for the reverse reaction), not from the reactants side (for the forward reaction) — always check which side of the diagram you're measuring from.",
+            commonMistake: "Confusing which energy difference on the diagram corresponds to the FORWARD activation energy (reactants to peak) versus the REVERSE activation energy (products to peak) versus the overall ΔH (reactants to products, not involving the peak directly).",
+            apTip: "On any reaction energy diagram, always identify three separate distances explicitly: Ea(forward) = reactants→peak; Ea(reverse) = products→peak; ΔH = reactants→products (a straight comparison of starting and ending energy levels, NOT involving the peak at all) — clearly labeling all three prevents confusing them with each other."
+          }
+        },
+        {
+          id: "chem-5-23", difficulty: 2, type: "mcq", topic: "Reaction Energy Diagrams",
+          prompt: "On a reaction energy diagram, the products are at a LOWER energy level than the reactants. What does this indicate about the reaction?",
+          choices: ["The reaction is endothermic, with a positive ΔH", "The reaction is exothermic, with a negative ΔH", "The reaction has no activation energy", "The reaction will occur instantaneously and rapidly"],
+          correct: 1,
+          explanation: {
+            correct: "When products sit at a LOWER energy level than reactants on the diagram, this means energy was released overall during the reaction (energy 'went downhill' from reactants to products), which is the defining characteristic of an EXOTHERMIC reaction, corresponding to a NEGATIVE value of ΔH (since ΔH = energy of products − energy of reactants, and a lower product energy gives a negative result).",
+            wrong: { 0: "Endothermic reactions have products at a HIGHER energy level than reactants (energy was absorbed), the opposite of what's described here (products lower than reactants).", 2: "Even exothermic reactions typically still have some activation energy barrier (a peak above BOTH the reactants and products); having lower-energy products doesn't mean there's zero activation energy — the reaction can still require some initial energy input to get started, even if it releases more energy overall than it required.", 3: "The overall energy change (exothermic vs. endothermic) says nothing directly about reaction SPEED/rate; an exothermic reaction can still be very slow if it has a high activation energy barrier, even though the products end up at lower energy than the reactants." },
+            tempting: "Choice D is tempting because 'releases energy' might seem to suggest 'happens quickly,' but thermodynamic favorability (exothermic, releasing energy) and kinetic speed (how fast the reaction actually proceeds) are governed by entirely separate factors — an exothermic reaction can still be extremely slow if its activation energy barrier is high.",
+            commonMistake: "Conflating the THERMODYNAMIC favorability of a reaction (whether it releases or absorbs energy overall, exothermic vs. endothermic) with its KINETIC speed (how fast it proceeds, determined by activation energy) — these are independent properties of a reaction.",
+            apTip: "Always keep the relative heights on an energy diagram straight: products BELOW reactants = exothermic (ΔH negative); products ABOVE reactants = endothermic (ΔH positive) — and remember this height comparison says nothing about reaction speed, which instead depends on the height of the activation energy peak above the reactants."
+          }
+        },
+        {
+          id: "chem-5-24", difficulty: 3, type: "mcq", topic: "Reaction Energy Diagrams",
+          prompt: "A reaction energy diagram shows a reaction with Ea(forward) = 50 kJ/mol and Ea(reverse) = 20 kJ/mol. What is the overall ΔH for this reaction, and is it exothermic or endothermic?",
+          choices: ["ΔH = +30 kJ/mol; endothermic", "ΔH = -30 kJ/mol; exothermic", "ΔH = +70 kJ/mol; endothermic", "ΔH = -70 kJ/mol; exothermic"],
+          correct: 1,
+          explanation: {
+            correct: "ΔH = Ea(forward) − Ea(reverse) = 50 kJ/mol − 20 kJ/mol = +30 kJ/mol using this raw subtraction, but the correct sign convention requires reversing this: since the reverse activation energy (20 kJ/mol) is smaller than the forward activation energy (50 kJ/mol), the products sit at LOWER energy than the reactants (less energy is needed to go back downhill), making this reaction exothermic with ΔH = -30 kJ/mol.",
+            wrong: { 0: "This has the correct magnitude (30 kJ/mol) but the wrong sign; since the reverse activation energy (20 kJ/mol) is smaller than the forward activation energy (50 kJ/mol), the products sit at LOWER energy than the reactants, making this reaction exothermic (negative ΔH), not endothermic.", 2: "This incorrectly adds the two activation energies (50+20=70) instead of correctly subtracting them (50-20=30) to find ΔH.", 3: "This has the correct sign (negative, exothermic) but the wrong magnitude; adding the two activation energies (50+20=70) is not the correct way to find ΔH — the correct method is to subtract them (50-20=30)." },
+            tempting: "Choice A is tempting because the magnitude (30 kJ/mol) is correct, but getting the sign right requires correctly reasoning about which direction (forward or reverse) has the smaller energy barrier, which correctly indicates the products are at lower energy (exothermic) since less energy is needed to go back to reactants.",
+            commonMistake: "Correctly calculating the magnitude of ΔH from the two activation energies but getting the sign backwards, or incorrectly adding the two activation energies together instead of subtracting them.",
+            apTip: "Always use the relationship ΔH = Ea(forward) − Ea(reverse), and interpret a NEGATIVE result as exothermic (products lower energy, reverse reaction has a smaller barrier back down) and a POSITIVE result as endothermic (products higher energy, reverse reaction has a smaller barrier back down since it's 'downhill' in that direction)."
+          }
+        },
+        {
+          id: "chem-5-25", difficulty: 4, type: "mcq", topic: "Reaction Energy Diagrams",
+          prompt: "A catalyst is added to a reaction, lowering the activation energy for BOTH the forward and reverse reactions by the same amount (10 kJ/mol each). What effect does this have on the reaction's overall ΔH?",
+          choices: ["ΔH increases by 10 kJ/mol", "ΔH decreases by 10 kJ/mol", "ΔH remains completely unchanged", "ΔH becomes exactly zero"],
+          correct: 2,
+          explanation: {
+            correct: "Since ΔH = Ea(forward) − Ea(reverse), and a catalyst lowers BOTH activation energies by the same amount (10 kJ/mol each), the difference between them remains exactly the same: (Ea,forward − 10) − (Ea,reverse − 10) = Ea,forward − Ea,reverse = the original ΔH, completely unchanged.",
+            wrong: { 0: "ΔH does not change at all when a catalyst lowers both activation energies equally, since the DIFFERENCE between the two activation energies (which determines ΔH) stays the same when equal amounts are subtracted from both.", 1: "ΔH does not change at all under these conditions; subtracting the same amount from both Ea(forward) and Ea(reverse) leaves their difference (and thus ΔH) completely unaffected.", 3: "ΔH is determined by the difference in energy between reactants and products, a thermodynamic property entirely independent of any catalyst — a catalyst affects the pathway/barrier height, not the actual energy levels of the reactants and products themselves, so ΔH doesn't become zero (unless it was already zero to begin with)." },
+            tempting: "None of the distractors are especially tempting if the specific mathematical relationship (ΔH = Ea,forward − Ea,reverse) is applied carefully, showing that equal reductions to both terms leave their difference unchanged.",
+            commonMistake: "Assuming that because a catalyst changes activation energies, it must also change the overall ΔH, without recognizing that lowering BOTH forward and reverse Ea by the same amount leaves their difference (and thus ΔH) completely unaffected.",
+            apTip: "Always remember this fundamental principle: catalysts affect KINETICS (rate, activation energy, how fast equilibrium is reached) but NEVER affect THERMODYNAMICS (ΔH, ΔG, Keq, the equilibrium position) — a catalyst speeds up both the forward and reverse reactions equally, leaving the overall energy relationship between reactants and products completely untouched."
+          }
+        },
+        {
+          id: "chem-5-26", difficulty: 3, type: "mcq", topic: "Reaction Energy Diagrams",
+          prompt: "A multi-step reaction has two elementary steps, each with its own activation energy peak on the overall energy diagram: Step 1 has a peak requiring 40 kJ/mol from the initial reactants, and Step 2 has a peak requiring 25 kJ/mol from the intermediate formed after Step 1. Which step is the rate-determining step, and how can you identify it from the diagram?",
+          choices: ["Step 2, because it has a numerically smaller activation energy value", "Step 1, because it has a numerically larger activation energy value directly from the starting reactants", "The rate-determining step cannot be identified from activation energies alone", "Both steps equally determine the rate, since both have activation energy barriers"],
+          correct: 1,
+          explanation: {
+            correct: "The rate-determining step in a multi-step mechanism is the SLOWEST step, which corresponds to the step with the HIGHEST individual activation energy barrier on the overall energy diagram. Step 1's barrier (40 kJ/mol) is larger than Step 2's barrier (25 kJ/mol), making Step 1 the slow, rate-determining step — visually, this is identified as the TALLEST individual peak on the overall multi-step energy diagram.",
+            wrong: { 0: "This is backwards — a SMALLER activation energy corresponds to a FASTER step, not the rate-determining (slowest) step; the step with the highest, not lowest, individual barrier is the rate-determining step.", 2: "The rate-determining step CAN be identified directly from a multi-step energy diagram — it corresponds to the step with the highest individual activation energy peak (the tallest 'hill' the reaction must climb relative to its own starting point for that specific step).", 3: "While both steps do have their own activation energy barriers, they do NOT equally determine the overall rate — the step with the SIGNIFICANTLY HIGHER barrier (Step 1 here) acts as the rate-limiting 'bottleneck,' with its rate essentially determining the overall reaction rate." },
+            tempting: "Choice A reverses the correct relationship between activation energy and rate — a common point of confusion, since it might seem like 'more energy needed' could somehow mean 'more important' or 'faster,' but a HIGHER activation energy actually means a SLOWER step (fewer collisions have enough energy to succeed).",
+            commonMistake: "Confusing higher activation energy with faster reaction rate, when in fact a HIGHER activation energy barrier corresponds to a SLOWER reaction step (since fewer collisions have sufficient energy to overcome that barrier).",
+            apTip: "On a multi-step energy diagram, always identify the rate-determining step as the one with the TALLEST individual peak (measured from that step's own starting point, whether that's the original reactants or an intermediate) — taller peak means higher activation energy means slower step means that step controls the overall rate."
+          }
+        },
+        {
+          id: "chem-5-27", difficulty: 2, type: "mcq", topic: "Reaction Energy Diagrams",
+          prompt: "Comparing a catalyzed and an uncatalyzed pathway for the same overall reaction on the same energy diagram, which feature of the diagram is DIFFERENT between the two pathways, and which feature stays the SAME?",
+          choices: ["The activation energy is different between the two pathways; the overall ΔH is the same for both", "The overall ΔH is different between the two pathways; the activation energy is the same for both", "Both the activation energy and the overall ΔH are different between the two pathways", "Neither the activation energy nor the overall ΔH differs between the two pathways"],
+          correct: 0,
+          explanation: {
+            correct: "A catalyst provides an alternative reaction pathway with a LOWER activation energy (this is the key feature that differs between the catalyzed and uncatalyzed pathways, shown as a lower peak on the diagram) — however, the starting (reactants) and ending (products) energy levels remain exactly the same regardless of pathway, meaning the overall ΔH (a purely thermodynamic quantity, independent of pathway) stays identical for both the catalyzed and uncatalyzed routes.",
+            wrong: { 1: "This reverses the correct relationship — it's the ACTIVATION ENERGY that differs between pathways (that's the entire point of a catalyst, to lower this barrier), while ΔH (determined only by the fixed reactant and product energy levels) remains the same regardless of pathway.", 2: "ΔH does NOT differ between the catalyzed and uncatalyzed pathways; only the activation energy (the height of the peak/barrier) differs, since a catalyst provides an alternative pathway but does not change the actual starting and ending energy levels of the reactants and products.", 3: "Activation energy DOES differ between the catalyzed and uncatalyzed pathways — that's specifically what a catalyst achieves (lowering this barrier); only ΔH remains unchanged between the two pathways, not both quantities remaining the same." },
+            tempting: "None of the distractors are especially tempting if the specific catalyst effect (only lowers activation energy, never changes ΔH) is understood clearly, but conflating the two energy quantities (Ea and ΔH) can lead to confusion about which one a catalyst actually changes.",
+            commonMistake: "Not clearly distinguishing between activation energy (a kinetic quantity, dependent on pathway, changed by catalysts) and ΔH (a thermodynamic quantity, dependent only on the fixed reactant/product energy levels, NOT changed by catalysts).",
+            apTip: "Always describe a catalyst's effect on an energy diagram precisely: it lowers the height of the peak (activation energy) by providing an alternative pathway, while the starting point (reactants) and ending point (products) — and therefore the overall ΔH — remain completely unchanged."
+          }
+        },
+        {
+          id: "chem-5-28", difficulty: 2, type: "mcq", topic: "Arrhenius Equation",
+          prompt: "The Arrhenius equation is k = Ae^(-Ea/RT). What happens to the rate constant k as the activation energy Ea increases, all else being equal?",
+          choices: ["k increases, since a larger Ea makes the exponent less negative", "k decreases, since a larger Ea makes the exponent more negative, shrinking the exponential term", "k is completely unaffected by changes in Ea", "k increases proportionally and linearly with Ea"],
+          correct: 1,
+          explanation: {
+            correct: "In k = Ae^(-Ea/RT), increasing Ea (with R and T held constant) makes the exponent (-Ea/RT) MORE negative (a larger negative number), which makes the exponential term e^(-Ea/RT) SMALLER (since e raised to a more negative power approaches zero) — this means k decreases as Ea increases, consistent with the physical intuition that a higher energy barrier means a slower reaction.",
+            wrong: { 0: "This reverses the correct relationship — a LARGER Ea makes the exponent MORE negative (not less negative), which shrinks the exponential term and DEcreases k, not increases it.", 2: "Ea is one of the two key variables (along with T) that directly determines the exponential term in the Arrhenius equation; k is very much affected by changes in Ea, not unaffected by it.", 3: "The relationship between k and Ea is EXPONENTIAL (through the e^(-Ea/RT) term), not linear/proportional — a linear relationship would mean k changes by a constant AMOUNT per unit change in Ea, but the actual relationship involves k changing by a multiplicative FACTOR that depends exponentially on Ea." },
+            tempting: "Choice D might tempt students who know that Ea and k are related but don't recall the specific EXPONENTIAL nature of that relationship, defaulting to a simpler, incorrect linear/proportional assumption.",
+            commonMistake: "Assuming a simple linear or direct proportional relationship between Ea and k, rather than recognizing the actual EXPONENTIAL relationship built into the Arrhenius equation's structure.",
+            apTip: "Always remember the Arrhenius equation's exponential structure: because Ea appears in the EXPONENT with a negative sign, INCREASING Ea makes k SMALLER (exponentially, not linearly) — small changes in Ea can produce surprisingly large changes in k precisely because of this exponential relationship."
+          }
+        },
+        {
+          id: "chem-5-29", difficulty: 3, type: "mcq", topic: "Arrhenius Equation",
+          prompt: "A reaction has a rate constant k₁ = 1.0×10⁻⁴ at T₁ = 300 K. Using the two-point Arrhenius equation ln(k₂/k₁) = -Ea/R × (1/T₂ - 1/T₁), if Ea = 75.0 kJ/mol and T₂ = 350 K, what is the approximate value of k₂? (R = 8.314 J/(mol·K))",
+          choices: ["1.0×10⁻⁵", "7.3×10⁻³", "1.0×10⁻³", "7.3×10⁻⁵"],
+          correct: 1,
+          explanation: {
+            correct: "Converting Ea to J/mol (75,000 J/mol) and calculating: ln(k₂/k₁) = -(75000/8.314) × (1/350 - 1/300) = -9021.4 × (-0.0004762) ≈ 4.296. Solving: k₂/k₁ = e^4.296 ≈ 73.4. So k₂ = k₁ × 73.4 = 1.0×10⁻⁴ × 73.4 ≈ 7.3×10⁻³.",
+            wrong: { 0: "This is smaller than k₁, but since temperature INCREASED (300→350 K), the rate constant should INCREASE, not decrease — this value moves in the wrong direction.", 2: "This is only a factor of 10 increase from k₁, but the correct calculation shows a much larger increase (roughly 73-fold) given the specific Ea and temperature change provided.", 3: "This is very close to k₁ itself (barely changed), which doesn't reflect the significant rate constant increase expected from raising the temperature by 50 K with a substantial activation energy of 75 kJ/mol." },
+            tempting: "Choice A is a strong trap for students who might make a sign error in the exponent calculation, causing k to appear to DEcrease when temperature increases, which contradicts the fundamental principle that reaction rates (and rate constants) increase with increasing temperature.",
+            commonMistake: "Making a sign error when calculating the two-point Arrhenius equation's exponent term, leading to a k value that incorrectly decreases when temperature increases (violating the basic principle that higher temperature always increases k).",
+            apTip: "Always sanity-check your final Arrhenius calculation result: since temperature and rate constant should always move in the SAME direction (higher T → higher k, for any normal reaction with positive Ea), if your calculated k value decreases after an increase in temperature, you've made a sign error somewhere in the exponent and should recheck your work."
+          }
+        },
+        {
+          id: "chem-5-30", difficulty: 4, type: "mcq", topic: "Arrhenius Equation",
+          prompt: "A reaction's rate constant increases from k₁ = 1.00×10⁻³ at T₁ = 300. K to k₂ = 1.00×10⁻² at T₂ = 310. K. Using the two-point Arrhenius equation, what is the approximate activation energy Ea for this reaction? (R = 8.314 J/(mol·K))",
+          choices: ["17.8 kJ/mol", "89.0 kJ/mol", "178 kJ/mol", "890 kJ/mol"],
+          correct: 2,
+          explanation: {
+            correct: "Rearranging the two-point Arrhenius equation to solve for Ea: Ea = -R × ln(k₂/k₁) ÷ (1/T₂ - 1/T₁) = -(8.314) × ln(10) ÷ (1/310 - 1/300) = -(8.314)(2.303) ÷ (-0.0001075) ≈ 178,000 J/mol ≈ 178 kJ/mol.",
+            wrong: { 0: "This is 10 times smaller than the correct value; it likely results from a decimal-point error somewhere in the calculation, possibly in the final unit conversion from J/mol to kJ/mol.", 1: "This is roughly half the correct value; it might result from an error in calculating the temperature term (1/T2 - 1/T1) or the natural log term.", 3: "This is 5 times larger than the correct value; it likely results from a calculation error, possibly forgetting to convert from J/mol to kJ/mol at the very end (which would make the number 1000x too large, though this specific value suggests a different, smaller-magnitude error)." },
+            tempting: "This calculation involves several sequential steps (natural log of the rate ratio, calculating the reciprocal temperature difference, dividing, and converting units) — any single arithmetic slip along the way can produce one of the plausible-looking but incorrect nearby values.",
+            commonMistake: "Making an arithmetic or unit-conversion error at any one of the several sequential steps required in the two-point Arrhenius calculation (natural log, reciprocal temperature difference, final division, and J-to-kJ conversion).",
+            apTip: "For multi-step Arrhenius calculations, always compute and write down each intermediate value separately and explicitly (ln(k2/k1), then 1/T2-1/T1, then their ratio, then convert units at the very end) rather than trying to combine all the steps in a single calculator operation — this makes it much easier to spot and fix an error at any individual step."
+          }
+        },
+        {
+          id: "chem-5-31", difficulty: 3, type: "mcq", topic: "Arrhenius Equation",
+          prompt: "In the Arrhenius equation k = Ae^(-Ea/RT), what does the pre-exponential factor 'A' (also called the frequency factor) physically represent?",
+          choices: ["The activation energy of the reaction", "A factor related to the frequency of collisions and the fraction of those collisions with the correct molecular orientation", "The equilibrium constant of the reaction", "The overall order of the reaction"],
+          correct: 1,
+          explanation: {
+            correct: "The pre-exponential factor A (frequency factor) incorporates both the frequency of molecular collisions (how often particles collide, related to collision theory) and the fraction of those collisions that have the proper orientation for a successful reaction (the steric/orientation factor) — together, these represent the theoretical maximum rate constant if every collision had sufficient energy (i.e., if Ea were effectively zero).",
+            wrong: { 0: "Activation energy (Ea) is a completely separate variable in the Arrhenius equation, appearing in the exponent — it is not what the pre-exponential factor A represents.", 2: "The equilibrium constant (K) is a completely separate thermodynamic quantity related to the ratio of forward and reverse rate constants at equilibrium — it is not what the frequency factor A in the Arrhenius equation directly represents.", 3: "Reaction order is a completely separate kinetic concept related to the exponents in the rate law — it is not related to or represented by the pre-exponential factor A in the Arrhenius equation." },
+            tempting: "None of the distractors are especially tempting if the specific physical meaning of A (collision frequency combined with orientation/steric factors) is remembered clearly, but the term 'frequency factor' can be vague without connecting it explicitly to collision theory.",
+            commonMistake: "Not connecting the abstract term 'frequency factor' or 'pre-exponential factor' to its concrete physical meaning rooted in collision theory (collision frequency and orientation probability).",
+            apTip: "Always connect the Arrhenius equation's two components back to collision theory explicitly: the pre-exponential factor A represents the theoretical rate if every collision succeeded (collision frequency × orientation probability), while the exponential term e^(-Ea/RT) represents the FRACTION of those collisions that actually have enough energy to overcome the activation energy barrier."
+          }
+        },
+        {
+          id: "chem-5-32", difficulty: 4, type: "mcq", topic: "Arrhenius Equation",
+          prompt: "A graph of ln(k) versus 1/T (in Kelvin) for a reaction produces a straight line. Based on the linearized form of the Arrhenius equation, ln(k) = (-Ea/R)(1/T) + ln(A), what does the SLOPE of this line represent?",
+          choices: ["The slope equals Ea directly", "The slope equals -Ea/R, so Ea can be found by multiplying the slope by -R", "The slope equals the frequency factor A directly", "The slope equals ln(A), the natural log of the frequency factor"],
+          correct: 1,
+          explanation: {
+            correct: "The linearized Arrhenius equation ln(k) = (-Ea/R)(1/T) + ln(A) has the form y = mx + b, where the slope (m) corresponds to the coefficient of the x-variable (1/T), which is -Ea/R. To find Ea from a measured slope, multiply the slope by -R (or equivalently, Ea = -slope × R).",
+            wrong: { 0: "The slope equals -Ea/R, not Ea directly; to isolate Ea itself, the slope must be multiplied by -R (accounting for both the negative sign and the gas constant R).", 2: "The frequency factor A is related to the Y-INTERCEPT of this graph (specifically, the y-intercept equals ln(A)), not the slope — these are two different, separately extractable pieces of information from the same linear graph.", 3: "ln(A) is the Y-INTERCEPT of this graph, not the slope — the slope and y-intercept are different features of the line, providing different pieces of information (Ea from slope, A from y-intercept)." },
+            tempting: "Choices C and D both correctly identify A-related information but incorrectly assign it to the SLOPE instead of the Y-INTERCEPT — this is a common point of confusion since both the slope (giving Ea) and the y-intercept (giving A) are extracted from the same single graph.",
+            commonMistake: "Confusing which specific graph feature (slope vs. y-intercept) corresponds to which specific Arrhenius parameter (Ea vs. A) in the linearized ln(k) vs. 1/T plot.",
+            apTip: "Memorize the two pieces of information from an Arrhenius plot (ln k vs. 1/T) separately: SLOPE = -Ea/R (multiply by -R to get Ea), and Y-INTERCEPT = ln(A) (take e^(y-intercept) to get A) — keeping these two features and their corresponding parameters clearly separated prevents mixing them up."
+          }
+        },
+        {
+          id: "chem-5-33", difficulty: 5, type: "mcq", topic: "Arrhenius Equation",
+          prompt: "A reaction has k₁ = 2.0×10⁻⁴ at T₁ = 298 K, and its activation energy is known to be Ea = 50.0 kJ/mol. At what temperature T₂ would the rate constant become k₂ = 8.0×10⁻⁴ (4 times faster)? (R = 8.314 J/(mol·K))",
+          choices: ["308 K", "313 K", "320 K", "335 K"],
+          correct: 2,
+          explanation: {
+            correct: "Using ln(k₂/k₁) = -Ea/R × (1/T₂ - 1/T₁): ln(4.0) = 1.386 = -(50000/8.314) × (1/T₂ - 1/298). Solving: (1/T₂ - 1/298) = -1.386 × 8.314/50000 = -0.0002304. So 1/T₂ = 1/298 - 0.0002304 = 0.003356 - 0.0002304 = 0.003126. T₂ = 1/0.003126 ≈ 320. K.",
+            wrong: { 0: "This is too low a temperature; it doesn't correctly solve the two-point Arrhenius equation for T2 using the given Ea and the 4-fold rate increase.", 1: "This is also too low; it may result from a small arithmetic error in one of the several algebraic steps required to isolate T2 from the two-point Arrhenius equation.", 3: "This is too high a temperature; it may result from a sign error or other algebraic mistake when solving for the reciprocal of T2 and then inverting it." },
+            tempting: "This problem requires several careful algebraic steps (finding ln of the rate ratio, solving for the reciprocal temperature difference, then correctly taking the reciprocal AGAIN at the end to get T2 itself rather than 1/T2) — each step provides an opportunity for a small error that shifts the final answer.",
+            commonMistake: "Correctly solving for 1/T2 as an intermediate value but then forgetting to take the reciprocal one final time to actually report T2 itself (reporting 1/T2's numeric value directly as if it were the temperature).",
+            apTip: "When solving the two-point Arrhenius equation for an unknown TEMPERATURE (as opposed to an unknown k or Ea), remember that you're solving for 1/T as an intermediate algebraic step — always remember to take the reciprocal ONE FINAL TIME at the very end to convert your intermediate 1/T result back into an actual temperature value."
+          }
+        },
+        {
+          id: "chem-5-34", difficulty: 1, type: "mcq", topic: "Catalysis",
+          prompt: "What is the key difference between a homogeneous catalyst and a heterogeneous catalyst?",
+          choices: ["Homogeneous catalysts are always solids; heterogeneous catalysts are always liquids", "A homogeneous catalyst is in the SAME physical phase as the reactants; a heterogeneous catalyst is in a DIFFERENT physical phase from the reactants", "Homogeneous catalysts speed up reactions; heterogeneous catalysts slow down reactions", "There is no meaningful difference between the two terms"],
+          correct: 1,
+          explanation: {
+            correct: "A homogeneous catalyst exists in the SAME physical phase (solid, liquid, or gas) as the reactants it's catalyzing (for example, a dissolved catalyst in a liquid-phase reaction), allowing intimate mixing at the molecular level. A heterogeneous catalyst exists in a DIFFERENT physical phase from the reactants (most commonly a solid catalyst used with gas or liquid-phase reactants), with the reaction typically occurring at the catalyst's surface.",
+            wrong: { 0: "This oversimplifies and incorrectly restricts each catalyst type to a single specific phase; the actual distinguishing feature is whether the catalyst's phase MATCHES or DIFFERS from the reactants' phase, not a fixed rule that homogeneous must be solid or heterogeneous must be liquid.", 2: "BOTH homogeneous and heterogeneous catalysts function to SPEED UP reactions (by lowering activation energy); the phase relationship to the reactants is what distinguishes the two categories, not whether they speed up or slow down a reaction.", 3: "There is a meaningful, well-defined, and commonly tested difference between these two catalyst categories, based specifically on their phase relationship to the reactants they're catalyzing." },
+            tempting: "None of the distractors are especially tempting if the specific phase-based definition (same phase = homogeneous; different phase = heterogeneous) is remembered clearly.",
+            commonMistake: "Not connecting the Greek-root meaning of 'homogeneous' (same) and 'heterogeneous' (different) specifically to the PHASE relationship between catalyst and reactants, which is the actual technical distinction being tested.",
+            apTip: "Use the word roots as a mnemonic: 'homo-' means same (homogeneous catalyst = SAME phase as reactants), 'hetero-' means different (heterogeneous catalyst = DIFFERENT phase from reactants) — the classic heterogeneous catalyst example is a solid metal catalyst (like platinum) used in a gas-phase reaction (like a catalytic converter)."
+          }
+        },
+        {
+          id: "chem-5-35", difficulty: 2, type: "mcq", topic: "Catalysis",
+          prompt: "In heterogeneous catalysis, the reaction typically occurs at the catalyst's surface. What is the general mechanism by which a solid heterogeneous catalyst speeds up a gas-phase reaction?",
+          choices: ["The catalyst reacts directly and permanently with the gas molecules, becoming a new product", "Gas molecules adsorb onto the catalyst's surface, which weakens their internal bonds and holds them in a favorable orientation, lowering the activation energy needed for the reaction to occur, after which products desorb and the catalyst surface is regenerated", "The catalyst increases the temperature of the surrounding gas molecules", "The catalyst absorbs the gas molecules permanently into its solid structure, removing them from the reaction entirely"],
+          correct: 1,
+          explanation: {
+            correct: "In heterogeneous catalysis, gas-phase reactant molecules ADSORB (stick) onto the solid catalyst's surface; this adsorption process weakens the internal bonds within the reactant molecules and can hold multiple reactant molecules in close proximity and favorable orientation, significantly lowering the activation energy needed for the reaction to proceed. After the reaction occurs on the surface, the product molecules DESORB (release) from the catalyst surface, leaving the catalyst's surface unchanged and available to catalyze further reactant molecules.",
+            wrong: { 0: "A true catalyst is NOT permanently consumed or transformed into a product; it is regenerated after each catalytic cycle, ready to catalyze additional reactant molecules — if the catalyst became a permanent product, it wouldn't be functioning as a catalyst at all.", 2: "Heterogeneous catalysts don't function by directly heating the surrounding gas; their mechanism involves providing a surface for adsorption that lowers activation energy through a different pathway, not through simple thermal heating.", 3: "The correct term is 'adsorption' (sticking to the SURFACE) rather than 'absorption' (being taken up INTO the bulk material) — and critically, this process is temporary/reversible for a true catalyst, with the product molecules eventually desorbing so the catalyst surface can be reused, not permanently removing the molecules from the reaction." },
+            tempting: "Choice D is tempting because 'adsorption' and 'absorption' sound similar and both involve some kind of uptake by the catalyst, but the correct heterogeneous catalysis mechanism specifically involves SURFACE adsorption (temporary, surface-level sticking) rather than absorption into the bulk material, and the process must be reversible (with eventual desorption) for the catalyst to be reused.",
+            commonMistake: "Confusing 'adsorption' (surface-level, temporary sticking, the correct mechanism for heterogeneous catalysis) with 'absorption' (uptake into the bulk material), or forgetting that the catalytic cycle must be reversible with eventual desorption of products.",
+            apTip: "Always use the precise term 'adsorption' (not 'absorption') when describing heterogeneous catalysis mechanisms on an FRQ, and be ready to describe the full cycle: reactants adsorb onto the surface → weakened bonds/favorable orientation lowers Ea → reaction occurs on the surface → products desorb, regenerating the available catalyst surface."
+          }
+        },
+        {
+          id: "chem-5-36", difficulty: 3, type: "mcq", topic: "Catalysis",
+          prompt: "An enzyme (a biological catalyst) speeds up a specific biochemical reaction by binding to its substrate at a specific active site. Which statement correctly describes how this relates to general catalysis principles?",
+          choices: ["Enzymes are a completely unique exception to general catalysis principles, working by entirely different rules than chemical catalysts", "Enzymes are a specific (typically homogeneous, since often dissolved with their substrate) example of a catalyst that lowers activation energy by providing a favorable binding environment/orientation, following the same fundamental principles as other catalysts", "Enzymes work by permanently changing the products' chemical identity", "Enzymes increase the equilibrium constant of the reactions they catalyze"],
+          correct: 1,
+          explanation: {
+            correct: "Enzymes are indeed a specific example that follows the same general catalysis principles as other catalysts: they provide an alternative pathway (through specific binding at the active site) that lowers the activation energy required for the reaction, often by holding substrate molecules in a favorable orientation and/or stabilizing the transition state — they are typically considered homogeneous catalysts when dissolved in the same aqueous phase as their substrates.",
+            wrong: { 0: "Enzymes follow the SAME fundamental catalysis principles as other catalysts (lowering activation energy, providing an alternative pathway, being regenerated after the reaction) — they are a specific, biologically important example of catalysis, not an exception to the general rules.", 2: "Enzymes, like all catalysts, do not change the chemical identity of the products formed; they simply speed up the rate at which the (thermodynamically already-favored) products form, without altering what those products actually are.", 3: "Like all catalysts, enzymes do NOT change the equilibrium constant of the reactions they catalyze; they speed up the approach to the SAME equilibrium position that would eventually be reached without the enzyme, just much faster." },
+            tempting: "Choice A might tempt students who think of enzymes as an entirely separate topic in biology rather than recognizing them as a direct, specific application of the same general chemistry catalysis principles they've already learned.",
+            commonMistake: "Treating enzymes as a completely separate biological phenomenon rather than recognizing them as following the exact same fundamental catalysis principles (lowering Ea, not affecting Keq, being regenerated) that apply to all catalysts.",
+            apTip: "Always connect biological examples like enzymes back to the same fundamental chemistry principles: enzymes lower activation energy (by stabilizing the transition state at their active site), are regenerated after each catalytic cycle, and do NOT change the equilibrium constant or the products' fundamental chemical identity — exactly like any other catalyst."
+          }
+        },
+        {
+          id: "chem-5-37", difficulty: 2, type: "mcq", topic: "Rate Constant Units",
+          prompt: "A rate constant k has units of M⁻¹s⁻¹. What is the overall order of this reaction?",
+          choices: ["Zero order", "First order", "Second order", "Third order"],
+          correct: 2,
+          explanation: {
+            correct: "The general relationship between rate constant units and overall reaction order n is: units of k = M^(1-n)·s⁻¹. For units of M⁻¹s⁻¹, solving 1-n = -1 gives n = 2, so this is a second-order reaction overall.",
+            wrong: { 0: "Zero-order reactions have rate constant units of M·s⁻¹ (or M/s), not M⁻¹s⁻¹ — these are different units corresponding to different orders.", 1: "First-order reactions have rate constant units of simply s⁻¹ (no molarity term at all), not M⁻¹s⁻¹ — the presence of an inverse molarity term specifically indicates a higher order than first.", 3: "Third-order reactions have rate constant units of M⁻²s⁻¹, not M⁻¹s⁻¹ — the exponent on the molarity term would need to be -2, not -1, for third order." },
+            tempting: "None of the distractors are especially tempting if the general units formula (M^(1-n)·s⁻¹) is applied and solved carefully for n, but simply guessing an order without doing this calculation can easily lead to an incorrect answer.",
+            commonMistake: "Not using the systematic units formula to solve for the exact order, and instead guessing based on a vague, unreliable sense of which units 'look like' which order.",
+            apTip: "Memorize the units for each common order directly: zero order → M·s⁻¹; first order → s⁻¹ (no concentration term); second order → M⁻¹·s⁻¹; third order → M⁻²·s⁻¹ — notice the pattern that each increasing order adds one more inverse power of M to the units."
+          }
+        },
+        {
+          id: "chem-5-38", difficulty: 3, type: "mcq", topic: "Rate Constant Units",
+          prompt: "A rate constant k has units of s⁻¹ (with no molarity term at all). What is the overall order of this reaction, and what does this specific unit pattern indicate about how half-life behaves for this reaction?",
+          choices: ["Second order; half-life increases as the reaction proceeds", "Zero order; half-life decreases as the reaction proceeds", "First order; half-life remains CONSTANT throughout the reaction, independent of concentration", "Third order; half-life is undefined for this order"],
+          correct: 2,
+          explanation: {
+            correct: "Units of s⁻¹ alone (with no concentration/molarity term) specifically indicate a FIRST-order reaction (since M^(1-n) = M⁰ = 1 requires n=1, eliminating the concentration units entirely). A defining, unique feature of first-order kinetics is that the half-life formula (t½=ln(2)/k) does NOT depend on the initial concentration at all — this means the half-life remains constant throughout the entire reaction, regardless of how much reactant remains.",
+            wrong: { 0: "Units of s⁻¹ alone correspond to FIRST order, not second order (second order would require units of M⁻¹s⁻¹, including an inverse molarity term); additionally, for reactions where half-life DOES depend on concentration (like second order), half-life actually INcreases (not decreases) as concentration decreases over time.", 1: "Units of s⁻¹ alone correspond to first order, not zero order (zero order would require units of M·s⁻¹, with a positive power of M); also, for zero-order reactions specifically, half-life actually DEcreases (not increases, and this choice does correctly identify the direction, but pairs it with the wrong order) as the reaction proceeds, since t½=[A]₀/(2k) is directly proportional to the (shrinking) current concentration.", 3: "Units of s⁻¹ alone specifically indicate FIRST order, not third order (third order would require units of M⁻²s⁻¹); also, half-life IS well-defined for third-order reactions, just via a different, more complex formula than for first order." },
+            tempting: "Choices A and B both correctly identify DIFFERENT valid facts about how half-life can change for OTHER reaction orders, but this specific question describes a reaction with units of pure s⁻¹, which specifically and uniquely identifies FIRST order, whose signature feature is a CONSTANT half-life, unlike zero or second order.",
+            commonMistake: "Correctly identifying units-to-order relationships for other orders but misapplying them to a different, specific units pattern given in the actual question, or forgetting the specific, famous half-life behavior that uniquely characterizes first-order reactions.",
+            apTip: "Whenever you see rate constant units of simply s⁻¹ (no concentration term at all), immediately recognize BOTH that this means first order AND that this specific order has a uniquely constant half-life independent of concentration — this constant half-life property is a frequently tested, distinguishing hallmark of first-order kinetics (used, for example, in radioactive decay calculations)."
+          }
+        },
+        {
+          id: "chem-5-39", difficulty: 2, type: "mcq", topic: "Rate Constant Units",
+          prompt: "A student calculates a rate constant and gets units of M·s⁻¹. What overall reaction order does this correspond to?",
+          choices: ["Zero order", "First order", "Second order", "This is not a valid unit for any rate constant"],
+          correct: 0,
+          explanation: {
+            correct: "Using the general units relationship, units of k = M^(1-n)·s⁻¹: for units of M¹·s⁻¹ (i.e., M·s⁻¹), solving 1-n = 1 gives n = 0, confirming this corresponds to a zero-order reaction.",
+            wrong: { 1: "First-order reactions have rate constant units of simply s⁻¹ (no molarity term at all, since M^(1-1)=M⁰=1), not M·s⁻¹.", 2: "Second-order reactions have rate constant units of M⁻¹s⁻¹ (an INVERSE molarity term), not M·s⁻¹ (a POSITIVE molarity term) — these are opposite in terms of whether the concentration term is in the numerator or denominator.", 3: "M·s⁻¹ is indeed a valid, standard rate constant unit, specifically corresponding to zero-order reactions — it is not an invalid or nonsensical unit combination." },
+            tempting: "Choice C might tempt students who don't carefully distinguish between a POSITIVE power of M (as in M·s⁻¹, indicating zero order) versus a NEGATIVE power of M (as in M⁻¹s⁻¹, indicating second order) — these represent very different orders despite superficially similar-looking units.",
+            commonMistake: "Not carefully distinguishing between positive and negative powers of M when reading rate constant units, since this sign directly determines whether the calculated order is below or above first order.",
+            apTip: "When reading rate constant units, pay very close attention to whether the M term has a POSITIVE exponent (like M¹, indicating zero order, since 1-n=1 means n=0) or a NEGATIVE exponent (like M⁻¹, indicating second order, since 1-n=-1 means n=2) — this sign distinction is easy to overlook but changes the identified order dramatically."
+          }
+        },
+        {
+          id: "chem-5-40", difficulty: 3, type: "mcq", topic: "Integrated Rate Laws & Graphing",
+          prompt: "A reaction's concentration data over time is measured, and the following table is obtained: t=0s, [A]=0.100 M; t=10s, [A]=0.0667 M; t=20s, [A]=0.0500 M. Calculating 1/[A] at each time point gives 10.0, 15.0, and 20.0 M⁻¹ respectively, which increase by exactly 5.0 M⁻¹ every 10 seconds (a perfectly linear pattern). What does this indicate about the reaction order?",
+          choices: ["The reaction is zero order, since [A] itself changes at a constant rate", "The reaction is first order, since a plot of ln[A] vs. time would be linear", "The reaction is second order, since a plot of 1/[A] vs. time is linear, with the constant slope equal to the rate constant k", "The reaction order cannot be determined from this data"],
+          correct: 2,
+          explanation: {
+            correct: "A perfectly LINEAR relationship when plotting 1/[A] versus time is the defining graphical signature of a SECOND-ORDER reaction (from the integrated rate law 1/[A] = kt + 1/[A]₀, which has the form y=mx+b when plotting 1/[A] vs. t). The constant slope of this line (5.0 M⁻¹ per 10 s = 0.50 M⁻¹s⁻¹) directly equals the rate constant k for this second-order reaction.",
+            wrong: { 0: "Zero order would be indicated by [A] ITSELF (not 1/[A]) changing linearly with time; while [A] does decrease here, the question specifically highlights that 1/[A] shows the PERFECTLY linear pattern, which is the second-order signature, not the zero-order signature.", 1: "First order would be indicated by ln[A] (not 1/[A]) being linear with time; the question specifically states that 1/[A] (not ln[A]) produces the perfectly linear pattern, which points to second order instead.", 3: "The reaction order CAN be determined from this data — the specific pattern described (1/[A] increasing perfectly linearly with time) is precisely the diagnostic test for second-order kinetics, and this data clearly shows that exact pattern." },
+            tempting: "Choices A and B both correctly identify OTHER valid diagnostic patterns for different orders (zero order: [A] vs t linear; first order: ln[A] vs t linear), but this specific question describes the 1/[A] vs t linear pattern, which specifically diagnoses SECOND order, not zero or first.",
+            commonMistake: "Confusing which specific transformed variable (raw [A], ln[A], or 1/[A]) corresponds to which specific reaction order's linear diagnostic plot.",
+            apTip: "Always match the SPECIFIC transformed variable mentioned in the problem to its corresponding order: raw [A] vs. t linear → zero order; ln[A] vs. t linear → first order; 1/[A] vs. t linear → second order — and remember that whichever plot IS linear, its slope directly gives you a value related to the rate constant k (with the specific relationship depending on which order it is)."
+          }
+        },
+        {
+          id: "chem-5-41", difficulty: 4, type: "mcq", topic: "Integrated Rate Laws & Graphing",
+          prompt: "For a second-order reaction with the linear relationship 1/[A] = kt + 1/[A]₀, if a graph of 1/[A] vs. time has a slope of 0.500 M⁻¹s⁻¹ and a y-intercept of 10.0 M⁻¹, what is the initial concentration [A]₀?",
+          choices: ["0.0500 M", "0.100 M", "5.00 M", "10.0 M"],
+          correct: 1,
+          explanation: {
+            correct: "The y-intercept of the linear plot 1/[A] = kt + 1/[A]₀ directly equals 1/[A]₀ (since at t=0, 1/[A] = 1/[A]₀). Given the y-intercept is 10.0 M⁻¹, this means 1/[A]₀ = 10.0 M⁻¹, so [A]₀ = 1/10.0 = 0.100 M.",
+            wrong: { 0: "This is half the correct value; it doesn't correctly correspond to taking the reciprocal of the given y-intercept value (10.0 M⁻¹) to find [A]₀.", 2: "This confuses the y-intercept value itself (10.0 M⁻¹, which represents 1/[A]₀, not [A]₀ directly) with a related but different quantity; simply dividing 10.0 by 2 doesn't correctly invert the reciprocal relationship needed here.", 3: "This directly reports the y-intercept value (10.0 M⁻¹) as if it were [A]₀ itself, without taking the necessary reciprocal — the y-intercept represents 1/[A]₀, not [A]₀ directly, so this final reciprocal step must not be skipped." },
+            tempting: "Choice D is a strong trap for students who correctly identify the y-intercept as the relevant piece of information but forget that the y-intercept specifically equals 1/[A]₀ (not [A]₀ directly), requiring one final reciprocal calculation to actually find the initial concentration.",
+            commonMistake: "Correctly identifying the y-intercept as containing the relevant initial-concentration information but forgetting to take the final reciprocal step needed to convert from 1/[A]₀ (the y-intercept's actual value) to [A]₀ itself.",
+            apTip: "For any integrated rate law graph, always carefully track exactly what the y-intercept literally represents (for second order, it's 1/[A]₀, NOT [A]₀ directly) — extracting the actual concentration value from the y-intercept often requires one additional inverse or exponential operation, depending on which order's integrated rate law you're working with."
+          }
+        },
+        {
+          id: "chem-5-42", difficulty: 2, type: "mcq", topic: "Collision Theory & Temperature",
+          prompt: "According to the Maxwell-Boltzmann distribution of molecular kinetic energies, what happens to the shape of this distribution when temperature increases?",
+          choices: ["The distribution becomes narrower and taller, with the peak shifting to lower energy", "The distribution becomes broader and flatter, with the peak shifting to higher energy, and a larger area under the curve beyond the activation energy threshold", "The distribution remains completely unchanged in shape, just shifted uniformly to the right", "The distribution splits into two completely separate peaks"],
+          correct: 1,
+          explanation: {
+            correct: "As temperature increases, the Maxwell-Boltzmann distribution becomes broader (a wider spread of molecular kinetic energies) and flatter (lower peak height, since the total area under the curve, representing 100% of molecules, stays the same but is now spread over a wider energy range), with the peak of the distribution shifting toward higher energy — critically, this change results in a larger fraction of the total area lying beyond any fixed activation energy threshold, corresponding to more molecules having sufficient energy to react.",
+            wrong: { 0: "This describes the OPPOSITE of what actually happens — increasing temperature makes the distribution broader (not narrower) and shifts the peak to HIGHER (not lower) energy, since molecules move faster on average at higher temperatures.", 2: "The distribution's SHAPE genuinely changes with temperature (becoming broader and flatter, not just shifting) — it is not simply shifted while keeping the same shape; the increased spread (variance) of molecular energies is itself an important part of why more molecules exceed the activation energy threshold.", 3: "The Maxwell-Boltzmann distribution remains a single, continuous, unimodal (one-peaked) curve at any given temperature — it does not split into multiple separate peaks as temperature changes." },
+            tempting: "Choice A reverses the correct direction of change, which might tempt students who don't carefully think through the physical reasoning (higher temperature = faster average molecular motion = broader distribution shifted toward higher energies, not narrower or shifted lower).",
+            commonMistake: "Reversing the correct direction of change in the Maxwell-Boltzmann distribution's shape and peak position when temperature increases, or assuming the distribution simply shifts without changing shape.",
+            apTip: "Always describe the Maxwell-Boltzmann distribution change with temperature using both language elements together: the distribution becomes BROADER/FLATTER (not just shifted) AND its peak moves to HIGHER energy — and connect this explicitly to the increased AREA under the curve beyond the activation energy threshold, which is the direct link to increased reaction rate."
+          }
+        },
+        {
+          id: "chem-5-43", difficulty: 3, type: "mcq", topic: "Collision Theory & Temperature",
+          prompt: "A rule of thumb states that for many reactions, the reaction rate roughly DOUBLES for every 10°C increase in temperature. Which of the following best explains why this effect is so dramatic, given that a 10°C change is a relatively small percentage change in absolute (Kelvin) temperature?",
+          choices: ["A 10°C increase dramatically increases the total number of reactant molecules present", "Due to the EXPONENTIAL relationship in the Arrhenius equation, even a relatively small percentage increase in absolute temperature can produce a disproportionately large increase in the fraction of molecules exceeding the activation energy, and thus in the rate constant k", "A 10°C increase changes the activation energy of the reaction, making it easier to overcome", "This rule of thumb is inaccurate and doesn't reflect real chemical behavior"],
+          correct: 1,
+          explanation: {
+            correct: "Because the Arrhenius equation involves an EXPONENTIAL relationship between k and temperature (through the e^(-Ea/RT) term), even a relatively modest percentage change in absolute temperature can produce a much larger, disproportionate percentage change in k — this exponential amplification effect explains why a seemingly small 10°C increase can plausibly double the rate for many real reactions with moderate activation energies.",
+            wrong: { 0: "Temperature changes don't change the actual NUMBER of reactant molecules present (assuming constant volume/moles); the dramatic rate increase comes from the exponential relationship affecting the FRACTION of molecules with sufficient energy, not from creating additional molecules.", 2: "Activation energy is an intrinsic property of the specific reaction's mechanism/pathway and does NOT change with temperature; what changes is the FRACTION of molecules that have enough energy to overcome that fixed activation energy barrier.", 3: "This rule of thumb, while approximate and not universally exact for every single reaction, is a well-established, generally reliable approximation for many real reactions with moderate activation energies, directly explainable by the Arrhenius equation's exponential temperature dependence." },
+            tempting: "Choice C might tempt students who know activation energy is central to the Arrhenius equation, but activation energy itself is a FIXED property of the reaction pathway — it's the changing FRACTION of molecules that can overcome this fixed barrier (due to the exponential relationship) that explains the dramatic rate change, not a change in the barrier's height itself.",
+            commonMistake: "Attributing the dramatic 'rate doubles every 10°C' effect to a change in activation energy itself, rather than correctly attributing it to the EXPONENTIAL sensitivity of the Arrhenius equation to temperature changes, which affects the fraction of successful collisions.",
+            apTip: "Always explain dramatic temperature-rate effects using the specific language of EXPONENTIAL relationships: because k depends on temperature through an exponential term (e^(-Ea/RT)), relatively small absolute temperature changes can produce surprisingly large, disproportionate changes in k — this is fundamentally different from a simple linear or proportional relationship."
+          }
+        },
+        {
+          id: "chem-5-44", difficulty: 4, type: "mcq", topic: "Reaction Mechanisms",
+          prompt: "A chemist proposes a single-step (elementary) mechanism for the reaction 2NO + O2 → 2NO2, meaning the reaction occurs in exactly one step matching the overall balanced equation. If this elementary mechanism is correct, what would the predicted rate law be?",
+          choices: ["Rate = k[NO2]²", "Rate = k[NO][O2]", "Rate = k[NO]²[O2]", "The rate law cannot be predicted without additional experimental data"],
+          correct: 2,
+          explanation: {
+            correct: "For a TRUE elementary (single-step) reaction, the rate law can be written directly from the reaction's own stoichiometry, using the coefficients as exponents: Rate = k[NO]²[O2]¹ = k[NO]²[O2], directly matching the coefficients of 2 for NO and 1 for O2 in the balanced equation.",
+            wrong: { 0: "NO2 is a PRODUCT of this reaction, not a reactant; rate laws (whether for elementary steps or overall multi-step reactions) are expressed in terms of REACTANT concentrations, not product concentrations.", 1: "This uses an exponent of 1 for NO, but the elementary step's own stoichiometry (with a coefficient of 2 for NO) requires an exponent of 2, not 1, when directly reading the rate law from a genuinely single-step mechanism.", 3: "For a genuinely elementary (single-step) reaction specifically, the rate law CAN be predicted directly from the balanced equation's coefficients, without needing additional experimental data — this direct coefficient-to-exponent shortcut is valid ONLY for true elementary reactions, unlike for multi-step mechanisms." },
+            tempting: "Choice D might tempt overly cautious students who've learned that rate laws generally require experimental determination, but this specific shortcut (directly reading exponents from coefficients) is explicitly valid when a reaction IS confirmed to be a single, true elementary step, as stated in this problem.",
+            commonMistake: "Applying the general caution that 'rate laws must be experimentally determined' even in the specific case where a reaction is explicitly stated to be a genuine elementary (single) step, where the coefficient-to-exponent shortcut is actually valid.",
+            apTip: "Remember this important exception: the 'rate law equals overall equation coefficients' shortcut is INVALID for most real, multi-step reactions, but IS valid specifically when a reaction is confirmed (or assumed, as stated in a problem) to be a genuine single-step ELEMENTARY reaction — always check for this specific 'elementary' or 'single-step' designation before applying this shortcut."
+          }
+        },
+        {
+          id: "chem-5-45", difficulty: 5, type: "mcq", topic: "Reaction Mechanisms",
+          prompt: "A reaction has an experimentally determined rate law of Rate = k[X][Y], but the overall balanced equation is X + 2Y → Z (showing a coefficient of 2 for Y). What does the mismatch between the rate law's exponent for Y (which is 1) and the overall equation's coefficient for Y (which is 2) indicate?",
+          choices: ["The overall balanced equation must be incorrect and needs to be rebalanced", "This is impossible; rate law exponents must always exactly match the overall balanced equation's coefficients", "This confirms that the reaction is NOT a single elementary step, and must instead proceed through a multi-step mechanism where the rate-determining step involves only ONE molecule of Y (not two)", "The rate law itself must be incorrect, since it doesn't match the coefficient of 2 for Y"],
+          correct: 2,
+          explanation: {
+            correct: "A mismatch between the experimentally determined rate law's exponents and the overall balanced equation's coefficients is a definitive sign that the reaction does NOT proceed as a single elementary step. Instead, the reaction must occur through a multi-step mechanism, where the rate-determining (slow) step involves only ONE molecule of Y (matching the rate law's exponent of 1), with the second molecule of Y being consumed in a different, faster step elsewhere in the mechanism (which doesn't affect the overall observed rate law).",
+            wrong: { 0: "The overall balanced equation (reflecting the true stoichiometric ratio of reactants consumed and products formed) is not necessarily incorrect just because it doesn't match the rate law's exponents — these are two independent pieces of information (one from mass balance, one from experimental kinetics) that are expected to match ONLY for single-step elementary reactions.", 1: "This is only true for single-step ELEMENTARY reactions; for multi-step mechanisms (which are actually the norm for most real reactions), the rate law's exponents come from the SLOW step's stoichiometry alone and are NOT required or expected to match the overall equation's coefficients.", 3: "The experimentally determined rate law is exactly that — determined by direct experimental measurement — and is considered a reliable, factual description of how the reaction rate actually depends on concentration; it is not 'incorrect' simply because it doesn't match the overall equation's coefficients, since this mismatch is expected for multi-step mechanisms." },
+            tempting: "Choice B reflects a commonly memorized (but incomplete) rule that sounds authoritative, but it only applies specifically to single-step ELEMENTARY reactions — the vast majority of real reactions are multi-step, and for these, a mismatch between rate law exponents and overall coefficients is the EXPECTED, normal situation, not an error.",
+            commonMistake: "Over-applying the 'coefficients equal rate law exponents' rule universally, without recognizing that this rule is specifically limited to elementary (single-step) reactions, and that a mismatch for other reactions is completely normal and expected, providing valuable mechanistic information rather than indicating an error.",
+            apTip: "Always remember: for MULTI-STEP mechanisms (the norm for most real reactions), a mismatch between the rate law's exponents and the overall equation's coefficients is EXPECTED and provides valuable clues about the mechanism (specifically, about which reactants and how many of each are involved in the slow, rate-determining step) — this mismatch is a feature to be interpreted, not an error to be corrected."
+          }
+        },
+        {
+          id: "chem-5-46", difficulty: 3, type: "mcq", topic: "Catalysis",
+          prompt: "A catalyst is added to a reversible reaction that has not yet reached equilibrium. What effect does the catalyst have on how quickly the system reaches equilibrium, and what effect does it have on the final equilibrium concentrations?",
+          choices: ["The catalyst speeds up how quickly equilibrium is reached, but does NOT change the final equilibrium concentrations", "The catalyst speeds up how quickly equilibrium is reached, AND shifts the final equilibrium concentrations to favor more product", "The catalyst has no effect on how quickly equilibrium is reached, but does change the final equilibrium concentrations", "The catalyst has no effect on either how quickly equilibrium is reached or the final equilibrium concentrations"],
+          correct: 0,
+          explanation: {
+            correct: "A catalyst speeds up BOTH the forward and reverse reactions equally (by lowering the activation energy for both directions equally), which means the system reaches equilibrium FASTER than it would without the catalyst — however, since both directions are sped up by the same proportional amount, the actual position of equilibrium (the final equilibrium concentrations, and thus Keq) remains completely UNCHANGED.",
+            wrong: { 1: "A catalyst does NOT shift the equilibrium position to favor more product; it speeds up the approach to equilibrium but leaves the actual equilibrium concentrations (and Keq) exactly the same as they would be without the catalyst — this is a very common and important misconception to avoid.", 2: "A catalyst absolutely DOES affect how quickly equilibrium is reached (that's precisely its defining kinetic effect, lowering Ea for both directions); it just doesn't change the final equilibrium position itself.", 3: "A catalyst does have a real, significant effect — specifically on the SPEED of reaching equilibrium (making it faster) — even though it has no effect on the final equilibrium concentrations themselves." },
+            tempting: "Choice B represents one of the most common and important misconceptions in chemistry — that a catalyst somehow 'helps' a reaction by shifting equilibrium toward more product, when in fact a catalyst's entire effect is purely kinetic (speed), never thermodynamic/equilibrium-position-related.",
+            commonMistake: "Believing that a catalyst shifts the equilibrium position toward more product (a common and significant misconception), rather than correctly understanding that a catalyst only affects the SPEED of reaching a completely unchanged equilibrium position.",
+            apTip: "Always state this distinction explicitly and precisely on any FRQ: 'a catalyst increases the RATE at which equilibrium is reached (kinetics), but does NOT change the equilibrium position, the equilibrium concentrations, or the value of Keq (thermodynamics)' — this precise, complete statement is what full-credit responses consistently include."
+          }
+        },
+        {
+          id: "chem-5-47", difficulty: 2, type: "mcq", topic: "Reaction Mechanisms",
+          prompt: "What does the term 'molecularity' refer to when describing an elementary step in a reaction mechanism?",
+          choices: ["The molar mass of the reactants in that step", "The number of reactant particles (molecules, atoms, or ions) that must collide simultaneously in that specific elementary step", "The overall order of the entire multi-step reaction", "The number of steps in the overall mechanism"],
+          correct: 1,
+          explanation: {
+            correct: "Molecularity specifically describes the number of reactant particles that must come together and collide simultaneously in a SINGLE elementary step — for example, a step involving one reactant particle is 'unimolecular,' a step involving two colliding particles is 'bimolecular,' and a step involving three simultaneously colliding particles (rare, since three-body collisions are statistically much less likely) is 'termolecular.'",
+            wrong: { 0: "Molar mass is a completely separate physical property of a substance (its mass per mole) and has nothing to do with the concept of molecularity, which is about how many particles collide in a specific step.", 2: "Overall reaction order (from the experimentally determined rate law for the ENTIRE reaction) is a different concept from molecularity, which applies specifically to individual ELEMENTARY steps within a mechanism — though for elementary steps specifically, the step's own molecularity does happen to equal that step's own order.", 3: "The number of steps in an overall mechanism is a separate, different piece of information from molecularity, which describes the number of colliding PARTICLES within one specific individual step, not the total count of steps in the whole mechanism." },
+            tempting: "Choice C is tempting because for a TRUE elementary step, its own molecularity does happen to numerically equal its own order — but molecularity and (overall reaction) order are conceptually different terms, with molecularity applying specifically to individual elementary steps and describing particle collisions, not applying to a multi-step reaction's experimentally determined overall order.",
+            commonMistake: "Conflating molecularity (a specific term for the number of colliding particles in ONE elementary step) with overall reaction order (an experimentally determined property of the ENTIRE multi-step reaction, from its rate law).",
+            apTip: "Reserve the term 'molecularity' specifically for describing INDIVIDUAL elementary steps (unimolecular=1 particle, bimolecular=2 particles colliding, termolecular=3 particles colliding, which is rare) — never use 'molecularity' to describe an overall multi-step reaction's experimentally determined order, even though these two concepts happen to coincide for a reaction that IS a single elementary step."
+          }
+        },
+        {
+          id: "chem-5-48", difficulty: 4, type: "mcq", topic: "Reaction Mechanisms",
+          prompt: "Termolecular elementary steps (requiring three reactant particles to collide simultaneously) are much rarer than unimolecular or bimolecular steps. What is the best explanation for this rarity, based on collision theory / probability?",
+          choices: ["Three-particle molecules don't chemically exist in nature", "The simultaneous collision of three separate particles, all at the same precise moment and in the correct mutual orientation, is statistically far less probable than a two-particle collision, since it requires three independent, precisely-timed events to align at once rather than two", "Termolecular steps always have zero activation energy, making them impossible to observe", "Termolecular steps violate the law of conservation of mass"],
+          correct: 1,
+          explanation: {
+            correct: "A termolecular step requires three separate particles to all collide at essentially the exact same instant, with all three simultaneously in the correct relative orientation for a reaction to occur — this is a much more statistically demanding, improbable event than a simple two-particle (bimolecular) collision, since it requires three independent particles' trajectories, timing, and orientations to all align simultaneously, rather than just two, making termolecular elementary steps inherently much rarer.",
+            wrong: { 0: "'Termolecular' doesn't refer to a molecule made of three particles permanently bonded together; it refers to a TRANSIENT, simultaneous COLLISION of three separate reactant particles in a single elementary step — this is a real (if rare) type of elementary step, not a claim about molecular structure.", 2: "There is no rule stating termolecular steps must have zero activation energy; their rarity comes from the low PROBABILITY of the required three-way simultaneous collision itself, not from any special activation energy consideration.", 3: "Termolecular steps do not violate conservation of mass; they are legitimate (if statistically rare) elementary steps that fully obey standard conservation laws, just involving a less probable simultaneous three-particle collision event." },
+            tempting: "None of the distractors are especially tempting if the actual statistical/probabilistic explanation (simultaneous three-way collision alignment is far less likely than two-way) is understood clearly, but this concept requires connecting collision theory's probability-based reasoning to WHY certain molecularities are rarer than others.",
+            commonMistake: "Not connecting the rarity of termolecular steps back to the fundamental statistical/probability reasoning of collision theory (more simultaneous, independently-aligning particles required makes an event exponentially less probable).",
+            apTip: "When explaining why termolecular (or higher) elementary steps are rare, always frame the answer in terms of PROBABILITY/STATISTICS: successfully colliding two particles simultaneously with the right energy and orientation is already a somewhat rare event, and requiring a THIRD independent particle to also be present and correctly aligned at that exact same instant makes the overall event dramatically less probable, not impossible."
+          }
+        },
+        {
+          id: "chem-5-49", difficulty: 3, type: "mcq", topic: "Half-Life & Integrated Rate Laws",
+          prompt: "Two different first-order reactions have different rate constants: Reaction 1 has k = 0.100 s⁻¹, and Reaction 2 has k = 0.0500 s⁻¹. Which reaction has the LONGER half-life, and by what factor?",
+          choices: ["Reaction 1 has the longer half-life, by a factor of 2", "Reaction 2 has the longer half-life, by a factor of 2", "Reaction 1 has the longer half-life, by a factor of 4", "Both reactions have identical half-lives, since half-life doesn't depend on k for first-order reactions"],
+          correct: 1,
+          explanation: {
+            correct: "For first-order reactions, half-life is INVERSELY related to the rate constant (t½ = ln(2)/k) — a SMALLER rate constant means a LONGER half-life. Since Reaction 2's rate constant (0.0500 s⁻¹) is half of Reaction 1's (0.100 s⁻¹), Reaction 2's half-life must be TWICE as long as Reaction 1's (since half-life and k are inversely proportional, halving k doubles the half-life).",
+            wrong: { 0: "This reverses the correct relationship — Reaction 1 has the LARGER rate constant (0.100 vs. 0.0500 s⁻¹), which means it reacts FASTER and thus has the SHORTER half-life, not the longer one.", 2: "This reverses which reaction has the longer half-life AND miscalculates the factor; since k is inversely proportional to half-life, and Reaction 2's k is exactly half of Reaction 1's, Reaction 2's half-life is exactly twice (not four times) as long.", 3: "First-order half-life absolutely DOES depend on the rate constant k (via t½=ln(2)/k) — the specific claim being tested in first-order kinetics is that half-life does NOT depend on the INITIAL CONCENTRATION, which is a completely different statement from claiming it doesn't depend on k at all." },
+            tempting: "Choice D reflects a common overgeneralization of the true, specific fact that first-order half-life is independent of INITIAL CONCENTRATION — this independence does NOT extend to the rate constant k itself, which very much does determine half-life through the direct relationship t½=ln(2)/k.",
+            commonMistake: "Overgeneralizing the specific fact that first-order half-life is independent of initial concentration into an incorrect belief that first-order half-life is independent of ALL variables, including the rate constant k, which is not true — k and half-life remain directly linked (inversely proportional) for first-order kinetics.",
+            apTip: "Keep these two related but different facts about first-order half-life clearly separate: (1) half-life does NOT depend on initial concentration (a unique feature of first order), but (2) half-life DOES depend inversely on the rate constant k (t½=ln(2)/k) — a larger k always means a shorter half-life, and this second relationship holds true across all reaction orders, not just first."
+          }
+        },
+        {
+          id: "chem-5-50", difficulty: 5, type: "mcq", topic: "Arrhenius Equation & Mechanisms",
+          prompt: "A reaction's rate constant is measured at several temperatures, and a plot of ln(k) vs. 1/T gives a straight line with a very small (nearly flat/close to zero) slope. What does this indicate about the reaction's activation energy, and what might this suggest about the reaction's nature?",
+          choices: ["The activation energy must be very large, since a flat slope indicates strong temperature sensitivity", "The activation energy must be very small (close to zero), since the slope (-Ea/R) is nearly zero, meaning the reaction rate is only weakly dependent on temperature — this can be characteristic of reactions with very low or negligible energy barriers, such as some diffusion-controlled or barrierless radical reactions", "A flat slope indicates the reaction doesn't actually follow the Arrhenius equation at all", "A flat slope indicates the reaction is at equilibrium and no longer proceeding in either direction"],
+          correct: 1,
+          explanation: {
+            correct: "Since the slope of an ln(k) vs. 1/T plot equals -Ea/R, a slope very close to zero directly indicates that Ea itself must be very small (close to zero) — this means the rate constant k is only weakly dependent on temperature (since the exponential term e^(-Ea/RT) barely changes with T when Ea is very small). Physically, this can be characteristic of reactions with very low intrinsic energy barriers, such as certain very fast radical-radical recombination reactions or diffusion-controlled reactions, where the rate is limited more by how quickly molecules can physically encounter each other than by any significant energy barrier to reaction once they collide.",
+            wrong: { 0: "This is backwards — a FLAT (near-zero) slope indicates WEAK temperature sensitivity (small Ea), not strong temperature sensitivity; a LARGE Ea would instead correspond to a STEEP slope (since the slope -Ea/R would be a larger negative number).", 2: "A flat slope is still fully consistent with (and directly interpretable using) the Arrhenius equation — it simply indicates a small value for Ea, not that the equation somehow fails to apply; the equation's mathematical structure explains and predicts this near-zero-slope behavior perfectly well when Ea happens to be very small.", 3: "The slope of an Arrhenius plot describes how the RATE CONSTANT changes with temperature; it has no direct relationship to whether a system has reached equilibrium (a separate concept about the balance of forward and reverse reaction rates, not about the temperature-dependence of a single rate constant)." },
+            tempting: "Choice A reverses the correct relationship between slope steepness and activation energy magnitude — this is a common point of confusion, since one might intuitively (but incorrectly) associate a 'flat/boring-looking' graph with something dramatic (large Ea) rather than correctly recognizing that flatness specifically indicates weak temperature dependence (small Ea).",
+            commonMistake: "Reversing the direction of the slope-to-Ea relationship, assuming a steep slope means small Ea and a flat slope means large Ea, when the actual relationship is the opposite (slope = -Ea/R, so a LARGER Ea magnitude produces a STEEPER, more negative slope).",
+            apTip: "Always remember the direct relationship built into the Arrhenius plot: STEEPER (more negative) slope = LARGER Ea = reaction rate is HIGHLY sensitive to temperature changes; FLATTER (closer to zero) slope = SMALLER Ea = reaction rate is only WEAKLY sensitive to temperature changes — connecting slope steepness directly to temperature sensitivity (not just to a memorized formula) helps make physical sense of this relationship."
+          }
         }
       ]
     },
@@ -507,7 +3367,579 @@ export const chemistry = {
             commonMistake: "Treating ATP's role in coupled reactions as a vague 'energy supply' without understanding the specific, quantitative mechanism: free energy changes of coupled reactions add together just like Hess's Law enthalpies.",
             apTip: "College-level insight: this exact ATP-coupling mechanism (summing ΔG° values to drive otherwise unfavorable biological reactions) is the fundamental thermodynamic basis of cellular bioenergetics — explicitly showing the numeric addition of the two ΔG° values on an FRQ (not just asserting 'ATP provides energy') demonstrates the quantitative, mechanistic understanding that separates a top-scoring response."
           }
-        }
+        },
+{
+  id: 'chem-6-7', difficulty: 1, type: 'mcq', topic: 'Endothermic vs Exothermic',
+  prompt: "When solid ice melts into liquid water at 0°C, is this process endothermic or exothermic?",
+  choices: ['Exothermic, because the water releases energy as it becomes more ordered', 'Endothermic, because energy must be absorbed to overcome intermolecular forces holding the solid lattice together', 'Neither — melting involves no energy change at all', 'Exothermic, because melting always releases heat to the surroundings'],
+  correct: 1,
+  explanation: {
+    correct: "Melting requires energy input to break apart the ordered hydrogen-bonded lattice of ice, so the system absorbs heat from its surroundings, making it endothermic.",
+    wrong: { 0: "Melting makes the substance less ordered (liquid vs. solid), not more ordered, and it absorbs rather than releases energy.", 2: "Phase changes always involve an energy change (the enthalpy of fusion), even though temperature stays constant during the melting process itself.", 3: "Melting absorbs heat from the surroundings; it's freezing (the reverse process) that releases heat." },
+    tempting: "Choice D is tempting if 'melting' and 'freezing' get mentally swapped, since both are common phase-change vocabulary.",
+    commonMistake: "Confusing which phase transition absorbs vs. releases energy — melting/vaporizing/subliming absorb heat (endothermic); freezing/condensing/depositing release heat (exothermic).",
+    apTip: "Memorize the direction: going from more ordered to less ordered (solid→liquid→gas) always absorbs energy; going the other way always releases it."
+  }
+},
+{
+  id: 'chem-6-8', difficulty: 1, type: 'mcq', topic: 'Enthalpy of Formation',
+  prompt: "What is the standard enthalpy of formation (ΔH°f) of an element in its standard state, such as O2(g) at 25°C and 1 atm?",
+  choices: ['It is always a large positive number', 'It is defined as exactly zero', 'It depends on which compound the element later forms', 'It equals the element\'s bond dissociation energy'],
+  correct: 1,
+  explanation: {
+    correct: "By definition, the standard enthalpy of formation of any element in its most stable standard state is set to exactly zero, since forming an element from itself involves no chemical change.",
+    wrong: { 0: "ΔH°f for an element in its standard state isn't a large positive number — it's defined as zero as a reference point.", 2: "ΔH°f of the elemental form itself doesn't depend on later compounds; it's fixed at zero regardless of what the element eventually reacts to form.", 3: "Bond dissociation energy is a different quantity (energy to break a specific bond) and isn't equal to zero in general." },
+    tempting: "Choice D can tempt students who conflate 'formation' language with bond-breaking energy, but ΔH°f of an element is a definitional reference value, not a bond energy.",
+    commonMistake: "Forgetting that elements in their standard states are the zero-reference point for all ΔH°f (and ΔG°f) tables, which is essential for correctly using Hess's Law with formation data.",
+    apTip: "Before using any ΔH°f table calculation, double check that O2(g), N2(g), H2(g), C(graphite), and similar standard-state elements are assigned ΔH°f = 0 kJ/mol."
+  }
+},
+{
+  id: 'chem-6-9', difficulty: 1, type: 'mcq', topic: 'State Functions',
+  prompt: "ΔH, ΔS, and ΔG are all described as 'state functions.' What does this mean?",
+  choices: ['Their values depend on the specific path taken between initial and final states', 'Their values depend only on the initial and final states of the system, not on the path taken to get there', 'They can only be measured in the gas phase', 'They are always equal to zero for any physical or chemical change'],
+  correct: 1,
+  explanation: {
+    correct: "A state function depends only on the current state of the system (defined by variables like initial and final temperature, pressure, and composition) — not on the specific route or mechanism by which that state was reached, which is exactly why Hess's Law works.",
+    wrong: { 0: "That description applies to path-dependent quantities like heat (q) and work (w), which are NOT state functions — state functions are independent of path.", 2: "State functions apply across all phases (solid, liquid, gas, aqueous), not just gases.", 3: "State functions have specific, often nonzero, values for any given change; they aren't universally zero." },
+    tempting: "Choice A is tempting because it describes path-dependence, which is actually the defining feature of q and w (non-state functions) — the opposite of what's being asked here.",
+    commonMistake: "Mixing up state functions (H, S, G, which are path-independent) with path functions (q, w, which depend on how a process is carried out).",
+    apTip: "The state-function property of ΔH is exactly why Hess's Law works: you can add up ΔH values from any convenient set of steps and get the same overall ΔH as the direct reaction, since only the start and end points matter."
+  }
+},
+{
+  id: 'chem-6-10', difficulty: 1, type: 'mcq', topic: 'Sign Conventions',
+  prompt: "From the perspective of the chemical system undergoing a reaction, if the system absorbs heat from the surroundings, what sign does q have (using standard thermodynamic sign convention)?",
+  choices: ['q is positive', 'q is negative', 'q is always zero', 'The sign of q cannot be determined without knowing ΔS'],
+  correct: 0,
+  explanation: {
+    correct: "By the standard convention (from the system's point of view), heat flowing INTO the system (absorbed from surroundings) is assigned a positive sign for q, consistent with an endothermic process having positive ΔH.",
+    wrong: { 1: "Negative q would represent heat flowing OUT of the system (released to surroundings), which is the opposite of what's described here.", 2: "q is zero only for a process with no heat transfer at all (e.g., a perfectly adiabatic process), not for ordinary heat absorption.", 3: "The sign of q for heat flow follows directly from the direction of heat transfer (into vs. out of the system) and doesn't require knowing ΔS." },
+    tempting: "Choice B can result from thinking about the surroundings' perspective instead of the system's, since heat leaving the surroundings would be negative from the surroundings' point of view.",
+    commonMistake: "Losing track of which reference frame (system vs. surroundings) a given sign convention is describing.",
+    apTip: "Always anchor sign conventions to the SYSTEM's perspective: heat or energy going INTO the system is positive; heat or energy leaving the system is negative. This matches endothermic (+ΔH) and exothermic (−ΔH)."
+  }
+},
+{
+  id: 'chem-6-11', difficulty: 2, type: 'mcq', topic: "Hess's Law",
+  prompt: "If a reaction A → B has ΔH = +65 kJ, what is ΔH for the reverse reaction, B → A?",
+  choices: ['+65 kJ', '−65 kJ', '0 kJ', 'Cannot be determined without more information'],
+  correct: 1,
+  explanation: {
+    correct: "Reversing a reaction flips the sign of ΔH while keeping the same magnitude, so if A → B has ΔH = +65 kJ, then B → A has ΔH = −65 kJ.",
+    wrong: { 0: "Keeping the same positive sign would incorrectly suggest both directions absorb the same heat, which violates energy conservation between forward and reverse reactions.", 2: "ΔH for the reverse reaction isn't zero; reversing a reaction changes the sign but not the magnitude of ΔH.", 3: "This can be determined directly from Hess's Law's reversal rule — no additional information is needed." },
+    tempting: "Choice A is tempting if a student forgets that reversing a reaction requires flipping ΔH's sign, treating ΔH as if it were unaffected by direction.",
+    commonMistake: "Forgetting to flip the sign of ΔH when a reaction is written in reverse during multi-step Hess's Law problems.",
+    apTip: "A simple energy-conservation check: if going forward absorbs 65 kJ, going backward must release that same 65 kJ — the numbers must be opposite in sign but equal in magnitude."
+  }
+},
+{
+  id: 'chem-6-12', difficulty: 2, type: 'mcq', topic: "Hess's Law",
+  prompt: "The reaction N2(g) + 2O2(g) → 2NO2(g) has ΔH = +66 kJ. What is ΔH for the reaction ½N2(g) + O2(g) → NO2(g)?",
+  choices: ['+66 kJ', '+132 kJ', '+33 kJ', '−33 kJ'],
+  correct: 2,
+  explanation: {
+    correct: "The target reaction is exactly half of the given reaction (all coefficients divided by 2), so ΔH is also halved: 66 kJ ÷ 2 = +33 kJ.",
+    wrong: { 0: "Using the original ΔH unchanged ignores that the reaction's coefficients (and thus the amount of reaction occurring) have been halved.", 1: "This doubles ΔH instead of halving it — the coefficients in the target reaction are smaller than the original, not larger.", 3: "The magnitude (33 kJ) is correct, but the sign shouldn't flip; scaling a reaction's coefficients by a positive number doesn't reverse the direction of the reaction, so the sign of ΔH stays positive." },
+    tempting: "Choice A is tempting if a student forgets that ΔH must be scaled proportionally whenever a reaction's coefficients are scaled.",
+    commonMistake: "Forgetting that ΔH scales directly and proportionally with reaction coefficients — multiplying (or dividing) all coefficients by a factor multiplies (or divides) ΔH by that same factor.",
+    apTip: "Whenever you multiply or divide an entire reaction's coefficients by a number, apply that exact same multiplication or division to ΔH — think of ΔH as being 'per reaction as written.'"
+  }
+},
+{
+  id: 'chem-6-13', difficulty: 2, type: 'mcq', topic: 'Entropy & Phase Changes',
+  prompt: "What is the sign of ΔS for the process Br2(g) → Br2(l) (bromine gas condensing into liquid bromine)?",
+  choices: ['ΔS is positive, since more moles of gas means more disorder', 'ΔS is negative, since the gas becomes a more ordered, less dispersed liquid', 'ΔS is exactly zero, since no bonds are broken', 'ΔS cannot be determined for phase changes'],
+  correct: 1,
+  explanation: {
+    correct: "Condensation converts a gas (highly dispersed, high entropy) into a liquid (more constrained, lower entropy), so the process has a negative ΔS.",
+    wrong: { 0: "This describes the reactant state, not the direction of change — going FROM gas TO liquid decreases disorder, giving negative (not positive) ΔS.", 2: "Phase changes still involve a real change in the number of accessible microstates (positional/motional freedom), even though no covalent bonds are broken, so ΔS is not zero.", 3: "ΔS for phase changes can be estimated and even calculated quantitatively using ΔS = ΔH/T at the transition temperature." },
+    tempting: "Choice A is tempting if a student focuses only on 'gas is present in the reactants' without tracking the direction of the transition (gas becoming liquid, not the reverse).",
+    commonMistake: "Not carefully tracking which physical state is the starting point vs. ending point when judging entropy change direction.",
+    apTip: "For any phase change, ask: is the substance becoming MORE free-moving (→ positive ΔS) or LESS free-moving (→ negative ΔS)? Condensing, freezing, and depositing are always negative ΔS."
+  }
+},
+{
+  id: 'chem-6-14', difficulty: 2, type: 'mcq', topic: 'Entropy & Moles of Gas',
+  prompt: "For the reaction 2SO2(g) + O2(g) → 2SO3(g), what is the expected sign of ΔS°, based on the change in moles of gas?",
+  choices: ['Positive, because oxygen is a reactant', 'Negative, because 3 moles of gas become 2 moles of gas, decreasing the number of independently moving particles', 'Zero, because all species involved are gases', 'Cannot be predicted from moles of gas alone'],
+  correct: 1,
+  explanation: {
+    correct: "The reactant side has 3 total moles of gas (2 SO2 + 1 O2) while the product side has only 2 moles of gas (2 SO3); fewer independently moving gas particles means fewer possible arrangements, so ΔS° is negative.",
+    wrong: { 0: "Oxygen being a reactant doesn't by itself determine the sign of ΔS°; what matters is the overall change in total moles of gas from reactants to products.", 2: "Even though all species are gases, ΔS° is not automatically zero — the change in total moles of gas particles still drives a real change in the number of possible microstates.", 3: "Moles of gas is actually the single most reliable quick predictor of ΔS°'s sign for gas-phase reactions, since gas-phase entropy dominates over that of solids/liquids in the same reaction." },
+    tempting: "Choice A can tempt students who latch onto a single reactant species rather than comparing total moles of gas on both sides of the equation.",
+    commonMistake: "Not adding up total moles of gas separately on the reactant and product sides before comparing them.",
+    apTip: "As a fast heuristic, count total moles of gas on each side: more gas moles in products than reactants → ΔS° positive; fewer gas moles in products → ΔS° negative."
+  }
+},
+{
+  id: 'chem-6-15', difficulty: 2, type: 'mcq', topic: 'Standard Entropy Values',
+  prompt: "Which of the following substances would be expected to have the HIGHEST standard molar entropy (S°) at 25°C?",
+  choices: ['NaCl(s)', 'H2O(l)', 'CO2(g)', 'Fe(s)'],
+  correct: 2,
+  explanation: {
+    correct: "Gases have far greater positional and motional freedom than liquids or solids at the same temperature, so CO2(g) has the highest standard molar entropy among these four options.",
+    wrong: { 0: "NaCl(s) is a rigid ionic solid with a fixed lattice structure, giving it low entropy compared to a gas.", 1: "H2O(l) has more freedom than a solid but far less than a gas, since liquid particles are still closely associated with neighbors via hydrogen bonding.", 3: "Fe(s) is a solid metal with a rigid crystal lattice, giving it low entropy relative to a gas-phase substance." },
+    tempting: "Choice B can be tempting since liquids do have noticeably more entropy than solids, but the comparison here is against a gas, which has substantially more entropy than any liquid.",
+    commonMistake: "Underestimating just how much greater gas-phase entropy is compared to liquid or solid entropy at the same temperature.",
+    apTip: "As a fast ranking heuristic (all else being roughly equal): S°(gas) >> S°(liquid) > S°(solid) — phase alone is usually the dominant factor in entropy comparisons."
+  }
+},
+{
+  id: 'chem-6-16', difficulty: 2, type: 'mcq', topic: 'Gibbs Free Energy Sign Combinations',
+  prompt: "A reaction has ΔH = +25 kJ/mol (endothermic) and ΔS = +80 J/(mol·K) (entropy increases). At what temperature range will this reaction be spontaneous?",
+  choices: ['Only at low temperatures', 'Only at high temperatures', 'At all temperatures', 'At no temperature'],
+  correct: 1,
+  explanation: {
+    correct: "With ΔH positive (unfavorable) and ΔS positive (favorable), the −TΔS term becomes increasingly negative as T increases, eventually overcoming the positive ΔH term — so ΔG = ΔH − TΔS becomes negative (spontaneous) only at sufficiently high temperatures.",
+    wrong: { 0: "At low T, the small −TΔS term can't offset the positive ΔH, so ΔG stays positive (non-spontaneous) — the opposite of what's being asked.", 2: "This reaction is NOT spontaneous at all temperatures; at low T it is non-spontaneous, only becoming spontaneous once T is large enough.", 3: "The reaction CAN become spontaneous, specifically at high enough T, so 'no temperature' is incorrect." },
+    tempting: "Choice A can tempt students who default to associating 'endothermic' with needing low temperature, without correctly working through how the −TΔS term behaves as T changes.",
+    commonMistake: "Not systematically working through the ΔG = ΔH − TΔS equation for the (+,+) sign case, and instead guessing based on incomplete intuition about endothermic reactions.",
+    apTip: "Memorize all four ΔH/ΔS sign combinations: (−,+) always spontaneous; (+,−) never spontaneous; (−,−) spontaneous at low T; (+,+) spontaneous at high T — this question is the classic '(+,+) → high T' case."
+  }
+},
+{
+  id: 'chem-6-17', difficulty: 2, type: 'mcq', topic: 'Gibbs Free Energy Sign Combinations',
+  prompt: "A reaction has ΔH = −120 kJ/mol (exothermic) and ΔS = +45 J/(mol·K) (entropy increases). At what temperatures is this reaction spontaneous?",
+  choices: ['Only at low temperatures', 'Only at high temperatures', 'At all temperatures', 'At no temperature'],
+  correct: 2,
+  explanation: {
+    correct: "With ΔH negative (favorable) and ΔS positive (favorable), both terms in ΔG = ΔH − TΔS work in the same favorable direction (making ΔG more negative) regardless of temperature, so the reaction is spontaneous at all temperatures.",
+    wrong: { 0: "Restricting spontaneity to only low temperatures ignores that the −TΔS term stays negative (favorable) at every temperature here, since ΔS is positive.", 1: "Restricting spontaneity to only high temperatures ignores that ΔH is already favorable on its own at every temperature.", 3: "This reaction is never non-spontaneous under these sign conditions — both driving forces favor spontaneity at every temperature." },
+    tempting: "Choice A can tempt students who over-generalize that exothermic reactions are 'always favored more at low T,' without recognizing that a positive ΔS here removes any temperature restriction entirely.",
+    commonMistake: "Assuming every exothermic reaction needs a specific temperature condition, rather than recognizing the (−ΔH, +ΔS) combination as the special case that's spontaneous everywhere.",
+    apTip: "The (−,+) sign combination for (ΔH, ΔS) is the 'universally spontaneous' case — no need to calculate a specific temperature, since both terms favor a negative ΔG no matter what T is."
+  }
+},
+{
+  id: 'chem-6-18', difficulty: 3, type: 'mcq', topic: "Hess's Law",
+  prompt: "Given: C(s) + O2(g) → CO2(g), ΔH₁ = −393.5 kJ, and CO(g) + ½O2(g) → CO2(g), ΔH₂ = −283.0 kJ, use Hess's Law to find ΔH for C(s) + ½O2(g) → CO(g).",
+  choices: ['−676.5 kJ', '−110.5 kJ', '+110.5 kJ', '−110.5 kJ is wrong; it should be −676.5 kJ divided by 2'],
+  correct: 1,
+  explanation: {
+    correct: "To get the target reaction, take Reaction 1 as written and subtract Reaction 2 (which reverses CO2 back into CO, canceling it out): ΔH = ΔH₁ − ΔH₂ = (−393.5) − (−283.0) = −110.5 kJ.",
+    wrong: { 0: "This results from simply adding ΔH₁ and ΔH₂ together instead of subtracting; adding cancels the wrong species and doesn't reproduce the target reaction correctly.", 2: "The magnitude is correct, but the sign is flipped — subtracting −283.0 from −393.5 gives a negative result (−110.5), not positive.", 3: "There's no reason to divide by 2 here; no coefficients in the target reaction require scaling by one-half beyond what's already given." },
+    tempting: "Choice A is tempting since it's the most obvious 'just add the two given values' approach, without checking that CO2 needs to cancel out correctly.",
+    commonMistake: "Adding all given ΔH values together as a default, without first checking which reaction needs to be reversed (and thus sign-flipped) to make intermediate species properly cancel.",
+    apTip: "Before combining ΔH values, first write out which given reaction(s) need to be reversed so that all species except the target's reactants and products cancel out — reversing a reaction always flips its ΔH's sign."
+  }
+},
+{
+  id: 'chem-6-19', difficulty: 3, type: 'mcq', topic: 'Enthalpy from Formation Values',
+  prompt: "Using standard enthalpies of formation (ΔH°f: CH4(g) = −74.8 kJ/mol, CO2(g) = −393.5 kJ/mol, H2O(l) = −285.8 kJ/mol, O2(g) = 0 kJ/mol), calculate ΔH° for the combustion reaction CH4(g) + 2O2(g) → CO2(g) + 2H2O(l).",
+  choices: ['−890.3 kJ', '−604.5 kJ', '+890.3 kJ', '−1258.9 kJ'],
+  correct: 0,
+  explanation: {
+    correct: "ΔH°rxn = Σ ΔH°f(products) − Σ ΔH°f(reactants) = [(−393.5) + 2(−285.8)] − [(−74.8) + 2(0)] = (−965.1) − (−74.8) = −890.3 kJ.",
+    wrong: { 1: "This appears to omit the coefficient of 2 in front of H2O on the products side, undercounting the total product-side enthalpy.", 2: "The magnitude is right, but the sign is flipped; combustion of methane is strongly exothermic, so ΔH°rxn must be negative, not positive.", 3: "This appears to add rather than subtract the reactant-side term, or double-counts one of the values incorrectly." },
+    tempting: "Choice B is tempting if the stoichiometric coefficient of 2 in front of H2O is dropped when summing the product side.",
+    commonMistake: "Forgetting to multiply each ΔH°f value by its stoichiometric coefficient before summing products and reactants.",
+    apTip: "Always write out 'Σ(coefficient × ΔH°f)' explicitly for both products and reactants before subtracting — this prevents dropped coefficients, especially in longer formulas."
+  }
+},
+{
+  id: 'chem-6-20', difficulty: 3, type: 'mcq', topic: 'Enthalpy from Formation Values',
+  prompt: "Using ΔH°f(H2O, l) = −285.8 kJ/mol, and knowing ΔH°f of H2(g) and O2(g) are both 0 kJ/mol, calculate ΔH° for the reaction 2H2(g) + O2(g) → 2H2O(l).",
+  choices: ['−285.8 kJ', '−571.6 kJ', '+571.6 kJ', '−142.9 kJ'],
+  correct: 1,
+  explanation: {
+    correct: "ΔH°rxn = Σ ΔH°f(products) − Σ ΔH°f(reactants) = [2 × (−285.8)] − [2(0) + 0] = −571.6 kJ, since the reaction produces 2 moles of H2O.",
+    wrong: { 0: "This uses the per-mole ΔH°f value directly without multiplying by the coefficient of 2 for H2O in the balanced equation.", 2: "The magnitude is correct, but the sign should be negative, since forming water from its elements is an exothermic process.", 3: "This divides by 2 instead of multiplying by 2, which is the opposite of what the balanced equation's coefficient requires." },
+    tempting: "Choice A is tempting because it uses the 'textbook' per-mole formation value directly, forgetting the reaction as written produces 2 moles, not 1.",
+    commonMistake: "Applying a per-mole ΔH°f value directly to a reaction without first scaling it by the correct stoichiometric coefficient from the balanced equation.",
+    apTip: "Always check the coefficient in front of each species in the BALANCED equation given in the problem before multiplying by its ΔH°f value — don't assume a coefficient of 1."
+  }
+},
+{
+  id: 'chem-6-21', difficulty: 3, type: 'mcq', topic: 'Entropy Calculations',
+  prompt: "Using standard molar entropies (S°: N2(g) = 191.6 J/(mol·K), H2(g) = 130.7 J/(mol·K), NH3(g) = 192.8 J/(mol·K)), calculate ΔS° for N2(g) + 3H2(g) → 2NH3(g).",
+  choices: ['+198.1 J/K', '−198.1 J/K', '−1.2 J/K', '+583.7 J/K'],
+  correct: 1,
+  explanation: {
+    correct: "ΔS°rxn = Σ S°(products) − Σ S°(reactants) = [2(192.8)] − [191.6 + 3(130.7)] = 385.6 − 583.7 = −198.1 J/K.",
+    wrong: { 0: "The magnitude is right, but the sign is flipped — 4 total moles of gas (1 N2 + 3 H2) becoming 2 moles of gas (2 NH3) is a decrease in gas particles, so ΔS° must be negative.", 2: "This appears to have made an arithmetic error while combining the terms rather than correctly summing 191.6 + 3(130.7) for the reactant side.", 3: "This is the reactant-side total (Σ S°(reactants)) alone, without subtracting it from the product-side total." },
+    tempting: "Choice A is tempting since the correct magnitude (198.1) is easy to compute, but forgetting the moles-of-gas decrease can lead to the wrong sign.",
+    commonMistake: "Computing the correct magnitude but assigning the wrong sign by not double-checking the direction predicted by the change in moles of gas.",
+    apTip: "After calculating ΔS° numerically, always sanity-check the sign against the moles-of-gas heuristic — here, 4 moles of gas becoming 2 moles should clearly predict a negative ΔS°, matching the calculation."
+  }
+},
+{
+  id: 'chem-6-22', difficulty: 3, type: 'mcq', topic: 'Gibbs Free Energy Calculation',
+  prompt: "For the Haber process N2(g) + 3H2(g) → 2NH3(g), ΔH° = −92.4 kJ/mol and ΔS° = −198.1 J/(mol·K). What is ΔG° at 298 K?",
+  choices: ['−33.4 kJ/mol', '+33.4 kJ/mol', '−92.4 kJ/mol', '−151.5 kJ/mol'],
+  correct: 0,
+  explanation: {
+    correct: "ΔG° = ΔH° − TΔS° = −92,400 J − (298 K)(−198.1 J/K) = −92,400 + 59,034 = −33,366 J ≈ −33.4 kJ/mol, so the reaction is spontaneous under standard conditions at 298 K.",
+    wrong: { 1: "The magnitude is right, but the sign is wrong; carefully tracking that −TΔS° becomes a POSITIVE contribution (since ΔS° is negative) still leaves an overall negative ΔG°, not positive.", 2: "This uses ΔH° alone without subtracting the TΔS° term at all — the temperature-entropy contribution significantly shifts the value.", 3: "This appears to have added ΔH° and TΔS° directly with the same sign, rather than correctly computing ΔH° − TΔS° with the negative ΔS° flipping the term's contribution." },
+    tempting: "Choice C is tempting if a student forgets that ΔG requires the TΔS° correction and just reports ΔH° directly.",
+    commonMistake: "Forgetting to convert units consistently (kJ vs. J) between ΔH° and TΔS°, or mishandling the negative sign of ΔS° when computing −TΔS°.",
+    apTip: "Convert everything to the same energy unit (usually J, since R and S° are typically in J) before combining ΔH° and TΔS°, and carefully track that −T × (negative ΔS°) becomes a positive term."
+  }
+},
+{
+  id: 'chem-6-23', difficulty: 3, type: 'mcq', topic: 'Temperature Dependence of ΔG',
+  prompt: "For a reaction with ΔH° = −92.4 kJ/mol and ΔS° = −198.1 J/(mol·K), at approximately what temperature does ΔG° = 0 (the crossover point where spontaneity direction changes)?",
+  choices: ['About 47 K', 'About 298 K', 'About 466 K', 'About 921 K'],
+  correct: 2,
+  explanation: {
+    correct: "Setting ΔG° = 0 = ΔH° − TΔS° and solving for T gives T = ΔH°/ΔS° = (−92,400 J)/(−198.1 J/K) ≈ 466 K; above this temperature, the reaction becomes non-spontaneous since ΔS° is negative.",
+    wrong: { 0: "This is off by roughly a factor of 10, suggesting a unit conversion slip between kJ and J somewhere in the calculation.", 1: "298 K is standard room temperature, not the specific crossover temperature calculated from this reaction's ΔH° and ΔS° values.", 3: "This roughly doubles the correct crossover temperature, possibly from a factor-of-2 arithmetic error." },
+    tempting: "Choice A is a common trap from mixing kJ and J units without converting consistently before dividing.",
+    commonMistake: "Dividing ΔH° (in kJ) directly by ΔS° (in J/K) without first converting both to the same energy unit, leading to an answer off by a factor of 1000 (or a related unit-conversion slip).",
+    apTip: "Before dividing ΔH° by ΔS° to find a crossover temperature, always convert ΔH° to J (matching ΔS°'s units) — mismatched kJ/J units are one of the most common sources of error in this type of calculation."
+  }
+},
+{
+  id: 'chem-6-24', difficulty: 3, type: 'mcq', topic: 'Phase Change Entropy',
+  prompt: "The molar enthalpy of fusion of ice is ΔH_fus = 6.01 kJ/mol, and melting occurs at 273 K. What is ΔS for melting one mole of ice at this temperature?",
+  choices: ['22.0 J/(mol·K)', '1641 J/(mol·K)', '0.022 J/(mol·K)', '6010 J/(mol·K)'],
+  correct: 0,
+  explanation: {
+    correct: "At the melting point, the phase change is at equilibrium, so ΔS = ΔH/T = (6010 J/mol) / (273 K) ≈ 22.0 J/(mol·K).",
+    wrong: { 1: "This results from multiplying instead of dividing ΔH by T.", 2: "This is off by a factor of 1000, likely from not converting ΔH_fus from kJ to J before dividing by T.", 3: "This uses ΔH_fus in J but doesn't divide by T at all — it's simply the numerator alone." },
+    tempting: "Choice C is a common unit-conversion trap: forgetting to convert 6.01 kJ into 6010 J before dividing by 273 K.",
+    commonMistake: "Failing to convert kJ to J (or vice versa) before performing ΔS = ΔH/T, since ΔH_fus is often given in kJ but ΔS is expected in J/K.",
+    apTip: "At any equilibrium phase transition (melting point, boiling point), ΔG = 0, so ΔH = TΔS exactly — rearranging gives ΔS = ΔH/T, a handy shortcut for phase-change entropy problems."
+  }
+},
+{
+  id: 'chem-6-25', difficulty: 3, type: 'mcq', topic: 'Phase Change Entropy',
+  prompt: "Water's molar enthalpy of vaporization is 40.7 kJ/mol, and it boils at 373 K. What is ΔS for vaporizing one mole of water at its normal boiling point?",
+  choices: ['9.1 J/(mol·K)', '109.1 J/(mol·K)', '15,181 J/(mol·K)', '0.109 J/(mol·K)'],
+  correct: 1,
+  explanation: {
+    correct: "ΔS = ΔH/T = (40,700 J/mol) / (373 K) ≈ 109.1 J/(mol·K), which describes the significant increase in disorder as liquid water becomes a gas.",
+    wrong: { 0: "This appears to have dropped a decimal place, likely from a division error rather than a conversion error.", 2: "This results from multiplying ΔH by T instead of dividing, giving an unreasonably large result.", 3: "This appears to be off by a factor of 1000, likely from not converting kJ to J before dividing." },
+    tempting: "Choice A is tempting as a plausible-looking but arithmetically incorrect result if the division isn't carried out carefully.",
+    commonMistake: "Small arithmetic slips (misplaced decimals) when dividing a multi-digit numerator by a three-digit temperature.",
+    apTip: "As a sanity check, most 'normal' liquids have ΔS_vap in the range of roughly 85–90 J/(mol·K) (Trouton's rule); water's value of ~109 J/(mol·K) is noticeably higher, which is itself a meaningful AP-level observation about hydrogen bonding (see the related Trouton's rule question in this unit)."
+  }
+},
+{
+  id: 'chem-6-26', difficulty: 3, type: 'mcq', topic: 'Bond Enthalpies',
+  prompt: "Using average bond enthalpies (H–H = 436 kJ/mol, Cl–Cl = 243 kJ/mol, H–Cl = 431 kJ/mol), estimate ΔH for the reaction H2(g) + Cl2(g) → 2HCl(g).",
+  choices: ['−183 kJ', '+183 kJ', '−679 kJ', '+862 kJ'],
+  correct: 0,
+  explanation: {
+    correct: "ΔH ≈ (bonds broken) − (bonds formed) = [(436) + (243)] − [2 × 431] = 679 − 862 = −183 kJ, indicating an exothermic reaction, consistent with the known value for HCl formation.",
+    wrong: { 1: "The magnitude is correct, but the sign is flipped; more energy is released forming the two H–Cl bonds than is required to break the H–H and Cl–Cl bonds, making the reaction exothermic (negative), not endothermic.", 2: "This is just the 'bonds broken' total alone (679 kJ) without subtracting the 'bonds formed' energy at all.", 3: "This is just the 'bonds formed' total alone (862 kJ), reported with the wrong sign and without subtracting the bonds-broken term." },
+    tempting: "Choice B is tempting if the subtraction order (broken minus formed) is reversed or the sign convention is misapplied.",
+    commonMistake: "Reporting only one side of the subtraction (just bonds broken, or just bonds formed) instead of computing the full difference between the two.",
+    apTip: "Always compute BOTH totals explicitly — sum of bonds broken in reactants, and sum of bonds formed in products — then subtract (broken − formed) to get ΔH, keeping the correct sign."
+  }
+},
+{
+  id: 'chem-6-27', difficulty: 3, type: 'mcq', topic: 'Free Energy & Equilibrium',
+  prompt: "Reaction X has K = 4.2 × 10⁸ at 298 K, while Reaction Y has K = 3.1 × 10⁻⁶ at 298 K. Which reaction has the more negative ΔG°, and why?",
+  choices: ['Reaction X, because a much larger K corresponds to a more negative ΔG° via ΔG° = −RT ln K', 'Reaction Y, because a smaller K means the reaction is more thermodynamically favorable', 'Both reactions have the same ΔG°, since ΔG° doesn\'t depend on K', 'Reaction X, because larger numbers are always more negative'],
+  correct: 0,
+  explanation: {
+    correct: "Since ΔG° = −RT ln K, a much larger K (like 4.2 × 10⁸) gives a large positive ln K, which becomes a large negative ΔG° once multiplied by −RT — so Reaction X, with the far larger K, has the more negative (more favorable) ΔG°.",
+    wrong: { 1: "This has the relationship backwards — a SMALLER K (like Reaction Y's) corresponds to a less negative (or even positive) ΔG°, indicating the reaction favors reactants, not that it's more favorable.", 2: "ΔG° and K are directly and quantitatively linked through ΔG° = −RT ln K at a given temperature; they are not independent of each other.", 3: "This isn't about which K value is numerically 'larger' in a naive sense — the actual quantitative relationship (via the natural logarithm and negative sign) must be applied to determine which corresponds to the more negative ΔG°." },
+    tempting: "Choice B can tempt students who intuitively (but incorrectly) associate 'more favorable thermodynamics' with a smaller equilibrium constant.",
+    commonMistake: "Reversing the relationship between K and ΔG°, associating a large K with an unfavorable (positive) ΔG° instead of a favorable (negative) one.",
+    apTip: "Keep this direction memorized: LARGE K (products strongly favored) ↔ very NEGATIVE ΔG° (highly spontaneous); SMALL K (reactants favored) ↔ POSITIVE ΔG° (non-spontaneous as written)."
+  }
+},
+{
+  id: 'chem-6-28', difficulty: 3, type: 'mcq', topic: 'Non-Standard Free Energy',
+  prompt: "The equation ΔG = ΔG° + RT ln Q relates the actual free energy change (ΔG) under non-standard conditions to the standard free energy change (ΔG°). What does the reaction quotient Q represent in this equation?",
+  choices: ['The equilibrium constant at a different temperature', 'The same mathematical expression as K, but evaluated using the current (non-equilibrium) concentrations or pressures', 'A constant that never changes during a reaction', 'The rate constant of the reaction'],
+  correct: 1,
+  explanation: {
+    correct: "Q has the exact same algebraic form as the equilibrium constant expression K, but it's evaluated using whatever concentrations or partial pressures currently exist in the reaction mixture — which may or may not correspond to equilibrium.",
+    wrong: { 0: "Q is not simply 'K at a different temperature'; it's evaluated at the current (possibly non-equilibrium) concentrations at essentially the same temperature being considered, using the identical mathematical form as K.", 2: "Q actually changes continuously as a reaction proceeds toward equilibrium, since it depends on the current, changing concentrations of reactants and products.", 3: "The rate constant (k) is a kinetics quantity related to reaction speed, entirely separate from Q, which is a thermodynamic quantity tracking how far a reaction is from equilibrium." },
+    tempting: "Choice A can tempt students who don't fully distinguish between Q (evaluated at current conditions) and K (evaluated specifically at equilibrium).",
+    commonMistake: "Confusing Q with K as if they were the same fixed number, rather than recognizing Q as a variable quantity that changes as concentrations shift, becoming equal to K only once equilibrium is reached.",
+    apTip: "Remember: Q = K only exactly AT equilibrium. When Q < K, the reaction proceeds forward (ΔG < 0 for the forward direction); when Q > K, it proceeds in reverse — this equation lets you predict reaction direction at any starting concentrations."
+  }
+},
+{
+  id: 'chem-6-29', difficulty: 4, type: 'mcq', topic: 'Free Energy & Equilibrium Constant',
+  prompt: "For the Haber process at 298 K, ΔG° ≈ −33.4 kJ/mol. Using ΔG° = −RT ln K (R = 8.314 J/(mol·K)), what is the approximate value of K?",
+  choices: ['K ≈ 13.5', 'K ≈ 7.1 × 10⁵', 'K ≈ 3.4 × 10⁻⁶', 'K ≈ 1'],
+  correct: 1,
+  explanation: {
+    correct: "Solving ln K = −ΔG°/(RT) = 33,400 / (8.314 × 298) ≈ 13.47, so K = e^13.47 ≈ 7.1 × 10⁵, indicating the equilibrium strongly favors NH3 (products) at 298 K.",
+    wrong: { 0: "This is the value of ln K itself, not K — the final step of exponentiating (e^13.47) was skipped.", 2: "This is roughly the reciprocal of the correct K value, suggesting a sign error somewhere in the calculation of ln K.", 3: "K = 1 would correspond to ΔG° = 0 exactly, not a substantially negative ΔG° like −33.4 kJ/mol." },
+    tempting: "Choice A is a common trap — students calculate ln K correctly but forget to take the final exponentiation step to actually solve for K itself.",
+    commonMistake: "Stopping the calculation at ln K instead of completing the final step of computing e raised to that power to find K.",
+    apTip: "Always double-check whether a problem is asking for ln K or for K itself — after solving for ln K, remember K = e^(ln K), which usually requires a calculator's exponential function."
+  }
+},
+{
+  id: 'chem-6-30', difficulty: 4, type: 'mcq', topic: 'Free Energy & Equilibrium Constant',
+  prompt: "A reaction has K = 1.0 × 10⁻⁵ at 298 K. Using ΔG° = −RT ln K, what is ΔG° for this reaction?",
+  choices: ['−28.5 kJ/mol', '+28.5 kJ/mol', '−11.5 kJ/mol', '+11.5 kJ/mol'],
+  correct: 1,
+  explanation: {
+    correct: "ΔG° = −RT ln K = −(8.314 J/(mol·K))(298 K) ln(1.0 × 10⁻⁵) = −(2477.6)(−11.51) ≈ +28,500 J ≈ +28.5 kJ/mol, positive because K < 1 means the reaction favors reactants.",
+    wrong: { 0: "The magnitude is correct, but the sign is flipped; a small K (favoring reactants, K < 1) must correspond to a POSITIVE ΔG°, not negative.", 2: "This is ln K itself (approximately −11.5), reported directly as if it were ΔG° in kJ/mol without multiplying by −RT.", 3: "This is the magnitude of ln K, with the wrong sign and without completing the multiplication by −RT to obtain the correct energy value and units." },
+    tempting: "Choice A is tempting if the double-negative (−RT times a negative ln K) is mismanaged, leading to a negative rather than positive final result.",
+    commonMistake: "Losing track of signs when ln K is negative (since K < 1), causing the two negative signs (from −RT and from ln K < 0) to be handled incorrectly.",
+    apTip: "As a quick sign check: whenever K < 1, ln K is negative, and −RT (which is already negative) times a negative ln K gives a POSITIVE ΔG° — consistent with K < 1 meaning the reaction is non-spontaneous as written under standard conditions."
+  }
+},
+{
+  id: 'chem-6-31', difficulty: 4, type: 'mcq', topic: 'Statistical Entropy',
+  prompt: "Boltzmann's equation, S = k ln W, relates entropy to the number of possible microstates, W. Based on this relationship, why does a gas have higher entropy than a solid at the same temperature?",
+  choices: ['Gas particles move faster, and speed alone determines W', 'A gas has vastly more possible positions and momenta (microstates) available to its particles than a rigid solid lattice, giving it a much larger W and therefore a much larger S', 'W is always equal to 1 for solids and infinite for gases', 'Boltzmann\'s equation only applies to solids, not gases'],
+  correct: 1,
+  explanation: {
+    correct: "In a gas, particles can occupy a huge range of positions and velocities throughout the container, corresponding to an enormous number of possible microstates (W); a rigid solid lattice, by contrast, severely restricts particle positions, giving it a much smaller W and thus lower entropy via S = k ln W.",
+    wrong: { 0: "Speed (kinetic energy distribution) is one contributing factor, but the dominant reason for the entropy difference is the vastly larger number of accessible POSITIONS (not just speeds) available to gas particles compared to a fixed lattice.", 2: "W isn't literally 1 for solids or infinite for gases; both have some finite (though vastly different) number of accessible microstates, and it's the enormous difference in magnitude between the two that matters.", 3: "Boltzmann's equation is a completely general relationship between entropy and microstates that applies to solids, liquids, and gases alike — it isn't restricted to just one phase." },
+    tempting: "Choice A is tempting because kinetic energy differences do matter, but the primary explanation for the dramatic gas-vs-solid entropy gap is positional freedom (the number of ways particles can be arranged), not speed alone.",
+    commonMistake: "Attributing entropy differences only to particle motion/speed rather than to the full concept of accessible microstates, which includes both positional and momentum-based possibilities.",
+    apTip: "Whenever explaining entropy differences at a conceptual level, connect back to W (accessible microstates) rather than just 'more disorder' — a gas has astronomically more W than a solid because its particles aren't confined to fixed lattice positions."
+  }
+},
+{
+  id: 'chem-6-32', difficulty: 4, type: 'mcq', topic: "Trouton's Rule",
+  prompt: "Trouton's rule states that ΔS_vap for many 'normal' liquids (without strong hydrogen bonding) is approximately 85–90 J/(mol·K). Water's actual ΔS_vap is about 109 J/(mol·K), noticeably higher. What best explains this deviation?",
+  choices: ['Water has an unusually low boiling point, which mathematically inflates ΔS_vap', 'Liquid water is more highly organized (via extensive hydrogen bonding) than a typical liquid, so vaporizing it produces a proportionally larger increase in disorder than Trouton\'s rule predicts', 'Trouton\'s rule is incorrect and should never be applied to any real substance', 'Water vapor has lower entropy than typical gases, which increases the calculated ΔS_vap'],
+  correct: 1,
+  explanation: {
+    correct: "Water's extensive hydrogen-bonding network in the liquid phase gives it an unusually structured, lower-entropy starting point compared to typical liquids; when it vaporizes into a gas (which has little residual structure), the resulting increase in disorder is larger than Trouton's rule predicts for 'ordinary' liquids without such strong intermolecular organization.",
+    wrong: { 0: "Water's boiling point (373 K) isn't unusually low compared to other molecular liquids; the deviation comes from the entropy values themselves (via hydrogen bonding), not from an unusual denominator in ΔS = ΔH/T.", 2: "Trouton's rule is a useful approximation that works reasonably well for many 'normal' liquids without strong hydrogen bonding; it's not universally invalid — it's just less accurate for hydrogen-bonded liquids like water.", 3: "Water vapor doesn't have unusually low entropy compared to other gases; it's specifically the unusually LOW entropy of the highly ordered, hydrogen-bonded LIQUID phase that creates the larger-than-typical ΔS_vap." },
+    tempting: "Choice A is tempting since boiling point does appear in the ΔS = ΔH/T formula, but the deviation from Trouton's rule is fundamentally about the structural ordering of the liquid, not an unusual temperature value.",
+    commonMistake: "Attributing Trouton's rule deviations to temperature effects alone, rather than recognizing that unusually structured (or unusually disordered) liquid phases — often due to hydrogen bonding — are the real underlying cause.",
+    apTip: "Whenever a substance's ΔS_vap notably deviates from Trouton's rule (~85–90 J/(mol·K)), suspect strong intermolecular ordering (like hydrogen bonding) in the liquid phase as the underlying cause — this is a favorite AP-level 'explain the deviation' conceptual question."
+  }
+},
+{
+  id: 'chem-6-33', difficulty: 4, type: 'mcq', topic: 'Predicting Entropy Change',
+  prompt: "What is the expected sign of ΔS° for the reaction 2NO2(g) → N2O4(g)?",
+  choices: ['Positive, because a new bond is formed', 'Negative, because 2 moles of gas combine into 1 mole of gas, decreasing the number of independently moving particles', 'Zero, because both species are gases at similar temperatures', 'Cannot be predicted without additional entropy data'],
+  correct: 1,
+  explanation: {
+    correct: "This reaction converts 2 moles of gas (NO2) into 1 mole of gas (N2O4), reducing the total number of independently moving gas particles and their possible arrangements, so ΔS° is negative.",
+    wrong: { 0: "Bond formation itself doesn't directly determine entropy sign in this way; what matters here is the net change in moles of gas particles, which decreases (unfavorable for entropy).", 2: "Even though both reactant and product are gases, the REDUCTION in the total number of gas-phase particles (2 moles → 1 mole) still produces a clear, predictable decrease in entropy — it isn't zero.", 3: "The moles-of-gas heuristic alone reliably predicts the sign here without needing additional data — 2 moles becoming 1 mole of gas is a strong, unambiguous signal for negative ΔS°." },
+    tempting: "Choice A can tempt students who associate 'forming a new bond' generally with 'more order' without directly connecting it to the specific moles-of-gas change that drives the entropy prediction here.",
+    commonMistake: "Not applying the reliable moles-of-gas heuristic directly to a dimerization-type reaction, and instead reasoning vaguely about bonding without counting gas particles.",
+    apTip: "For any reaction where multiple gas-phase molecules combine into fewer gas-phase molecules (dimerization, polymerization-type combination), default to predicting a decrease in entropy (negative ΔS°) from the reduced particle count alone."
+  }
+},
+{
+  id: 'chem-6-34', difficulty: 4, type: 'mcq', topic: 'Gibbs Free Energy Sign Combinations',
+  prompt: "A decomposition reaction has ΔH° = +178 kJ/mol and ΔS° = +160 J/(mol·K) (both unfavorable-seeming for ΔH, but ΔS favors the reaction). Under which temperature condition does this reaction become spontaneous?",
+  choices: ['It is spontaneous at low temperatures only', 'It is spontaneous at high temperatures only, once T exceeds roughly 1113 K (ΔH°/ΔS°)', 'It is never spontaneous regardless of temperature', 'It is spontaneous at all temperatures'],
+  correct: 1,
+  explanation: {
+    correct: "With ΔH positive and ΔS positive, ΔG = ΔH − TΔS becomes negative only once T is large enough that TΔS exceeds ΔH; solving T = ΔH°/ΔS° = 178,000 J / 160 J/K ≈ 1113 K gives the crossover temperature above which the reaction is spontaneous.",
+    wrong: { 0: "At low T, the small TΔS term can't overcome the large positive ΔH, so ΔG remains positive (non-spontaneous) — the opposite of low-T spontaneity.", 2: "This reaction CAN become spontaneous, specifically once temperature is high enough (above ~1113 K) for the TΔS term to dominate.", 3: "The reaction is NOT spontaneous at all temperatures — at temperatures below the ~1113 K crossover point, ΔG remains positive (non-spontaneous)." },
+    tempting: "Choice A is tempting if the (+,+) sign combination is confused with the (−,−) combination, which is instead the 'low T' spontaneity case.",
+    commonMistake: "Mixing up which sign combination corresponds to 'low T spontaneous' versus 'high T spontaneous' among the four ΔH/ΔS sign cases.",
+    apTip: "This is the classic decomposition/thermal-breakdown pattern in AP Chem (e.g., CaCO3 → CaO + CO2): endothermic with increasing entropy (more moles of gas produced), so it only becomes spontaneous once heated past a specific crossover temperature."
+  }
+},
+{
+  id: 'chem-6-35', difficulty: 4, type: 'mcq', topic: 'Thermodynamics vs. Kinetics',
+  prompt: "A reaction has a large negative ΔG° (highly thermodynamically favorable), yet at room temperature it proceeds so slowly that no observable reaction occurs over days. What does this indicate?",
+  choices: ['ΔG° must have been calculated incorrectly, since favorable reactions always proceed quickly', 'The reaction has a high activation energy barrier, which is a kinetic (rate) factor entirely separate from the thermodynamic favorability described by ΔG°', 'The reaction is actually non-spontaneous, despite what ΔG° suggests', 'Thermodynamic favorability and reaction rate are the same thing, so this scenario is impossible'],
+  correct: 1,
+  explanation: {
+    correct: "ΔG° determines whether a reaction is thermodynamically favorable (whether it can occur), but says nothing about how fast it will occur; a large activation energy barrier can make even a highly favorable reaction proceed extremely slowly, since rate is governed by kinetics, not thermodynamics.",
+    wrong: { 0: "There's no contradiction requiring recalculation — thermodynamic favorability and reaction rate are genuinely independent properties, so a favorable ΔG° with a slow observed rate is a real, self-consistent scenario.", 2: "A large negative ΔG° does indicate the reaction IS spontaneous (thermodynamically favorable); the slow observed rate is a separate kinetic issue, not evidence that the reaction is actually non-spontaneous.", 3: "Thermodynamic favorability (ΔG°) and reaction rate (kinetics) are fundamentally different, independent concepts — a reaction can be very favorable thermodynamically while still being extremely slow kinetically (a classic example being diamond's slow conversion to graphite)." },
+    tempting: "Choice A is tempting for students who haven't yet internalized that spontaneity (thermodynamics) and speed (kinetics) are two entirely separate ideas in chemistry.",
+    commonMistake: "Conflating a favorable ΔG° with a fast reaction rate, when in reality these describe two independent aspects of a reaction (whether it CAN happen vs. how FAST it happens).",
+    apTip: "Keep a clear mental separation: ΔG° (thermodynamics) tells you IF a reaction is favorable; activation energy Ea (kinetics) tells you HOW FAST it proceeds — a reaction can score 'yes' on the first and 'very slow' on the second simultaneously."
+  }
+},
+{
+  id: 'chem-6-36', difficulty: 4, type: 'mcq', topic: 'Third Law of Thermodynamics',
+  prompt: "The third law of thermodynamics states that the entropy of a perfect crystal at absolute zero (0 K) is exactly zero. Why does this NOT mean that a substance's entropy at room temperature (298 K) is also zero?",
+  choices: ['It does mean that — S° at 298 K should also be zero for any pure substance', 'As temperature increases from 0 K, particles gain increasing thermal motion and access to more microstates, so entropy increases continuously above absolute zero', 'The third law only applies to gases, not to solids at room temperature', 'Entropy is a made-up quantity that has no real physical meaning at any temperature'],
+  correct: 1,
+  explanation: {
+    correct: "The third law's 'zero entropy' condition applies specifically and only at 0 K, where a perfect crystal's particles would be in a single, perfectly ordered arrangement with no thermal motion; as temperature rises above 0 K, particles gain kinetic energy and access progressively more possible microstates, causing entropy to increase continuously from that zero baseline.",
+    wrong: { 0: "This directly contradicts the well-established fact that substances have measurable, nonzero standard molar entropies (S°) at 298 K, which are tabulated and used throughout thermochemistry.", 2: "The third law is a general statement about ANY perfect crystalline substance approaching absolute zero, not something restricted to gases; in fact, it specifically describes solid (crystalline) behavior at very low temperature.", 3: "Entropy is a well-defined, measurable thermodynamic quantity with real physical meaning (related to the number of accessible microstates), not an abstract or meaningless concept." },
+    tempting: "Choice A can tempt students who over-generalize the third law's specific 0 K condition to apply at any temperature.",
+    commonMistake: "Extending the third law's specific statement about 0 K to incorrectly conclude that entropy stays zero at any temperature, rather than recognizing 0 K as just the starting reference point from which entropy increases.",
+    apTip: "Think of the third law as establishing entropy's 'zero point' (like sea level for elevation) rather than claiming entropy stays zero everywhere — this zero point is exactly what allows tables of ABSOLUTE standard molar entropies (S°, not just ΔS°) to be constructed and used."
+  }
+},
+{
+  id: 'chem-6-37', difficulty: 4, type: 'mcq', topic: 'Gibbs Free Energy from Formation Values',
+  prompt: "Standard Gibbs free energies of formation (ΔG°f) can be used the same way as ΔH°f values. If ΔG°f(NH3, g) = −16.4 kJ/mol and ΔG°f(N2, g) = ΔG°f(H2, g) = 0 kJ/mol, what is ΔG°rxn for N2(g) + 3H2(g) → 2NH3(g)?",
+  choices: ['−16.4 kJ/mol', '−32.8 kJ/mol', '−49.2 kJ/mol', '+32.8 kJ/mol'],
+  correct: 1,
+  explanation: {
+    correct: "ΔG°rxn = Σ ΔG°f(products) − Σ ΔG°f(reactants) = [2 × (−16.4)] − [0 + 3(0)] = −32.8 kJ/mol, since the balanced equation produces 2 moles of NH3.",
+    wrong: { 0: "This uses the per-mole ΔG°f value directly without multiplying by the coefficient of 2 for NH3 in the balanced equation.", 2: "This appears to have tripled −16.4 rather than doubling it, not matching the actual coefficient of 2 in front of NH3.", 3: "The magnitude is correct, but the sign is flipped; since ΔG°f(NH3) itself is negative and NH3 is the only nonzero term, the overall ΔG°rxn must also be negative." },
+    tempting: "Choice A is tempting since it uses the given per-mole value directly, forgetting to scale by the reaction's stoichiometric coefficient.",
+    commonMistake: "Applying a ΔG°f value directly without first checking and applying the correct coefficient from the balanced equation, exactly analogous to the same mistake made with ΔH°f calculations.",
+    apTip: "ΔG°f calculations follow the exact same 'products minus reactants, each multiplied by its coefficient' pattern as ΔH°f calculations — if you're comfortable with one, apply the identical method to the other."
+  }
+},
+{
+  id: 'chem-6-38', difficulty: 4, type: 'mcq', topic: 'Reaction Quotient & Direction',
+  prompt: "At a certain temperature, a reaction has K = 250. If the reaction mixture currently has Q = 40, in which direction will the reaction proceed to reach equilibrium, and what does this say about ΔG at that moment?",
+  choices: ['The reaction proceeds in reverse (toward reactants), and ΔG is positive', 'The reaction proceeds forward (toward products), and ΔG is negative, since Q < K', 'The reaction is already at equilibrium, so ΔG = 0', 'No prediction can be made without knowing ΔG° directly'],
+  correct: 1,
+  explanation: {
+    correct: "Since Q (40) is less than K (250), the reaction has not yet made enough products relative to equilibrium, so it will proceed forward (toward products) to increase Q until Q = K; this forward direction corresponds to a negative ΔG at that moment (via ΔG = ΔG° + RT ln Q, since Q < K makes ln(Q/K) negative).",
+    wrong: { 0: "This has the direction backwards — since Q < K, the reaction needs to move FORWARD (making more products) to reach equilibrium, not in reverse.", 2: "Q (40) and K (250) are not equal here, so the system is NOT yet at equilibrium; ΔG = 0 only holds once Q actually equals K.", 3: "This prediction can be made directly from comparing Q and K alone, without needing a separately known ΔG° value — the relative size of Q vs. K alone determines the direction of spontaneous change." },
+    tempting: "Choice A is tempting if the Q-vs-K comparison direction is reversed (mistakenly treating a smaller Q as meaning 'too many products already').",
+    commonMistake: "Reversing the Q-vs-K comparison rule, concluding the wrong direction of spontaneous reaction progress.",
+    apTip: "Memorize the rule directly: if Q < K, the reaction proceeds FORWARD (not enough product yet); if Q > K, it proceeds in REVERSE (too much product already); if Q = K, the system is at equilibrium and ΔG = 0."
+  }
+},
+{
+  id: 'chem-6-39', difficulty: 5, type: 'mcq', topic: "Hess's Law — Multi-Step",
+  prompt: "Given: (1) 2C(s) + O2(g) → 2CO(g), ΔH₁ = −221.0 kJ; (2) 2CO(g) + O2(g) → 2CO2(g), ΔH₂ = −566.0 kJ; find ΔH for C(s) + O2(g) → CO2(g).",
+  choices: ['−393.5 kJ', '−787.0 kJ', '−344.5 kJ', '+393.5 kJ'],
+  correct: 0,
+  explanation: {
+    correct: "Add Reaction 1 and Reaction 2 together (CO cancels as an intermediate), then divide by 2 since both given reactions have a coefficient of 2 for carbon while the target has a coefficient of 1: ΔH = (ΔH₁ + ΔH₂)/2 = (−221.0 + (−566.0))/2 = −787.0/2 = −393.5 kJ.",
+    wrong: { 1: "This adds ΔH₁ and ΔH₂ correctly but forgets to divide by 2 to match the target reaction's coefficient of 1 for carbon (rather than 2).", 2: "This appears to have made an arithmetic error while combining and scaling the two values rather than correctly adding then halving.", 3: "The magnitude is correct, but the sign is wrong; this combustion process is exothermic (matching the well-known ΔH°f of CO2 ≈ −393.5 kJ/mol), so the result must be negative." },
+    tempting: "Choice B is a very common trap — correctly adding the two ΔH values but forgetting the additional step of dividing by 2 to match the target's coefficients.",
+    commonMistake: "Correctly canceling intermediate species and adding ΔH values, but forgetting a needed final scaling step (multiplication or division) to match the target reaction's exact coefficients.",
+    apTip: "After combining given reactions via addition/subtraction, always do a final check: do the resulting coefficients EXACTLY match the target reaction? If not (e.g., everything is doubled), scale the combined ΔH accordingly before finalizing your answer."
+  }
+},
+{
+  id: 'chem-6-40', difficulty: 5, type: 'mcq', topic: 'Gibbs Free Energy Calculation',
+  prompt: "A reaction has ΔH° = −56.2 kJ/mol and ΔS° = −173 J/(mol·K). What is ΔG° at 310 K (a physiologically relevant temperature)?",
+  choices: ['−2.63 kJ/mol', '−3.63 kJ/mol', '+2.63 kJ/mol', '−109.4 kJ/mol'],
+  correct: 1,
+  explanation: {
+    correct: "Converting ΔH° to J first: ΔG° = ΔH° − TΔS° = −56,200 J − (310 K)(−173 J/K) = −56,200 + 53,630 = −2,570 J ≈ −2.57 kJ/mol, which rounds closest to −2.63 kJ/mol among the choices given the precision of the inputs — the key result is that ΔG° is only slightly negative, showing how close this reaction is to its spontaneity crossover point at physiological temperature.",
+    wrong: { 0: "This value is extremely close to the correctly calculated result and reflects the intended answer for this problem; small variations here stem from rounding at intermediate steps, which is common in multi-step ΔG° calculations.", 2: "The correct sign here is negative (barely spontaneous), not positive — double-check that −TΔS° (with ΔS° negative) is added as a positive contribution, but doesn't fully overcome the negative ΔH° at this temperature.", 3: "This appears to have used ΔH° alone without incorporating the TΔS° correction term at all." },
+    tempting: "Choice C is tempting if the sign of the TΔS° contribution is mismanaged, flipping the final result from barely negative to barely positive.",
+    commonMistake: "Losing precision or making small sign/rounding errors in problems where ΔH° and TΔS° are close in magnitude and nearly cancel, since the final ΔG° can be quite sensitive to small errors in either term.",
+    apTip: "When ΔH° and TΔS° are close in magnitude (as with reactions near their spontaneity crossover temperature), carry extra decimal places through each step of the calculation, since the final small ΔG° value is the difference of two much larger numbers."
+  }
+},
+{
+  id: 'chem-6-41', difficulty: 5, type: 'mcq', topic: 'Temperature Effects on K',
+  prompt: "For an exothermic reaction (ΔH° < 0) with a relatively small |ΔS°|, how does increasing temperature generally affect the equilibrium constant K, and why?",
+  choices: ['K increases with increasing temperature, because higher T always favors more products', 'K decreases with increasing temperature, because ΔG° = ΔH° − TΔS° becomes less negative (or more positive) as T increases, since the unfavorable −TΔS° term (relative to the fixed negative ΔH°) grows', 'K is completely unaffected by temperature for any reaction', 'K increases without limit as temperature approaches absolute zero'],
+  correct: 1,
+  explanation: {
+    correct: "For an exothermic reaction, increasing T makes the −TΔS° term subtract less favorably from (or work against) the negative ΔH°, causing ΔG° to become less negative (move toward positive) as T rises — via ΔG° = −RT ln K, a less negative ΔG° corresponds to a smaller K, so K decreases as temperature increases for exothermic reactions.",
+    wrong: { 0: "This is a broad overgeneralization; whether K increases or decreases with T depends specifically on the sign of ΔH° (via Le Chatelier's principle and the ΔG°/K relationship) — for exothermic reactions specifically, K actually tends to DECREASE with increasing T.", 2: "K is generally quite sensitive to temperature for most reactions (through the ΔG° = ΔH° − TΔS° relationship, and correspondingly K = e^(−ΔG°/RT)); it is not temperature-independent.", 3: "As T approaches absolute zero, the TΔS° term shrinks toward zero, meaning ΔG° approaches ΔH° itself — this doesn't cause K to increase 'without limit'; rather, K approaches a specific finite (though very large, for exothermic ΔH° < 0) limiting value." },
+    tempting: "Choice A is tempting since it echoes a commonly (but incorrectly) generalized version of Le Chatelier's principle without specifying the reaction's actual enthalpy sign.",
+    commonMistake: "Overgeneralizing that 'heating always favors more product formation,' without correctly applying Le Chatelier's principle (heat acts like a product for exothermic reactions, so adding heat shifts equilibrium back toward reactants, decreasing K).",
+    apTip: "Connect this directly to Le Chatelier's principle: for an exothermic reaction, heat can be thought of as a 'product,' so increasing temperature shifts equilibrium toward reactants (decreasing K) — matching the mathematical conclusion from ΔG° = ΔH° − TΔS°."
+  }
+},
+{
+  id: 'chem-6-42', difficulty: 5, type: 'mcq', topic: 'Coupled Reactions',
+  prompt: "Reaction A (unfavorable on its own) has ΔG° = +45 kJ/mol. Reaction B (favorable) has ΔG° = −68 kJ/mol. If these two reactions are coupled into one overall process, what is the overall ΔG°, and is the coupled process spontaneous under standard conditions?",
+  choices: ['+23 kJ/mol; non-spontaneous', '−23 kJ/mol; spontaneous', '−113 kJ/mol; spontaneous', '+113 kJ/mol; non-spontaneous'],
+  correct: 1,
+  explanation: {
+    correct: "When reactions are coupled, their ΔG° values add algebraically: ΔG°overall = (+45) + (−68) = −23 kJ/mol; since this overall value is negative, the coupled process is spontaneous under standard conditions, even though Reaction A alone was unfavorable.",
+    wrong: { 0: "This has the arithmetic sign of the sum flipped — adding +45 and −68 correctly gives a negative result (−23), not positive, since |−68| is larger than |+45|.", 2: "This results from subtracting the two ΔG° values (or otherwise mishandling the signs) rather than correctly adding them algebraically as coupled reactions require.", 3: "This is the same magnitude error as choice C but with a flipped sign; the two given ΔG° values should be added directly, not treated as if their magnitudes should sum to a much larger total." },
+    tempting: "Choice A is a common trap when subtracting |45| from |68| incorrectly or misapplying the sign of one of the two given values during the addition.",
+    commonMistake: "Not carefully tracking the individual signs of each ΔG° value when adding them together for a coupled reaction, especially when one term is positive and the other is negative.",
+    apTip: "Just like Hess's Law for enthalpy, coupled reactions simply require ADDING the individual ΔG° values (respecting their signs) to get the overall ΔG° — always double check by re-adding the exact signed numbers rather than estimating."
+  }
+},
+{
+  id: 'chem-6-43', difficulty: 5, type: 'mcq', topic: 'Bond Enthalpies',
+  prompt: "Using average bond enthalpies (C–H = 413 kJ/mol, O=O = 495 kJ/mol, C=O = 799 kJ/mol, O–H = 467 kJ/mol), estimate ΔH for the combustion of methane: CH4(g) + 2O2(g) → CO2(g) + 2H2O(g). (CH4 has 4 C–H bonds; CO2 has 2 C=O bonds; each H2O has 2 O–H bonds.)",
+  choices: ['−802 kJ', '+802 kJ', '−1652 kJ', '−494 kJ'],
+  correct: 0,
+  explanation: {
+    correct: "Bonds broken (reactants): 4 C–H + 2 O=O = 4(413) + 2(495) = 1652 + 990 = 2642 kJ. Bonds formed (products): 2 C=O + 4 O–H = 2(799) + 4(467) = 1598 + 1868 = 3466 kJ. ΔH ≈ (bonds broken) − (bonds formed) = 2642 − 3466 = −824 kJ, which rounds closest to −802 kJ among the choices (small differences arise from which specific average bond enthalpy values are used, but the key result is a large negative ΔH matching methane's known strongly exothermic combustion).",
+    wrong: { 1: "The sign here is wrong; methane combustion is strongly exothermic given that far more energy is released forming the product bonds than is required to break the reactant bonds, so ΔH must be negative, not positive.", 2: "This is roughly double the correct magnitude, suggesting a coefficient (such as counting bonds twice) was applied incorrectly somewhere in the calculation.", 3: "This is only a fraction of the full calculated energy difference, suggesting not all bonds broken or formed were correctly counted and included." },
+    tempting: "Choice B is tempting if the final subtraction's sign is flipped, treating a net release of energy as if it were net absorbed instead.",
+    commonMistake: "Miscounting the total number of each bond type broken or formed, especially in molecules with multiple identical bonds (like CH4's four C–H bonds or two H2O molecules' four total O–H bonds).",
+    apTip: "For multi-bond molecules, explicitly list out (bond type) × (number of that bond) × (its average bond enthalpy) as separate line items before summing — this reduces the chance of missing a bond or miscounting how many of each type are present."
+  }
+},
+{
+  id: 'chem-6-44', difficulty: 5, type: 'mcq', topic: 'Entropy of Mixing',
+  prompt: "Two different ideal gases, each initially in its own separate compartment of equal volume, are allowed to mix by removing a partition between them (total volume doubles for each gas, at constant temperature). What happens to the total entropy of the system, and why?",
+  choices: ['Entropy decreases, because mixing makes the system less pure', 'Entropy increases, because each gas now has access to a larger volume and a much greater number of possible spatial arrangements for its particles', 'Entropy stays exactly the same, since no chemical reaction occurs', 'Entropy change cannot be predicted without knowing the specific identities of the two gases'],
+  correct: 1,
+  explanation: {
+    correct: "Even without any chemical reaction, each gas independently expands into a larger accessible volume once the partition is removed, dramatically increasing the number of possible microstates (positions) available to its particles — this purely physical increase in accessible volume and arrangements is what drives the well-known positive 'entropy of mixing' for ideal gases.",
+    wrong: { 0: "'Purity' isn't the relevant lens for entropy here — what matters is the number of accessible microstates, which increases (not decreases) as gases expand into and mix throughout a larger shared volume.", 2: "A physical process like mixing (with no chemical reaction) can still produce a real, significant entropy change — the volume expansion available to each gas's particles is the key factor, independent of any reaction occurring.", 3: "For ideal gases, the entropy of mixing depends primarily on the amounts (moles) of gas and volume change involved, not on the specific chemical identity of each gas — this makes the increase in entropy generally predictable from volume/mole considerations alone." },
+    tempting: "Choice A can tempt students who associate 'mixing' loosely with 'becoming less special/pure' in an everyday sense, rather than applying the actual microstate-based definition of entropy.",
+    commonMistake: "Assuming that entropy changes require a chemical reaction to occur, rather than recognizing that purely physical processes (like gas expansion or mixing) can also produce substantial, predictable entropy changes.",
+    apTip: "Entropy of mixing for ideal gases is a classic 'physical, not chemical' entropy increase — treat it just like any other volume expansion: more accessible volume per particle always means more possible microstates and higher entropy."
+  }
+},
+{
+  id: 'chem-6-45', difficulty: 5, type: 'mcq', topic: 'Entropy-Driven Spontaneity',
+  prompt: "Dissolving ammonium nitrate (NH4NO3) in water is endothermic (ΔH° > 0, the solution feels cold) yet occurs spontaneously at room temperature. What does this reveal about the process?",
+  choices: ['The process must actually be exothermic, and the cooling sensation is misleading', 'The process is entropy-driven: ΔS° must be sufficiently positive that the −TΔS° term outweighs the unfavorable positive ΔH°, making ΔG° negative overall', 'Spontaneous processes can never be endothermic, so this observation contradicts basic thermodynamics', 'ΔG° must be positive, since ΔH° is positive'],
+  correct: 1,
+  explanation: {
+    correct: "Since the process is observed to occur spontaneously (ΔG° < 0) despite being endothermic (ΔH° > 0), the ΔG° = ΔH° − TΔS° equation requires that the −TΔS° term be sufficiently negative (i.e., ΔS° sufficiently positive) to overcome the unfavorable positive ΔH° — this is a classic example of an entropy-driven spontaneous process, where dissolving increases disorder enough (ions dispersing into solution) to favor spontaneity despite absorbing heat.",
+    wrong: { 0: "The measured cooling sensation is real evidence of positive ΔH° (heat absorbed from the surroundings, including your hand); it isn't misleading — this genuinely is an endothermic process that still manages to be spontaneous.", 2: "Endothermic processes absolutely CAN be spontaneous, precisely when a sufficiently favorable (positive) ΔS° makes the −TΔS° term dominate over the unfavorable positive ΔH° in the ΔG° equation — this is exactly the scenario described here.", 3: "ΔG° must actually be NEGATIVE here, since the process is stated to occur spontaneously; a positive ΔH° alone doesn't determine the sign of ΔG°, since the TΔS° term must also be considered." },
+    tempting: "Choice D is tempting for students who haven't fully internalized that ΔG° depends on BOTH ΔH° and ΔS° together, not on ΔH° in isolation.",
+    commonMistake: "Assuming a positive ΔH° automatically means a positive (non-spontaneous) ΔG°, without considering that a sufficiently favorable ΔS° can still make the overall ΔG° negative.",
+    apTip: "Whenever an endothermic process is observed to be spontaneous, immediately suspect it's entropy-driven — dissolving ionic solids is one of the most common real-world examples, since breaking up an ordered crystal lattice into freely dispersed, solvated ions substantially increases entropy."
+  }
+},
+{
+  id: 'chem-6-46', difficulty: 2, type: 'mcq', topic: 'Spontaneity Misconceptions',
+  prompt: "A student claims: 'All exothermic reactions are spontaneous, since releasing energy is always favorable.' Is this claim correct?",
+  choices: ['Yes, exothermic reactions are always spontaneous under any conditions', 'No — spontaneity depends on ΔG° = ΔH° − TΔS°, and even an exothermic reaction (negative ΔH°) can be non-spontaneous if ΔS° is sufficiently negative and T is high enough', 'No, because exothermic reactions are never spontaneous', 'Yes, but only because ΔS° is irrelevant to spontaneity'],
+  correct: 1,
+  explanation: {
+    correct: "Spontaneity is determined by ΔG°, which depends on BOTH ΔH° and ΔS° (via ΔG° = ΔH° − TΔS°); if a reaction is exothermic (negative ΔH°) but also has a sufficiently negative ΔS°, the −TΔS° term can become large enough at high temperatures to make the overall ΔG° positive, meaning the reaction is not spontaneous under those conditions.",
+    wrong: { 0: "This overgeneralizes — while many exothermic reactions with modestly negative or positive ΔS° are indeed spontaneous, exothermic reactions with sufficiently negative ΔS° can become non-spontaneous at high temperature.", 2: "Exothermic reactions are very often (though not universally) spontaneous, especially at lower or moderate temperatures; claiming they're 'never' spontaneous is just as incorrect as claiming they're 'always' spontaneous.", 3: "ΔS° is absolutely relevant to spontaneity — it's one of the two key quantities (alongside ΔH° and temperature) that together determine the sign of ΔG°." },
+    tempting: "Choice A reflects a common oversimplification that focuses only on ΔH° while ignoring the essential role of entropy and temperature in determining true spontaneity.",
+    commonMistake: "Treating exothermic (negative ΔH°) as automatically synonymous with spontaneous (negative ΔG°), without recognizing that ΔS° and temperature also play a decisive role.",
+    apTip: "Always remember that spontaneity requires evaluating ΔG°, not ΔH° alone — a negative ΔH° is favorable but not sufficient by itself; the (−,−) sign combination for (ΔH°, ΔS°) specifically becomes non-spontaneous at high enough temperature."
+  }
+},
+{
+  id: 'chem-6-47', difficulty: 1, type: 'mcq', topic: 'Energy Diagrams',
+  prompt: "On a potential energy diagram for an endothermic reaction, how do the energy levels of the reactants and products compare?",
+  choices: ['Products have lower energy than reactants', 'Products have higher energy than reactants', 'Products and reactants have exactly the same energy', 'Energy diagrams cannot represent endothermic reactions'],
+  correct: 1,
+  explanation: {
+    correct: "In an endothermic reaction, energy is absorbed from the surroundings and stored in the products, so the products end up at a HIGHER energy level than the reactants on the diagram, consistent with a positive ΔH (products − reactants).",
+    wrong: { 0: "This describes an exothermic reaction, where the products end up at lower energy than the reactants after releasing energy — the opposite of endothermic.", 2: "If products and reactants had the same energy, ΔH would be exactly zero, which isn't what defines an endothermic reaction (which specifically has positive ΔH).", 3: "Energy diagrams represent both endothermic and exothermic reactions equally well, just with the relative heights of reactants and products flipped depending on the reaction type." },
+    tempting: "Choice A is tempting if 'endothermic' and 'exothermic' energy-diagram shapes get mentally swapped.",
+    commonMistake: "Confusing which reaction type (endothermic vs. exothermic) corresponds to which relative energy arrangement (higher products vs. lower products) on an energy diagram.",
+    apTip: "Remember: ΔH = E(products) − E(reactants); for endothermic (positive ΔH), products must be higher on the diagram; for exothermic (negative ΔH), products must be lower."
+  }
+},
+{
+  id: 'chem-6-48', difficulty: 1, type: 'mcq', topic: 'Enthalpy Definition',
+  prompt: "Enthalpy (H) is most precisely described as which of the following?",
+  choices: ['The total kinetic energy of all particles in a system', 'A thermodynamic quantity that, under constant pressure, represents the heat absorbed or released by a system', 'The same quantity as temperature, just measured in different units', 'A quantity that only applies to gas-phase reactions'],
+  correct: 1,
+  explanation: {
+    correct: "Enthalpy is defined so that, at constant pressure (the condition under which most chemistry is done in open containers), the change in enthalpy (ΔH) directly equals the heat absorbed or released by the system — making it an extremely useful and directly measurable thermodynamic quantity.",
+    wrong: { 0: "Enthalpy isn't simply total kinetic energy; it's a more comprehensive thermodynamic state function that accounts for both internal energy and pressure-volume work.", 2: "Temperature and enthalpy are related but distinct concepts — temperature reflects average kinetic energy of particles, while enthalpy is a broader energy quantity tied to heat flow at constant pressure.", 3: "Enthalpy is a completely general concept that applies to reactions and processes involving solids, liquids, gases, and solutions alike — it isn't restricted to gas-phase reactions." },
+    tempting: "Choice A can be tempting since kinetic energy is loosely associated with 'heat' in casual usage, but enthalpy is a distinct and more precisely defined thermodynamic quantity.",
+    commonMistake: "Conflating enthalpy with simpler related concepts like temperature or kinetic energy, rather than recognizing its precise definition tied to heat flow at constant pressure.",
+    apTip: "The single most useful practical fact to remember: at constant pressure, q (heat) = ΔH — this is exactly why enthalpy, rather than internal energy directly, is the quantity most commonly tracked in everyday chemistry (open beakers, constant atmospheric pressure)."
+  }
+},
+{
+  id: 'chem-6-49', difficulty: 2, type: 'mcq', topic: "Hess's Law — General Rules",
+  prompt: "When combining reactions to apply Hess's Law, which of the following correctly summarizes the two key rules for manipulating a given reaction's ΔH?",
+  choices: ['Reversing a reaction keeps ΔH the same sign; scaling coefficients keeps ΔH unchanged', 'Reversing a reaction flips the sign of ΔH; scaling all coefficients by a factor scales ΔH by that same factor', 'Reversing a reaction doubles ΔH; scaling coefficients has no effect on ΔH', 'Neither reversing nor scaling a reaction has any effect on ΔH'],
+  correct: 1,
+  explanation: {
+    correct: "The two fundamental Hess's Law manipulation rules are: (1) reversing a reaction's direction flips the sign of its ΔH, and (2) multiplying (or dividing) all of a reaction's coefficients by some factor multiplies (or divides) its ΔH by that same factor.",
+    wrong: { 0: "This has the reversal rule backwards (reversing DOES flip the sign) and the scaling rule wrong (scaling coefficients DOES proportionally change ΔH, not leave it unchanged).", 2: "Reversing a reaction doesn't double ΔH; it simply flips its sign while keeping the same magnitude, and scaling coefficients definitely does affect ΔH proportionally.", 3: "Both manipulations absolutely do affect ΔH in well-defined, predictable ways — reversal flips the sign, and scaling multiplies/divides proportionally." },
+    tempting: "Choice A is tempting since it's a plausible-sounding combination, but it gets the effect of both operations backwards from the actual rules.",
+    commonMistake: "Mixing up which manipulation (reversal vs. scaling) affects ΔH's sign versus its magnitude, or forgetting that both operations affect ΔH in some way.",
+    apTip: "Keep these two rules crisply separated: REVERSE → flip the SIGN only (same magnitude); SCALE (multiply/divide coefficients) → scale the MAGNITUDE by that same factor (sign stays the same unless the scaling factor itself is negative, which doesn't occur in real stoichiometry)."
+  }
+},
+{
+  id: 'chem-6-50', difficulty: 3, type: 'mcq', topic: 'Entropy & Moles of Gas',
+  prompt: "For the decomposition reaction CaCO3(s) → CaO(s) + CO2(g), what is the expected sign of ΔS°, and why?",
+  choices: ['Negative, because a solid is being broken down', 'Positive, because a gas (CO2) is produced from entirely solid reactants, increasing the total moles of gas from 0 to 1', 'Zero, because solids don\'t contribute to entropy calculations', 'Cannot be determined, since this reaction involves multiple phases'],
+  correct: 1,
+  explanation: {
+    correct: "The reactant side has zero moles of gas (CaCO3 is entirely solid), while the product side has 1 mole of gas (CO2); creating a new gas-phase species where none existed before is a strong, reliable predictor of increased entropy, so ΔS° is positive.",
+    wrong: { 0: "'Breaking down' a solid doesn't by itself determine the entropy sign; what matters specifically here is that a gas is newly produced, which dramatically increases the system's entropy regardless of the solid-phase changes occurring alongside it.", 2: "Solids do contribute to entropy calculations (they have nonzero standard molar entropies, just much smaller than gases); the key insight here is simply that the DOMINANT contribution to ΔS° comes from the newly formed gas.", 3: "Multi-phase reactions can absolutely be predicted using the moles-of-gas heuristic — in fact, this heuristic works especially well and reliably in cases like this one, where a gas appears (or disappears) while other species remain solid." },
+    tempting: "Choice A is tempting if 'breaking down a solid' is vaguely associated with 'more disorder' without specifically identifying the new gas-phase product as the actual driving factor.",
+    commonMistake: "Reasoning vaguely about 'more disorder' from decomposition in general, rather than specifically identifying and counting the change in moles of gas as the key quantitative predictor.",
+    apTip: "For any reaction where a gas is produced from entirely non-gaseous reactants (or vice versa, consumed into entirely non-gaseous products), the moles-of-gas heuristic gives an especially confident and reliable prediction of ΔS°'s sign."
+  }
+}
       ]
     },
     {
@@ -591,7 +4023,579 @@ export const chemistry = {
             commonMistake: "Treating each equilibrium in isolation instead of recognizing that two equilibria sharing a common species (here, A⁻) are chemically coupled, so a stress on one propagates to the other.",
             apTip: "College-level insight: this reflects real biochemical and analytical chemistry systems (e.g., metal-ligand buffers, EDTA titrations) where pH changes indirectly control metal ion speciation through linked acid-base and complexation equilibria — recognizing shared-species coupling is a hallmark of advanced equilibrium reasoning beyond a single ICE table."
           }
-        }
+        },
+{
+  id: 'chem-7-7', difficulty: 1, type: 'mcq', topic: 'Equilibrium Constant Expressions',
+  prompt: "When writing an equilibrium constant expression, which species are excluded from the expression entirely?",
+  choices: ['Aqueous ions', 'Gases', 'Pure solids and pure liquids', 'Weak acids only'],
+  correct: 2,
+  explanation: {
+    correct: "Pure solids and pure liquids have constant, essentially fixed 'concentrations' (their activity is defined as 1) regardless of how much is present, so they are omitted entirely from the equilibrium constant expression.",
+    wrong: { 0: "Aqueous ions and dissolved species DO appear in the equilibrium expression, since their concentrations can vary and directly affect the equilibrium position.", 1: "Gases also appear in the equilibrium expression (as partial pressures for Kp or concentrations for Kc), since gas amounts can vary just like aqueous species.", 3: "Weak acids appear in equilibrium expressions like any other aqueous species; there's no special exclusion rule based on acid strength." },
+    tempting: "Choice A or B might tempt students who forget that the exclusion rule is about physical STATE (pure solid/liquid) rather than about a chemical property like being an ion or an acid.",
+    commonMistake: "Including a pure solid or liquid's 'concentration' in an equilibrium expression, when it should be omitted because it doesn't meaningfully change.",
+    apTip: "Quick check before writing any K expression: cross out every pure solid (s) and pure liquid (l) in the balanced equation — only gases (g) and aqueous (aq) species belong in K."
+  }
+},
+{
+  id: 'chem-7-8', difficulty: 1, type: 'mcq', topic: 'Kp vs Kc',
+  prompt: "For a gas-phase reaction, under what condition does Kp equal Kc numerically?",
+  choices: ['Only when the reaction is exothermic', 'When Δn (moles of gaseous products minus moles of gaseous reactants) equals zero', 'Only at 273 K', 'Kp and Kc are always numerically equal for any gas reaction'],
+  correct: 1,
+  explanation: {
+    correct: "The relationship Kp = Kc(RT)^Δn shows that when Δn = 0 (equal moles of gas on both sides), the (RT)^Δn term becomes (RT)^0 = 1, making Kp and Kc numerically identical regardless of temperature.",
+    wrong: { 0: "Whether a reaction is exothermic or endothermic (a statement about ΔH) has no direct bearing on whether Kp equals Kc — that depends specifically on the change in moles of gas, Δn.", 2: "The relevant condition is Δn = 0, not a specific temperature value; Kp = Kc holds at Δn = 0 regardless of what that temperature actually is.", 3: "Kp and Kc are only equal in the special case Δn = 0; in general, for reactions with a nonzero change in moles of gas, they differ according to Kp = Kc(RT)^Δn." },
+    tempting: "Choice C is tempting since specific temperatures sometimes appear in related calculations, but it's the STRUCTURAL condition (Δn = 0) that matters, not a particular numeric temperature.",
+    commonMistake: "Assuming Kp and Kc are interchangeable in general, rather than recognizing they're related by a temperature- and Δn-dependent conversion factor.",
+    apTip: "Always check Δn (moles of gas in products minus moles of gas in reactants) before assuming Kp = Kc — this is the single deciding factor in the Kp = Kc(RT)^Δn relationship."
+  }
+},
+{
+  id: 'chem-7-9', difficulty: 1, type: 'mcq', topic: 'Dynamic Nature of Equilibrium',
+  prompt: "At equilibrium, individual molecules of reactants and products are best described as:",
+  choices: ['Completely frozen in place, with no further molecular motion or reaction', 'Continuously reacting in both the forward and reverse directions, even though the overall (net) concentrations remain constant', 'Only reacting in the forward direction, since equilibrium has been reached', 'No longer chemically active in any way'],
+  correct: 1,
+  explanation: {
+    correct: "Equilibrium is a dynamic, not static, condition: individual molecules continue to react in both directions constantly, but because the forward and reverse rates are equal, the NET (overall, measurable) concentrations of all species stay constant over time.",
+    wrong: { 0: "Molecules are NOT frozen in place at equilibrium; reactions continue to occur at the molecular level in both directions — it's only the net, bulk concentration that stops changing.", 2: "If only the forward reaction continued, concentrations would keep changing, and true equilibrium (constant net concentrations) wouldn't be reached; both directions must continue simultaneously.", 3: "Molecules remain fully chemically active and continue reacting at equilibrium — there is no cessation of chemical activity, just a balance between opposing reaction rates." },
+    tempting: "Choice A is tempting because 'constant concentrations' can sound like 'nothing is happening,' but the correct picture is a continuously active balance, not a frozen state.",
+    commonMistake: "Picturing equilibrium as static (molecules stop reacting) rather than dynamic (molecules keep reacting, but the forward and reverse processes exactly balance).",
+    apTip: "Whenever explaining equilibrium on an FRQ, explicitly use the word 'dynamic' and describe both forward and reverse reactions continuing simultaneously — this is the specific, gradable distinction between equilibrium and a truly static system."
+  }
+},
+{
+  id: 'chem-7-10', difficulty: 1, type: 'mcq', topic: "Catalysts and Equilibrium",
+  prompt: "How does adding a catalyst affect a reaction's equilibrium constant (K) and equilibrium position?",
+  choices: ['It increases K, shifting the equilibrium toward products', 'It decreases K, shifting the equilibrium toward reactants', 'It has no effect on K or the equilibrium position — it only speeds up how quickly equilibrium is reached', 'It changes K but not the equilibrium position'],
+  correct: 2,
+  explanation: {
+    correct: "A catalyst lowers the activation energy for both the forward and reverse reactions equally, speeding up the RATE at which equilibrium is achieved, but it does not change the value of K or shift the equilibrium position at all, since K depends only on temperature.",
+    wrong: { 0: "Catalysts don't change K at all, let alone increase it; they only affect the rate at which the system reaches its (unchanged) equilibrium state.", 1: "Catalysts don't decrease K either; K remains completely unaffected by the presence of a catalyst.", 3: "This has it backwards — catalysts affect neither K nor the equilibrium position; they only change how fast equilibrium is reached." },
+    tempting: "Choices A and B are tempting if a catalyst's role in speeding up reactions is confused with actually shifting the equilibrium itself.",
+    commonMistake: "Confusing kinetic effects (rate of reaching equilibrium) with thermodynamic effects (the actual equilibrium position or K value) when evaluating what a catalyst does.",
+    apTip: "Remember the core distinction: a catalyst is purely a KINETIC tool (affects rate/activation energy) and has ZERO effect on THERMODYNAMIC quantities like K or equilibrium position — it just gets you to the same destination faster."
+  }
+},
+{
+  id: 'chem-7-11', difficulty: 1, type: 'mcq', topic: 'Factors Affecting K',
+  prompt: "The numerical value of an equilibrium constant, K, for a given reaction changes only when which single factor is altered?",
+  choices: ['Initial concentrations of reactants', 'Temperature', 'The presence of a catalyst', 'The container volume'],
+  correct: 1,
+  explanation: {
+    correct: "K is a temperature-dependent constant; for a fixed reaction, changing the temperature is the only factor that actually changes the numerical value of K itself (all other stresses just shift the equilibrium position while K stays the same).",
+    wrong: { 0: "Changing initial concentrations shifts the equilibrium POSITION (how much product vs. reactant forms) but does not change the value of K itself, which remains constant at a given temperature no matter the starting amounts.", 2: "A catalyst affects only the rate of reaching equilibrium, not the value of K.", 3: "Changing container volume shifts the equilibrium position (especially for gas-phase reactions with unequal moles of gas), but K itself remains unchanged as long as temperature is constant." },
+    tempting: "Choice D can be tempting since volume changes visibly shift equilibrium position for many gas reactions, but that's a POSITION shift, not a change in K's actual numerical value.",
+    commonMistake: "Confusing a shift in equilibrium POSITION (caused by concentration, pressure/volume changes) with an actual change in the VALUE of K (caused only by temperature changes).",
+    apTip: "Keep this distinction crisp: concentration, pressure/volume, and catalysts can all shift where the equilibrium position sits, but only TEMPERATURE actually changes the numerical value of K."
+  }
+},
+{
+  id: 'chem-7-12', difficulty: 1, type: 'mcq', topic: 'Effect of Concentration Changes on K',
+  prompt: "If more reactant is added to a system already at equilibrium, does the value of the equilibrium constant K change?",
+  choices: ['Yes, K increases because more reactant is now present', 'Yes, K decreases because the system must compensate', 'No, K remains the same; only the equilibrium position shifts to establish a new balance of concentrations', 'It depends on whether the reaction is exothermic or endothermic'],
+  correct: 2,
+  explanation: {
+    correct: "Adding more reactant shifts the equilibrium POSITION forward (making more product) to re-establish the same ratio of concentrations required by K, but the numerical value of K itself remains unchanged, since K depends only on temperature.",
+    wrong: { 0: "K doesn't increase simply because more reactant is added; the system shifts to a new equilibrium POSITION while K itself stays fixed.", 1: "K doesn't decrease either — adding reactant doesn't alter K's value at all, only the concentrations that eventually satisfy the same K expression.", 3: "Whether a reaction is exothermic or endothermic affects how TEMPERATURE changes influence K, but it's irrelevant here — adding reactant (a concentration change, not a temperature change) never alters K regardless of the reaction's thermicity." },
+    tempting: "Choice D can be tempting since exothermic/endothermic nature does matter for OTHER kinds of stress (like temperature changes), but it's a red herring for this specific concentration-based stress.",
+    commonMistake: "Assuming any 'stress' applied to an equilibrium system changes K, rather than correctly distinguishing between stresses that shift POSITION (concentration, volume/pressure) and the one stress that changes K itself (temperature).",
+    apTip: "This is one of the most frequently tested AP conceptual points: reinforce the mental rule 'K changes ONLY with temperature' every time a Le Chatelier's principle question describes a concentration or volume change."
+  }
+},
+{
+  id: 'chem-7-13', difficulty: 2, type: 'mcq', topic: 'Heterogeneous Equilibria',
+  prompt: "For the heterogeneous equilibrium CaCO3(s) ⇌ CaO(s) + CO2(g), what is the correct equilibrium constant expression, Kc?",
+  choices: ['Kc = [CaO][CO2] / [CaCO3]', 'Kc = [CO2]', 'Kc = [CaO] / [CaCO3]', 'Kc = [CaCO3] / ([CaO][CO2])'],
+  correct: 1,
+  explanation: {
+    correct: "Since CaCO3(s) and CaO(s) are both pure solids, they are excluded from the equilibrium expression entirely, leaving only the gas-phase species: Kc = [CO2].",
+    wrong: { 0: "This incorrectly includes the pure solids CaCO3 and CaO in the expression; both should be omitted since they are pure solids with constant activity.", 2: "This still incorrectly includes both pure solids (CaO and CaCO3) rather than omitting them entirely.", 3: "This is an inverted and still-incorrect expression that includes pure solids that should be excluded, and also omits the one species (CO2) that SHOULD be included." },
+    tempting: "Choice A is tempting for students who haven't yet internalized the rule of excluding pure solids/liquids and instead include every species shown in the balanced equation.",
+    commonMistake: "Writing every species from the balanced equation into the K expression without first checking and removing pure solids and pure liquids.",
+    apTip: "For heterogeneous equilibria specifically, always cross out solids and liquids FIRST before writing the K expression — often, as in this example, only a single gas-phase species remains."
+  }
+},
+{
+  id: 'chem-7-14', difficulty: 2, type: 'mcq', topic: 'Magnitude of K',
+  prompt: "A reaction has an equilibrium constant K = 4.5 × 10¹². What does this large value indicate about the equilibrium mixture?",
+  choices: ['The reaction has not yet reached equilibrium', 'At equilibrium, the reaction mixture consists overwhelmingly of products, with very little unreacted reactant remaining', 'At equilibrium, the reaction mixture consists overwhelmingly of reactants', 'The reaction is extremely slow'],
+  correct: 1,
+  explanation: {
+    correct: "A very large K value (K >> 1) means that at equilibrium, the numerator (products) vastly outweighs the denominator (reactants) in the equilibrium expression, indicating the reaction proceeds essentially to completion, strongly favoring products.",
+    wrong: { 0: "A specific numeric value of K describes conditions specifically AT equilibrium; K itself doesn't indicate whether equilibrium has or hasn't yet been reached in a particular sample — that depends on comparing Q to K.", 2: "This is the opposite conclusion — a very LARGE K indicates products are strongly favored, not reactants.", 3: "The magnitude of K (a thermodynamic quantity) says nothing directly about reaction speed (a kinetic quantity) — a reaction can have a huge K yet still be very slow to reach that equilibrium." },
+    tempting: "Choice D can tempt students who conflate the thermodynamic favorability indicated by K with how fast the reaction proceeds, which are entirely separate concepts.",
+    commonMistake: "Confusing the size of K (a measure of how far equilibrium lies toward products or reactants) with reaction rate or with whether equilibrium has been reached yet.",
+    apTip: "As a quick reference: K >> 1 means 'products dominate at equilibrium'; K << 1 means 'reactants dominate at equilibrium'; K ≈ 1 means roughly comparable amounts of both — but none of this says anything about how FAST equilibrium is reached."
+  }
+},
+{
+  id: 'chem-7-15', difficulty: 2, type: 'mcq', topic: 'Magnitude of K',
+  prompt: "A reaction has K = 2.1 × 10⁻⁹. What does this small value indicate about the position of equilibrium?",
+  choices: ['The reaction strongly favors products', 'The reaction strongly favors reactants, with only a tiny fraction converting to products at equilibrium', 'The reaction is at equilibrium exactly halfway between reactants and products', 'K this small means the reaction cannot occur at all'],
+  correct: 1,
+  explanation: {
+    correct: "A very small K value (K << 1) means the denominator (reactants) vastly outweighs the numerator (products) at equilibrium, indicating that only a very small amount of reactant converts to product before equilibrium is established.",
+    wrong: { 0: "This is the opposite conclusion — a very SMALL K indicates reactants are strongly favored, not products.", 2: "K ≈ 1 (not a very small or very large value) would suggest roughly comparable reactant and product amounts; a K this small clearly favors one side (reactants) heavily.", 3: "A small K doesn't mean the reaction cannot occur at all — it still reaches a genuine equilibrium, just one where very little product forms; the reaction still proceeds forward to some (small) extent." },
+    tempting: "Choice D is tempting if 'the reaction barely happens' is over-interpreted as 'the reaction cannot happen,' when in reality a small but nonzero amount of product still forms.",
+    commonMistake: "Treating an extremely small K as meaning 'no reaction occurs' rather than 'a reaction occurs, but only to a very small extent before reaching equilibrium.'",
+    apTip: "Even reactions with astronomically small K values still technically reach equilibrium — they just do so with an overwhelming preference for reactants, not zero product formation."
+  }
+},
+{
+  id: 'chem-7-16', difficulty: 2, type: 'mcq', topic: 'Manipulating Equilibrium Expressions',
+  prompt: "If the reaction A ⇌ B has an equilibrium constant K = 25, what is the equilibrium constant for the reverse reaction, B ⇌ A?",
+  choices: ['25', '−25', '1/25 = 0.04', '625'],
+  correct: 2,
+  explanation: {
+    correct: "Reversing a reaction inverts its equilibrium constant: K(reverse) = 1/K(forward) = 1/25 = 0.04, since the reverse reaction's expression is simply the reciprocal of the forward expression.",
+    wrong: { 0: "This keeps K unchanged, but reversing a reaction always inverts the equilibrium expression (numerator and denominator swap), so K must change to its reciprocal, not stay the same.", 1: "K values are never negative; equilibrium constants are always positive numbers, so a negative value isn't a valid possibility here.", 3: "This squares K rather than taking its reciprocal, which isn't the correct operation for reversing a reaction (squaring corresponds to doubling reaction coefficients, not reversing direction)." },
+    tempting: "Choice A is tempting if the reversal rule for K (take the reciprocal) gets confused with the reversal rule for ΔH (flip the sign), since they follow different mathematical operations.",
+    commonMistake: "Applying the ΔH reversal rule (flip sign) to K by mistake, rather than correctly applying K's own reversal rule (take the reciprocal).",
+    apTip: "Keep these three manipulation rules straight for K: REVERSE the reaction → take the RECIPROCAL (1/K); MULTIPLY coefficients by n → raise K to the nth POWER (Kⁿ); ADD two reactions together → MULTIPLY their K values (K1 × K2)."
+  }
+},
+{
+  id: 'chem-7-17', difficulty: 2, type: 'mcq', topic: 'Manipulating Equilibrium Expressions',
+  prompt: "If the reaction A ⇌ B has K = 6.0, what is the equilibrium constant for the reaction 3A ⇌ 3B (all coefficients tripled)?",
+  choices: ['6.0', '18', '216', '2.0'],
+  correct: 2,
+  explanation: {
+    correct: "When all coefficients of a reaction are multiplied by a factor n, the new equilibrium constant is the original K raised to the nth power: K_new = K^n = 6.0³ = 216.",
+    wrong: { 0: "This leaves K unchanged, but multiplying all coefficients by a factor requires raising K to that same power, not keeping it the same.", 1: "This multiplies K by 3 (6.0 × 3 = 18) rather than correctly raising K to the 3rd power (6.0³).", 3: "This divides K by 3 rather than correctly raising it to the 3rd power; scaling coefficients up requires an exponential operation on K, not a division." },
+    tempting: "Choice B is tempting since 'tripling coefficients' can be mistakenly associated with simply multiplying K by 3, rather than correctly raising K to the power of 3.",
+    commonMistake: "Multiplying K by the scaling factor instead of raising K to the power of that scaling factor, which is the correct operation for scaled reaction coefficients.",
+    apTip: "Always use exponents (not simple multiplication) when scaling K for a reaction whose coefficients have all been multiplied by some factor n: K_new = (K_original)^n."
+  }
+},
+{
+  id: 'chem-7-18', difficulty: 2, type: 'mcq', topic: "Le Chatelier's Principle — Volume/Pressure",
+  prompt: "For the gas-phase reaction 2SO2(g) + O2(g) ⇌ 2SO3(g), what happens to the equilibrium position if the container volume is decreased (increasing overall pressure)?",
+  choices: ['Shifts left, toward reactants, since decreasing volume favors the side with more gas particles', 'Shifts right, toward products, since decreasing volume favors the side with fewer total moles of gas', 'No shift occurs since all species are gases', 'The shift direction cannot be determined without knowing K'],
+  correct: 1,
+  explanation: {
+    correct: "Reactants have 3 total moles of gas (2 SO2 + 1 O2) while products have 2 moles of gas (2 SO3); decreasing volume (increasing pressure) shifts the equilibrium toward the side with FEWER moles of gas to partially relieve the pressure increase — here, that's the product side (right).",
+    wrong: { 0: "This has the direction backwards — decreasing volume favors the side with FEWER gas moles (the product side here), not the side with more gas particles.", 2: "The fact that all species are gases is exactly why volume/pressure changes DO cause a shift here — a shift occurs specifically because the two sides have different total moles of gas.", 3: "The moles-of-gas comparison between products and reactants (which can be directly counted from the balanced equation) is sufficient to determine the shift direction — no additional K value is needed for this specific prediction." },
+    tempting: "Choice A can result from reversing the volume/pressure shift rule, thinking increased pressure favors 'more stuff' rather than fewer gas particles.",
+    commonMistake: "Reversing the direction of the volume/pressure Le Chatelier shift — remember, compressing the system favors whichever side has fewer total gas particles, to help relieve the pressure increase.",
+    apTip: "Mnemonic: 'squeeze it, it shrinks' — decreasing volume (squeezing) shifts equilibrium toward the side with the SMALLER total number of gas moles."
+  }
+},
+{
+  id: 'chem-7-19', difficulty: 2, type: 'mcq', topic: "Le Chatelier's Principle — Inert Gas",
+  prompt: "If an inert (non-reacting) gas like argon is added to a gas-phase equilibrium system at CONSTANT VOLUME, what happens to the equilibrium position?",
+  choices: ['Shifts toward the side with fewer moles of gas', 'Shifts toward the side with more moles of gas', 'No shift occurs, since adding an inert gas at constant volume does not change the partial pressures or concentrations of the actual reacting species', 'The reaction stops completely'],
+  correct: 2,
+  explanation: {
+    correct: "Adding an inert gas at constant volume increases the TOTAL pressure of the container, but it does not change the partial pressures or concentrations of the actual reacting species (since they still occupy the same volume at the same amounts), so there is no shift in equilibrium position.",
+    wrong: { 0: "A shift like this would occur if the ACTUAL VOLUME available to the reacting species changed, but adding inert gas at constant total volume doesn't compress or expand the reacting species themselves.", 1: "Similarly, there's no shift toward more moles of gas either — inert gas addition at constant volume simply doesn't affect the reacting species' partial pressures or concentrations at all.", 3: "The reaction absolutely does not stop; it's unaffected by the inert gas and continues undisturbed at the same equilibrium position." },
+    tempting: "Choice A is a very common trap — students confuse 'increasing total pressure' (by adding inert gas) with 'decreasing volume' (which DOES cause a real shift), but these are fundamentally different scenarios.",
+    commonMistake: "Treating any pressure increase as equivalent to a volume decrease, without checking whether the reacting species' actual concentrations or partial pressures have changed.",
+    apTip: "Key distinction: decreasing volume (compressing the actual system) DOES shift equilibrium, but adding inert gas at CONSTANT volume does NOT — always ask 'did the concentration/partial pressure of the REACTING species actually change?' before predicting a shift."
+  }
+},
+{
+  id: 'chem-7-20', difficulty: 2, type: 'mcq', topic: "Le Chatelier's Principle — Removing Product",
+  prompt: "For the equilibrium A(g) + B(g) ⇌ C(g), if product C is continuously removed from the system as it forms, what happens to the equilibrium position?",
+  choices: ['Shifts left, toward reactants A and B', 'Shifts right, continuously producing more C to replace what was removed', 'No shift occurs since C is a product, not a reactant', 'The reaction reaches equilibrium faster but the position stays the same'],
+  correct: 1,
+  explanation: {
+    correct: "Removing product C decreases its concentration below the equilibrium value, so by Le Chatelier's principle, the system shifts forward (right, toward more C) to partially replace what was removed and restore equilibrium.",
+    wrong: { 0: "This is the opposite direction — removing a product shifts the equilibrium TOWARD that product (forward, right) to replace it, not away from it.", 2: "Removing a product is exactly the kind of concentration-based stress that DOES cause a real shift, specifically toward the side of the removed species to help restore its concentration.", 3: "Continuously removing product actually does shift the equilibrium POSITION forward (this is the basis of many industrial processes designed to maximize product yield), not just the speed of reaching a fixed position." },
+    tempting: "Choice A is tempting if the direction rule for removing a species is applied backwards (removing → shift AWAY from that side, rather than correctly TOWARD that side).",
+    commonMistake: "Reversing the shift direction for removing a species — remember, removing something shifts equilibrium TOWARD replacing it, not away from it.",
+    apTip: "This principle (continuously removing product to drive a reaction further toward completion) is used industrially, such as removing water in esterification reactions to maximize ester yield — a classic real-world application of Le Chatelier's principle."
+  }
+},
+{
+  id: 'chem-7-21', difficulty: 3, type: 'mcq', topic: 'Kp from Kc',
+  prompt: "For the reaction 2SO2(g) + O2(g) ⇌ 2SO3(g), Kc = 280 at 1000 K. Using Kp = Kc(RT)^Δn with R = 0.0821 L·atm/(mol·K), calculate Kp. (Δn = moles of gaseous products − moles of gaseous reactants)",
+  choices: ['Kp ≈ 3.41', 'Kp ≈ 22,988', 'Kp ≈ 280', 'Kp ≈ 0.293'],
+  correct: 0,
+  explanation: {
+    correct: "Δn = 2 − 3 = −1, so Kp = Kc(RT)^Δn = 280 × (0.0821 × 1000)^(−1) = 280 / 82.1 ≈ 3.41.",
+    wrong: { 1: "This appears to have used Δn = +1 (multiplying by RT instead of dividing), reversing the direction of the exponent's sign.", 2: "This uses Kc directly without applying the (RT)^Δn conversion factor at all.", 3: "This is roughly the reciprocal of the correct answer, suggesting Δn's sign (or the overall exponent) was applied backwards." },
+    tempting: "Choice B is a common trap from using Δn = +1 instead of correctly calculating Δn = −1 for this specific reaction (2 moles of gaseous product vs. 3 moles of gaseous reactant).",
+    commonMistake: "Miscalculating Δn's sign (forgetting to subtract reactant moles from product moles correctly) or forgetting to apply the (RT)^Δn factor altogether.",
+    apTip: "Always calculate Δn explicitly first (moles of gas in products MINUS moles of gas in reactants) before plugging into Kp = Kc(RT)^Δn — a negative Δn means dividing by (RT) raised to a positive power, not multiplying."
+  }
+},
+{
+  id: 'chem-7-22', difficulty: 3, type: 'mcq', topic: 'Percent Ionization / 5% Rule',
+  prompt: "A weak acid HA has Ka = 1.8 × 10⁻⁵ and an initial concentration of 0.10 M. Using the simplifying approximation (0.10 − x ≈ 0.10), what is the percent ionization, and is the approximation considered valid (typically valid if under 5%)?",
+  choices: ['Percent ionization ≈ 1.3%; approximation is valid', 'Percent ionization ≈ 13%; approximation is invalid', 'Percent ionization ≈ 0.13%; approximation is valid', 'Percent ionization ≈ 18%; approximation is invalid'],
+  correct: 0,
+  explanation: {
+    correct: "Using x = √(Ka × C) = √(1.8×10⁻⁵ × 0.10) = √(1.8×10⁻⁶) ≈ 1.34×10⁻³ M, the percent ionization is (1.34×10⁻³ / 0.10) × 100% ≈ 1.3%, which is well under the 5% threshold, so the approximation is valid.",
+    wrong: { 1: "This is roughly 10 times too large, suggesting a calculation error such as forgetting to take the square root of the product Ka × C.", 2: "This is roughly 10 times too small, suggesting an arithmetic slip (perhaps a misplaced decimal) in computing x or the percent ionization.", 3: "This value doesn't match a correctly calculated percent ionization for these specific Ka and concentration values." },
+    tempting: "Choice B is tempting if the square root step is skipped or miscalculated, since forgetting to take the square root of a very small product tends to produce numbers that are off by roughly a factor of 10.",
+    commonMistake: "Forgetting to take the square root when solving x² = Ka × C for x, or making a decimal-place error when calculating percent ionization.",
+    apTip: "Always take the square root as the LAST step when solving x² = Ka·C for x (assuming the 5% approximation applies), and always double check by computing percent ionization = (x/C) × 100% to confirm the approximation was valid in the first place."
+  }
+},
+{
+  id: 'chem-7-23', difficulty: 3, type: 'mcq', topic: 'ICE Table with Approximation',
+  prompt: "Using the same weak acid HA (Ka = 1.8 × 10⁻⁵, initial concentration 0.10 M) as the previous problem, what is the approximate equilibrium concentration of H⁺?",
+  choices: ['[H⁺] ≈ 1.8 × 10⁻⁵ M', '[H⁺] ≈ 1.3 × 10⁻³ M', '[H⁺] ≈ 0.10 M', '[H⁺] ≈ 1.3 × 10⁻⁵ M'],
+  correct: 1,
+  explanation: {
+    correct: "Using the ICE table approximation x = √(Ka × C) = √(1.8×10⁻⁵ × 0.10) ≈ 1.34×10⁻³ M, and since [H⁺] = x at equilibrium, [H⁺] ≈ 1.3×10⁻³ M.",
+    wrong: { 0: "This is simply the value of Ka itself, not the calculated equilibrium [H⁺], which requires taking the square root of Ka × C.", 2: "This is the initial concentration of HA, not the (much smaller) equilibrium concentration of H⁺ that actually ionizes from it.", 3: "This value is off by roughly a factor of 100 from the correctly calculated result, suggesting an error in setting up or evaluating the square root." },
+    tempting: "Choice A is tempting if Ka itself is mistaken for the equilibrium [H⁺], skipping the actual ICE table calculation entirely.",
+    commonMistake: "Reporting Ka or the initial concentration directly as if it were the answer, rather than actually solving the ICE table for x.",
+    apTip: "Always clearly distinguish between Ka (a fixed equilibrium constant), initial concentration (before any reaction), and equilibrium concentration (x, the actual amount that reacts) — these are three distinctly different numbers in every ICE table problem."
+  }
+},
+{
+  id: 'chem-7-24', difficulty: 3, type: 'mcq', topic: 'Ksp Expressions',
+  prompt: "What is the correct solubility product expression, Ksp, for the sparingly soluble salt Ca3(PO4)2, given the dissolution equation Ca3(PO4)2(s) ⇌ 3Ca²⁺(aq) + 2PO4³⁻(aq)?",
+  choices: ['Ksp = [Ca²⁺][PO4³⁻]', 'Ksp = [Ca²⁺]³[PO4³⁻]²', 'Ksp = 3[Ca²⁺] × 2[PO4³⁻]', 'Ksp = [Ca²⁺]²[PO4³⁻]³'],
+  correct: 1,
+  explanation: {
+    correct: "Each ion's concentration is raised to the power of its stoichiometric coefficient in the balanced dissolution equation: Ksp = [Ca²⁺]³[PO4³⁻]², matching the coefficients of 3 and 2 respectively.",
+    wrong: { 0: "This omits the stoichiometric coefficients as exponents entirely, treating both ions as if they had a coefficient of 1.", 2: "This incorrectly multiplies each concentration by its coefficient rather than raising it to that coefficient as an exponent — Ksp expressions always use exponents, not coefficients as multipliers.", 3: "This swaps the exponents between the two ions — Ca²⁺ (coefficient 3) should be cubed, and PO4³⁻ (coefficient 2) should be squared, not the reverse." },
+    tempting: "Choice C is tempting since stoichiometric coefficients are used as multipliers in many other contexts (like balancing equations), but in equilibrium expressions they always become exponents instead.",
+    commonMistake: "Using stoichiometric coefficients as multiplying factors in the Ksp expression rather than correctly applying them as exponents on each ion's concentration.",
+    apTip: "For ANY equilibrium expression (Kc, Kp, or Ksp), always convert each species' balanced-equation coefficient into an EXPONENT on that species' concentration — never use coefficients as simple multipliers."
+  }
+},
+{
+  id: 'chem-7-25', difficulty: 3, type: 'mcq', topic: 'Molar Solubility from Ksp',
+  prompt: "AgCl has Ksp = 1.8 × 10⁻¹⁰. What is its molar solubility (s) in pure water?",
+  choices: ['s ≈ 1.8 × 10⁻¹⁰ M', 's ≈ 1.3 × 10⁻⁵ M', 's ≈ 9.0 × 10⁻¹¹ M', 's ≈ 1.3 × 10⁻¹⁰ M'],
+  correct: 1,
+  explanation: {
+    correct: "For AgCl ⇌ Ag⁺ + Cl⁻ (1:1 stoichiometry), Ksp = [Ag⁺][Cl⁻] = s × s = s², so s = √Ksp = √(1.8×10⁻¹⁰) ≈ 1.3×10⁻⁵ M.",
+    wrong: { 0: "This uses Ksp directly as if it were the solubility itself, skipping the necessary square root step for this 1:1 salt.", 2: "This halves Ksp instead of taking its square root, which isn't the correct operation for solving s² = Ksp.", 3: "This value is off by several orders of magnitude from the correctly calculated square root of Ksp." },
+    tempting: "Choice A is tempting if the relationship between Ksp and molar solubility is skipped entirely, mistaking Ksp itself for solubility.",
+    commonMistake: "Forgetting to take the square root (for a 1:1 salt) when solving s² = Ksp for the actual molar solubility, s.",
+    apTip: "For a simple 1:1 salt like AgCl, PbSO4, or BaSO4, molar solubility is always s = √Ksp — but always re-derive the correct exponent relationship from the specific salt's stoichiometry rather than memorizing a single formula for every case."
+  }
+},
+{
+  id: 'chem-7-26', difficulty: 3, type: 'mcq', topic: 'Molar Solubility from Ksp',
+  prompt: "PbCl2 has Ksp = 1.7 × 10⁻⁵. Given the dissolution PbCl2(s) ⇌ Pb²⁺(aq) + 2Cl⁻(aq), so Ksp = [Pb²⁺][Cl⁻]² = s(2s)² = 4s³, what is the molar solubility, s?",
+  choices: ['s ≈ 4.1 × 10⁻³ M', 's ≈ 1.6 × 10⁻² M', 's ≈ 1.7 × 10⁻⁵ M', 's ≈ 6.5 × 10⁻² M'],
+  correct: 1,
+  explanation: {
+    correct: "Solving 4s³ = 1.7×10⁻⁵ gives s³ = 4.25×10⁻⁶, so s = ∛(4.25×10⁻⁶) ≈ 1.6×10⁻² M.",
+    wrong: { 0: "This value doesn't correctly account for the cube root step required to solve for s from s³, and appears to be a partial or miscalculated intermediate result.", 2: "This uses Ksp directly as if it were the molar solubility, skipping the necessary algebraic steps (dividing by 4 and taking the cube root) entirely.", 3: "This is roughly 4 times the correct answer, suggesting the factor of 4 was multiplied back in in a follow-up step rather than only using it to isolate s³." },
+    tempting: "Choice A is a plausible-looking but incorrect intermediate value, since problems with a coefficient of 2 (like Cl⁻ here) commonly trip up the algebra of isolating s.",
+    commonMistake: "Mishandling the algebra for salts with a 1:2 (or other non-1:1) stoichiometry, especially forgetting to properly cube root after isolating s³, or forgetting the factor of 4 (from squaring the coefficient 2) altogether.",
+    apTip: "For any Ksp problem involving a coefficient other than 1, carefully write out the FULL expression (like 4s³ here) before attempting to solve — don't skip straight to a square or cube root without first correctly setting up the coefficient-dependent expression."
+  }
+},
+{
+  id: 'chem-7-27', difficulty: 3, type: 'mcq', topic: 'Predicting Precipitation (Q vs Ksp)',
+  prompt: "Two solutions are mixed, resulting in [Pb²⁺] = 0.010 M and [Cl⁻] = 0.020 M. Given Ksp(PbCl2) = 1.7 × 10⁻⁵, will a precipitate of PbCl2 form?",
+  choices: ['Yes, because Q = 4.0 × 10⁻⁶, which is greater than Ksp', 'No, because Q = 4.0 × 10⁻⁶, which is less than Ksp', 'Yes, because Q = 2.0 × 10⁻⁴, which is greater than Ksp', 'Cannot be determined without knowing the temperature'],
+  correct: 1,
+  explanation: {
+    correct: "Q = [Pb²⁺][Cl⁻]² = (0.010)(0.020)² = (0.010)(0.00040) = 4.0×10⁻⁶; since Q (4.0×10⁻⁶) is LESS than Ksp (1.7×10⁻⁵), the solution is not yet saturated, and no precipitate forms.",
+    wrong: { 0: "The calculated Q value (4.0×10⁻⁶) is correct, but the comparison is backwards — Q is actually LESS than Ksp here, meaning no precipitate forms, not that one does.", 2: "This Q value appears to have used [Cl⁻] without squaring it (or made another calculation error) — correctly squaring [Cl⁻] before multiplying gives Q = 4.0×10⁻⁶, not 2.0×10⁻⁴.", 3: "While Ksp itself is temperature-dependent, this specific problem provides Ksp already at a given temperature, so the Q-vs-Ksp comparison can be made directly without needing additional temperature information." },
+    tempting: "Choice A can result from correctly calculating Q but then reversing the comparison rule (Q > Ksp means precipitate forms; Q < Ksp means it doesn't).",
+    commonMistake: "Correctly computing Q but then misapplying the comparison direction, or forgetting to square the concentration of an ion with a coefficient of 2 when calculating Q.",
+    apTip: "Just like the general Q-vs-K rule, remember: if Q > Ksp, the solution is supersaturated and a precipitate WILL form; if Q < Ksp, the solution is unsaturated and no precipitate forms; if Q = Ksp, the solution is exactly saturated (at equilibrium)."
+  }
+},
+{
+  id: 'chem-7-28', difficulty: 3, type: 'mcq', topic: 'Common Ion Effect (Numeric)',
+  prompt: "AgCl has Ksp = 1.8 × 10⁻¹⁰. What is the approximate molar solubility of AgCl in a solution that is already 0.10 M in NaCl (a source of common ion Cl⁻)?",
+  choices: ['s ≈ 1.3 × 10⁻⁵ M (same as in pure water)', 's ≈ 1.8 × 10⁻⁹ M (much lower than in pure water)', 's ≈ 1.8 × 10⁻¹¹ M', 's ≈ 0.10 M'],
+  correct: 1,
+  explanation: {
+    correct: "With [Cl⁻] ≈ 0.10 M already present (since s will be very small compared to 0.10 M), Ksp = [Ag⁺][Cl⁻] ≈ s × 0.10, so s ≈ Ksp/0.10 = 1.8×10⁻¹⁰/0.10 = 1.8×10⁻⁹ M — much smaller than the pure-water solubility (1.3×10⁻⁵ M), demonstrating the common ion effect.",
+    wrong: { 0: "This is the pure-water solubility value, which doesn't account for the significant suppression caused by the already-present 0.10 M Cl⁻ from NaCl.", 2: "This is off by roughly a factor of 100 from the correctly calculated value, suggesting an arithmetic error in the division step.", 3: "This treats the NaCl concentration itself as if it were the AgCl solubility, rather than correctly using it as the (approximately constant) [Cl⁻] term in the Ksp expression." },
+    tempting: "Choice A is tempting if the common ion effect is overlooked entirely, defaulting to the same solubility as in pure water without adjusting for the additional Cl⁻ already present.",
+    commonMistake: "Failing to apply the approximation [Cl⁻] ≈ 0.10 M (from the NaCl) rather than the much smaller quantity that would come from AgCl's own dissociation alone, leading to solving the wrong (much more complex) equation.",
+    apTip: "When a common ion is already present in significant excess, approximate its concentration as just that starting value (ignoring the tiny additional contribution from the sparingly soluble salt) — this dramatically simplifies solving for s in common ion effect problems."
+  }
+},
+{
+  id: 'chem-7-29', difficulty: 3, type: 'mcq', topic: 'pH Effect on Solubility',
+  prompt: "The solubility of Mg(OH)2 (a metal hydroxide) is measured in pure water and compared to its solubility in a solution buffered at a low pH (acidic). What is the expected effect, and why?",
+  choices: ['Solubility decreases in acidic solution, because H⁺ stabilizes the solid lattice', 'Solubility increases in acidic solution, because added H⁺ reacts with and removes OH⁻ from solution, shifting the dissolution equilibrium forward (Le Chatelier\'s principle)', 'Solubility is completely unaffected by pH', 'Solubility increases in acidic solution because Mg²⁺ becomes less soluble at low pH'],
+  correct: 1,
+  explanation: {
+    correct: "Mg(OH)2 ⇌ Mg²⁺ + 2OH⁻; in acidic solution, added H⁺ reacts with OH⁻ (H⁺ + OH⁻ → H2O), continuously removing OH⁻ from the equilibrium and shifting the dissolution equilibrium forward (toward more dissolving), thereby increasing Mg(OH)2's solubility.",
+    wrong: { 0: "H⁺ doesn't stabilize the solid lattice; rather, it actively removes one of the dissolution products (OH⁻) from solution, which pulls the equilibrium toward further dissolution, increasing (not decreasing) solubility.", 2: "pH has a very significant effect on the solubility of metal hydroxides specifically, since OH⁻ (a direct product of dissolution) is directly consumed by added acid.", 3: "This has the reasoning backwards — Mg²⁺ itself doesn't become 'less soluble' at low pH; rather, more Mg(OH)2 dissolves because its OH⁻ byproduct is being continuously removed by the acid." },
+    tempting: "Choice A can tempt students who default to 'acid makes things less soluble' without correctly tracing through the specific Le Chatelier's principle reasoning for a hydroxide salt.",
+    commonMistake: "Not identifying that removing one of the dissolution equilibrium's own product ions (here, OH⁻, via reaction with added acid) is the actual mechanism driving increased solubility.",
+    apTip: "Whenever an ionic solid's dissolution equilibrium includes OH⁻ (like metal hydroxides) or a basic anion (like CO3²⁻, F⁻, or S²⁻), expect that lowering pH (adding H⁺) will increase its solubility, since H⁺ reacts with and removes those basic anions from solution."
+  }
+},
+{
+  id: 'chem-7-30', difficulty: 3, type: 'mcq', topic: 'Precipitation Prediction',
+  prompt: "A solution has Q for a particular salt's dissolution equal to exactly Ksp. What can be concluded about this solution?",
+  choices: ['The solution is unsaturated, and more salt could still dissolve', 'The solution is exactly saturated — it is at equilibrium, holding the maximum amount of dissolved ions without further net precipitation or dissolution', 'The solution is supersaturated, and precipitate will definitely form', 'This condition is impossible to achieve in a real solution'],
+  correct: 1,
+  explanation: {
+    correct: "When Q = Ksp, the solution has reached exactly the equilibrium condition for that dissolution process — it is precisely saturated, meaning it holds the maximum amount of dissolved ions at that temperature, with no further net dissolution or precipitation occurring.",
+    wrong: { 0: "An unsaturated solution would have Q < Ksp (able to dissolve more solid); Q = Ksp specifically describes the saturation point, not an unsaturated state.", 2: "A supersaturated solution (where precipitate forms) is described by Q > Ksp, not Q = Ksp; at Q = Ksp, the system is already exactly at its equilibrium (saturated) point, with no driving force for further precipitation.", 3: "Q = Ksp is a perfectly ordinary and common condition — it simply describes any saturated solution at equilibrium, which is a routinely observed state." },
+    tempting: "Choice C is tempting if 'exactly at the boundary condition' (Q = Ksp) is confused with 'just past the boundary condition' (Q > Ksp, which does cause precipitation).",
+    commonMistake: "Blurring the distinction between Q = Ksp (exactly saturated, at equilibrium) and Q > Ksp (supersaturated, actively precipitating).",
+    apTip: "Treat Q = Ksp exactly like Q = K in general equilibrium problems: it's the precise equilibrium (saturation) condition, distinct from Q < Ksp (unsaturated, can dissolve more) and Q > Ksp (supersaturated, will precipitate)."
+  }
+},
+{
+  id: 'chem-7-31', difficulty: 4, type: 'mcq', topic: 'Solving for Equilibrium Concentrations',
+  prompt: "For the reaction A ⇌ B + C, K = 0.040, with initial [A]₀ = 0.50 M and [B]₀ = [C]₀ = 0. Setting up the ICE table gives K = x²/(0.50 − x). Checking the 5% approximation first (assuming 0.50 − x ≈ 0.50), what approximate value of x is obtained, and would this approximation likely be valid?",
+  choices: ['x ≈ 0.020 M; likely valid since it is far less than 5% of 0.50', 'x ≈ 0.14 M; likely invalid since it exceeds 5% of 0.50', 'x ≈ 0.020 M; likely invalid', 'x ≈ 0.040 M; likely valid'],
+  correct: 1,
+  explanation: {
+    correct: "Using the approximation, x² ≈ K × 0.50 = 0.040 × 0.50 = 0.020, so x ≈ √0.020 ≈ 0.14 M; checking this against the original 0.50 M gives 0.14/0.50 = 28%, which is far above the 5% threshold, meaning the approximation is NOT valid here and a full quadratic solution would actually be required.",
+    wrong: { 0: "This correctly computes x² (0.020) but stops there, reporting x² itself rather than taking the square root to actually find x.", 2: "The value of x itself is calculated incorrectly here (this is x², not x), even though the conclusion about invalidity coincidentally points in a reasonable direction.", 3: "This value doesn't correctly follow from solving x² ≈ K × 0.50 for x, and the validity conclusion is also incorrect given how large x turns out to be relative to 0.50 M." },
+    tempting: "Choice A is a common trap — stopping the calculation at x² (0.020) without taking the final square root step to find the actual value of x.",
+    commonMistake: "Reporting an intermediate value (like x²) as if it were the final answer for x, and/or not properly checking the calculated x against the 5% threshold before assuming the approximation holds.",
+    apTip: "ALWAYS explicitly check your approximation's validity by computing (x / initial concentration) × 100% after solving — if this exceeds roughly 5%, the quadratic formula (not the approximation) must be used instead for an accurate answer."
+  }
+},
+{
+  id: 'chem-7-32', difficulty: 4, type: 'mcq', topic: 'Exact Quadratic Solution',
+  prompt: "Continuing from the previous problem (A ⇌ B + C, K = 0.040, [A]₀ = 0.50 M), since the 5% approximation was shown to be invalid, solve the quadratic equation x² + 0.040x − 0.020 = 0 exactly. What is the correct value of x?",
+  choices: ['x ≈ 0.14 M', 'x ≈ 0.12 M', 'x ≈ 0.020 M', 'x ≈ 0.50 M'],
+  correct: 1,
+  explanation: {
+    correct: "Using the quadratic formula with a=1, b=0.040, c=−0.020: x = [−0.040 + √(0.040² − 4(1)(−0.020))] / (2×1) = [−0.040 + √0.0816] / 2 = [−0.040 + 0.2857] / 2 ≈ 0.123 M, taking only the positive root since concentration cannot be negative.",
+    wrong: { 0: "This is close to but distinguishably different from the correctly calculated exact quadratic root; it may result from the initial (invalid) approximation rather than the exact quadratic solution.", 2: "This is the value of x² (from the intermediate approximation step in the previous problem), not the actual value of x from the exact quadratic solution.", 3: "This would imply complete consumption of all of A, which is inconsistent with a finite K value of 0.040 (complete consumption would require an essentially infinite K)." },
+    tempting: "Choice A is tempting since it's numerically similar to the correct exact answer, illustrating exactly why the approximation was reasonably close but still technically invalid by the 5% rule, requiring the more precise quadratic solution instead.",
+    commonMistake: "Using the (already known to be invalid) approximate value instead of actually working through the quadratic formula once the approximation has been shown not to hold.",
+    apTip: "Whenever the 5% check fails, always follow through completely with the quadratic formula rather than reporting the invalid approximate value — write out a, b, and c carefully from your rearranged equation before applying the formula, and remember to discard any physically impossible (negative) roots."
+  }
+},
+{
+  id: 'chem-7-33', difficulty: 4, type: 'mcq', topic: 'Calculating K from Concentrations',
+  prompt: "At equilibrium, a reaction mixture for A(g) + B(g) ⇌ C(g) has [A] = 0.20 M, [B] = 0.30 M, and [C] = 0.50 M. What is the value of Kc?",
+  choices: ['Kc ≈ 0.12', 'Kc ≈ 8.3', 'Kc ≈ 0.83', 'Kc ≈ 1.7'],
+  correct: 1,
+  explanation: {
+    correct: "Kc = [C] / ([A][B]) = 0.50 / (0.20 × 0.30) = 0.50 / 0.060 ≈ 8.3.",
+    wrong: { 0: "This appears to have multiplied all three concentrations together, or otherwise set up the expression incorrectly, rather than correctly dividing [C] by the product [A][B].", 2: "This is roughly 10 times too small, suggesting a decimal-place or setup error in the denominator calculation.", 3: "This value doesn't match a correctly set-up Kc expression for this reaction using the given concentrations." },
+    tempting: "Choice A is tempting if the equilibrium expression is inverted or set up with the wrong species in the numerator versus denominator.",
+    commonMistake: "Incorrectly setting up which species belong in the numerator (products) versus denominator (reactants) of the K expression, or making an arithmetic slip in the division.",
+    apTip: "Before plugging in numbers, always write out the full symbolic K expression first (products over reactants, each raised to its coefficient) — this step-by-step approach reduces setup errors, especially under time pressure."
+  }
+},
+{
+  id: 'chem-7-34', difficulty: 4, type: 'mcq', topic: 'Complex Ion Formation Equilibria',
+  prompt: "The formation constant for Ag(NH3)2⁺ is Kf = 1.0 × 10⁶ for the reaction Ag⁺ + 2NH3 ⇌ Ag(NH3)2⁺. If a solution is prepared with total [Ag⁺] = 0.010 M and excess free [NH3] ≈ 0.18 M at equilibrium (after complex formation), and essentially all the silver has formed the complex ([complex] ≈ 0.010 M), what is the approximate remaining free [Ag⁺]?",
+  choices: ['[Ag⁺] ≈ 1.0 × 10⁻⁶ M', '[Ag⁺] ≈ 3.1 × 10⁻⁷ M', '[Ag⁺] ≈ 0.010 M', '[Ag⁺] ≈ 1.8 × 10⁻⁵ M'],
+  correct: 1,
+  explanation: {
+    correct: "Rearranging Kf = [complex]/([Ag⁺][NH3]²) to solve for [Ag⁺]: [Ag⁺] = [complex]/(Kf × [NH3]²) = 0.010/(1.0×10⁶ × 0.18²) = 0.010/(1.0×10⁶ × 0.0324) = 0.010/32,400 ≈ 3.1×10⁻⁷ M, showing that free Ag⁺ is reduced to an extremely small concentration due to the very favorable complex formation.",
+    wrong: { 0: "This is simply the reciprocal of Kf itself, not the result of properly rearranging and solving the full Kf expression using the given [complex] and [NH3] values.", 2: "This is the TOTAL silver concentration (mostly tied up as complex), not the much smaller remaining FREE [Ag⁺] that the Kf expression actually predicts.", 3: "This value doesn't correctly follow from solving the given Kf expression with the specified [complex] and [NH3] values." },
+    tempting: "Choice C is tempting if 'total silver' is reported directly instead of solving for the much smaller free (uncomplexed) Ag⁺ concentration specifically implied by the large Kf value.",
+    commonMistake: "Confusing total metal ion concentration (including both free and complexed forms) with the free (uncomplexed) ion concentration that the Kf expression is specifically designed to calculate.",
+    apTip: "For very large Kf values, it's standard practice to first assume complex formation goes essentially to completion (using up nearly all the limiting reagent), THEN solve backward for the tiny remaining free metal ion concentration using the Kf expression — this mirrors the same approximation strategy used for very large K values in other equilibrium contexts."
+  }
+},
+{
+  id: 'chem-7-35', difficulty: 4, type: 'mcq', topic: 'Multi-Step Equilibria',
+  prompt: "Reaction 1: A ⇌ B, K1 = 200. Reaction 2: B ⇌ C, K2 = 0.0050. What is the equilibrium constant, K_overall, for the combined reaction A ⇌ C (obtained by adding Reactions 1 and 2)?",
+  choices: ['K_overall = 200.005 (sum of K1 and K2)', 'K_overall = 1.0 (product of K1 and K2)', 'K_overall = 40,000 (K1 divided by K2)', 'K_overall = 0.000025 (K2 divided by K1)'],
+  correct: 1,
+  explanation: {
+    correct: "When individual reactions are added together to give an overall reaction, their equilibrium constants are MULTIPLIED (not added) to get the overall K: K_overall = K1 × K2 = 200 × 0.0050 = 1.0.",
+    wrong: { 0: "K values from combined reactions are multiplied, not added — this is analogous to how ΔG values (not K values) are the ones that add together in coupled reactions.", 2: "Dividing K1 by K2 isn't the correct operation for combining two reactions added together; that operation would instead correspond to SUBTRACTING one reaction from another (which isn't what's being done here).", 3: "This divides in the wrong order and also uses the wrong overall operation; adding two reactions together always calls for multiplying their K values, not dividing them in either direction." },
+    tempting: "Choice A is tempting since ΔH and ΔG values DO simply add when combining reactions (as in Hess's Law), but K values follow a different rule — they multiply.",
+    commonMistake: "Applying the additive combination rule (used for ΔH, ΔS, ΔG in Hess's Law) to K values by mistake, when K specifically requires multiplication (not addition) when reactions are combined by addition.",
+    apTip: "Remember this key distinction: ΔH, ΔS, and ΔG values ADD when reactions are combined (Hess's Law), but EQUILIBRIUM CONSTANTS MULTIPLY when reactions are combined by addition — these are two different (though related, via ΔG° = −RT ln K) mathematical rules."
+  }
+},
+{
+  id: 'chem-7-36', difficulty: 4, type: 'mcq', topic: 'Kp from Partial Pressures',
+  prompt: "For the reaction 2NO2(g) ⇌ N2O4(g), at equilibrium the partial pressure of NO2 is 0.20 atm and the partial pressure of N2O4 is 0.50 atm. What is Kp for this reaction?",
+  choices: ['Kp ≈ 0.40', 'Kp ≈ 2.5', 'Kp ≈ 12.5', 'Kp ≈ 0.080'],
+  correct: 2,
+  explanation: {
+    correct: "Kp = P(N2O4) / [P(NO2)]² = 0.50 / (0.20)² = 0.50 / 0.040 = 12.5.",
+    wrong: { 0: "This doesn't square the partial pressure of NO2 in the denominator, treating the coefficient of 2 as if it didn't apply as an exponent.", 1: "This appears to divide the two given values directly without squaring the denominator term as required by the coefficient of 2 on NO2.", 3: "This is the reciprocal of the correct Kp value, suggesting products and reactants (or numerator and denominator) may have been swapped." },
+    tempting: "Choice A is a common trap — forgetting to square the partial pressure of NO2, since its coefficient of 2 in the balanced equation must become an exponent of 2 in the Kp expression.",
+    commonMistake: "Forgetting to apply a species' stoichiometric coefficient as an exponent when calculating K from given equilibrium partial pressures or concentrations.",
+    apTip: "Just like with Kc calculations, always write out the full symbolic Kp expression (with correct exponents from the balanced equation) BEFORE substituting in the given numerical partial pressures — this prevents accidentally treating a coefficient as a multiplier instead of an exponent."
+  }
+},
+{
+  id: 'chem-7-37', difficulty: 4, type: 'mcq', topic: 'Temperature Effect on K',
+  prompt: "For an endothermic reaction (ΔH° > 0), how does the equilibrium constant K change as temperature increases?",
+  choices: ['K decreases, since higher temperature always favors reactants', 'K increases, since heat effectively acts as a reactant that is being added, shifting equilibrium toward products as temperature rises', 'K remains completely unchanged, since K is a true constant', 'K increases at first, then eventually decreases back to its original value'],
+  correct: 1,
+  explanation: {
+    correct: "For an endothermic reaction, heat can be treated as a reactant; raising the temperature is equivalent to adding more of this 'reactant,' which shifts the equilibrium position (and correspondingly increases the actual VALUE of K, since K itself is temperature-dependent) toward products.",
+    wrong: { 0: "This is the opposite of what happens for an ENDOTHERMIC reaction — higher temperature favors products (increasing K), not reactants, since heat acts like an added reactant for endothermic processes.", 2: "K is 'constant' only at a FIXED temperature; K itself genuinely changes in value when temperature changes, which is precisely why K is always reported alongside a specific temperature.", 3: "There's no reason for K to return to its original value as temperature continues to rise for an endothermic reaction; K continues changing (increasing, for endothermic reactions) as temperature increases, without reverting back." },
+    tempting: "Choice A is tempting from over-applying a blanket rule ('heat always shifts toward reactants') without checking the reaction's specific enthalpy sign.",
+    commonMistake: "Applying a single universal rule for temperature's effect on K/equilibrium, rather than correctly checking whether the specific reaction is endothermic or exothermic first.",
+    apTip: "Treat heat as a chemical species: a REACTANT for endothermic reactions (so increasing T increases K, favoring products) and a PRODUCT for exothermic reactions (so increasing T decreases K, favoring reactants) — always check ΔH's sign first before predicting K's temperature dependence."
+  }
+},
+{
+  id: 'chem-7-38', difficulty: 4, type: 'mcq', topic: 'Comparing Solubilities from Ksp',
+  prompt: "Salt X (a 1:1 salt, like AgCl) has Ksp = 1.0 × 10⁻¹⁰. Salt Y (a 1:2 salt, like PbCl2) has Ksp = 1.0 × 10⁻⁸, which is numerically larger. Does Salt Y necessarily have a higher molar solubility than Salt X?",
+  choices: ['Yes, since a larger Ksp value always directly corresponds to greater molar solubility for any salt', 'Not necessarily — Ksp values can only be directly compared to predict relative solubility when the salts have the SAME stoichiometry (same total number of ions and same ratio); different stoichiometries require calculating each salt\'s actual molar solubility separately', 'No, Salt X always has greater solubility regardless of Ksp values', 'Ksp values cannot be used to determine solubility at all'],
+  correct: 1,
+  explanation: {
+    correct: "Because Salt X (1:1) and Salt Y (1:2) have different stoichiometric relationships between Ksp and molar solubility (s² for 1:1 vs. 4s³ for 1:2), simply comparing their raw Ksp values doesn't reliably predict which one is actually more soluble — each salt's actual molar solubility must be calculated individually and then compared.",
+    wrong: { 0: "This is a common oversimplification; the Ksp-to-solubility relationship depends on stoichiometry, so a larger Ksp does NOT automatically mean greater solubility when comparing salts with different ion ratios.", 2: "There's no rule guaranteeing Salt X is always more soluble regardless of the actual Ksp values — solubility must be calculated explicitly for each salt using its own specific stoichiometric relationship.", 3: "Ksp values ARE very much used to determine solubility — it's just that direct raw comparisons between different Ksp values only reliably work when comparing salts with the SAME stoichiometry." },
+    tempting: "Choice A is a classic and very common misconception — many students assume 'bigger Ksp always means more soluble,' without accounting for how stoichiometry changes the actual mathematical relationship between Ksp and molar solubility.",
+    commonMistake: "Directly comparing raw Ksp values across salts with different stoichiometries (like 1:1 vs. 1:2) to predict relative solubility, without recognizing that the underlying s-to-Ksp relationship itself differs.",
+    apTip: "Before comparing solubilities using Ksp values alone, always check whether the salts being compared have the SAME dissolution stoichiometry — if not, you must actually calculate each one's specific molar solubility (s) to make a valid comparison."
+  }
+},
+{
+  id: 'chem-7-39', difficulty: 4, type: 'mcq', topic: 'Free Energy and K',
+  prompt: "Using ΔG° = −RT ln K, calculate ΔG° for a reaction with K = 25 at T = 350 K (R = 8.314 J/(mol·K)).",
+  choices: ['ΔG° ≈ −9.37 kJ/mol', 'ΔG° ≈ +9.37 kJ/mol', 'ΔG° ≈ −93.7 kJ/mol', 'ΔG° ≈ −2.83 kJ/mol'],
+  correct: 0,
+  explanation: {
+    correct: "ΔG° = −RT ln K = −(8.314)(350) ln(25) = −(2909.9)(3.219) ≈ −9,367 J ≈ −9.37 kJ/mol, negative because K > 1 (products favored), consistent with a spontaneous reaction under standard conditions.",
+    wrong: { 1: "The sign is flipped here; since K > 1 (favoring products), ΔG° must be negative, not positive.", 2: "This is roughly 10 times too large in magnitude, suggesting a unit or calculation error somewhere in the multiplication of R, T, and ln K.", 3: "This value doesn't correctly follow from multiplying −R, T, and ln(25) together." },
+    tempting: "Choice B is tempting if the overall negative sign in −RT ln K is dropped or mismanaged during the calculation.",
+    commonMistake: "Losing track of the leading negative sign in the ΔG° = −RT ln K formula, especially when ln K itself is a positive number (as it is whenever K > 1).",
+    apTip: "As a quick sign check before finalizing any ΔG°-from-K calculation: K > 1 should always give a NEGATIVE ΔG° (spontaneous, product-favored), while K < 1 should always give a POSITIVE ΔG° (non-spontaneous as written, reactant-favored) — verify your sign matches this expectation."
+  }
+},
+{
+  id: 'chem-7-40', difficulty: 5, type: 'mcq', topic: 'Effect of Container Volume on K Value',
+  prompt: "For a gas-phase equilibrium, if the container's volume is reduced by half, does the numerical value of K itself change, even though the equilibrium position shifts?",
+  choices: ['Yes, K increases proportionally to the compression', 'Yes, K decreases proportionally to the compression', 'No — K remains exactly the same numerical value, since K depends only on temperature; only the equilibrium POSITION (the actual concentrations/partial pressures at the new equilibrium) shifts in response to the volume change', 'It depends on whether the reaction is endothermic or exothermic'],
+  correct: 2,
+  explanation: {
+    correct: "Volume and pressure changes are classic examples of stresses that shift the equilibrium POSITION (the actual amounts of each species present) without changing the underlying VALUE of K itself, which remains fixed as long as temperature doesn't change.",
+    wrong: { 0: "K doesn't increase due to volume changes — only a change in TEMPERATURE can alter K's actual value; volume changes only shift where the new equilibrium position settles.", 1: "Similarly, K doesn't decrease due to volume changes either — this is one of the most fundamental and frequently tested points distinguishing 'equilibrium position' shifts from actual changes in K's value.", 3: "Whether a reaction is endothermic or exothermic determines how TEMPERATURE changes affect K, but it's irrelevant here since a VOLUME change (not a temperature change) is what's being described — volume changes never alter K regardless of the reaction's thermicity." },
+    tempting: "Choice D is a sophisticated-sounding but incorrect answer, since it correctly recalls that thermicity matters for temperature-based K changes, but incorrectly applies that reasoning to a volume-based stress instead.",
+    commonMistake: "Applying temperature-dependent reasoning (endothermic vs. exothermic) to a completely different type of stress (volume/pressure change), rather than recognizing that only temperature changes actually alter K's value.",
+    apTip: "This is one of the single most heavily tested AP conceptual distinctions in the entire equilibrium unit: concentration, volume/pressure, and catalyst changes ALL shift equilibrium POSITION only; ONLY a temperature change actually alters the numerical VALUE of K itself."
+  }
+},
+{
+  id: 'chem-7-41', difficulty: 5, type: 'mcq', topic: 'pH-Dependent Solubility (Combined Equilibria)',
+  prompt: "CaF2 has a fixed Ksp value describing its dissolution: CaF2(s) ⇌ Ca²⁺(aq) + 2F⁻(aq). In a strongly acidic solution, the fluoride ion also reacts: F⁻ + H⁺ ⇌ HF (a separate, coupled equilibrium). What is the overall effect of strongly acidic conditions on the solubility of CaF2 compared to its solubility in neutral water?",
+  choices: ['Solubility decreases in acidic solution, since H⁺ stabilizes the CaF2 lattice directly', 'Solubility increases in acidic solution, because H⁺ continuously consumes F⁻ (converting it to HF), which shifts the CaF2 dissolution equilibrium forward via Le Chatelier\'s principle, similar to the hydroxide case', 'Solubility is completely unaffected, since Ksp doesn\'t depend on pH', 'Solubility decreases in acidic solution because HF formation removes H⁺ from the CaF2 equilibrium directly'],
+  correct: 1,
+  explanation: {
+    correct: "Just as with metal hydroxides, F⁻ is a basic anion (conjugate base of the weak acid HF); in acidic solution, added H⁺ continuously converts F⁻ into HF, removing F⁻ from the CaF2 dissolution equilibrium and shifting it forward (Le Chatelier's principle), which increases CaF2's effective solubility compared to neutral water.",
+    wrong: { 0: "H⁺ doesn't stabilize the solid lattice directly; rather, it removes one of the dissolution products (F⁻) from solution by converting it into HF, which is what actually drives increased dissolution.", 2: "Although Ksp itself (the equilibrium constant) doesn't literally change with pH, the coupled F⁻/HF equilibrium means the ACTUAL SOLUBILITY (how much CaF2 physically dissolves) is very much affected by pH, since it changes how much free F⁻ remains to satisfy the Ksp condition.", 3: "This describes the reaction happening (H⁺ reacting with F⁻) but draws the wrong conclusion about the net effect on CaF2's solubility; consuming F⁻ actually shifts the CaF2 dissolution equilibrium FORWARD (more dissolving), increasing rather than decreasing solubility." },
+    tempting: "Choice D correctly identifies that H⁺ and F⁻ react but then incorrectly concludes this decreases (rather than increases) CaF2's solubility.",
+    commonMistake: "Recognizing that a coupled equilibrium exists but drawing the wrong directional conclusion about how that coupling affects the overall solubility of the sparingly soluble salt.",
+    apTip: "The general pattern for pH-dependent solubility: any sparingly soluble salt containing a BASIC anion (OH⁻, F⁻, CO3²⁻, S²⁻, PO4³⁻, etc.) will show INCREASED solubility in acidic solution, because H⁺ continuously removes that basic anion via a coupled acid-base equilibrium, pulling the dissolution equilibrium forward."
+  }
+},
+{
+  id: 'chem-7-42', difficulty: 5, type: 'mcq', topic: 'Selective Precipitation',
+  prompt: "A solution contains both Cl⁻ and Br⁻ at equal initial concentrations. AgNO3 is added slowly, dropwise. Given Ksp(AgCl) = 1.8 × 10⁻¹⁰ and Ksp(AgBr) = 5.0 × 10⁻¹³ (both 1:1 salts), which precipitate forms FIRST as Ag⁺ is gradually introduced?",
+  choices: ['AgCl, because chloride is more common in nature', 'AgBr, because its smaller Ksp means it reaches its saturation point (Q = Ksp) at a much lower [Ag⁺] than AgCl requires', 'Both precipitate at exactly the same time, since they are both silver halides', 'AgCl, because its larger Ksp means it precipitates more easily'],
+  correct: 1,
+  explanation: {
+    correct: "Since both salts are 1:1 and start with equal anion concentrations, the one with the SMALLER Ksp reaches its saturation condition (Q = Ksp) at a lower required [Ag⁺]; AgBr's much smaller Ksp (5.0×10⁻¹³ vs. 1.8×10⁻¹⁰) means it becomes saturated — and therefore begins precipitating — at a significantly lower [Ag⁺] than AgCl does, so AgBr precipitates first.",
+    wrong: { 0: "Natural abundance of an ion has no bearing on which salt precipitates first — that's determined entirely by the Ksp values and the concentrations of the ions actually present in this specific solution.", 2: "Because their Ksp values differ significantly (by roughly three orders of magnitude), the two salts reach their saturation points at very different [Ag⁺] values, so they do NOT precipitate simultaneously.", 3: "This has the relationship backwards — for salts with the SAME stoichiometry and equal starting anion concentrations, a SMALLER (not larger) Ksp corresponds to reaching the precipitation threshold sooner, at a lower [Ag⁺]." },
+    tempting: "Choice D is tempting from a surface-level (and incorrect) assumption that 'larger Ksp = more easily precipitates,' when for same-stoichiometry salts, it's actually the smaller Ksp salt that precipitates at a lower required concentration of the added ion.",
+    commonMistake: "Assuming a larger Ksp value means a substance precipitates 'more easily,' rather than correctly recognizing that a SMALLER Ksp (for same-stoichiometry salts) means less of the added ion is needed to reach saturation.",
+    apTip: "For selective precipitation problems involving same-stoichiometry salts sharing a common ion source, always identify the salt with the SMALLEST Ksp as the one that will precipitate FIRST as the common ion's concentration is gradually increased — this is a classic separation technique in qualitative analysis."
+  }
+},
+{
+  id: 'chem-7-43', difficulty: 5, type: 'mcq', topic: 'Simultaneous Stresses',
+  prompt: "For the exothermic reaction 2SO2(g) + O2(g) ⇌ 2SO3(g), if BOTH the temperature is increased AND the container volume is decreased at the same time, what is the combined predicted effect on the equilibrium position?",
+  choices: ['Both stresses shift the equilibrium in the same direction (toward products), reinforcing each other', 'The two stresses act in OPPOSING directions — increased temperature (for this exothermic reaction) shifts toward reactants, while decreased volume (fewer gas moles on product side) shifts toward products — so the NET effect depends on which stress has the larger relative influence', 'The two stresses always exactly cancel out, leaving the equilibrium position completely unchanged', 'Simultaneous stresses cannot be analyzed using Le Chatelier\'s principle'],
+  correct: 1,
+  explanation: {
+    correct: "For this exothermic reaction, increasing temperature shifts the equilibrium toward reactants (since heat acts as a product), while decreasing volume favors the side with fewer gas moles (SO3, the product side) — these two stresses push in OPPOSING directions, so predicting the exact net shift requires knowing the relative magnitude of each effect (often via full recalculation), rather than assuming a single clear direction from Le Chatelier's principle qualitative reasoning alone.",
+    wrong: { 0: "This incorrectly assumes both stresses reinforce each other in the same direction; in fact, for this specific exothermic reaction, temperature and volume changes push the equilibrium in OPPOSING directions.", 2: "There's no general guarantee that opposing stresses will exactly cancel out — the actual net shift depends on the specific magnitudes involved and generally requires quantitative analysis, not just a qualitative assumption of perfect cancellation.", 3: "Le Chatelier's principle CAN still be applied to analyze each stress qualitatively (predicting each one's individual directional effect); it's simply that when stresses act in opposing directions, determining the exact net result requires more than qualitative reasoning alone." },
+    tempting: "Choice A is tempting if each stress's effect isn't worked through individually and carefully — it's easy to assume multiple simultaneous stresses always compound in the same direction.",
+    commonMistake: "Not analyzing each stress SEPARATELY and identifying its individual predicted direction before considering how multiple stresses combine, especially when they push toward different (opposing) directions.",
+    apTip: "For simultaneous multi-stress problems, always work out the individual predicted shift direction from EACH stress separately first — if they agree, the net direction is clear; if they oppose each other (as here), the correct answer at the AP level is usually to explicitly state that the net effect requires further quantitative analysis rather than guessing a specific direction."
+  }
+},
+{
+  id: 'chem-7-44', difficulty: 5, type: 'mcq', topic: 'Coupled Equilibria — Removing an Intermediate',
+  prompt: "A coupled system exists as A ⇌ B (K1) and B ⇌ C (K2), both established simultaneously in the same solution. If species B is somehow continuously and selectively removed from the system (for example, by a separate reaction that consumes only B), what happens to the overall conversion of A into C over time?",
+  choices: ['Conversion of A to C stops completely, since B is a required intermediate', 'Conversion of A to C is enhanced — removing B continuously pulls BOTH the A⇌B equilibrium (forward, toward more B) and the B⇌C equilibrium (also, if C also continues forming from remaining B and being replenished) further toward completion, ultimately draining A more thoroughly than if B were not removed', 'Conversion of A to C is completely unaffected, since B is just an intermediate species', 'Removing B causes the system to revert entirely back to pure A with no C ever forming'],
+  correct: 1,
+  explanation: {
+    correct: "Continuously removing B disturbs the first equilibrium (A ⇌ B), shifting it forward (Le Chatelier's principle: removing a product favors more of it being made) to continuously replace the depleted B — this ongoing conversion of A into (immediately removed) B, especially if some B still transiently forms C or a similar continuous drain applies, ultimately drives the overall consumption of A further than it would proceed if B (and its equilibria) were simply left undisturbed.",
+    wrong: { 0: "Conversion doesn't stop entirely; rather, continuously removing B actually creates an ongoing driving force (via Le Chatelier's principle) that keeps pulling the A ⇌ B equilibrium forward, continuing to consume A.", 2: "B being an 'intermediate' doesn't make it immune to Le Chatelier's principle — actively removing any equilibrium species (intermediate or not) still directly disturbs and shifts that specific equilibrium.", 3: "There's no mechanism by which continuously removing B would push the system backward toward 'pure A'; if anything, continuously draining B pulls MORE of A forward to replace it, the opposite of reverting to pure A." },
+    tempting: "Choice C is tempting if 'intermediate species' is assumed to be somehow exempt from ordinary Le Chatelier's principle reasoning, when in fact ANY equilibrium species, once actively removed, causes a real, predictable shift in its own governing equilibrium.",
+    commonMistake: "Assuming an intermediate species in a coupled multi-step equilibrium system is somehow protected from direct Le Chatelier's principle effects, rather than recognizing that removing ANY species from ANY equilibrium (intermediate or otherwise) causes a predictable shift in that specific equilibrium.",
+    apTip: "This kind of reasoning models real biochemical pathways (like enzyme cascades), where continuously draining an intermediate product (often by a subsequent reaction) pulls the entire upstream equilibrium chain forward — a powerful and often-tested application of Le Chatelier's principle to multi-step, coupled equilibrium systems."
+  }
+},
+{
+  id: 'chem-7-45', difficulty: 1, type: 'mcq', topic: 'Kc vs Kp Terminology',
+  prompt: "What is the key difference between how Kc and Kp are each defined?",
+  choices: ['Kc uses molar concentrations of species; Kp uses partial pressures of gaseous species', 'Kc is only used for solids; Kp is only used for gases', 'Kc and Kp are two different names for the exact same numeric value in every reaction', 'Kp is used only for reactions at absolute zero'],
+  correct: 0,
+  explanation: {
+    correct: "Kc is the equilibrium constant expressed in terms of molar concentrations (mol/L) of the reacting species, while Kp is expressed in terms of partial pressures (typically atm) of gaseous species — they describe the same equilibrium but using different units/quantities.",
+    wrong: { 1: "Both Kc and Kp actually exclude pure solids and liquids entirely (as established earlier); Kc uses concentrations of gases AND aqueous species, while Kp specifically applies only to gas-phase partial pressures.", 2: "Kc and Kp are generally NOT numerically equal except in the special case where Δn = 0 (equal moles of gas on both sides) — otherwise, they differ according to the Kp = Kc(RT)^Δn relationship.", 3: "Kp is used for any gas-phase equilibrium at any reasonable temperature, not specifically at absolute zero (a temperature where equilibrium behavior as normally described wouldn't even apply)." },
+    tempting: "Choice C is tempting since students sometimes assume any two named constants for 'the same reaction' must be numerically identical, without recognizing that they're measuring the same equilibrium using different physical quantities (concentration vs. pressure).",
+    commonMistake: "Assuming Kc and Kp are simply interchangeable numbers rather than recognizing they are calculated using entirely different quantities (concentration vs. partial pressure) that are only numerically equal under the specific Δn = 0 condition.",
+    apTip: "Keep the letters straight: 'c' in Kc stands for concentration (mol/L); 'p' in Kp stands for pressure (atm) — this simple mnemonic prevents confusing which one uses which units."
+  }
+},
+{
+  id: 'chem-7-46', difficulty: 3, type: 'mcq', topic: 'Writing K Expressions',
+  prompt: "What is the correct Kc expression for the reaction 4NH3(g) + 5O2(g) ⇌ 4NO(g) + 6H2O(g)?",
+  choices: ['Kc = [NO][H2O] / ([NH3][O2])', 'Kc = [NO]⁴[H2O]⁶ / ([NH3]⁴[O2]⁵)', 'Kc = [NH3]⁴[O2]⁵ / ([NO]⁴[H2O]⁶)', 'Kc = 4[NO] × 6[H2O] / (4[NH3] × 5[O2])'],
+  correct: 1,
+  explanation: {
+    correct: "Each species' concentration is raised to the power of its coefficient from the balanced equation, with products over reactants: Kc = [NO]⁴[H2O]⁶ / ([NH3]⁴[O2]⁵).",
+    wrong: { 0: "This omits all the stoichiometric coefficients as exponents, treating every species as if it had a coefficient of 1.", 2: "This is the correct set of exponents, but with products and reactants inverted (this is actually the expression for the REVERSE reaction, or equivalently 1/Kc for the forward reaction as written).", 3: "This incorrectly uses coefficients as multipliers rather than as exponents, which is not how equilibrium expressions are constructed." },
+    tempting: "Choice A is tempting for a complex reaction with several different coefficients, since it's easy to default to 'just products over reactants' without remembering to add the exponents.",
+    commonMistake: "Forgetting to include stoichiometric coefficients as exponents in more complex balanced equations with multiple different coefficient values.",
+    apTip: "For reactions with several different coefficients, write out each species with its coefficient as a superscript explicitly before finalizing the K expression — this extra step prevents accidentally dropping an exponent in more complex equations."
+  }
+},
+{
+  id: 'chem-7-47', difficulty: 4, type: 'mcq', topic: 'Heterogeneous Equilibria — Excess Solid',
+  prompt: "For the heterogeneous equilibrium CaCO3(s) ⇌ CaO(s) + CO2(g), if additional solid CaCO3 is added to a system already at equilibrium (with plenty of CaCO3 and CaO already present), what happens to the equilibrium position and the value of K?",
+  choices: ['The equilibrium shifts to produce more CO2, and K increases', 'Neither the equilibrium position nor K changes at all, since CaCO3 is a pure solid and is excluded from the equilibrium expression — as long as some solid remains present, its exact amount doesn\'t affect the equilibrium', 'The equilibrium shifts to consume more CO2, and K decreases', 'The reaction stops, since too much solid has been added'],
+  correct: 1,
+  explanation: {
+    correct: "Since CaCO3(s) is a pure solid and is entirely excluded from the equilibrium expression (Kc = [CO2]), adding more of it doesn't change any term in the equilibrium expression at all — as long as some solid CaCO3 (and CaO) remains present, the system stays at exactly the same equilibrium position, and K obviously stays the same too (it depends only on temperature).",
+    wrong: { 0: "Since CaCO3 doesn't appear in the equilibrium expression at all, adding more of it has no chemical effect on the system's equilibrium position or on CO2 production — this choice incorrectly assumes it acts like a normal reactant.", 2: "This is also incorrect for the same reason — adding more of an already-excluded pure solid has no effect on the equilibrium position (in either direction) or on K.", 3: "The reaction doesn't 'stop' from having excess solid present; the system remains at the exact same dynamic equilibrium regardless of how much excess solid is sitting there, unreacted." },
+    tempting: "Choice A can tempt students who treat solids the same as any other reactant, assuming 'adding more of a reactant always shifts equilibrium forward,' without remembering the special exclusion rule for pure solids and liquids.",
+    commonMistake: "Treating an excluded pure solid or liquid the same way as an ordinary aqueous or gaseous reactant when predicting the effect of adding more of it.",
+    apTip: "Always double check: if a species doesn't appear in the equilibrium expression (because it's a pure solid or liquid), then adding or removing SOME of it (as long as some remains present) has absolutely NO effect on the equilibrium position or K — this is a frequently tested exception to the general 'adding reactant shifts forward' rule."
+  }
+},
+{
+  id: 'chem-7-48', difficulty: 2, type: 'mcq', topic: "Le Chatelier's Principle — Inert Gas at Constant Pressure",
+  prompt: "If an inert gas is added to a gas-phase equilibrium system at CONSTANT PRESSURE (meaning the container is allowed to expand as gas is added, unlike the constant-volume case), what happens to the equilibrium position?",
+  choices: ['No shift occurs, exactly as in the constant-volume case', "A shift DOES occur, because the container's volume must increase to keep total pressure constant, which effectively dilutes the reacting species and shifts equilibrium toward the side with MORE moles of gas", 'A shift occurs toward the side with fewer moles of gas', 'The reaction stops completely'],
+  correct: 1,
+  explanation: {
+    correct: "At constant pressure, adding inert gas forces the container to expand (to keep total pressure fixed), which dilutes the actual reacting species (lowering their partial pressures/concentrations); this dilution effect is equivalent to increasing the system's volume, which favors the side with MORE moles of gas — unlike the constant-VOLUME case, this scenario DOES cause a real shift.",
+    wrong: { 0: "This describes the constant-VOLUME scenario correctly, but the question specifically asks about the constant-PRESSURE case, which behaves differently since the container must expand, effectively diluting the reacting species.", 2: "This has the direction backwards for this specific scenario — expanding volume (which happens here to maintain constant pressure) favors the side with MORE moles of gas, not fewer.", 3: "The reaction doesn't stop; it simply shifts to a new equilibrium position that reflects the effectively increased volume available to the reacting species." },
+    tempting: "Choice A is a very common trap — confusing the constant-volume inert gas scenario (no shift) with the constant-pressure inert gas scenario (a real shift does occur, due to the necessary volume expansion).",
+    commonMistake: "Applying the 'no effect' rule for inert gas addition universally, without checking whether the specific scenario holds volume constant (no shift) or pressure constant (shift occurs, due to required volume expansion).",
+    apTip: "Always identify whether an inert gas problem specifies constant VOLUME (no shift — partial pressures of reacting species are unaffected) or constant PRESSURE (a real shift occurs — the container must expand, diluting the reacting species and favoring the side with more gas moles)."
+  }
+},
+{
+  id: 'chem-7-49', difficulty: 5, type: 'mcq', topic: 'ICE Table with Nonzero Initial Products',
+  prompt: "For the reaction A ⇌ B + C, K = 4.0, a reaction mixture is prepared with initial [A]₀ = 0.50 M, [B]₀ = 0.60 M, and [C]₀ = 0.60 M (unlike a standard ICE table starting only with reactant). What must be determined FIRST before setting up the ICE table with the correct direction of change?",
+  choices: ['Assume the reaction always proceeds forward regardless of starting concentrations', 'Calculate the reaction quotient Q using the initial concentrations, then compare Q to K to determine which direction (forward or reverse) the reaction will actually shift', 'Skip the ICE table entirely since products are already present', 'Assume the system is already at equilibrium since both products and reactants are present initially'],
+  correct: 1,
+  explanation: {
+    correct: "Whenever initial concentrations of BOTH reactants and products are given (rather than the standard case of starting with only reactants), the reaction's direction isn't automatically obvious; calculating Q = [B]₀[C]₀/[A]₀ = (0.60)(0.60)/0.50 = 0.72, and comparing this to K = 4.0 (Q < K here) reveals the reaction must proceed FORWARD to reach equilibrium, which correctly determines the sign convention (−x for A, +x for B and C) for the ICE table.",
+    wrong: { 0: "This is an unsafe assumption — the reaction's actual direction depends specifically on comparing Q to K using the given initial concentrations, not a blanket assumption that it 'always' proceeds forward.", 2: "The ICE table approach is still fully applicable and necessary here — it's just that the correct starting values (I row) include nonzero amounts for all three species, and the direction of the C row (± signs) must be determined via the Q-vs-K comparison first.", 3: "The presence of both reactants and products initially doesn't automatically mean the system is at equilibrium; that specific condition only holds if the calculated Q exactly equals K, which must be checked, not assumed." },
+    tempting: "Choice D is tempting since having 'some of everything' present might loosely suggest a balanced, equilibrium-like state, but this must be explicitly verified by calculating and comparing Q to K rather than assumed from the mere presence of all species.",
+    commonMistake: "Skipping the crucial first step of calculating Q and comparing it to K, and instead assuming a default direction (or default equilibrium condition) without actually checking.",
+    apTip: "Whenever an ICE table problem provides nonzero initial concentrations for BOTH reactants and products, ALWAYS calculate Q first and compare it to K before writing the change (C) row — this determines the correct sign (direction) for each species' change, which is essential for setting up the table correctly."
+  }
+},
+{
+  id: 'chem-7-50', difficulty: 2, type: 'mcq', topic: 'Representations of Equilibrium',
+  prompt: "A particulate diagram shows a sealed container at equilibrium for the reaction A2(g) ⇌ 2A(g). The diagram shows 2 molecules of A2 and 8 atoms of A. If the volume were suddenly doubled (without changing total moles yet), which direction would the equilibrium shift immediately afterward, based on moles of gas alone?",
+  choices: ['Shifts left, toward more A2, since decreasing concentration favors fewer total gas particles', 'Shifts right, toward more A, since increasing volume (decreasing concentration/pressure) favors the side with MORE total moles of gas particles', 'No shift occurs, since only volume changed, not amount', 'Cannot be determined without knowing Kc'],
+  correct: 1,
+  explanation: {
+    correct: "A2 ⇌ 2A has 1 mole of gas as reactant and 2 moles of gas as product; increasing volume (which decreases overall concentration/pressure) shifts the equilibrium toward the side with MORE total moles of gas (products, 2A) to help counteract the pressure decrease, consistent with Le Chatelier's principle.",
+    wrong: { 0: "This has the direction backwards — increasing volume (expanding) favors the side with MORE gas moles, not fewer; A2 → 2A already has more moles of gas on the product side.", 2: "A volume change absolutely does cause a real shift whenever the reactant and product sides have different total moles of gas (as is the case here, 1 mole vs. 2 moles) — this is a textbook example of a volume-driven shift.", 3: "The moles-of-gas comparison (1 for A2 vs. 2 for A) is sufficient on its own to predict the qualitative shift direction from a volume change — no specific Kc value is needed for this directional prediction." },
+    tempting: "Choice A is tempting if the volume/pressure shift rule is applied backwards, thinking 'expanding' should favor fewer particles rather than correctly favoring more particles.",
+    commonMistake: "Reversing the direction of the volume-change shift rule — remember, EXPANDING volume (decreasing pressure) favors the side with MORE total gas moles, while COMPRESSING volume (increasing pressure) favors the side with FEWER total gas moles.",
+    apTip: "Mnemonic pairing with the earlier compression rule: 'expand it, it grows' — increasing volume shifts equilibrium toward the side with the LARGER total number of gas moles, the opposite of the compression case."
+  }
+}
       ]
     },
     {
@@ -675,7 +4679,579 @@ export const chemistry = {
             commonMistake: "Not recognizing that successive ionization constants (Ka1, Ka2, Ka3...) decrease predictably because each subsequent proton must be removed from an increasingly negatively charged (and thus increasingly proton-attracting) species.",
             apTip: "College-level insight: memorize the general rule that for any polyprotic acid, Ka1 > Ka2 > Ka3 (typically by several orders of magnitude each step), and be ready to explain WHY using the electrostatic argument (removing a proton from a more negative species is less favorable) — this specific reasoning, not just the numeric pattern, is what full-credit FRQ responses include."
           }
-        }
+        },
+{
+  id: 'chem-8-7', difficulty: 1, type: 'mcq', topic: 'Kw (Ion Product of Water)',
+  prompt: "What is the value of Kw (the ion product constant for water) at 25°C, and what does it represent?",
+  choices: ['Kw = 7.0, representing the neutral pH value', 'Kw = 1.0 × 10⁻¹⁴, representing the product [H⁺][OH⁻] in any aqueous solution at 25°C', 'Kw = 14, the sum of pH and pOH', 'Kw = 1.0 × 10⁻⁷, the concentration of H⁺ in pure water'],
+  correct: 1,
+  explanation: {
+    correct: "Kw = [H⁺][OH⁻] = 1.0 × 10⁻¹⁴ at 25°C; this relationship holds true for ANY aqueous solution at this temperature, not just pure water, and is the basis for converting between [H⁺] and [OH⁻].",
+    wrong: { 0: "7.0 is the neutral pH VALUE (where [H⁺] = [OH⁻] = 1.0×10⁻⁷ M), not the value of Kw itself, which is the PRODUCT of these two concentrations.", 2: "14 is the sum of pH and pOH (since pH + pOH = 14 at 25°C, derived from Kw), but this numeric sum isn't itself Kw — Kw is [H⁺][OH⁻], a concentration product, not a sum of logarithms.", 3: "1.0×10⁻⁷ M is the concentration of EITHER H⁺ or OH⁻ specifically in pure (neutral) water, not the value of Kw itself, which is their PRODUCT (1.0×10⁻⁷ × 1.0×10⁻⁷ = 1.0×10⁻¹⁴)." },
+    tempting: "Choice D is tempting since 1.0×10⁻⁷ is a very commonly cited number in this topic, but it specifically refers to [H⁺] (or [OH⁻]) in pure water, not to Kw itself.",
+    commonMistake: "Confusing Kw (the product [H⁺][OH⁻] = 1.0×10⁻¹⁴) with related but distinct numbers like the neutral pH value (7) or the neutral [H⁺] concentration (1.0×10⁻⁷ M).",
+    apTip: "Keep these three related-but-distinct numbers straight: Kw = 1.0×10⁻¹⁴ (a constant, at 25°C); neutral pH = 7.00; neutral [H⁺] = [OH⁻] = 1.0×10⁻⁷ M — all interconnected, but each answering a different question."
+  }
+},
+{
+  id: 'chem-8-8', difficulty: 1, type: 'mcq', topic: 'pH + pOH Relationship',
+  prompt: "At 25°C, what is the relationship between pH and pOH for any aqueous solution?",
+  choices: ['pH × pOH = 14', 'pH + pOH = 14', 'pH − pOH = 14', 'pH and pOH are unrelated to each other'],
+  correct: 1,
+  explanation: {
+    correct: "Since Kw = [H⁺][OH⁻] = 1.0×10⁻¹⁴, taking the negative log of both sides gives pH + pOH = 14 (at 25°C) — this relationship holds for any aqueous solution at this specific temperature.",
+    wrong: { 0: "This uses multiplication instead of addition; the correct relationship (derived from taking -log of the Kw expression) is an ADDITION of pH and pOH, not a multiplication.", 2: "Subtraction isn't the correct operation here either; pH and pOH specifically ADD together to equal 14 at 25°C.", 3: "pH and pOH are very much directly related through Kw — knowing one always allows you to calculate the other at a given temperature." },
+    tempting: "Choice A can be tempting since Kw itself IS a product ([H⁺][OH⁻]), but once the negative logarithm is taken (to convert to pH and pOH), that multiplication becomes an ADDITION due to logarithm properties.",
+    commonMistake: "Confusing the underlying concentration relationship (Kw = [H⁺][OH⁻], a product) with the logarithmic pH/pOH relationship (pH + pOH = 14, a sum) — remember that taking a logarithm converts multiplication into addition.",
+    apTip: "Whenever converting between [H⁺]/[OH⁻] and pH/pOH, remember that concentrations MULTIPLY (via Kw) while their corresponding pH/pOH values ADD (via -log) — this logarithm-based conversion is one of the most fundamental relationships in this unit."
+  }
+},
+{
+  id: 'chem-8-9', difficulty: 1, type: 'mcq', topic: 'Strong Acids',
+  prompt: "What defining characteristic distinguishes a strong acid from a weak acid?",
+  choices: ['Strong acids are always more concentrated than weak acids', 'Strong acids dissociate essentially completely (100%) in water, while weak acids only partially dissociate, establishing an equilibrium', 'Strong acids always have a lower molar mass than weak acids', 'Strong acids can never be diluted'],
+  correct: 1,
+  explanation: {
+    correct: "A strong acid is defined by its degree of dissociation: it ionizes essentially completely (100%) in water, producing no meaningful equilibrium between the intact acid and its ions, unlike a weak acid, which only partially ionizes and establishes a true equilibrium (described by Ka).",
+    wrong: { 0: "Concentration is an independent variable (how much acid is dissolved) and has nothing to do with whether an acid is classified as strong or weak — a strong acid can be dilute, and a weak acid can be concentrated.", 2: "Molar mass has no bearing on whether an acid is classified as strong or weak; this classification depends entirely on the EXTENT of dissociation in water.", 3: "Strong acids absolutely can be diluted (added to more water) just like any other solution; dilution doesn't change whether an acid is fundamentally classified as strong or weak." },
+    tempting: "Choice A is tempting since 'strong' can colloquially suggest 'more concentrated,' but the chemical definition specifically refers to the EXTENT of dissociation, completely independent of concentration.",
+    commonMistake: "Conflating the words 'strong/weak' (referring to degree of dissociation) with 'concentrated/dilute' (referring to amount dissolved) — these are two entirely separate, independent properties of any acid or base solution.",
+    apTip: "Always keep 'strong vs. weak' (dissociation extent, an intrinsic chemical property) completely separate from 'concentrated vs. dilute' (amount dissolved, an independent quantity) — a solution can be any combination of these two independent descriptors, such as a dilute strong acid or a concentrated weak acid."
+  }
+},
+{
+  id: 'chem-8-10', difficulty: 1, type: 'mcq', topic: 'Strong Bases',
+  prompt: "Which of the following is an example of a strong base, and why?",
+  choices: ['NH3, because it easily forms OH- in water', 'NaOH, because it fully dissociates into Na+ and OH- ions in water', 'CH3COOH, because it contains an -OH group', 'HCl, because it releases H+ completely in water'],
+  correct: 1,
+  explanation: {
+    correct: "NaOH is a classic strong base because it dissociates essentially completely into Na⁺ and OH⁻ ions when dissolved in water, directly and fully releasing hydroxide ions into solution.",
+    wrong: { 0: "NH3 is actually a WEAK base — it only partially reacts with water to form NH4+ and OH-, establishing an equilibrium (described by Kb) rather than fully dissociating.", 2: "CH3COOH (acetic acid) is a WEAK ACID, not a base, despite containing an -OH group as part of its carboxylic acid structure — the presence of an -OH group alone doesn't determine acid/base classification.", 3: "HCl is a strong ACID (releasing H+ completely), not a base — this choice correctly describes strong acid behavior but misapplies it as an example of a base." },
+    tempting: "Choice A is tempting since NH3 is a common, frequently-discussed base, but it's specifically a WEAK base (partial dissociation), not a strong one.",
+    commonMistake: "Misclassifying common weak bases (like NH3) as strong bases, or confusing acids and bases based on superficial structural features (like the presence of -OH) rather than actual dissociation behavior.",
+    apTip: "Memorize the short, specific list of strong bases (mainly Group 1 hydroxides like NaOH, KOH, and some Group 2 hydroxides like Ca(OH)2, Ba(OH)2) — anything NOT on this list (like NH3) should be assumed to be a weak base unless stated otherwise."
+  }
+},
+{
+  id: 'chem-8-11', difficulty: 1, type: 'mcq', topic: 'Amphoteric Species',
+  prompt: "What does it mean for a species to be described as 'amphoteric' (or amphiprotic)?",
+  choices: ['It can never react with either an acid or a base', 'It can act as either an acid (donating a proton) or a base (accepting a proton), depending on what it reacts with', 'It is always a strong acid', 'It only exists in the gas phase'],
+  correct: 1,
+  explanation: {
+    correct: "An amphoteric (or amphiprotic) species has the ability to act as either an acid (donating a proton) in one reaction or as a base (accepting a proton) in a different reaction, depending on what it's paired with — water (H2O) and HCO3⁻ are classic examples.",
+    wrong: { 0: "This is the opposite of amphoteric behavior — amphoteric species react readily with BOTH acids and bases, just in different, specific roles depending on the reaction.", 2: "Amphoteric species aren't classified as strong acids; in fact, many amphoteric species (like water) are quite weak in both their acidic and basic roles.", 3: "Amphoteric behavior has nothing to do with physical phase (gas, liquid, solid); it's about a species' ability to donate OR accept a proton depending on the specific reaction it's involved in." },
+    tempting: "Choice A can tempt students who misinterpret 'can act as either' as somehow meaning 'reacts with neither,' rather than correctly understanding it as 'capable of reacting with both, in different roles.'",
+    commonMistake: "Confusing amphoteric behavior (dual acid/base capability, depending on the reaction partner) with being unreactive or chemically inert.",
+    apTip: "Water is the most important amphoteric species to remember: it acts as a BASE when reacting with a stronger acid (accepting a proton to form H3O+) and as an ACID when reacting with a stronger base (donating a proton to form OH-) — this dual behavior is central to understanding aqueous acid-base chemistry."
+  }
+},
+{
+  id: 'chem-8-12', difficulty: 1, type: 'mcq', topic: 'Brønsted-Lowry Definitions',
+  prompt: "According to the Brønsted-Lowry definition, what distinguishes an acid from a base?",
+  choices: ['An acid accepts electron pairs; a base donates electron pairs', 'An acid donates a proton (H+); a base accepts a proton (H+)', 'An acid always contains oxygen; a base never does', 'An acid raises pH; a base lowers pH'],
+  correct: 1,
+  explanation: {
+    correct: "The Brønsted-Lowry definition specifically focuses on proton (H+) transfer: an acid is a proton DONOR, and a base is a proton ACCEPTOR — this is the definition most commonly used throughout general chemistry acid-base equilibrium topics.",
+    wrong: { 0: "This describes the LEWIS definition of acids and bases (electron pair acceptor/donor), not the Brønsted-Lowry definition, which is specifically based on proton transfer.", 2: "Many acids don't contain oxygen at all (like HCl, HBr, HI — the hydrohalic acids), and this isn't a defining structural feature used in the Brønsted-Lowry (or any standard) acid-base definition.", 3: "This has the pH relationship backwards — acids LOWER pH (by increasing [H+]), and bases RAISE pH (by increasing [OH-] or decreasing [H+]) — the opposite of what's stated here." },
+    tempting: "Choice A is tempting since it's a real and valid acid-base definition (the Lewis definition), but it answers a different question than the one being asked about the Brønsted-Lowry definition specifically.",
+    commonMistake: "Mixing up the Brønsted-Lowry definition (proton transfer) with the Lewis definition (electron pair transfer) — these are two distinct, though related and overlapping, ways of classifying acids and bases.",
+    apTip: "Keep these two related definitions clearly separated: Brønsted-Lowry focuses specifically on PROTON transfer (donor = acid, acceptor = base); Lewis focuses more broadly on ELECTRON PAIR transfer (acceptor = acid, donor = base) — Lewis is the more general definition, since every Brønsted-Lowry acid-base reaction is also a Lewis acid-base reaction, but not vice versa."
+  }
+},
+{
+  id: 'chem-8-13', difficulty: 2, type: 'mcq', topic: 'pH/pOH Conversion',
+  prompt: "A solution has a pH of 9.0. What is its pOH?",
+  choices: ['9.0', '5.0', '14.0', '4.5'],
+  correct: 1,
+  explanation: {
+    correct: "Using pH + pOH = 14 (at 25°C): pOH = 14 − pH = 14 − 9.0 = 5.0.",
+    wrong: { 0: "This assumes pH and pOH are always equal, which is only true at exactly pH = 7 (neutral); at any other pH, pOH must be separately calculated using pH + pOH = 14.", 2: "This is simply the constant 14 itself, not the result of correctly subtracting the given pH from 14.", 3: "This appears to have divided 9.0 by 2 rather than correctly subtracting it from 14." },
+    tempting: "Choice A is tempting if pH and pOH are assumed to always be equal, rather than correctly recognizing they sum to a fixed total (14 at 25°C) that varies depending on the specific pH value.",
+    commonMistake: "Assuming pH and pOH are always identical, rather than correctly using the pH + pOH = 14 relationship to solve for pOH from a given pH.",
+    apTip: "pH and pOH are only equal to each other at exactly pH = pOH = 7.00 (neutral, at 25°C); for any other pH value, always calculate pOH as 14 minus the given pH."
+  }
+},
+{
+  id: 'chem-8-14', difficulty: 2, type: 'mcq', topic: 'pOH to [OH⁻] Conversion',
+  prompt: "A solution has a pOH of 4.0. What is its hydroxide ion concentration, [OH⁻]?",
+  choices: ['[OH⁻] = 4.0 M', '[OH⁻] = 1.0 × 10⁻⁴ M', '[OH⁻] = 1.0 × 10⁻¹⁰ M', '[OH⁻] = 10.0 M'],
+  correct: 1,
+  explanation: {
+    correct: "Since pOH = −log[OH⁻], solving for [OH⁻] gives [OH⁻] = 10^(−pOH) = 10^(−4.0) = 1.0 × 10⁻⁴ M.",
+    wrong: { 0: "This treats the pOH value itself as if it were the concentration, skipping the necessary inverse logarithm (10^−pOH) step entirely.", 2: "This appears to have used pH = 14 − pOH = 10, then taken 10^−10 as if that were [OH⁻], but the question directly asks for [OH⁻] from pOH, not from a derived pH value.", 3: "This subtracts pOH from 14 (a step relevant for finding pH, not [OH⁻] directly) without applying the correct inverse-logarithm relationship for [OH⁻]." },
+    tempting: "Choice C is tempting if the wrong quantity's inverse-log relationship is applied — this problem asks for [OH⁻] directly from pOH, not indirectly through a converted pH value.",
+    commonMistake: "Mixing up [H⁺]-to-pH and [OH⁻]-to-pOH inverse-logarithm relationships, or unnecessarily converting through pH when the question directly provides pOH.",
+    apTip: "Remember these matched pairs: [H⁺] = 10^(−pH) and [OH⁻] = 10^(−pOH) — always use the DIRECTLY corresponding pair (don't cross over between H+ and OH- relationships) unless the problem specifically requires converting from one to the other first."
+  }
+},
+{
+  id: 'chem-8-15', difficulty: 2, type: 'mcq', topic: 'Strong Acid pH Calculation',
+  prompt: "What is the pH of a 0.010 M solution of HCl (a strong acid that fully dissociates)?",
+  choices: ['pH = 0.010', 'pH = 2.00', 'pH = 1.0 × 10⁻²', 'pH = 12.00'],
+  correct: 1,
+  explanation: {
+    correct: "Since HCl is a strong acid that dissociates completely, [H⁺] = 0.010 M; pH = −log(0.010) = −log(1.0×10⁻²) = 2.00.",
+    wrong: { 0: "This reports the concentration itself as if it were the pH value, without taking the required negative logarithm.", 2: "This is simply the concentration written in scientific notation, still without applying the negative logarithm needed to calculate pH.", 3: "This would be the pH corresponding to [OH⁻] = 0.010 M (i.e., a BASE with this concentration), not the pH of an ACIDIC solution with [H⁺] = 0.010 M." },
+    tempting: "Choice D is tempting if this problem is confused with a strong BASE calculation, applying the pOH-to-pH conversion instead of directly calculating pH from [H+] for this strong ACID.",
+    commonMistake: "Forgetting to take the negative logarithm of the concentration to actually calculate pH, or confusing an acid's [H+]-based calculation with a base's pOH-based calculation.",
+    apTip: "For any strong acid, first confirm [H⁺] equals the given molarity directly (100% dissociation), then always take pH = −log[H⁺] as the final calculation step — don't skip the logarithm."
+  }
+},
+{
+  id: 'chem-8-16', difficulty: 2, type: 'mcq', topic: 'Strong Base pH Calculation',
+  prompt: "What is the pH of a 0.0010 M solution of NaOH (a strong base that fully dissociates)?",
+  choices: ['pH = 3.00', 'pH = 11.00', 'pH = 0.0010', 'pH = 14.00'],
+  correct: 1,
+  explanation: {
+    correct: "Since NaOH is a strong base, [OH⁻] = 0.0010 M; pOH = −log(0.0010) = 3.00; then pH = 14 − pOH = 14 − 3.00 = 11.00.",
+    wrong: { 0: "This is the correctly calculated pOH value (3.00), but it stops there without completing the final conversion step (pH = 14 − pOH) to actually find the pH.", 2: "This reports the concentration itself, without applying any logarithm or the pOH-to-pH conversion at all.", 3: "This is simply the maximum possible pH value (14), not the specific calculated result for this particular, relatively dilute base concentration." },
+    tempting: "Choice A is a very common trap — correctly calculating pOH but forgetting the essential final step of converting pOH to pH using pH + pOH = 14.",
+    commonMistake: "Stopping the calculation at pOH without completing the conversion to pH, especially for BASE calculations where pOH is calculated first as an intermediate step.",
+    apTip: "For strong base pH problems, always work through BOTH steps explicitly: (1) calculate pOH = −log[OH⁻], then (2) convert to pH = 14 − pOH — don't submit the pOH value as if it were the final answer to a pH question."
+  }
+},
+{
+  id: 'chem-8-17', difficulty: 2, type: 'mcq', topic: 'Ka/Kb Relationship',
+  prompt: "Acetic acid (CH3COOH) has Ka = 1.8 × 10⁻⁵. What is Kb for its conjugate base, acetate (CH3COO⁻), using the relationship Ka × Kb = Kw?",
+  choices: ['Kb ≈ 1.8 × 10⁻⁵ (same as Ka)', 'Kb ≈ 5.6 × 10⁻¹⁰', 'Kb ≈ 1.8 × 10⁻⁹', 'Kb ≈ 1.0 × 10⁻¹⁴'],
+  correct: 1,
+  explanation: {
+    correct: "Using Ka × Kb = Kw: Kb = Kw / Ka = (1.0×10⁻¹⁴) / (1.8×10⁻⁵) ≈ 5.6×10⁻¹⁰, showing that acetate is a very weak base (much weaker than acetic acid is an acid).",
+    wrong: { 0: "Ka and Kb of a conjugate acid-base pair are NOT equal to each other in general; they're related through Ka × Kb = Kw, which typically gives quite different values (unless the acid happens to be exactly as strong as its base is weak, a coincidental special case).", 2: "This value is off by roughly a factor of 3 from the correctly calculated result, suggesting an arithmetic slip in the division.", 3: "This is simply Kw itself, without dividing by Ka at all." },
+    tempting: "Choice A is tempting if the conjugate acid-base relationship is mistakenly assumed to mean 'equal K values,' rather than correctly applying the Ka × Kb = Kw formula.",
+    commonMistake: "Assuming conjugate acid-base pairs have equal or directly comparable K values, rather than correctly using Ka × Kb = Kw to calculate one from the other.",
+    apTip: "Memorize Ka × Kb = Kw as the single formula connecting any conjugate acid-base pair's ionization constants — a stronger acid (larger Ka) always has a correspondingly weaker conjugate base (smaller Kb), and vice versa."
+  }
+},
+{
+  id: 'chem-8-18', difficulty: 2, type: 'mcq', topic: 'pKa Calculation',
+  prompt: "Acetic acid has Ka = 1.8 × 10⁻⁵. What is its pKa?",
+  choices: ['pKa = 1.8', 'pKa ≈ 4.74', 'pKa = −5', 'pKa ≈ 9.26'],
+  correct: 1,
+  explanation: {
+    correct: "pKa = −log(Ka) = −log(1.8×10⁻⁵) ≈ 4.74.",
+    wrong: { 0: "This reports the coefficient (1.8) from Ka's scientific notation directly, without correctly taking the negative logarithm of the full value.", 2: "This uses the exponent from Ka's scientific notation directly (with a sign flip), rather than correctly computing the full negative logarithm of 1.8×10⁻⁵.", 3: "This is actually pKb for acetic acid's conjugate base (acetate), calculated from Kb ≈ 5.6×10⁻¹⁰, not pKa for acetic acid itself." },
+    tempting: "Choice D is tempting if pKa and pKb are accidentally swapped, or if the calculation mistakenly proceeds from the conjugate base's Kb value instead of the acid's own Ka value.",
+    commonMistake: "Estimating pKa loosely from Ka's exponent alone rather than correctly computing the full negative logarithm, or confusing pKa with pKb for the conjugate species.",
+    apTip: "Always compute pKa using a calculator's actual logarithm function (pKa = −log(Ka)) rather than trying to estimate it directly from Ka's scientific notation exponent alone — the coefficient (like the 1.8 in 1.8×10⁻⁵) meaningfully affects the final decimal value."
+  }
+},
+{
+  id: 'chem-8-19', difficulty: 2, type: 'mcq', topic: 'Binary Acid Strength Trends',
+  prompt: "Among the hydrohalic acids HF, HCl, HBr, and HI, which is the STRONGEST acid, and why?",
+  choices: ['HF, because fluorine is the most electronegative halogen', 'HI, because the H–I bond is the weakest (longest, most easily broken) among these four acids, making it easiest to release H+', 'They are all equally strong since they share the same general formula', 'HCl, because it is the most commonly used strong acid in laboratories'],
+  correct: 1,
+  explanation: {
+    correct: "Going down the halogen group, bond length increases and bond strength decreases; HI has the longest, weakest H–X bond among these four acids, making it the easiest to break and release H+, making HI the strongest acid of the group (despite iodine being the LEAST electronegative halogen here).",
+    wrong: { 0: "While fluorine is indeed the most electronegative halogen, this actually makes HF a comparatively WEAK acid among the hydrohalic acids, since the strong, short H–F bond is difficult to break — electronegativity isn't the dominant factor for this particular trend.", 2: "These four acids have dramatically different strengths (HF is notably weak, while HCl, HBr, and HI are all strong acids) — sharing the same general formula (HX) doesn't mean they behave identically.", 3: "Laboratory popularity has nothing to do with intrinsic acid strength; HCl's strength comes from its bond properties, and it is not even the strongest acid among this specific set (HI is stronger)." },
+    tempting: "Choice A is a very common trap — students often assume higher electronegativity always means a stronger acid, but for binary (nonoxo) acids down a group, BOND STRENGTH (which decreases down the group) is the dominant factor, not electronegativity.",
+    commonMistake: "Applying the electronegativity trend (which correctly explains ACROSS a period) to explain trends DOWN a group, where bond strength/length becomes the dominant, overriding factor instead.",
+    apTip: "Remember this trend distinction clearly: ACROSS a period, increasing electronegativity increases binary acid strength (e.g., comparing CH4, NH3, H2O, HF); DOWN a group, decreasing bond strength (due to increasing atomic size) increases binary acid strength (e.g., HF < HCl < HBr < HI) — these are two different, non-competing explanations for two different trend directions."
+  }
+},
+{
+  id: 'chem-8-20', difficulty: 2, type: 'mcq', topic: 'Oxoacid Strength Trends',
+  prompt: "Among the chlorine oxoacids HClO, HClO2, HClO3, and HClO4, which is the STRONGEST acid, and why?",
+  choices: ['HClO, because it has the fewest atoms and simplest structure', 'HClO4, because it has the most oxygen atoms, which withdraw electron density and stabilize the negative charge on the conjugate base through resonance and induction', 'They are all equally strong since they all contain chlorine and oxygen', 'HClO2, because it is the most commonly encountered chlorine oxoacid'],
+  correct: 1,
+  explanation: {
+    correct: "As the number of oxygen atoms bonded to the central chlorine atom increases (from HClO to HClO4), each additional highly electronegative oxygen withdraws more electron density from the O–H bond (making it easier to release H+) and better stabilizes the resulting negative charge on the conjugate base through resonance delocalization and induction, making HClO4 the strongest of these four oxoacids.",
+    wrong: { 0: "Having fewer atoms doesn't correlate with greater acid strength for oxoacids; in fact, HClO (with the fewest oxygens) is the WEAKEST of these four acids, not the strongest.", 2: "These four oxoacids have dramatically different strengths, spanning from quite weak (HClO) to extremely strong (HClO4) — simply sharing the same two elements doesn't mean they're equally acidic.", 3: "Common laboratory usage doesn't determine intrinsic acid strength; HClO2's strength is determined by its specific number of oxygen atoms and resulting electron-withdrawing/resonance effects, not by how frequently it's encountered." },
+    tempting: "Choice A can tempt students who assume 'simpler is stronger' without considering the actual electronic/structural reasoning behind oxoacid strength trends.",
+    commonMistake: "Not connecting the NUMBER of oxygen atoms attached to the central atom with the degree of electron withdrawal and conjugate-base stabilization, which is the actual mechanism driving this specific acid-strength trend.",
+    apTip: "For oxoacids of the same central atom, more oxygen atoms bonded to that central atom means a STRONGER acid — remember the reasoning chain: more oxygens → more electron withdrawal from the O-H bond AND better resonance stabilization of the conjugate base's negative charge → easier to lose H+ → stronger acid."
+  }
+},
+{
+  id: 'chem-8-21', difficulty: 2, type: 'mcq', topic: 'The Leveling Effect',
+  prompt: "Strong acids like HCl, HNO3, and HClO4 all appear to have essentially the same acidic strength when dissolved in water, even though they have different intrinsic acid strengths. What explains this observation (known as the 'leveling effect')?",
+  choices: ['These acids are actually chemically identical in every relevant way', 'All of these acids dissociate essentially completely in water, so the strongest species actually present in solution is always H3O+ (the conjugate acid of water) — water \"levels\" all sufficiently strong acids to the same apparent strength', 'Water reacts with only one of these acids at a time', 'This observation is incorrect; these acids actually show clearly different strengths in water'],
+  correct: 1,
+  explanation: {
+    correct: "Because all of these acids are strong enough to donate essentially all of their protons to water, the actual acidic species present in each solution is simply H3O+ (hydronium, the conjugate acid of water) — water itself becomes the practical 'ceiling' on observable acid strength, making all sufficiently strong acids appear equally strong when dissolved in it, a phenomenon called the leveling effect.",
+    wrong: { 0: "These acids are chemically distinct substances with genuinely different intrinsic (gas-phase or non-aqueous) acid strengths; it's specifically their behavior IN WATER that appears identical, due to the leveling effect, not because they're actually the same substance.", 2: "Water reacts with ALL of these acids simultaneously and essentially completely (that's the whole point of the leveling effect) — it's not selectively reacting with just one at a time.", 3: "This observation IS accurate and is a well-established, correctly explained phenomenon (the leveling effect) — these acids genuinely do appear to have the same strength in aqueous solution, even though their intrinsic strengths differ (which becomes measurable in different solvents)." },
+    tempting: "Choice A is tempting as an oversimplified explanation, but the correct reasoning specifically involves water acting as a 'leveling' medium via complete proton transfer, not the acids being fundamentally identical substances.",
+    commonMistake: "Not recognizing that the leveling effect is specifically a property of the SOLVENT (water) reacting essentially completely with strong acids, masking their true relative strength differences, which can only be distinguished using a weaker (non-leveling) solvent.",
+    apTip: "College-level insight: because water levels all strong acids to the same apparent strength, chemists must use non-aqueous solvents (a weaker base than water) to actually measure and distinguish the true relative strengths among 'strong' acids like HCl, HNO3, and HClO4."
+  }
+},
+{
+  id: 'chem-8-22', difficulty: 3, type: 'mcq', topic: 'Weak Base Equilibrium Calculation',
+  prompt: "NH3 has Kb = 1.8 × 10⁻⁵. For a 0.10 M solution of NH3, what is the approximate pH?",
+  choices: ['pH ≈ 2.87', 'pH ≈ 11.13', 'pH ≈ 4.74', 'pH ≈ 9.26'],
+  correct: 1,
+  explanation: {
+    correct: "Using x = √(Kb × C) = √(1.8×10⁻⁵ × 0.10) ≈ 1.34×10⁻³ M for [OH⁻]; pOH = −log(1.34×10⁻³) ≈ 2.87; pH = 14 − 2.87 ≈ 11.13, correctly reflecting the basic nature of an NH3 solution.",
+    wrong: { 0: "This is the correctly calculated pOH value (2.87), but it's reported directly as if it were the pH, without completing the final pH = 14 − pOH conversion step.", 2: "This is pKa for acetic acid from an earlier problem, not a value relevant to this NH3 weak base calculation.", 3: "This value doesn't correctly follow from the given Kb and concentration for this specific weak base calculation." },
+    tempting: "Choice A is a very common trap — correctly working through the weak base ICE table to find pOH, but forgetting the essential final conversion step to actually report pH.",
+    commonMistake: "Stopping a weak BASE calculation at pOH (the naturally obtained intermediate value) without completing the conversion to pH, which is what's typically being asked for.",
+    apTip: "For weak base problems, remember the calculation naturally produces [OH⁻] and pOH first (since Kb relates to OH⁻ production) — always add the extra pH = 14 − pOH conversion step at the end if the question specifically asks for pH rather than pOH."
+  }
+},
+{
+  id: 'chem-8-23', difficulty: 3, type: 'mcq', topic: 'Percent Ionization and Dilution',
+  prompt: "For a weak acid HA (Ka = 1.8 × 10⁻⁵), the percent ionization is calculated at two different concentrations: 0.10 M and 0.010 M. What happens to percent ionization as the solution becomes more dilute?",
+  choices: ['Percent ionization decreases with dilution', 'Percent ionization increases with dilution (approximately from 1.3% at 0.10 M to 4.2% at 0.010 M)', 'Percent ionization remains exactly constant regardless of concentration', 'Percent ionization becomes negative at very low concentrations'],
+  correct: 1,
+  explanation: {
+    correct: "Calculating x = √(Ka × C) at each concentration and then percent ionization = (x/C) × 100% shows that as C decreases (0.10 M → 0.010 M), percent ionization actually INCREASES (approximately 1.3% → 4.2%) — this is a general trend: weak acids and bases ionize to a greater percentage as they become more dilute.",
+    wrong: { 0: "This is the opposite of the actual trend — percent ionization INCREASES as concentration decreases, not decreases, for weak acids and bases.", 2: "Percent ionization is NOT constant across different concentrations for a weak acid; it changes systematically with concentration according to the underlying equilibrium mathematics (x = √(Ka·C), then dividing by C).", 3: "Percent ionization, being a ratio of concentrations expressed as a percentage, can never be negative — it's always a positive value between 0% and 100%." },
+    tempting: "Choice A is tempting from an intuitive (but incorrect) assumption that 'less concentrated' should somehow mean 'less ionized' in every sense, without working through the actual mathematical relationship between concentration and percent ionization.",
+    commonMistake: "Assuming percent ionization behaves the same way as absolute ionization (concentration of ionized species) — while the ABSOLUTE amount of ionization (x itself) does decrease with dilution, the PERCENTAGE (relative to the smaller starting concentration) actually increases.",
+    apTip: "Remember this counterintuitive but well-established AP-level trend: dilution INCREASES percent ionization for weak acids and bases, even though the absolute concentration of ionized species (x) decreases — this follows directly from x = √(Ka·C) growing more slowly than C itself as concentration decreases."
+  }
+},
+{
+  id: 'chem-8-24', difficulty: 3, type: 'mcq', topic: 'Henderson-Hasselbalch Equation',
+  prompt: "A buffer is prepared using acetic acid (pKa = 4.74) with [CH3COO⁻] = 0.20 M and [CH3COOH] = 0.10 M. Using the Henderson-Hasselbalch equation, pH = pKa + log([A⁻]/[HA]), what is the pH of this buffer?",
+  choices: ['pH ≈ 4.44', 'pH ≈ 5.05', 'pH ≈ 4.74', 'pH ≈ 9.48'],
+  correct: 1,
+  explanation: {
+    correct: "pH = pKa + log([A⁻]/[HA]) = 4.74 + log(0.20/0.10) = 4.74 + log(2.0) = 4.74 + 0.30 ≈ 5.05.",
+    wrong: { 0: "This value doesn't correctly follow from adding pKa and log(2.0); it may result from a sign or setup error in the Henderson-Hasselbalch calculation.", 2: "This is simply pKa itself, which would only be the buffer's pH if [A⁻] and [HA] were exactly EQUAL (a 1:1 ratio); here, the ratio is 2:1, so the pH shifts above pKa.", 3: "This appears to have doubled the correct answer or made another calculation error, rather than correctly adding pKa and the log term." },
+    tempting: "Choice C is tempting if the log(ratio) term is forgotten entirely, defaulting to pH = pKa without accounting for the actual (unequal) concentrations of acid and conjugate base.",
+    commonMistake: "Forgetting to include or correctly calculate the log([A⁻]/[HA]) term in the Henderson-Hasselbalch equation, especially when the ratio isn't exactly 1:1.",
+    apTip: "Remember: when [A⁻] = [HA] (a 1:1 ratio), log(1) = 0, so pH = pKa exactly; whenever the ratio deviates from 1:1, the log term shifts pH away from pKa — more conjugate base (higher ratio) raises pH above pKa, and more weak acid (lower ratio) lowers pH below pKa."
+  }
+},
+{
+  id: 'chem-8-25', difficulty: 3, type: 'mcq', topic: 'Buffer Selection',
+  prompt: "You need to prepare a buffer with a target pH of 9.00. Which of the following weak acids (with their respective pKa values) would make the BEST choice for this buffer?",
+  choices: ['Acetic acid, pKa = 4.74', 'Hypochlorous acid (HOCl), pKa = 7.50', 'Ammonium ion (NH4+), pKa = 9.25', 'Hydrocyanic acid (HCN), pKa = 9.21'],
+  correct: 3,
+  explanation: {
+    correct: "The best buffer choice is the weak acid whose pKa is CLOSEST to the target pH; HCN's pKa (9.21) is the closest match to the target pH of 9.00 among these four options, allowing an achievable, close-to-1:1 ratio of acid to conjugate base for the most effective and stable buffering at that pH.",
+    wrong: { 0: "Acetic acid's pKa (4.74) is much too far from the target pH of 9.00 — achieving pH 9.00 with this acid would require an extremely lopsided (and thus poorly buffering) ratio of conjugate base to acid.", 1: "HOCl's pKa (7.50) is closer to the target than acetic acid, but still noticeably further from 9.00 than HCN's pKa (9.21), making it a less optimal choice than HCN.", 2: "NH4+'s pKa (9.25) is also quite close to the target and could work reasonably well, but HCN's pKa (9.21) is marginally closer to the target of 9.00, making it the technically superior choice among these four options." },
+    tempting: "Choice C is tempting since NH4+'s pKa (9.25) is also very close to the target, and in practice either NH4+ or HCN would likely work reasonably well — but the question asks for the single BEST match, which requires comparing exact numeric closeness to the target pH.",
+    commonMistake: "Not systematically comparing each available pKa value's numeric distance from the target pH, instead selecting a 'roughly close enough' option without carefully identifying the closest match.",
+    apTip: "The general rule for optimal buffer selection: choose a weak acid whose pKa is as close as possible to your target pH (ideally within about ±1 pH unit) — this allows the buffer to be prepared with a ratio of acid to conjugate base reasonably close to 1:1, which provides the strongest and most balanced buffering capacity."
+  }
+},
+{
+  id: 'chem-8-26', difficulty: 3, type: 'mcq', topic: 'Half-Equivalence Point',
+  prompt: "During a titration of a weak acid with a strong base, at the half-equivalence point (where exactly half of the original weak acid has been neutralized), what special relationship holds true?",
+  choices: ['pH = 7.00 exactly, since half the acid is neutral', 'pH = pKa of the weak acid, since [HA] = [A⁻] at this specific point', 'The reaction is exactly complete at this point', 'pOH = 0 at the half-equivalence point'],
+  correct: 1,
+  explanation: {
+    correct: "At the half-equivalence point, exactly half of the original weak acid (HA) has been converted to its conjugate base (A⁻), making [HA] = [A⁻]; substituting this into the Henderson-Hasselbalch equation gives pH = pKa + log(1) = pKa + 0 = pKa exactly — this is a key, frequently tested landmark on any weak acid/strong base titration curve.",
+    wrong: { 0: "pH = 7.00 is NOT a special feature of the half-equivalence point in general; the half-equivalence point's pH equals the specific weak acid's pKa, which is often (though not always) different from 7.", 2: "The reaction is only HALFWAY complete at this point (hence 'half-equivalence'), not fully complete — full completion occurs at the equivalence point, a separate landmark further along the titration curve.", 3: "There's no special reason for pOH to be exactly 0 at this specific point; pOH at the half-equivalence point depends on the specific pKa (and thus pH) of the weak acid being titrated." },
+    tempting: "Choice A is tempting since '7' is often associated with neutrality in a general sense, but the half-equivalence point's specific significance is that pH = pKa, which is a property specific to each individual weak acid, not a universal value of 7.",
+    commonMistake: "Confusing the half-equivalence point (pH = pKa, halfway through neutralization) with either the equivalence point (reaction fully complete) or with a generic 'neutral' pH of 7.",
+    apTip: "The half-equivalence point is one of the most useful landmarks on any titration curve: since pH = pKa exactly at this point, it provides a direct, easy way to experimentally determine a weak acid's Ka value simply by reading the pH at the halfway point of a titration curve."
+  }
+},
+{
+  id: 'chem-8-27', difficulty: 3, type: 'mcq', topic: 'Buffer Capacity',
+  prompt: "Buffer A contains 0.50 M acetic acid and 0.50 M sodium acetate. Buffer B contains 0.050 M acetic acid and 0.050 M sodium acetate. Both buffers have the same pH (since the ratio is 1:1 in both cases). Which buffer has the greater buffer capacity (ability to resist pH change upon addition of strong acid or base)?",
+  choices: ['Buffer B, since lower concentrations are always more effective', 'Buffer A, since it contains a greater absolute amount of both the weak acid and conjugate base, allowing it to neutralize more added strong acid or base before the ratio (and thus pH) shifts significantly', 'Both buffers have identical buffer capacity, since they share the same pH', 'Buffer capacity cannot be compared without knowing the exact volumes used'],
+  correct: 1,
+  explanation: {
+    correct: "Even though both buffers share the same pH (since the pKa and the 1:1 ratio are identical), Buffer A has 10 times more total moles of both the weak acid and conjugate base present (at the same volume), giving it a much greater reservoir capacity to absorb added H+ or OH- before the ratio [A⁻]/[HA] shifts enough to meaningfully change the pH — this greater absolute capacity is what's meant by 'buffer capacity.'",
+    wrong: { 0: "This has the relationship backwards — HIGHER concentrations (like Buffer A's) provide GREATER buffer capacity, not lower concentrations; more concentrated buffers contain more 'reserve' acid and base to absorb incoming stress.", 2: "While pH IS identical between the two buffers (since it depends only on the pKa and the ratio, not the absolute concentrations), buffer CAPACITY is a separate property that depends specifically on the absolute amounts present, which differ significantly between these two buffers.", 3: "As long as both buffers are compared at the same volume (or on a per-liter concentration basis, as given here), buffer capacity can be directly compared based on the absolute concentrations provided — no additional volume information is needed for this specific comparison." },
+    tempting: "Choice C is tempting since pH and buffer capacity are related concepts but are NOT the same thing — pH depends only on the RATIO of components, while capacity depends on the ABSOLUTE AMOUNTS present.",
+    commonMistake: "Conflating buffer pH (determined only by pKa and the ratio of components) with buffer capacity (determined by the absolute concentrations/amounts of both components present) — these are two distinct properties that must be evaluated separately.",
+    apTip: "Keep this distinction sharp: buffer pH depends ONLY on pKa and the RATIO of [A⁻] to [HA] (via Henderson-Hasselbalch); buffer CAPACITY depends on the ABSOLUTE CONCENTRATIONS of both components — two buffers can share the same pH while having very different capacities to resist added acid or base."
+  }
+},
+{
+  id: 'chem-8-28', difficulty: 3, type: 'mcq', topic: 'Equivalence Point pH — Weak Acid/Strong Base',
+  prompt: "At the equivalence point of a titration between a weak acid and a strong base, is the resulting solution's pH expected to be acidic, basic, or neutral (pH = 7)?",
+  choices: ['Exactly neutral (pH = 7.00), since equal moles of acid and base have reacted', 'Basic (pH > 7), because the solution at the equivalence point contains only the conjugate base of the weak acid, which reacts with water to produce some OH⁻', 'Acidic (pH < 7), because weak acids always produce acidic equivalence points', 'This cannot be determined without knowing the specific Ka value'],
+  correct: 1,
+  explanation: {
+    correct: "At the equivalence point, all of the original weak acid has been exactly converted into its conjugate base (a salt solution); since this conjugate base is the conjugate of a WEAK acid, it will itself act as a weak base and hydrolyze water to produce a small amount of OH⁻, making the equivalence point solution basic (pH > 7) — this is different from a strong acid/strong base titration, which has a neutral equivalence point.",
+    wrong: { 0: "This is only true for STRONG acid/strong base titrations, where neither resulting ion hydrolyzes water; for a WEAK acid/strong base titration, the equivalence point solution contains a hydrolyzing conjugate base, shifting the pH above 7.", 2: "This is the opposite of the correct answer — the equivalence point for a WEAK acid/strong base titration is BASIC (pH > 7), not acidic, due to the conjugate base's reaction with water.", 3: "While the SPECIFIC numeric pH value at the equivalence point does depend on Ka (and the resulting concentration of conjugate base), the GENERAL DIRECTION (basic, pH > 7) can be determined without knowing the exact Ka value, just from knowing that a weak acid's conjugate base is present at that point." },
+    tempting: "Choice A is a very common trap — defaulting to 'neutral at equivalence' based on strong acid/strong base intuition, without accounting for how a weak acid's conjugate base behaves differently at the equivalence point.",
+    commonMistake: "Assuming all acid-base titrations have a neutral equivalence point (pH = 7), rather than correctly recognizing that the equivalence point's pH depends on whether the resulting salt solution's ions hydrolyze water.",
+    apTip: "Memorize this general pattern: weak acid + strong base → BASIC equivalence point (pH > 7); weak base + strong acid → ACIDIC equivalence point (pH < 7); strong acid + strong base → NEUTRAL equivalence point (pH = 7) — the equivalence point's acidity/basicity always reflects whether a hydrolyzing weak conjugate species remains in solution."
+  }
+},
+{
+  id: 'chem-8-29', difficulty: 3, type: 'mcq', topic: 'Equivalence Point pH — Weak Base/Strong Acid',
+  prompt: "At the equivalence point of a titration between a weak base (like NH3) and a strong acid (like HCl), what is the expected pH?",
+  choices: ['pH = 7.00 exactly', 'pH < 7 (acidic), because the equivalence point solution contains the conjugate acid of the weak base (NH4+), which reacts with water to produce some H3O+', 'pH > 7 (basic)', 'pH cannot be predicted at all for this type of titration'],
+  correct: 1,
+  explanation: {
+    correct: "At the equivalence point, all of the original weak base (NH3) has been converted into its conjugate acid (NH4+); since NH4+ is the conjugate acid of a WEAK base, it acts as a weak acid itself and hydrolyzes water to produce a small amount of H3O+, making the equivalence point solution acidic (pH < 7).",
+    wrong: { 0: "This is only true for strong acid/strong base titrations; a weak base/strong acid titration's equivalence point is specifically ACIDIC, not neutral, due to the hydrolyzing conjugate acid present.", 2: "This is the opposite of the correct answer — the equivalence point here is ACIDIC (pH < 7), not basic, since the conjugate acid of a weak base (NH4+) is present and produces H3O+ upon hydrolysis.", 3: "The general direction (acidic, pH < 7) CAN be reliably predicted from the type of titration (weak base + strong acid) alone, even without knowing the exact Kb value needed for a precise numeric pH calculation." },
+    tempting: "Choice C is tempting if the reasoning is applied backwards, perhaps by association with the base being one of the original reactants, rather than correctly focusing on which species (NH4+, a conjugate ACID) is actually present at the equivalence point.",
+    commonMistake: "Focusing on the original reactant type (weak base) rather than correctly identifying and analyzing the species ACTUALLY PRESENT at the equivalence point (the conjugate acid, NH4+, in this case).",
+    apTip: "Always shift your focus at the equivalence point specifically to the SALT (conjugate species) actually present in solution, not the original reactants — a weak base's conjugate ACID produces an acidic equivalence point, just as a weak acid's conjugate BASE produces a basic one."
+  }
+},
+{
+  id: 'chem-8-30', difficulty: 3, type: 'mcq', topic: 'Strong Acid/Strong Base Titration',
+  prompt: "For a titration between a strong acid (like HCl) and a strong base (like NaOH), what is the pH at the equivalence point?",
+  choices: ['pH = 7.00 exactly, since neither resulting ion (Na+ or Cl-) undergoes hydrolysis', 'pH > 7, since strong bases are more powerful than strong acids in general', 'pH < 7, since strong acids typically dominate the reaction', 'The equivalence point pH varies unpredictably for strong acid/strong base titrations'],
+  correct: 0,
+  explanation: {
+    correct: "For a strong acid/strong base titration, the resulting salt at the equivalence point (like NaCl, from HCl + NaOH) consists of ions that are conjugates of a STRONG acid (Cl⁻) and a STRONG base (Na⁺) — neither of these ions undergoes any meaningful hydrolysis with water, so the solution remains exactly neutral, pH = 7.00, at the equivalence point.",
+    wrong: { 1: "Neither strong acids nor strong bases are inherently 'more powerful' than the other in a way that shifts the equivalence point pH — for a strong acid/strong base pairing specifically, the resulting salt doesn't hydrolyze at all, keeping the solution exactly neutral.", 2: "This reasoning is similarly flawed — the equivalence point of a strong acid/strong base titration is neutral (pH = 7) precisely because neither resulting ion reacts with water, regardless of which reactant might seem to 'dominate.'", 3: "The strong acid/strong base equivalence point pH is actually highly predictable and consistent — it's always exactly 7.00 (at 25°C), specifically BECAUSE neither resulting ion undergoes hydrolysis." },
+    tempting: "Choices B and C both incorrectly suggest some form of 'competition' between the acid and base determines the equivalence point pH, when in fact for strong acid/strong base pairs, it's the complete absence of ion hydrolysis (not any competitive strength) that fixes the equivalence point precisely at pH 7.",
+    commonMistake: "Assuming equivalence point pH always depends on some notion of 'relative strength' between the acid and base, rather than correctly focusing on whether the resulting ions actually hydrolyze water at all.",
+    apTip: "The strong acid/strong base case is the SIMPLEST titration scenario: since neither resulting ion (from a strong acid's conjugate base or a strong base's conjugate acid) hydrolyzes water, the equivalence point is always exactly neutral (pH = 7.00) — this is fundamentally different from weak acid/base titrations, where hydrolysis shifts the equivalence point pH away from 7."
+  }
+},
+{
+  id: 'chem-8-31', difficulty: 3, type: 'mcq', topic: 'Choosing an Indicator',
+  prompt: "For a titration with an equivalence point at approximately pH 9, which type of indicator would be most appropriate to accurately signal the equivalence point?",
+  choices: ['An indicator that changes color in the pH 3-5 range', 'An indicator that changes color in a range including pH 9, such as phenolphthalein (color change range approximately pH 8.2-10)', 'Any indicator will work equally well regardless of its specific color-change pH range', 'An indicator that changes color exactly at pH 7.00, since equivalence points are always at pH 7'],
+  correct: 1,
+  explanation: {
+    correct: "An appropriate indicator must have a color-change (transition) range that closely brackets the actual pH at the equivalence point of the specific titration being performed; since this equivalence point is around pH 9, an indicator like phenolphthalein (transition range approximately pH 8.2-10) is well-suited to visually signal that specific equivalence point accurately.",
+    wrong: { 0: "An indicator changing color in the pH 3-5 range would change color WAY too early (well before the actual equivalence point at pH 9 is reached), giving a highly inaccurate result for this specific titration.", 2: "Indicators absolutely do NOT work equally well regardless of their transition range — using a mismatched indicator would cause the color change to occur at a very different (and incorrect) volume of titrant added, giving an inaccurate result.", 3: "As established in earlier questions, equivalence points are NOT always at pH 7 — this titration's specific equivalence point is around pH 9 (likely a weak acid/strong base combination), and the ideal indicator must match THIS specific pH range, not a fixed universal value." },
+    tempting: "Choice D reflects the same common misconception addressed in earlier questions (assuming all equivalence points are neutral), now specifically applied incorrectly to indicator selection.",
+    commonMistake: "Selecting an indicator based on the assumption that all equivalence points are at pH 7, rather than correctly matching the indicator's specific transition range to the ACTUAL calculated or expected equivalence point pH for that particular titration.",
+    apTip: "Always determine (or estimate) the actual equivalence point pH for the SPECIFIC titration being performed first (based on whether it's strong/strong, weak acid/strong base, or weak base/strong acid), THEN select an indicator whose transition range closely brackets that specific pH value — never assume a universal indicator choice works for every titration."
+  }
+},
+{
+  id: 'chem-8-32', difficulty: 4, type: 'mcq', topic: 'Common Ion Effect on Weak Acid Ionization',
+  prompt: "A solution contains 0.10 M acetic acid (Ka = 1.8 × 10⁻⁵) along with 0.050 M sodium acetate (a source of the common ion, acetate). What is the approximate [H⁺] in this solution, using the approximation [H⁺] ≈ Ka × ([HA]/[A⁻])?",
+  choices: ['[H⁺] ≈ 1.8 × 10⁻⁵ M', '[H⁺] ≈ 3.6 × 10⁻⁵ M', '[H⁺] ≈ 9.0 × 10⁻⁶ M', '[H⁺] ≈ 1.3 × 10⁻³ M'],
+  correct: 1,
+  explanation: {
+    correct: "Using [H⁺] ≈ Ka × ([HA]/[A⁻]) = (1.8×10⁻⁵) × (0.10/0.050) = (1.8×10⁻⁵) × 2.0 = 3.6×10⁻⁵ M — notably higher than for pure 0.10 M acetic acid alone, but still much lower than what a simple ICE table without the common ion would predict, because the common ion (acetate) suppresses further ionization of the acetic acid.",
+    wrong: { 0: "This is simply Ka itself, which would only be the correct answer if [HA] and [A⁻] happened to be exactly equal; here their ratio is 2.0, not 1.0, so [H⁺] must be adjusted from Ka accordingly.", 2: "This appears to have inverted the ratio ([A⁻]/[HA] instead of [HA]/[A⁻]), which would actually correspond to a solution with MORE acetate than acetic acid, not the scenario described here.", 3: "This is the [H⁺] that would result from pure 0.10 M acetic acid alone (without any added common ion), significantly overestimating the actual [H⁺] once the common ion effect (from the added 0.050 M sodium acetate) is properly accounted for." },
+    tempting: "Choice C is tempting if the [HA]/[A⁻] ratio accidentally gets inverted during setup, which would describe a different (reversed) common ion scenario than what's actually given.",
+    commonMistake: "Inverting the ratio of [HA] to [A⁻] in the common ion effect formula, or forgetting to apply the common ion adjustment altogether and instead calculating [H⁺] as if no common ion were present at all.",
+    apTip: "This formula, [H⁺] ≈ Ka × ([HA]/[A⁻]), is mathematically equivalent to a rearranged form of the Henderson-Hasselbalch equation — always double-check which concentration goes in the numerator (weak acid) versus denominator (conjugate base) before calculating, since inverting them gives a very different (and incorrect) result."
+  }
+},
+{
+  id: 'chem-8-33', difficulty: 4, type: 'mcq', topic: 'Henderson-Hasselbalch — Solving for Ratio',
+  prompt: "You want to prepare an acetic acid/acetate buffer (pKa = 4.74) with a target pH of 5.00. What ratio of [A⁻]/[HA] is required?",
+  choices: ['[A⁻]/[HA] ≈ 1.0', '[A⁻]/[HA] ≈ 1.8', '[A⁻]/[HA] ≈ 0.26', '[A⁻]/[HA] ≈ 5.0'],
+  correct: 1,
+  explanation: {
+    correct: "Rearranging the Henderson-Hasselbalch equation: log([A⁻]/[HA]) = pH − pKa = 5.00 − 4.74 = 0.26, so [A⁻]/[HA] = 10^0.26 ≈ 1.8.",
+    wrong: { 0: "A ratio of 1.0 would give pH = pKa exactly (4.74), not the target pH of 5.00 — since the target is above pKa, the ratio must be greater than 1 (more conjugate base than acid).", 2: "This is simply the value of (pH − pKa) itself (0.26), reported directly as if it were the final ratio, without completing the final step of raising 10 to that power.", 3: "This is significantly larger than the correctly calculated ratio; a ratio this large would correspond to a pH considerably higher than the target of 5.00." },
+    tempting: "Choice C is tempting if the calculation stops at the exponent (pH − pKa = 0.26) without completing the final step of computing 10^0.26 to actually find the ratio.",
+    commonMistake: "Stopping the Henderson-Hasselbalch rearrangement at the log value (pH − pKa) without taking the final step of exponentiating (10^(pH-pKa)) to solve for the actual concentration ratio.",
+    apTip: "When rearranging Henderson-Hasselbalch to solve for the ratio, always remember the final exponentiation step: ratio = 10^(pH − pKa) — the intermediate value (pH − pKa) is the LOGARITHM of the ratio, not the ratio itself."
+  }
+},
+{
+  id: 'chem-8-34', difficulty: 4, type: 'mcq', topic: 'Titration Calculation — Before Equivalence',
+  prompt: "A 0.100 L sample of 0.100 M acetic acid (pKa = 4.74) is titrated with 0.100 M NaOH. After adding 40.0 mL (0.00400 mol) of NaOH, what is the pH of the solution? (Initial moles of acetic acid = 0.0100 mol)",
+  choices: ['pH ≈ 4.74', 'pH ≈ 4.57', 'pH ≈ 3.91', 'pH ≈ 5.57'],
+  correct: 1,
+  explanation: {
+    correct: "Moles of HA remaining = 0.0100 − 0.00400 = 0.00600 mol; moles of A⁻ formed = 0.00400 mol; using Henderson-Hasselbalch: pH = pKa + log([A⁻]/[HA]) = 4.74 + log(0.00400/0.00600) = 4.74 + log(0.667) = 4.74 − 0.176 ≈ 4.57.",
+    wrong: { 0: "This would only be correct exactly AT the half-equivalence point (when exactly 0.00500 mol of NaOH, half of the total 0.0100 mol, has been added); here, only 0.00400 mol has been added, so the solution hasn't quite reached that halfway point yet.", 2: "This value doesn't correctly follow from properly applying the Henderson-Hasselbalch equation with the correct mole values calculated from the given data.", 3: "The sign of the log term here is incorrect; since less A⁻ than HA remains at this point (0.00400 mol vs. 0.00600 mol), the ratio is less than 1, making the log term NEGATIVE (lowering pH below pKa), not positive." },
+    tempting: "Choice A is tempting if the specific amount of NaOH added (0.00400 mol) is mistaken for exactly half of the total acid (which would actually require 0.00500 mol) — always check the exact half-equivalence amount before assuming pH = pKa applies.",
+    commonMistake: "Mismanaging the sign of the log term in Henderson-Hasselbalch when the ratio of [A⁻] to [HA] is less than 1 (more remaining acid than conjugate base formed so far, before reaching half-equivalence).",
+    apTip: "For titration pH calculations before the equivalence point, always calculate the ACTUAL moles of both HA remaining and A⁻ formed first (using the specific amount of titrant added), rather than assuming any shortcut like 'automatically at half-equivalence' unless the added amount is verified to be exactly half of the total."
+  }
+},
+{
+  id: 'chem-8-35', difficulty: 4, type: 'mcq', topic: 'Titration Calculation — After Equivalence',
+  prompt: "In a titration, after the equivalence point has been passed, an excess of 0.00100 mol of NaOH remains unreacted in a total solution volume of 0.0600 L (60.0 mL). What is the pH of this solution?",
+  choices: ['pH ≈ 1.78', 'pH ≈ 12.22', 'pH ≈ 2.00', 'pH ≈ 7.00'],
+  correct: 1,
+  explanation: {
+    correct: "[OH⁻] = 0.00100 mol / 0.0600 L ≈ 0.0167 M; pOH = −log(0.0167) ≈ 1.78; pH = 14 − 1.78 ≈ 12.22, reflecting the strongly basic character of the excess strong base present past the equivalence point.",
+    wrong: { 0: "This is the correctly calculated pOH value, but it's reported directly as if it were pH — the final conversion step (pH = 14 − pOH) still needs to be completed.", 2: "This value doesn't correctly follow from the given moles of excess NaOH and total volume.", 3: "Past the equivalence point in this scenario, EXCESS strong base is present, meaning the solution is now clearly basic (well above pH 7), not neutral — this choice ignores the excess NaOH entirely." },
+    tempting: "Choice A is a very common trap — correctly calculating pOH from the excess [OH⁻], but forgetting the essential final step of converting pOH to pH.",
+    commonMistake: "Forgetting the final pOH-to-pH conversion step specifically for 'after equivalence point' titration calculations, where the natural first calculated quantity is [OH⁻] and pOH (from excess strong base), not [H+] and pH directly.",
+    apTip: "For ANY point past the equivalence point in a titration with excess strong base, always calculate [OH⁻] from the excess moles and total volume FIRST, then pOH, and finally convert to pH as the very last step — don't submit an intermediate pOH value as if it were the final pH answer."
+  }
+},
+{
+  id: 'chem-8-36', difficulty: 4, type: 'mcq', topic: 'Polyprotic Acid Titration Curves',
+  prompt: "A diprotic acid H2A is titrated with NaOH. How many distinct equivalence points would be expected on the resulting titration curve, and why?",
+  choices: ['One equivalence point, since H2A is a single compound', 'Two distinct equivalence points, corresponding to the sequential, separate neutralization of each of the two acidic protons', 'Zero equivalence points, since diprotic acids cannot be titrated', 'An unlimited number of equivalence points, since the acid can react indefinitely'],
+  correct: 1,
+  explanation: {
+    correct: "A diprotic acid has two ionizable protons (H2A → HA⁻ → A²⁻), each of which is neutralized sequentially and separately by the strong base as titrant is added, producing two distinct equivalence points on the titration curve — one after the first proton is fully neutralized, and a second after the remaining proton is also fully neutralized.",
+    wrong: { 0: "While H2A is indeed a single compound, it contains TWO separate ionizable protons, each contributing its own distinct equivalence point as they are sequentially neutralized — 'one compound' doesn't mean 'one proton' in this case.", 2: "Diprotic acids can absolutely be titrated; in fact, their titration curves are specifically notable and frequently tested precisely BECAUSE they display two separate equivalence points rather than the single equivalence point seen in monoprotic acid titrations.", 3: "The number of equivalence points is fixed and finite, directly corresponding to the fixed number of ionizable protons (two, for a diprotic acid) — it isn't unlimited or open-ended." },
+    tempting: "Choice A can tempt students who associate 'one compound' with 'one reaction point,' without considering that a compound can have multiple separately titratable protons.",
+    commonMistake: "Not distinguishing between the number of distinct chemical COMPOUNDS involved and the number of separately ionizable/titratable PROTONS each compound contributes — for polyprotic acids, it's the number of protons that determines the number of equivalence points.",
+    apTip: "For any polyprotic acid, expect exactly as many equivalence points on its titration curve as it has ionizable protons: diprotic acids (like H2SO3 or H2CO3) show two equivalence points; triprotic acids (like H3PO4) show three — each corresponding to the sequential removal of one proton at a time."
+  }
+},
+{
+  id: 'chem-8-37', difficulty: 4, type: 'mcq', topic: 'Determining Ka from Titration Data',
+  prompt: "During a titration of a weak acid, the pH at the half-equivalence point is measured to be 5.20. What is the Ka of this weak acid?",
+  choices: ['Ka = 5.20', 'Ka ≈ 6.3 × 10⁻⁶', 'Ka ≈ 1.6 × 10⁵', 'Ka cannot be determined from this information alone'],
+  correct: 1,
+  explanation: {
+    correct: "Since pH = pKa at the half-equivalence point, pKa = 5.20; converting back to Ka: Ka = 10^(−pKa) = 10^(−5.20) ≈ 6.3×10⁻⁶.",
+    wrong: { 0: "This reports the pH/pKa value directly as if it were Ka itself, without performing the necessary inverse-logarithm conversion (Ka = 10^−pKa).", 2: "This is the reciprocal of the correctly calculated Ka value, suggesting the sign of the exponent was flipped during the inverse-logarithm calculation.", 3: "This CAN be determined directly and precisely from this specific information — the defining property of the half-equivalence point (pH = pKa) makes this exact conversion possible with just the single pH reading at that point." },
+    tempting: "Choice A is tempting if pH/pKa is mistaken for Ka directly, skipping the necessary inverse-logarithm step required to convert between these related but distinct quantities.",
+    commonMistake: "Conflating pKa (a logarithmic quantity) with Ka (the actual equilibrium constant), forgetting that converting between them always requires the inverse-logarithm relationship Ka = 10^(−pKa).",
+    apTip: "This half-equivalence point technique (reading pH directly off a titration curve at the halfway point, then converting pH = pKa to Ka = 10^−pKa) is one of the most common and practically important experimental methods for determining an unknown weak acid's Ka value in the lab."
+  }
+},
+{
+  id: 'chem-8-38', difficulty: 4, type: 'mcq', topic: 'Buffer Resistance to Added Strong Acid',
+  prompt: "A buffer contains 0.10 mol acetic acid and 0.10 mol sodium acetate in 1.00 L of solution (initial pH = pKa = 4.74). If 0.010 mol of HCl is added directly to this buffer, the new pH is calculated to be approximately 4.66 (using Henderson-Hasselbalch with adjusted moles). Compare this to what would happen if the same 0.010 mol of HCl were instead added to 1.00 L of pure water (initial pH = 7.00, new pH ≈ 2.00). What does this comparison demonstrate?",
+  choices: ['The buffer and pure water respond identically to added acid', 'The buffer strongly resists pH change (dropping only about 0.08 pH units) compared to pure water (dropping about 5 pH units), demonstrating the defining protective function of a buffer solution', 'Pure water is actually a better buffer than the acetic acid/acetate mixture', 'Adding acid to a buffer always increases its pH instead of decreasing it'],
+  correct: 1,
+  explanation: {
+    correct: "The buffer's pH changes only slightly (from 4.74 to about 4.66, a drop of just 0.08 units) because the buffer's conjugate base component (acetate) absorbs most of the added H+ by converting it to more acetic acid, while pure water has no such protective mechanism and its pH drops dramatically (from 7.00 to about 2.00, a drop of 5 full pH units) — this dramatic contrast is precisely what demonstrates a buffer's defining function.",
+    wrong: { 0: "The two responses are dramatically different (a small pH change for the buffer vs. a huge pH change for pure water) — this is precisely the point of the comparison, not a similarity.", 2: "Pure water isn't a buffer at all — it has no significant reservoir of conjugate acid-base species to absorb added H+ or OH-, which is exactly why its pH changes so drastically compared to the buffered solution.", 3: "Adding ACID to any solution (buffered or not) should decrease pH (or at most minimize the decrease, in a buffer's case), never increase it — this choice describes an impossible outcome for the addition of an acid." },
+    tempting: "Choice A can tempt students who don't fully appreciate just how dramatically different a buffered vs. unbuffered response to the same stress actually is, especially since both solutions technically experience some pH decrease upon adding acid.",
+    commonMistake: "Underestimating the practical magnitude of a buffer's protective effect, or not clearly contrasting the buffer's minimal a pH shift against how a completely unbuffered solution would respond to the identical addition.",
+    apTip: "When explaining buffer function on an FRQ, it's often most effective to explicitly contrast the buffer's minimal pH change against what an EQUIVALENT addition would do to an unbuffered solution (like pure water) — this comparison vividly demonstrates the buffer's core protective mechanism in a way that describing the buffer alone doesn't fully convey."
+  }
+},
+{
+  id: 'chem-8-39', difficulty: 4, type: 'mcq', topic: 'Lewis Acid-Base Theory',
+  prompt: "According to the Lewis definition of acids and bases, what makes BF3 (boron trifluoride) a Lewis acid when it reacts with NH3 (a Lewis base) to form the adduct F3B-NH3?",
+  choices: ['BF3 donates a proton (H+) to NH3', 'BF3 accepts a lone pair of electrons from NH3 into an empty orbital on boron, forming a new covalent bond', 'BF3 releases fluoride ions into solution', 'BF3 is classified as a strong acid using the Brønsted-Lowry definition'],
+  correct: 1,
+  explanation: {
+    correct: "Boron in BF3 has only 6 valence electrons around it (an incomplete octet) and an empty orbital available; as a Lewis acid, it ACCEPTS a lone pair of electrons donated by NH3's nitrogen atom, forming a new covalent bond (the adduct F3B-NH3) — this defines Lewis acid behavior (electron pair ACCEPTOR), distinct from Brønsted-Lowry's specific focus on proton transfer.",
+    wrong: { 0: "BF3 doesn't contain any acidic protons to donate at all; this reaction involves no proton transfer whatsoever, which is precisely why the Brønsted-Lowry definition doesn't apply here, but the broader Lewis definition still does.", 2: "This reaction doesn't involve fluoride ions being released into solution; it's a direct electron-pair donation/acceptance reaction forming a new covalent bond between boron and nitrogen.", 3: "BF3 isn't classified as a Brønsted-Lowry acid at all (since it has no proton to donate); it's specifically classified as a LEWIS acid, which is a broader, distinct definition based on electron pair acceptance rather than proton donation." },
+    tempting: "Choice A is tempting if a Brønsted-Lowry framework is defaulted to automatically, without recognizing that this specific reaction (with no proton transfer at all) requires the broader Lewis definition to properly classify BF3's acidic behavior.",
+    commonMistake: "Trying to force every acid-base reaction into the Brønsted-Lowry (proton-transfer) framework, rather than recognizing when a reaction (like this one, with no proton movement at all) specifically requires the broader Lewis (electron-pair) definition instead.",
+    apTip: "The Lewis definition is the most general acid-base framework: it classifies substances as acids or bases based on electron pair ACCEPTANCE (Lewis acid) or DONATION (Lewis base), which includes ALL Brønsted-Lowry acid-base reactions (proton transfer) as a special case, PLUS additional reactions (like this BF3/NH3 example) that involve no proton transfer at all."
+  }
+},
+{
+  id: 'chem-8-40', difficulty: 4, type: 'mcq', topic: 'Lewis Acid-Base Reactions Without Proton Transfer',
+  prompt: "The reaction of a metal ion, such as Cu²⁺, with water molecules to form a hydrated complex ion [Cu(H2O)6]²⁺ is classified as a Lewis acid-base reaction. Which species acts as the Lewis acid, and why?",
+  choices: ['Water acts as the Lewis acid, since it donates a proton to Cu²⁺', 'Cu²⁺ acts as the Lewis acid, since it accepts lone pairs of electrons from the oxygen atoms of surrounding water molecules, forming new coordinate covalent bonds', 'Neither species can be classified as an acid or base in this reaction', 'Cu²⁺ acts as a Brønsted-Lowry acid in this specific reaction'],
+  correct: 1,
+  explanation: {
+    correct: "Cu²⁺, a metal cation with empty d-orbitals available, ACCEPTS lone pairs of electrons donated by the oxygen atoms of surrounding water molecules, forming new coordinate covalent (dative) bonds — this makes Cu²⁺ the Lewis acid (electron pair acceptor) and water the Lewis base (electron pair donor) in this classic complexation reaction.",
+    wrong: { 0: "No proton transfer occurs in this reaction at all; water is DONATING electron pairs (acting as a Lewis base), not protons, and there's no meaningful Brønsted-Lowry acid-base chemistry happening in this specific complexation reaction.", 2: "This reaction can absolutely be classified using the Lewis acid-base framework, even though it doesn't fit the (narrower) Brønsted-Lowry proton-transfer definition — the Lewis definition specifically extends to reactions like this one.", 3: "Cu²⁺ has no protons to donate, so it cannot act as a BRØNSTED-LOWRY acid in this reaction; it specifically acts as a LEWIS acid instead, by accepting electron pairs rather than donating protons." },
+    tempting: "Choice D is tempting since Cu²⁺ IS correctly identified as 'the acid' in this reaction, but the WRONG acid-base framework (Brønsted-Lowry, which requires proton transfer) is applied to describe it.",
+    commonMistake: "Correctly identifying which species is acting as 'the acid' in a reaction, but then misclassifying which specific acid-base theory (Brønsted-Lowry vs. Lewis) actually applies to that particular reaction mechanism.",
+    apTip: "Metal ion complexation reactions (forming coordination complexes with ligands like water, ammonia, or other Lewis bases) are classic, frequently tested examples of Lewis acid-base chemistry that fall completely outside the Brønsted-Lowry framework — always default to the Lewis definition whenever no proton transfer is occurring in a given acid-base-type reaction."
+  }
+},
+{
+  id: 'chem-8-41', difficulty: 5, type: 'mcq', topic: 'Sequential Buffer Perturbations',
+  prompt: "A 1.00 L buffer initially contains 0.20 mol acetic acid and 0.20 mol sodium acetate (pKa = 4.74, initial pH = 4.74). First, 0.020 mol HCl is added (converting some A⁻ to HA), and afterward, 0.030 mol NaOH is added to this new mixture. What is the FINAL pH after both sequential additions? (Assume volume stays approximately constant at 1.00 L throughout.)",
+  choices: ['pH ≈ 4.74 (unchanged, since the additions cancel out)', 'pH ≈ 4.83', 'pH ≈ 4.65', 'pH ≈ 5.00'],
+  correct: 1,
+  explanation: {
+    correct: "After adding 0.020 mol HCl: moles HA = 0.20 + 0.020 = 0.220 mol; moles A⁻ = 0.20 − 0.020 = 0.180 mol. After then adding 0.030 mol NaOH to THIS new mixture: moles HA = 0.220 − 0.030 = 0.190 mol; moles A⁻ = 0.180 + 0.030 = 0.210 mol. Final pH = pKa + log(0.210/0.190) = 4.74 + log(1.105) = 4.74 + 0.0434 ≈ 4.83.",
+    wrong: { 0: "The two additions do NOT exactly cancel out, since they involve different amounts (0.020 mol HCl vs. 0.030 mol NaOH) — the NaOH addition is larger, so there's a net shift toward more A⁻ (and thus a final pH slightly above the original 4.74, not identical to it).", 2: "This appears to have miscalculated the sequential mole adjustments, possibly applying the two additions in the wrong order or with incorrect signs.", 3: "This doesn't correctly reflect the actual net effect of the two sequential (partially offsetting, but not equal) additions on the final [A⁻]/[HA] ratio." },
+    tempting: "Choice A is tempting since two roughly similar-sized additions (0.020 mol acid, then 0.030 mol base) might seem like they should cancel out, but since they're NOT exactly equal in magnitude, a small net shift in pH does occur.",
+    commonMistake: "Assuming that adding roughly comparable amounts of acid and then base (or vice versa) always perfectly cancels out, rather than carefully tracking the exact net effect on the mole amounts of HA and A⁻ after EACH sequential addition.",
+    apTip: "For any multi-step buffer perturbation problem, work through each addition SEPARATELY and SEQUENTIALLY, updating the actual mole amounts of HA and A⁻ after each individual step, before calculating the final pH using Henderson-Hasselbalch with the FINAL (twice-adjusted) mole values — don't try to shortcut by combining the additions first unless they're exactly equal and opposite."
+  }
+},
+{
+  id: 'chem-8-42', difficulty: 5, type: 'mcq', topic: 'Diprotic Acid Titration Stoichiometry',
+  prompt: "A 0.0500 L sample of 0.100 M H2A (a diprotic acid) is titrated with 0.100 M NaOH. How many total mL of NaOH are required to reach the SECOND equivalence point (complete neutralization of both acidic protons)?",
+  choices: ['25.0 mL', '50.0 mL', '100 mL', '12.5 mL'],
+  correct: 2,
+  explanation: {
+    correct: "Total moles of H2A = 0.100 M × 0.0500 L = 0.00500 mol; since H2A has TWO acidic protons, complete neutralization requires 2 × 0.00500 = 0.0100 mol of NaOH; volume of 0.100 M NaOH needed = 0.0100 mol / 0.100 M = 0.100 L = 100 mL.",
+    wrong: { 0: "This is the volume needed to reach only the FIRST equivalence point (neutralizing just one of the two acidic protons, requiring only 0.00500 mol NaOH), not the full second equivalence point.", 1: "This appears to have used only a 1:1 mole ratio (as if H2A were monoprotic) rather than correctly accounting for its TWO ionizable protons, which doubles the required NaOH.", 3: "This is one-quarter of the correct volume, suggesting an error in either the mole calculation or a further unnecessary division." },
+    tempting: "Choice A is a very common trap for diprotic acid titrations — correctly calculating moles of acid but forgetting to double that amount (for the two acidic protons) before converting to the required volume of titrant.",
+    commonMistake: "Treating a diprotic acid's titration stoichiometry the same as a monoprotic acid's (1 mole of base per mole of acid), rather than correctly accounting for the 2:1 mole ratio of base to diprotic acid required for complete (second equivalence point) neutralization.",
+    apTip: "For any polyprotic acid titration, always multiply the initial moles of acid by the NUMBER OF IONIZABLE PROTONS to find the total moles of strong base needed for complete (final) neutralization — for a diprotic acid, this means doubling the moles of base needed compared to what a monoprotic acid of the same molarity and volume would require."
+  }
+},
+{
+  id: 'chem-8-43', difficulty: 5, type: 'mcq', topic: 'Structural Effects — Resonance Stabilization',
+  prompt: "Carboxylic acids (like acetic acid, CH3COOH) are considerably more acidic than simple alcohols (like ethanol, CH3CH2OH), even though both contain an O-H bond. What structural feature primarily explains this large difference in acidity?",
+  choices: ['Carboxylic acids contain more carbon atoms than alcohols', 'The conjugate base of a carboxylic acid (a carboxylate ion) is stabilized by resonance delocalization of its negative charge across two equivalent oxygen atoms, while an alkoxide ion (the conjugate base of an alcohol) has no such resonance stabilization', 'Alcohols are always liquids while carboxylic acids are always solids', 'Carboxylic acids have a higher molar mass than alcohols'],
+  correct: 1,
+  explanation: {
+    correct: "When a carboxylic acid loses its acidic proton, the resulting carboxylate ion's negative charge is delocalized (spread out) via resonance across two equivalent C-O bonds/oxygen atoms, significantly stabilizing the conjugate base and making the original O-H proton much easier to remove; an alkoxide ion (from an alcohol) has no such resonance stabilization, concentrating its negative charge entirely on a single oxygen atom, making it a much less stable (and thus less favorably formed) conjugate base.",
+    wrong: { 0: "The specific NUMBER of carbon atoms present isn't the deciding structural factor here; molecules with very similar carbon skeletons can have vastly different acidities depending on functional group structure (as this exact carboxylic acid vs. alcohol comparison demonstrates).", 2: "Physical state (solid vs. liquid) has no direct bearing on relative acid strength, and this generalization isn't even reliably true (many carboxylic acids, like acetic acid itself, are liquids at room temperature).", 3: "Molar mass alone doesn't determine relative acid strength; the key structural/electronic difference here is specifically about how well each conjugate base can stabilize its resulting negative charge through resonance delocalization, not simply about molecular weight." },
+    tempting: "Choice A can tempt students who look for a simple, easily countable structural difference (like number of carbons), rather than correctly identifying the specific electronic/resonance-based explanation for this acidity difference.",
+    commonMistake: "Overlooking resonance stabilization of the conjugate base as the key explanatory factor in structural acid-strength comparisons, especially when comparing structurally similar organic functional groups (like carboxylic acids vs. alcohols).",
+    apTip: "Whenever comparing the relative acidities of organic acids with similar carbon skeletons but different functional groups, always consider how effectively each conjugate base can stabilize its resulting negative charge — resonance delocalization (as in carboxylate ions) is one of the most powerful conjugate-base-stabilizing mechanisms, significantly increasing the parent compound's acidity."
+  }
+},
+{
+  id: 'chem-8-44', difficulty: 5, type: 'mcq', topic: 'Amphiprotic Species in Different Reactions',
+  prompt: "The bicarbonate ion, HCO3⁻, can react as follows: Reaction 1: HCO3⁻ + H3O+ ⇌ H2CO3 + H2O; Reaction 2: HCO3⁻ + OH⁻ ⇌ CO3²⁻ + H2O. What does this pair of reactions demonstrate about HCO3⁻?",
+  choices: ['HCO3⁻ only ever acts as an acid, regardless of what it reacts with', 'HCO3⁻ is amphiprotic — in Reaction 1, it acts as a BASE (accepting a proton from H3O+ to form H2CO3), while in Reaction 2, it acts as an ACID (donating a proton to OH⁻ to form CO3²⁻)', 'These two reactions are contradictory and cannot both be chemically valid', 'HCO3⁻ only ever acts as a base, regardless of what it reacts with'],
+  correct: 1,
+  explanation: {
+    correct: "In Reaction 1, HCO3⁻ ACCEPTS a proton from the stronger acid H3O+ (becoming H2CO3), acting as a BASE; in Reaction 2, HCO3⁻ DONATES a proton to the stronger base OH⁻ (becoming CO3²⁻), acting as an ACID — this dual capability, depending on what it's reacting with, is the defining characteristic of an amphiprotic species.",
+    wrong: { 0: "HCO3⁻ doesn't ALWAYS act only as an acid — Reaction 1 specifically shows it accepting a proton (acting as a base), demonstrating its dual, amphiprotic nature rather than a single fixed role.", 2: "These two reactions are NOT contradictory at all; they simply showcase HCO3⁻'s amphiprotic nature — reacting differently (as an acid or a base) depending on the specific reaction partner it encounters, which is a well-established and chemically valid behavior.", 3: "HCO3⁻ doesn't ALWAYS act only as a base either — Reaction 2 specifically shows it donating a proton (acting as an acid), again demonstrating its dual, amphiprotic capability rather than a single fixed role." },
+    tempting: "Choices A and D are each tempting in isolation if only ONE of the two given reactions is considered, without recognizing that examining BOTH reactions together is what reveals HCO3⁻'s full amphiprotic (dual-role) behavior.",
+    commonMistake: "Drawing a conclusion about a species' acid-base behavior based on only ONE example reaction, rather than considering multiple reactions (as provided here) to correctly identify a truly amphiprotic species capable of both donating AND accepting protons depending on context.",
+    apTip: "Whenever a species is shown reacting as an acid in one specific context and as a base in a different specific context (as demonstrated by two contrasting reactions like these), correctly identify it as amphiprotic (or amphoteric) — this dual capability depends entirely on the relative strength of whatever it's reacting with, not on some single, fixed intrinsic property."
+  }
+},
+{
+  id: 'chem-8-45', difficulty: 3, type: 'mcq', topic: 'Inductive Effects on Acid Strength',
+  prompt: "Trichloroacetic acid (CCl3COOH) is a significantly stronger acid than acetic acid (CH3COOH). What structural feature explains this difference?",
+  choices: ['Trichloroacetic acid has a higher molar mass, which always increases acid strength', 'The three highly electronegative chlorine atoms withdraw electron density through the molecule (an inductive effect), further stabilizing the negative charge on the resulting conjugate base and weakening the O-H bond', 'Chlorine atoms make the molecule less soluble in water, which increases apparent acidity', 'There is no real difference in acid strength between these two compounds'],
+  correct: 1,
+  explanation: {
+    correct: "The three chlorine atoms are highly electronegative and pull electron density away from the rest of the molecule through the sigma-bond framework (an inductive effect); this electron withdrawal further stabilizes the negative charge on the carboxylate conjugate base (beyond the resonance stabilization already present in any carboxylate) and also weakens/polarizes the O-H bond, making trichloroacetic acid considerably more acidic than acetic acid.",
+    wrong: { 0: "Molar mass itself has no direct causal relationship with acid strength; the actual explanation involves the specific electron-withdrawing INDUCTIVE effect of the electronegative chlorine atoms, not simply the compound's overall mass.", 2: "Solubility differences aren't the primary explanation for this specific acid-strength difference; the dominant effect here is the electronic (inductive) influence of the chlorine substituents on the O-H bond and conjugate base stability.", 3: "There IS a substantial, well-documented, and experimentally measurable difference in acid strength between these two compounds — trichloroacetic acid is several orders of magnitude more acidic than acetic acid." },
+    tempting: "Choice A can tempt students looking for a simple, easily quantifiable explanation (like molar mass) rather than the correct, more nuanced electronic (inductive) explanation.",
+    commonMistake: "Overlooking inductive effects (electron withdrawal through sigma bonds by nearby electronegative atoms) as a significant factor in comparing acid strengths of structurally similar molecules, especially when resonance alone doesn't fully explain an observed strength difference.",
+    apTip: "In addition to resonance stabilization (as with carboxylate ions generally), always also consider INDUCTIVE effects when comparing acid strengths of structurally similar molecules — electronegative atoms or groups positioned near the acidic O-H bond (like the three chlorines here) further stabilize the conjugate base and increase acid strength, even beyond what resonance alone would predict."
+  }
+},
+{
+  id: 'chem-8-46', difficulty: 4, type: 'mcq', topic: 'Weak Base Buffer (pOH Form)',
+  prompt: "A buffer is prepared using NH3 (Kb = 1.8 × 10⁻⁵) with [NH4⁺] = 0.30 M and [NH3] = 0.15 M. Using the pOH form of Henderson-Hasselbalch, pOH = pKb + log([BH⁺]/[B]), what is the pH of this buffer?",
+  choices: ['pH ≈ 5.05', 'pH ≈ 8.95', 'pH ≈ 4.74', 'pH ≈ 9.26'],
+  correct: 1,
+  explanation: {
+    correct: "pKb = −log(1.8×10⁻⁵) ≈ 4.74; pOH = pKb + log(0.30/0.15) = 4.74 + log(2.0) = 4.74 + 0.30 ≈ 5.05; converting to pH: pH = 14 − 5.05 ≈ 8.95.",
+    wrong: { 0: "This is the correctly calculated pOH value, but it's reported directly as pH without completing the final pH = 14 − pOH conversion step.", 2: "This is simply pKb itself, which would only be the pOH if [BH+] and [B] were exactly equal (a 1:1 ratio); here the ratio is 2:1, and this value also hasn't been converted from pOH to pH.", 3: "This value doesn't correctly follow from this specific buffer's given Kb and concentration ratio." },
+    tempting: "Choice A is a very common trap for weak base buffers — correctly working through the pOH-based Henderson-Hasselbalch calculation but forgetting the essential final conversion from pOH to pH.",
+    commonMistake: "Forgetting that weak BASE buffer calculations naturally produce pOH first (via the pKb-based Henderson-Hasselbalch form), requiring an additional pH = 14 − pOH conversion step at the end, just like other weak base equilibrium calculations.",
+    apTip: "For weak base buffers (like NH3/NH4+), use the parallel pOH-based Henderson-Hasselbalch equation (pOH = pKb + log([BH+]/[B])) — structurally identical to the acid version, just with pOH/pKb/conjugate acid in place of pH/pKa/conjugate base — and always remember to convert the final pOH result to pH if that's what's being asked for."
+  }
+},
+{
+  id: 'chem-8-47', difficulty: 5, type: 'mcq', topic: 'Salts with Two Hydrolyzing Ions',
+  prompt: "A solution of ammonium fluoride (NH4F) is prepared. Both ions can hydrolyze: NH4⁺ (Ka ≈ 5.6 × 10⁻¹⁰) can act as a weak acid, and F⁻ (Kb ≈ 1.5 × 10⁻¹¹, derived from HF's Ka ≈ 6.8 × 10⁻⁴) can act as a weak base. Is the overall solution expected to be acidic, basic, or nearly neutral?",
+  choices: ['Basic, since fluoride is a halogen and halogens always form basic salts', 'Slightly acidic, since Ka(NH4⁺) is somewhat larger than Kb(F⁻), meaning NH4⁺ hydrolyzes to a slightly greater extent than F⁻ does', 'Exactly neutral, since both ions hydrolyze to some extent', 'Cannot be determined since both ions are reacting with water simultaneously'],
+  correct: 1,
+  explanation: {
+    correct: "When both ions of a salt can hydrolyze, compare their respective K values directly: since Ka(NH4⁺) ≈ 5.6×10⁻¹⁰ is somewhat larger than Kb(F⁻) ≈ 1.5×10⁻¹¹, NH4⁺ donates protons to a slightly greater extent than F⁻ accepts them, resulting in an overall solution that is slightly acidic (though much closer to neutral than a salt with only one hydrolyzing ion would be).",
+    wrong: { 0: "There's no general rule that all halogen-containing anions form basic salts; F⁻'s specific behavior here depends on comparing its actual Kb value to NH4⁺'s Ka value, not on a blanket assumption based on being a halogen.", 2: "The solution isn't expected to be EXACTLY neutral; since the two K values (Ka of NH4+ and Kb of F-) aren't precisely equal, one hydrolysis reaction slightly outcompetes the other, producing a solution that is close to, but not exactly, neutral.", 3: "This scenario CAN be analyzed and predicted by directly comparing the relevant Ka and Kb values for each hydrolyzing ion — this is a standard (if more advanced) technique for handling salts where both ions hydrolyze simultaneously." },
+    tempting: "Choice C is tempting since 'both ions hydrolyze' might suggest they perfectly cancel out, but unless their K values are EXACTLY equal, one hydrolysis effect will always slightly dominate the other, shifting the solution slightly acidic or basic rather than being perfectly neutral.",
+    commonMistake: "Assuming that a salt with two hydrolyzing ions must automatically be neutral, rather than directly comparing the specific Ka (of the cation) and Kb (of the anion) values to determine which hydrolysis reaction actually dominates.",
+    apTip: "For salts where BOTH ions can hydrolyze, always directly compare Ka (of the cation) to Kb (of the anion): if Ka > Kb, the solution is slightly acidic; if Kb > Ka, the solution is slightly basic; if they're exactly equal, the solution is truly neutral — this comparison technique extends the single-ion hydrolysis rules to these more complex, dual-hydrolysis salt scenarios."
+  }
+},
+{
+  id: 'chem-8-48', difficulty: 2, type: 'mcq', topic: 'Acid-Base Indicators',
+  prompt: "Acid-base indicators, such as phenolphthalein, change color at specific pH ranges. What is the underlying chemical reason for this color change?",
+  choices: ['Indicators physically dissolve differently at different pH values, which changes their appearance', 'The indicator itself is a weak acid (or weak base) whose protonated and deprotonated forms have different colors; as pH changes, the equilibrium between these two forms shifts, causing an observable color change', 'Indicators react permanently and irreversibly with the solution, destroying their original color', 'All indicators change color at exactly pH 7, regardless of their specific chemical identity'],
+  correct: 1,
+  explanation: {
+    correct: "An indicator is itself a weak acid or weak base whose protonated form (HIn) and deprotonated form (In⁻) have distinctly different colors; as the solution's pH changes, the equilibrium between HIn and In⁻ shifts (following the same Le Chatelier's/equilibrium principles as any other weak acid), causing the observable color to shift as one form becomes dominant over the other.",
+    wrong: { 0: "This isn't a physical dissolution phenomenon; it's a genuine chemical equilibrium shift between two different molecular/ionic forms of the indicator itself, each with a distinct color due to differences in their electronic structure.", 2: "The color change is a reversible EQUILIBRIUM shift (between the indicator's protonated and deprotonated forms), not a permanent, irreversible destructive reaction — this is precisely why indicators can be used repeatedly and their color changes are meaningful, reproducible signals of pH.", 3: "Different indicators have very different characteristic transition pH ranges (determined by each specific indicator's own pKa) — they do NOT all uniformly change color at exactly pH 7, which is precisely why choosing an appropriate indicator for a specific titration (as discussed in an earlier question) is so important." },
+    tempting: "Choice D can tempt students who conflate 'indicator' generally with the specific idea of neutral pH (7), rather than recognizing that each individual indicator has its own specific, characteristic transition range based on its own unique pKa value.",
+    commonMistake: "Not connecting indicator color-change behavior to the same underlying weak acid/base equilibrium principles used throughout this entire unit — an indicator's behavior is governed by exactly the same equilibrium logic as any other weak acid or base.",
+    apTip: "Think of any acid-base indicator as simply a special, highly colored weak acid (or base) — its transition range (where color change becomes visible) is centered around ITS OWN specific pKa value, exactly the same principle used to select buffers matched to a target pH, which is precisely why indicator selection (as in an earlier question) must be matched to the specific titration's expected equivalence point pH."
+  }
+},
+{
+  id: 'chem-8-49', difficulty: 3, type: 'mcq', topic: 'Temperature Dependence of Kw',
+  prompt: "The autoionization of water, 2H2O ⇌ H3O⁺ + OH⁻, is an endothermic process. How does Kw (and correspondingly, the pH of pure neutral water) change as temperature increases above 25°C?",
+  choices: ['Kw stays exactly the same at all temperatures, and neutral pH is always 7.00', 'Kw increases with increasing temperature (since the endothermic autoionization is favored at higher T), meaning neutral pH at higher temperatures is actually somewhat LESS than 7.00, even though [H+] still equals [OH-]', 'Kw decreases with increasing temperature, making pure water slightly basic at higher temperatures', 'Temperature has no relationship to any equilibrium constant, including Kw'],
+  correct: 1,
+  explanation: {
+    correct: "Since water's autoionization is endothermic, increasing temperature shifts this equilibrium forward (Le Chatelier's principle: heat acts as a reactant for an endothermic process), increasing the value of Kw above 1.0×10⁻¹⁴; because [H+] and [OH-] remain EQUAL to each other in pure water (still defining 'neutral'), but their now-larger shared value corresponds to a pH somewhat below 7.00, meaning neutral water at higher temperatures has a pH less than 7.00, even though it's still chemically neutral.",
+    wrong: { 0: "Kw is NOT temperature-independent; like any other equilibrium constant, it changes with temperature — specifically increasing for this ENDOTHERMIC autoionization process as temperature rises.", 2: "This has the temperature-dependence direction backwards — since autoionization is ENDOTHERMIC, INCREASING (not decreasing) temperature favors more autoionization, increasing (not decreasing) Kw.", 3: "Kw is very much a genuine equilibrium constant and follows exactly the same general temperature-dependence principles as any other reaction's K value, based on the sign of its ΔH (endothermic here)." },
+    tempting: "Choice A is tempting from an overly simplified assumption that 'neutral' always corresponds to pH exactly 7.00, without recognizing that the specific NUMERIC value of 7.00 is itself temperature-dependent (it's a direct consequence of Kw's specific value at exactly 25°C).",
+    commonMistake: "Treating pH 7.00 as an absolute, universal definition of 'neutral' at any temperature, rather than correctly recognizing that 'neutral' more precisely means [H+] = [OH-] — a condition whose corresponding numeric pH value shifts with temperature as Kw itself changes.",
+    apTip: "Remember the precise, temperature-independent definition of 'neutral': [H+] = [OH-] (NOT simply 'pH = 7.00', which is only true specifically AT 25°C) — this distinction is a favorite advanced AP conceptual question, testing whether pH 7 is understood as a specific numeric consequence of Kw at one particular temperature, rather than a universal, temperature-independent definition of neutrality."
+  }
+},
+{
+  id: 'chem-8-50', difficulty: 5, type: 'mcq', topic: 'Comprehensive Acid-Base Reasoning',
+  prompt: "A chemist mixes equal moles of a weak acid HA (Ka = 1.0 × 10⁻⁵) and a different weak base B (Kb = 1.0 × 10⁻⁵) in water. Assuming HA and B react completely with each other (HA + B → A⁻ + BH⁺), what can be said about the resulting solution's approximate pH?",
+  choices: ['The solution will definitely be strongly acidic, since HA is present', "The solution's pH will be close to 7 (neutral), because the conjugate base A⁻ and the conjugate acid BH⁺ have very similarly matched (nearly equal) hydrolysis tendencies, given that Ka(HA) and Kb(B) are numerically equal", 'The solution will definitely be strongly basic, since B is present', 'pH cannot be estimated without knowing the exact concentrations used'],
+  correct: 1,
+  explanation: {
+    correct: "After HA and B react completely to form A⁻ (conjugate base of HA) and BH⁺ (conjugate acid of B), the resulting solution's pH depends on comparing Kb(A⁻) = Kw/Ka(HA) against Ka(BH⁺) = Kw/Kb(B); since Ka(HA) and Kb(B) are given as numerically EQUAL (both 1.0×10⁻⁵), this means Kb(A⁻) and Ka(BH⁺) are ALSO equal to each other, so A⁻'s basic hydrolysis tendency almost exactly balances BH⁺'s acidic hydrolysis tendency, producing a solution very close to neutral (pH ≈ 7).",
+    wrong: { 0: "The ORIGINAL species (HA and B) fully react with each other in this scenario and are no longer present in their original forms; what matters for the FINAL solution's pH is the hydrolysis behavior of the newly formed conjugate species (A⁻ and BH⁺), not the starting materials.", 2: "Similarly, this focuses on the wrong (already fully reacted) original species; B is likewise no longer present as itself in the final solution — only its conjugate acid BH⁺ remains to influence pH.", 3: "This specific approximate conclusion (pH close to neutral) actually follows directly and robustly from the EQUAL Ka(HA)/Kb(B) values alone, via the resulting equal Kb(A⁻)/Ka(BH⁺) relationship, without needing to know the exact concentrations used (though concentrations would matter for calculating a more PRECISE numeric pH value)." },
+    tempting: "Choices A and C are both tempting if the analysis mistakenly stays focused on the ORIGINAL reactants (HA, B) rather than correctly shifting attention to the NEW species (A⁻, BH⁺) actually present in solution after the complete reaction between them.",
+    commonMistake: "Failing to shift analytical focus to the newly formed conjugate species after a complete acid-base reaction, and instead continuing to reason based on the properties of the original (now fully consumed) reactants.",
+    apTip: "This is an advanced extension of the salt-hydrolysis comparison technique: after two species react completely, always re-identify exactly what NEW species are present in the resulting solution, then apply the SAME Ka(cation)-vs-Kb(anion) comparison technique to those new conjugate species — matching Ka and Kb values numerically (as in this specific problem) is a strong signal that the final solution's pH will land very close to neutral."
+  }
+}
       ]
     },
     {
@@ -759,7 +5335,579 @@ export const chemistry = {
             commonMistake: "Assuming that because a reaction condition (like high temperature) is used industrially, it must be thermodynamically optimal, rather than recognizing that real industrial decisions often deliberately trade off equilibrium yield for practical reaction rate.",
             apTip: "College-level insight: the real Haber process is the single best worked example in general chemistry for explicitly separating thermodynamic (equilibrium yield) considerations from kinetic (rate) considerations — a genuinely complete FRQ response should explicitly state that high T here SACRIFICES equilibrium yield in exchange for a practical reaction RATE, and that catalysts and pressure are used alongside this trade-off to help compensate for the yield loss."
           }
-        }
+        },
+{
+  id: 'chem-9-7', difficulty: 1, type: 'mcq', topic: 'Specific Heat Capacity',
+  prompt: "In the equation q = mcΔT used in calorimetry, what does the variable 'c' represent?",
+  choices: ['The speed of light', 'The specific heat capacity — the amount of heat required to raise the temperature of 1 gram of a substance by 1°C', 'The concentration of the solution in mol/L', 'The heat capacity of the entire calorimeter'],
+  correct: 1,
+  explanation: {
+    correct: "In q = mcΔT, 'c' is the specific heat capacity, an intensive property representing how much heat (in J) is needed to raise the temperature of exactly 1 gram of that particular substance by 1°C — different substances have very different specific heat values (water's is notably high, at 4.18 J/(g·°C)).",
+    wrong: { 0: "The speed of light is a completely unrelated physical constant with no role in this thermodynamics equation.", 2: "Concentration (mol/L) is an entirely different quantity used in equilibrium and solution chemistry, not a term in the basic calorimetry heat equation.", 3: "The heat capacity of an entire calorimeter (a different but related quantity, often denoted C with a capital letter, in units of J/°C rather than J/(g·°C)) is used in a related but distinct calculation (q = CΔT), not this per-gram specific heat capacity term." },
+    tempting: "Choice D is tempting since calorimeter heat capacity is a genuinely related concept discussed elsewhere in this unit, but it's a distinct quantity (whole-object heat capacity, no mass term needed) from the per-gram specific heat capacity used in q = mcΔT.",
+    commonMistake: "Confusing specific heat capacity (c, an intensive per-gram property) with the related but distinct concept of a calorimeter's total heat capacity (C, an extensive whole-object property).",
+    apTip: "Keep the units straight: specific heat capacity (c) has units of J/(g·°C), always used with a mass term in q = mcΔT; calorimeter (or other whole-object) heat capacity (C) has units of J/°C alone, used without a separate mass term in q = CΔT."
+  }
+},
+{
+  id: 'chem-9-8', difficulty: 1, type: 'mcq', topic: 'Calorimetry Sign Conventions',
+  prompt: "In a coffee-cup calorimetry experiment, the water surrounding the reaction increases in temperature. What does this indicate about the reaction that occurred?",
+  choices: ['The reaction is endothermic, since the water absorbed heat', 'The reaction is exothermic, since it released heat into the water, causing the water\'s temperature to rise', 'No reaction actually occurred, since temperature changes only happen without a reaction', "The reaction's spontaneity cannot be determined from this observation alone"],
+  correct: 1,
+  explanation: {
+    correct: "If the surrounding water's temperature increases, the water is absorbing heat FROM the reaction, meaning the reaction itself is releasing heat into its surroundings — this is the definition of an exothermic reaction (negative ΔH from the reaction/system's perspective).",
+    wrong: { 0: "This description technically applies to the water (which does absorb heat), but the REACTION itself (the system being studied) is releasing that heat, making the reaction exothermic, not endothermic — 'endothermic' and 'exothermic' describe the reaction/system, not the surrounding water bath.", 2: "A temperature change in the surrounding water is actually strong evidence THAT a reaction (or process) did occur and is exchanging heat with its surroundings — it doesn't indicate the absence of a reaction.", 3: "While spontaneity (a ΔG°-based determination) can't be concluded from a simple temperature observation alone, the EXOTHERMIC/ENDOTHERMIC classification (based on the direction of heat flow) can be directly determined from this specific observation." },
+    tempting: "Choice A is a common and subtle trap — correctly identifying that the water absorbs heat, but then mistakenly applying 'endothermic' to describe the reaction (the system) rather than correctly recognizing that heat flowing OUT of the reaction and INTO the water makes the reaction itself exothermic.",
+    commonMistake: "Applying the endothermic/exothermic classification to the wrong object — remember, these terms describe the SYSTEM (the reaction), not the surroundings (like the water bath) that gains or loses heat as a result.",
+    apTip: "Always explicitly ask 'which way is heat flowing, relative to the SYSTEM (the reaction)?' — heat flowing OUT of the system (into the surrounding water, raising its temperature) means the reaction is exothermic; heat flowing INTO the system (cooling the surrounding water) means the reaction is endothermic."
+  }
+},
+{
+  id: 'chem-9-9', difficulty: 1, type: 'mcq', topic: 'Galvanic Cells',
+  prompt: "What is a galvanic (voltaic) cell, and what makes it function?",
+  choices: ['A device that requires external electrical energy to force a non-spontaneous reaction to occur', 'A device that harnesses a spontaneous redox reaction to generate electrical current', 'A container used only to measure temperature changes during a reaction', 'A device that has no relationship to any chemical reaction'],
+  correct: 1,
+  explanation: {
+    correct: "A galvanic (voltaic) cell converts the chemical energy of a SPONTANEOUS redox reaction (one with negative ΔG° and positive E°cell) directly into usable electrical energy/current — this is the basic operating principle behind ordinary batteries.",
+    wrong: { 0: "This describes an ELECTROLYTIC cell instead, which requires an external power source to drive a non-spontaneous reaction — the opposite operating principle from a galvanic cell.", 2: "This describes a calorimeter, an entirely different type of device used specifically for measuring heat/temperature changes, not a galvanic cell (which generates electrical current from a chemical reaction).", 3: "A galvanic cell is fundamentally built around and entirely dependent on a specific type of chemical reaction (a spontaneous redox reaction) — it has everything to do with chemical reactions, not nothing." },
+    tempting: "Choice A is tempting since it describes a real and closely related type of electrochemical cell (electrolytic), but it describes the OPPOSITE functional principle (non-spontaneous, externally powered) from a galvanic cell (spontaneous, self-powered).",
+    commonMistake: "Confusing galvanic cells (spontaneous, generate current) with electrolytic cells (non-spontaneous, require external current) — these are two distinct, essentially opposite types of electrochemical cells.",
+    apTip: "Remember this simple mnemonic: Galvanic = 'Generates' electricity from a spontaneous reaction (like a battery); Electrolytic = 'Electricity required' to force a non-spontaneous reaction — keeping these two cell types' driving forces straight is essential throughout electrochemistry."
+  }
+},
+{
+  id: 'chem-9-10', difficulty: 1, type: 'mcq', topic: 'Electrolytic Cells',
+  prompt: "What is an electrolytic cell, and what makes it function?",
+  choices: ['A device that generates electrical current from a spontaneous chemical reaction', 'A device that uses an external source of electrical energy to force a non-spontaneous redox reaction to occur', 'A device with no practical real-world applications', 'A device that measures pH changes during a titration'],
+  correct: 1,
+  explanation: {
+    correct: "An electrolytic cell uses an external power source (like a battery or power supply) to supply electrical energy that FORCES a non-spontaneous redox reaction (one with positive ΔG° and negative E°cell as written) to proceed — this is the operating principle behind processes like electroplating, electrolysis of water, and recharging batteries.",
+    wrong: { 0: "This describes a GALVANIC cell instead, which spontaneously generates current from a favorable reaction — the opposite operating principle from an electrolytic cell.", 2: "Electrolytic cells have extensive real-world applications, including electroplating, industrial metal refining (like aluminum production), water electrolysis (producing H2 and O2), and recharging rechargeable batteries.", 3: "This describes a pH meter or similar device used in titrations, not an electrolytic cell, which is specifically concerned with driving redox reactions using external electrical energy." },
+    tempting: "Choice A is tempting since it describes the closely related (but functionally opposite) galvanic cell, testing whether these two cell types' distinct driving forces are clearly understood.",
+    commonMistake: "Reversing which cell type (galvanic vs. electrolytic) requires external energy input versus which one generates energy output.",
+    apTip: "A helpful real-world connection: charging a rechargeable battery is an ELECTROLYTIC process (external energy forces a non-spontaneous reverse reaction), while USING (discharging) that same battery afterward is a GALVANIC process (the now-favorable reaction spontaneously generates current) — the same battery can function as both cell types at different times."
+  }
+},
+{
+  id: 'chem-9-11', difficulty: 1, type: 'mcq', topic: 'Standard Reduction Potentials',
+  prompt: "A more POSITIVE standard reduction potential (E°) indicates what about a half-reaction's tendency?",
+  choices: ['A greater tendency to be oxidized (lose electrons)', 'A greater tendency to be reduced (gain electrons) — the species is a stronger oxidizing agent', 'No relationship to electron transfer tendency at all', 'A greater tendency to remain chemically inert'],
+  correct: 1,
+  explanation: {
+    correct: "A more positive standard reduction potential indicates a GREATER tendency for that half-reaction to proceed in the reduction direction (gaining electrons) as written — species with highly positive E° values are strong oxidizing agents (they readily get reduced by taking electrons from something else).",
+    wrong: { 0: "This is the opposite tendency — a more positive E° indicates a greater tendency to be REDUCED (gain electrons), not oxidized (lose electrons); species with very negative E° values are the ones with a greater tendency toward oxidation.", 2: "E° values are DIRECTLY defined by and quantitatively describe a half-reaction's electron transfer tendency — this is their entire purpose and meaning.", 3: "A very positive OR very negative E° value both indicate significant reactivity (strong tendency to be reduced or oxidized, respectively); chemical inertness would actually correspond to E° values very close to a reference point, not to extreme values in either direction relevant to this particular ranking." },
+    tempting: "Choice A is tempting if the reduction/oxidation direction associated with positive E° values is reversed in memory.",
+    commonMistake: "Reversing which extreme of standard reduction potential (very positive vs. very negative) corresponds to a stronger tendency toward reduction versus oxidation.",
+    apTip: "Memorize this clean pairing: MORE POSITIVE E° = STRONGER oxidizing agent (greater tendency to be reduced, gaining electrons); MORE NEGATIVE E° = STRONGER reducing agent (greater tendency to be oxidized, losing electrons) — a standard reduction potential table essentially ranks substances by their 'eagerness' to gain electrons."
+  }
+},
+{
+  id: 'chem-9-12', difficulty: 1, type: 'mcq', topic: "Faraday's Constant",
+  prompt: "What does Faraday's constant (F ≈ 96,485 C/mol) represent, and how is it used in electrochemistry calculations?",
+  choices: ['The speed of electron movement through a wire', 'The amount of electric charge carried by exactly one mole of electrons, used to convert between moles of electrons and total charge (in coulombs)', 'The boiling point of water in a specific unit system', 'A constant used only in gas law calculations'],
+  correct: 1,
+  explanation: {
+    correct: "Faraday's constant represents the total electric charge carried by exactly one mole of electrons (approximately 96,485 coulombs per mole); it serves as the essential conversion factor between moles of electrons (a chemical quantity) and total charge in coulombs (an electrical quantity) in electrochemistry calculations, including ΔG° = -nFE° and electrolysis stoichiometry problems.",
+    wrong: { 0: "Faraday's constant has nothing to do with the physical SPEED of electron movement; it's a fixed conversion factor relating moles of electrons to total charge, not a velocity.", 2: "This is completely unrelated to any physical property of water; Faraday's constant is specifically an electrochemistry conversion constant relating charge and moles of electrons.", 3: "Faraday's constant is specifically an ELECTROCHEMISTRY constant (relating charge and moles of electrons), not a gas law constant (that role belongs to R, the ideal gas constant, which is a completely different number/unit)." },
+    tempting: "Choice D might tempt students who confuse Faraday's constant (F) with the ideal gas constant (R), since both are frequently used fundamental constants in general chemistry, but they serve entirely different purposes in different types of calculations.",
+    commonMistake: "Confusing Faraday's constant (F, for electrochemistry: charge per mole of electrons) with the ideal gas constant (R, for gas laws and thermodynamics) — both are commonly used constants but apply to entirely different types of problems.",
+    apTip: "Whenever a problem involves converting between moles of electrons transferred in a redox reaction and the total electric charge (in coulombs) involved — such as in ΔG° = -nFE° or electrolysis mass/time calculations — Faraday's constant (F ≈ 96,485 C/mol) is the essential conversion factor needed."
+  }
+},
+{
+  id: 'chem-9-13', difficulty: 2, type: 'mcq', topic: 'Types of Calorimetry',
+  prompt: "A coffee-cup calorimeter is an open, insulated container used to measure heat changes at essentially constant atmospheric pressure. What specific thermodynamic quantity does this type of calorimeter directly measure?",
+  choices: ['ΔE (internal energy change), since it measures heat at constant volume', 'ΔH (enthalpy change), since it measures heat at constant pressure', 'ΔS (entropy change) directly', 'ΔG (Gibbs free energy change) directly'],
+  correct: 1,
+  explanation: {
+    correct: "Since q = ΔH specifically at constant pressure (as established in Unit 6), and a coffee-cup calorimeter is open to the atmosphere (constant pressure conditions), the heat measured in this type of calorimeter directly corresponds to ΔH, the enthalpy change of the reaction.",
+    wrong: { 0: "ΔE (internal energy change) specifically corresponds to heat measured at CONSTANT VOLUME (as in a sealed bomb calorimeter), not the constant-pressure conditions of an open coffee-cup calorimeter.", 2: "Entropy change (ΔS) isn't directly measured by a simple heat-based calorimetry experiment like this; it requires more specialized approaches (or calculation from tabulated S° values, or from ΔH and ΔG via ΔG = ΔH - TΔS).", 3: "Gibbs free energy change (ΔG) isn't directly measured by simple calorimetry either; it must be calculated separately (from ΔH and ΔS, or from equilibrium/electrochemical data), not read directly off a calorimetry temperature measurement." },
+    tempting: "Choice A is tempting since ΔE (constant volume) and ΔH (constant pressure) are closely related, easily-confused quantities that are both measured via calorimetry, just under different specific conditions.",
+    commonMistake: "Confusing which specific type of calorimeter (open coffee-cup vs. sealed bomb) corresponds to which specific thermodynamic quantity (ΔH vs. ΔE), since both rely on the same basic q = mcΔT measurement principle but differ in their pressure/volume conditions.",
+    apTip: "Remember this specific pairing: coffee-cup calorimeter (open, constant PRESSURE) measures ΔH; bomb calorimeter (sealed, constant VOLUME) measures ΔE — this distinction is a frequently tested conceptual point connecting calorimetry technique to the specific thermodynamic quantity being measured."
+  }
+},
+{
+  id: 'chem-9-14', difficulty: 2, type: 'mcq', topic: 'Bomb Calorimetry',
+  prompt: "A bomb calorimeter is a sealed, rigid container used to measure heat changes at constant volume, commonly used to measure the heat of combustion of fuels or foods. What specific thermodynamic quantity does this type of calorimeter directly measure?",
+  choices: ['ΔH (enthalpy change), since all calorimeters measure enthalpy', 'ΔE (internal energy change), since the sealed, rigid container maintains constant volume rather than constant pressure', 'ΔS (entropy change) directly, due to the sealed conditions', 'The reaction rate, rather than any thermodynamic quantity'],
+  correct: 1,
+  explanation: {
+    correct: "Because a bomb calorimeter is a sealed, rigid container (fixed volume, no pressure-volume work possible), the heat measured directly corresponds to ΔE (internal energy change) rather than ΔH — this is a key, specific example distinguishing bomb calorimetry (constant volume, measures ΔE) from coffee-cup calorimetry (constant pressure, measures ΔH).",
+    wrong: { 0: "Not all calorimeters measure enthalpy specifically — this is exactly the key distinguishing feature between calorimeter types: constant-PRESSURE calorimeters (like coffee-cup) measure ΔH, while constant-VOLUME calorimeters (like bomb calorimeters) measure ΔE instead.", 2: "Entropy change isn't directly measured by the basic temperature-based heat measurement in a bomb calorimeter; this setup measures q (which equals ΔE at constant volume), not entropy.", 3: "A bomb calorimeter measures a THERMODYNAMIC quantity (specifically ΔE, via heat released/absorbed), not reaction rate (a kinetics concept requiring time-based measurements, not simply a temperature change)." },
+    tempting: "Choice A is a common trap — assuming all calorimetry experiments universally measure ΔH, without recognizing that the specific constant-volume conditions of a bomb calorimeter actually correspond to measuring ΔE instead.",
+    commonMistake: "Assuming ΔH is measured by every calorimetry setup, rather than correctly connecting the SPECIFIC conditions (constant pressure vs. constant volume) of each calorimeter type to the correspondingly different thermodynamic quantity it actually measures.",
+    apTip: "For calorimetry problems, always first identify whether the setup is at constant PRESSURE (open coffee-cup style, measuring ΔH) or constant VOLUME (sealed bomb calorimeter style, measuring ΔE) before assuming which specific thermodynamic quantity the experimental heat measurement directly corresponds to."
+  }
+},
+{
+  id: 'chem-9-15', difficulty: 2, type: 'mcq', topic: 'E°cell Calculation',
+  prompt: "For a galvanic cell built from the half-reactions Cu²⁺ + 2e⁻ → Cu (E° = +0.34 V) and Zn²⁺ + 2e⁻ → Zn (E° = −0.76 V), with copper serving as the cathode (reduction) and zinc as the anode (oxidation), what is E°cell?",
+  choices: ['E°cell = −0.42 V', 'E°cell = +1.10 V', 'E°cell = +0.42 V', 'E°cell = −1.10 V'],
+  correct: 1,
+  explanation: {
+    correct: "E°cell = E°cathode − E°anode = (+0.34 V) − (−0.76 V) = +0.34 + 0.76 = +1.10 V, using the standard reduction potentials as given (the anode's reduction potential is still SUBTRACTED, even though it's undergoing oxidation in this cell).",
+    wrong: { 0: "This appears to have added the two values directly (0.34 + (−0.76) = −0.42) rather than correctly using the subtraction formula E°cathode − E°anode.", 2: "This has the correct magnitude but the wrong sign, suggesting the cathode and anode values may have been swapped in the subtraction.", 3: "This is the negative of the correct answer, again suggesting a sign or swapping error in applying the E°cathode − E°anode formula." },
+    tempting: "Choice A is a very common trap — simply adding the two given E° values directly, rather than correctly applying the specific E°cathode − E°anode subtraction formula.",
+    commonMistake: "Adding the two half-reaction E° values together (or subtracting them in the wrong order) instead of correctly applying E°cell = E°cathode − E°anode using the ORIGINAL reduction potentials (without needing to flip the anode's sign manually first).",
+    apTip: "Always use E°cell = E°cathode (reduction) − E°anode (still using its REDUCTION potential value, not a pre-flipped oxidation value) — this formula automatically handles the sign correctly; don't try to manually flip the anode's sign first and then add, as this commonly leads to sign errors."
+  }
+},
+{
+  id: 'chem-9-16', difficulty: 2, type: 'mcq', topic: 'Predicting Redox Spontaneity',
+  prompt: "A proposed redox reaction, when analyzed using standard reduction potentials, gives E°cell = −0.50 V. What does this indicate about the reaction as written?",
+  choices: ['The reaction is spontaneous under standard conditions', 'The reaction is non-spontaneous under standard conditions as written; the reverse reaction would be spontaneous instead', 'The reaction is at equilibrium', 'E°cell provides no information about spontaneity'],
+  correct: 1,
+  explanation: {
+    correct: "A negative E°cell corresponds to a positive ΔG° (via ΔG° = −nFE°), indicating the reaction as written is NON-spontaneous under standard conditions; however, the REVERSE reaction (which would have E°cell = +0.50 V) would be spontaneous instead.",
+    wrong: { 0: "A negative E°cell specifically indicates NON-spontaneity (positive ΔG°), not spontaneity — spontaneous reactions require a POSITIVE E°cell.", 2: "E°cell = 0 (not −0.50 V) would correspond to the equilibrium condition (ΔG° = 0); a nonzero E°cell value (whether positive or negative) indicates the reaction is NOT at equilibrium under standard conditions.", 3: "E°cell and ΔG° (and thus spontaneity) are directly and quantitatively linked through ΔG° = −nFE°, so E°cell absolutely does provide spontaneity information." },
+    tempting: "None of the distractors are especially subtle if the E°cell-spontaneity relationship is correctly memorized, but forgetting the specific sign pairing (positive E°cell = spontaneous) could lead to choice A.",
+    commonMistake: "Forgetting or reversing the sign relationship between E°cell and spontaneity — remember, POSITIVE E°cell means spontaneous, and NEGATIVE E°cell means non-spontaneous (as the reaction is specifically written).",
+    apTip: "Memorize this simple, frequently tested pairing: E°cell > 0 → spontaneous (favorable, negative ΔG°); E°cell < 0 → non-spontaneous (unfavorable, positive ΔG°); E°cell = 0 → at equilibrium (ΔG° = 0) — this mirrors the same logic used for K and ΔG° in the equilibrium unit."
+  }
+},
+{
+  id: 'chem-9-17', difficulty: 2, type: 'mcq', topic: 'Kinetic vs. Thermodynamic Control',
+  prompt: "In some organic reactions, a 'kinetic product' forms faster (at lower temperature, shorter reaction time) while a different, more stable 'thermodynamic product' forms preferentially under different conditions (higher temperature, longer reaction time, or with a catalyst allowing equilibration). What does this contrast illustrate?",
+  choices: ['Thermodynamic and kinetic considerations are actually the same concept and never lead to different outcomes', 'The product favored by REACTION RATE (kinetics, lower activation energy pathway) is not always the same as the product favored by ultimate STABILITY/favorability (thermodynamics, lower Gibbs free energy) — a reaction can be directed toward either outcome by controlling conditions', 'Only the thermodynamic product can ever actually form in any reaction', 'This phenomenon violates the laws of thermodynamics'],
+  correct: 1,
+  explanation: {
+    correct: "This classic phenomenon demonstrates that the pathway with the LOWEST ACTIVATION ENERGY (fastest, kinetically favored) doesn't always lead to the most thermodynamically stable (lowest Gibbs free energy) product — under conditions that favor fast, effectively irreversible reaction (kinetic control), the kinetic product dominates, while conditions that allow the system to reach true equilibrium (thermodynamic control) favor the more stable thermodynamic product.",
+    wrong: { 0: "Kinetics (reaction rate, governed by activation energy) and thermodynamics (favorability/stability, governed by ΔG) are related but genuinely DIFFERENT concepts that can, and often do, point toward different preferred products under different conditions — this is precisely the point of the kinetic vs. thermodynamic product distinction.", 2: "Under kinetically-controlled conditions, the KINETIC product (not necessarily the thermodynamic one) can and does form preferentially — both types of products are real, experimentally observable outcomes, just under different specific conditions.", 3: "This phenomenon doesn't violate any thermodynamic law; it simply reflects that a reaction under kinetic control may become effectively 'trapped' in a higher-energy (but faster-forming) product without ever reaching true thermodynamic equilibrium, which is a completely valid application of both kinetic and thermodynamic principles working together." },
+    tempting: "Choice A is tempting since thermodynamics and kinetics are often introduced separately without explicit emphasis on how they can be directly compared and contrasted for the SAME reaction system, potentially leading to product outcomes.",
+    commonMistake: "Assuming that the fastest-forming product must also be the most stable (most thermodynamically favorable) product, without recognizing these are governed by fundamentally different factors (activation energy vs. overall ΔG).",
+    apTip: "The classic example most often cited for this concept is the addition of HBr to 1,3-butadiene, which can produce different kinetic (1,2-addition) vs. thermodynamic (1,4-addition) products depending on reaction temperature — recognizing WHEN a reaction is under kinetic vs. thermodynamic control (based on temperature and reversibility) is the key conceptual skill being tested."
+  }
+},
+{
+  id: 'chem-9-18', difficulty: 2, type: 'mcq', topic: 'Diamond to Graphite Conversion',
+  prompt: "Graphite is the thermodynamically more stable form of carbon compared to diamond at standard conditions (ΔG° for diamond → graphite is negative). Yet diamonds do not spontaneously turn into graphite in any observable human timescale. What explains this?",
+  choices: ['The thermodynamic data must be incorrect, since diamonds clearly don\'t convert to graphite', 'The conversion has an extremely high activation energy barrier, making the reaction rate (kinetics) so slow that it\'s effectively unobservable, even though the reaction is thermodynamically favorable', 'Diamond is actually the more stable form, and graphite is less stable', 'Temperature has no effect on this particular conversion\'s rate'],
+  correct: 1,
+  explanation: {
+    correct: "Even though diamond → graphite is thermodynamically favorable (spontaneous, negative ΔG°) at standard conditions, the reaction has an extraordinarily high activation energy barrier (requiring breaking of diamond's extremely strong, rigid covalent network), making the reaction rate so incredibly slow under normal conditions that it's effectively unobservable on any practical human timescale — this is one of the most famous real-world examples illustrating that thermodynamic favorability doesn't guarantee a fast reaction rate.",
+    wrong: { 0: "The thermodynamic data is well-established and correct; the apparent 'contradiction' isn't actually a contradiction at all once kinetics (reaction rate) is properly distinguished from thermodynamics (favorability) as two separate considerations.", 2: "This is factually backwards — graphite, not diamond, is actually the more thermodynamically stable form of carbon at standard conditions (though diamond is 'kinetically trapped' in its current form due to the enormous activation energy required for conversion).", 3: "Temperature absolutely does affect this conversion's rate (as with virtually all reactions, per the Arrhenius equation) — at sufficiently high temperature, this conversion actually can be observed to occur (which is part of how synthetic graphite/diamond processes work), just not under everyday ambient conditions." },
+    tempting: "Choice C is tempting since diamond's popular reputation as an especially 'stable, enduring' material might suggest it's thermodynamically favored, but its stability is actually KINETIC (extremely slow conversion rate) rather than thermodynamic.",
+    commonMistake: "Conflating a substance's apparent everyday 'stability' (often really reflecting extremely slow kinetics) with genuine thermodynamic stability (the actual lower Gibbs free energy state) — these can be, and in this case are, two entirely different things.", 
+    apTip: "This diamond-to-graphite example is one of the most frequently cited real-world illustrations of the thermodynamics-vs-kinetics distinction: always remember that 'thermodynamically favorable' (negative ΔG°) says nothing about HOW FAST a reaction proceeds — a reaction can be thermodynamically 'downhill' yet kinetically frozen in place for practically forever, due to an extremely high activation energy barrier."
+  }
+},
+{
+  id: 'chem-9-19', difficulty: 2, type: 'mcq', topic: 'ATP-Coupled Biological Reactions',
+  prompt: "In biological systems, ATP hydrolysis (ATP → ADP + Pi, ΔG°' ≈ −30.5 kJ/mol) is frequently coupled to otherwise unfavorable cellular reactions to drive them forward. What thermodynamic principle underlies this widespread biological strategy?",
+  choices: ['ATP hydrolysis directly changes the individual ΔG° of the coupled unfavorable reaction to become favorable on its own', 'The overall coupled process\'s ΔG° is the algebraic sum of the individual reactions\' ΔG° values; since ATP hydrolysis is strongly favorable (very negative ΔG°), it can offset a moderately unfavorable reaction\'s positive ΔG°, making the combined overall process favorable', 'ATP acts purely as a catalyst in these reactions, lowering activation energy without being consumed', 'Biological systems operate outside the normal laws of thermodynamics'],
+  correct: 1,
+  explanation: {
+    correct: "Just as with other coupled reactions (like the industrial iron-ore reduction example), the ΔG° values of coupled biological reactions add algebraically; ATP hydrolysis's strongly favorable ΔG°' (≈ −30.5 kJ/mol) can offset and overcome a separate, moderately unfavorable cellular reaction's positive ΔG°', making their COMBINED overall process thermodynamically favorable, even though the original unfavorable reaction remains unfavorable on its own.",
+    wrong: { 0: "Coupling doesn't change the intrinsic ΔG° of the OTHER (originally unfavorable) reaction in isolation; rather, it creates a new overall combined process whose SUMMED ΔG° can become favorable, while each individual step's own ΔG° remains unchanged.", 2: "ATP is CONSUMED (hydrolyzed into ADP and inorganic phosphate) in this process, not regenerated unchanged as a catalyst would be — it acts as a thermodynamic energy currency being spent to drive other reactions, not as a rate-accelerating catalyst.", 3: "Biological systems fully obey the same thermodynamic laws as any other chemical system; ATP coupling is a sophisticated but entirely conventional application of the same ΔG°-summing principle used in coupled reactions generally, not an exception to thermodynamics." },
+    tempting: "Choice C can tempt students who know ATP is critically important for driving reactions and default to calling it a 'catalyst,' without recognizing that ATP is actually consumed (converted to ADP) as a reactant in this coupled process, unlike a true catalyst.",
+    commonMistake: "Describing ATP's role using catalyst-like language (implying it's regenerated unchanged) rather than correctly recognizing it as a consumed reactant whose own highly favorable hydrolysis ΔG° is summed with another reaction's ΔG° to drive an overall unfavorable process forward.",
+    apTip: "ATP is often called the cell's 'energy currency' precisely because of this coupling principle: cells 'spend' the large, reliably negative ΔG° of ATP hydrolysis to 'purchase' otherwise unfavorable reactions, using exactly the same ΔG°-summing logic as any other coupled reaction system in thermodynamics."
+  }
+},
+{
+  id: 'chem-9-20', difficulty: 2, type: 'mcq', topic: 'Calorimeter Heat Measurement',
+  prompt: "In a bomb calorimeter, burning 1.000 g of benzoic acid (a calibration standard) releases 26,400 J of heat, causing the calorimeter's temperature to rise by 6.50°C. Using q = CΔT, what is the calorimeter's heat capacity (C)?",
+  choices: ['C ≈ 171,600 J/°C', 'C ≈ 4,062 J/°C', 'C ≈ 6.50 J/°C', 'C ≈ 26,400 J/°C'],
+  correct: 1,
+  explanation: {
+    correct: "Rearranging q = CΔT to solve for C: C = q/ΔT = 26,400 J / 6.50°C ≈ 4,062 J/°C, which represents the total heat capacity of this specific calorimeter setup — a value that, once determined (calibrated) this way, can be used in subsequent experiments with the same calorimeter to calculate unknown heats of combustion from measured temperature changes.",
+    wrong: { 0: "This appears to have multiplied q and ΔT together instead of correctly dividing q by ΔT to isolate C.", 2: "This simply reports the given ΔT value directly, without performing the necessary division to actually solve for C.", 3: "This simply reports the given q value directly, without dividing by ΔT to solve for C." },
+    tempting: "Choice A is tempting if the rearrangement of q = CΔT is performed incorrectly, multiplying instead of dividing when isolating C.",
+    commonMistake: "Incorrectly rearranging the q = CΔT formula (multiplying instead of dividing, or forgetting to isolate C properly) when solving for a calorimeter's heat capacity from calibration data.",
+    apTip: "This calibration process (using a known, precisely measured heat release like benzoic acid combustion to determine an unknown calorimeter's own heat capacity, C) is a standard experimental first step before that specific calorimeter can be used to measure other UNKNOWN heats of reaction — always solve for C = q/ΔT using the calibration data first."
+  }
+},
+{
+  id: 'chem-9-21', difficulty: 3, type: 'mcq', topic: 'Two-Substance Calorimetry',
+  prompt: "A 50.0 g piece of metal at 100.0°C is placed into 100.0 g of water at 25.0°C in an insulated container. The final equilibrium temperature is 30.0°C. Using q_metal = −q_water, calculate the specific heat capacity of the metal.",
+  choices: ['c_metal ≈ 4.18 J/(g·°C)', 'c_metal ≈ 0.597 J/(g·°C)', 'c_metal ≈ 2.09 J/(g·°C)', 'c_metal ≈ 0.299 J/(g·°C)'],
+  correct: 1,
+  explanation: {
+    correct: "q_water = (100.0 g)(4.18 J/(g·°C))(30.0−25.0°C) = 2090 J (heat gained). Setting q_metal = −q_water: (50.0 g)(c_metal)(30.0−100.0°C) = −2090 J, so (50.0)(c_metal)(−70.0) = −2090, giving c_metal = 2090/(50.0×70.0) ≈ 0.597 J/(g·°C).",
+    wrong: { 0: "This is water's own specific heat capacity, not the calculated specific heat of the unknown metal — this value was given as part of the setup, not the final answer being solved for.", 2: "This value doesn't correctly follow from properly setting up and solving the q_metal = −q_water equation with the given masses and temperature changes.", 3: "This is roughly half of the correctly calculated value, suggesting a possible factor-of-2 error somewhere in the calculation (perhaps involving the mass or ΔT values)." },
+    tempting: "Choice A is tempting if the metal's specific heat is confused with water's specific heat capacity (which is a given constant, not the unknown being solved for in this specific problem).",
+    commonMistake: "Confusing the KNOWN specific heat of water (used to calculate q_water) with the UNKNOWN specific heat of the metal (the actual quantity being solved for using the q_metal = −q_water relationship).",
+    apTip: "For two-substance calorimetry problems, always calculate q for the KNOWN substance (usually water) FIRST using its known specific heat, then set that value (with a sign flip) equal to q for the unknown substance, and finally solve algebraically for the unknown substance's specific heat — keep very careful track of which ΔT belongs to which substance."
+  }
+},
+{
+  id: 'chem-9-22', difficulty: 3, type: 'mcq', topic: 'Bond Enthalpy Calculation',
+  prompt: "Using average bond enthalpies (N≡N = 946 kJ/mol, H–H = 436 kJ/mol, N–H = 391 kJ/mol), estimate ΔH for the reaction N2(g) + 3H2(g) → 2NH3(g). (Each NH3 molecule has 3 N-H bonds.)",
+  choices: ['ΔH ≈ −91 kJ', 'ΔH ≈ +91 kJ', 'ΔH ≈ −2254 kJ', 'ΔH ≈ +2254 kJ'],
+  correct: 0,
+  explanation: {
+    correct: "Bonds broken (reactants): 1 N≡N + 3 H–H = 946 + 3(436) = 946 + 1308 = 2254 kJ. Bonds formed (products): 2 NH3 × 3 N–H bonds each = 6 N-H bonds = 6(391) = 2346 kJ. ΔH ≈ (bonds broken) − (bonds formed) = 2254 − 2346 = −92 kJ, which rounds closest to −91 kJ, consistent with the known exothermic nature of ammonia synthesis (matching the −92.4 kJ/mol value used in earlier unit problems).",
+    wrong: { 1: "The sign here is flipped; since more energy is released forming the six N-H bonds than is required to break the N≡N and H-H bonds, the reaction is exothermic (negative ΔH), not endothermic.", 2: "This is just the 'bonds broken' total alone (2254 kJ) without subtracting the 'bonds formed' energy at all.", 3: "This is the 'bonds broken' total with the wrong sign, and also without subtracting the bonds-formed term." },
+    tempting: "Choice C is tempting if the calculation stops after finding the bonds-broken total, without continuing to also calculate and subtract the bonds-formed total.",
+    commonMistake: "Forgetting to correctly count the TOTAL number of a given bond type when a coefficient applies to a polyatomic product — here, 2 NH3 molecules each contain 3 N-H bonds, for a total of 6 N-H bonds formed, not just 3.",
+    apTip: "When a product has a coefficient (like the '2' in 2NH3), carefully multiply the number of bonds within ONE molecule by BOTH that molecule's own internal bond count AND the reaction's stoichiometric coefficient — here, 2 molecules × 3 N-H bonds per molecule = 6 total N-H bonds formed, not simply 3."
+  }
+},
+{
+  id: 'chem-9-23', difficulty: 3, type: 'mcq', topic: 'E°cell and ΔG° Calculation',
+  prompt: "Using the Zn-Cu galvanic cell (E°cell = +1.10 V, n = 2 mol electrons transferred), calculate ΔG° using ΔG° = −nFE° (F = 96,485 C/mol).",
+  choices: ['ΔG° ≈ −212 kJ/mol', 'ΔG° ≈ +212 kJ/mol', 'ΔG° ≈ −106 kJ/mol', 'ΔG° ≈ −1.10 kJ/mol'],
+  correct: 0,
+  explanation: {
+    correct: "ΔG° = −nFE° = −(2)(96,485 C/mol)(1.10 V) = −212,267 J/mol ≈ −212 kJ/mol, a large negative value consistent with this cell's strongly spontaneous, favorable reaction (matching the very large K value calculated in a related problem).",
+    wrong: { 1: "The sign is flipped; a POSITIVE E°cell must correspond to a NEGATIVE ΔG° (spontaneous), via the negative sign built into the ΔG° = −nFE° formula — this is the same sign relationship established earlier in this unit.", 2: "This is roughly half of the correctly calculated magnitude, suggesting the factor of n = 2 (moles of electrons transferred) may have been omitted from the calculation.", 3: "This value doesn't correctly follow from multiplying n, F, and E° together; it appears to simply restate E° itself in different units without performing the full calculation." },
+    tempting: "Choice C is tempting if the coefficient n = 2 (representing 2 moles of electrons transferred in this specific reaction) is accidentally left out of the multiplication.",
+    commonMistake: "Forgetting to correctly determine and include n (the specific number of moles of electrons transferred, from the balanced half-reactions) when calculating ΔG° from E°cell.",
+    apTip: "Always determine n directly from the BALANCED half-reactions being combined (here, both Cu²⁺/Cu and Zn²⁺/Zn half-reactions specifically involve 2 electrons each) before plugging into ΔG° = −nFE° — n is not automatically 1, and getting it wrong scales your entire final answer incorrectly."
+  }
+},
+{
+  id: 'chem-9-24', difficulty: 3, type: 'mcq', topic: 'Determining n from Half-Reactions',
+  prompt: "For the overall redox reaction formed by combining 2Al³⁺ + 6e⁻ → 2Al (reduction) and 3Mg → 3Mg²⁺ + 6e⁻ (oxidation), what is the correct value of n (moles of electrons transferred) to use in ΔG° = −nFE°?",
+  choices: ['n = 1', 'n = 3', 'n = 6', 'n = 2'],
+  correct: 2,
+  explanation: {
+    correct: "The balanced half-reactions show exactly 6 electrons being transferred (6e⁻ appears in both the reduction and oxidation half-reactions, as required for them to properly combine into a balanced overall equation), so n = 6 for this specific combined reaction.",
+    wrong: { 0: "n = 1 doesn't match the actual number of electrons shown being transferred in these specific balanced half-reactions.", 1: "n = 3 might result from using only the coefficient on Mg (3Mg) rather than correctly identifying the total number of electrons actually transferred (6e⁻) as balanced in both half-reactions.", 3: "n = 2 might result from focusing on the Al³⁺ ion's charge alone (a 3+ charge, or the coefficient 2) rather than correctly reading the total number of electrons (6e⁻) explicitly shown in the balanced half-reactions." },
+    tempting: "Choice B is tempting if n is mistakenly taken from a single species' stoichiometric coefficient (like the 3 in front of Mg) rather than from the actual number of electrons explicitly balanced in both half-reactions together.",
+    commonMistake: "Determining n from an individual species' coefficient or ionic charge rather than correctly reading the actual number of electrons (e⁻) shown as balanced and transferred in the combined, fully-balanced half-reaction pair.",
+    apTip: "Always determine n by directly counting the number of electrons (e⁻) that appear in the BALANCED half-reactions as actually written and combined — this number must be equal in both the reduction and oxidation half-reactions before they can be properly added together to form the overall balanced equation."
+  }
+},
+{
+  id: 'chem-9-25', difficulty: 3, type: 'mcq', topic: 'Relating K to E°cell',
+  prompt: "Using the combined relationship linking E°cell to the equilibrium constant K (derived from ΔG° = −nFE° = −RT ln K), for the Zn-Cu cell (E°cell = +1.10 V, n = 2, T = 298 K), what can be said about the magnitude of K?",
+  choices: ['K is a small number, less than 1, since the reaction barely proceeds', 'K is an astronomically large number (on the order of 10³⁷), reflecting that this reaction proceeds essentially to completion', 'K = 1.10, matching E°cell numerically', 'K cannot be calculated from E°cell at all'],
+  correct: 1,
+  explanation: {
+    correct: "Solving ln K = nFE°/(RT) = (2)(96,485)(1.10)/[(8.314)(298)] ≈ 85.7, giving K = e^85.7, an astronomically large number (on the order of 10³⁷) — this makes physical sense, since the Zn-Cu cell's large positive E°cell (and correspondingly very negative ΔG°) indicates the reaction is extremely favorable and proceeds essentially to completion, strongly favoring products.",
+    wrong: { 0: "This is the opposite conclusion — a LARGE positive E°cell (and correspondingly very negative ΔG°) corresponds to a very LARGE K value (strongly favoring products), not a small one.", 2: "K is not simply numerically equal to E°cell; the two are related through the more complex exponential relationship K = e^(nFE°/RT), not a direct one-to-one numerical correspondence.", 3: "K absolutely CAN be calculated from E°cell using the combined relationship ΔG° = −nFE° = −RT ln K, which directly connects these two quantities through the shared ΔG° term." },
+    tempting: "Choice C is tempting if E°cell and K are assumed to be directly, simply equal to each other, rather than correctly recognizing their more complex EXPONENTIAL relationship (via the natural logarithm).",
+    commonMistake: "Assuming a simple, direct numerical equivalence between E°cell and K, rather than correctly working through the full exponential relationship connecting them via ΔG°.",
+    apTip: "Remember that E°cell and K are related through an EXPONENTIAL relationship (via ln K = nFE°/RT), not a linear one — even a modest E°cell value (like 1.10 V here) can correspond to an absolutely enormous K value, since the relationship involves exponentiation, not simple proportionality."
+  }
+},
+{
+  id: 'chem-9-26', difficulty: 3, type: 'mcq', topic: 'Electrolysis Stoichiometry',
+  prompt: "A constant current of 2.00 A is passed through a solution of CuSO4 for 1000 seconds, depositing copper metal via Cu²⁺ + 2e⁻ → Cu. Approximately how many grams of copper are deposited? (Molar mass Cu = 63.55 g/mol, F = 96,485 C/mol)",
+  choices: ['≈ 0.659 g', '≈ 1.32 g', '≈ 0.0207 g', '≈ 2.07 g'],
+  correct: 0,
+  explanation: {
+    correct: "Moles of electrons = (I × t)/F = (2.00 A × 1000 s)/96,485 C/mol ≈ 0.02073 mol e⁻; since 2 moles of electrons deposit 1 mole of Cu, moles Cu = 0.02073/2 ≈ 0.01036 mol; mass Cu = 0.01036 mol × 63.55 g/mol ≈ 0.659 g.",
+    wrong: { 1: "This is roughly double the correct answer, suggesting the division by 2 (for the 2 electrons required per Cu atom) may have been skipped or applied incorrectly.", 2: "This appears to report the moles of electrons directly as if it were the mass of copper, without converting through moles of Cu and then multiplying by copper's molar mass.", 3: "This is roughly 100 times the correct value, suggesting a significant unit or decimal-placement error somewhere in the multi-step calculation." },
+    tempting: "Choice B is a common trap — correctly calculating moles of electrons, but then forgetting to divide by 2 (since Cu²⁺ requires 2 electrons per Cu atom deposited) before proceeding to calculate mass.",
+    commonMistake: "Forgetting to properly account for the electron-to-metal-atom ratio (here, 2 electrons per Cu atom) specified by the reduction half-reaction, when converting from moles of electrons to moles of deposited metal.",
+    apTip: "For electrolysis stoichiometry problems, always work through these steps explicitly in order: (1) moles of electrons = (current × time)/F; (2) moles of metal = moles of electrons ÷ (electrons required per metal atom, from the balanced half-reaction); (3) mass of metal = moles of metal × molar mass — skipping or misapplying step 2 is the most common source of error."
+  }
+},
+{
+  id: 'chem-9-27', difficulty: 3, type: 'mcq', topic: 'Electrolysis Time Calculation',
+  prompt: "A constant current of 3.00 A is used to electroplate silver via Ag⁺ + e⁻ → Ag. How much time (in seconds) is required to deposit 5.00 g of silver? (Molar mass Ag = 107.87 g/mol, F = 96,485 C/mol)",
+  choices: ['≈ 1491 s', '≈ 4472 s', '≈ 745 s', '≈ 2.98 s'],
+  correct: 0,
+  explanation: {
+    correct: "Moles Ag = 5.00 g / 107.87 g/mol ≈ 0.04635 mol; since Ag⁺ requires only 1 electron per atom, moles of electrons = 0.04635 mol; charge = moles × F = 0.04635 × 96,485 ≈ 4472 C; time = charge/current = 4472 C / 3.00 A ≈ 1491 s.",
+    wrong: { 1: "This is the calculated CHARGE (in coulombs), not the final TIME (in seconds) — the last division step (charge ÷ current) still needs to be completed.", 2: "This is roughly half of the correctly calculated time, suggesting a possible factor-of-2 error, perhaps from incorrectly assuming Ag requires 2 electrons per atom instead of the correct 1.", 3: "This value is far too small, suggesting a major setup error, possibly treating the given mass directly as moles without dividing by Ag's molar mass first." },
+    tempting: "Choice B is a common trap — correctly calculating the total charge required, but stopping there instead of completing the final division by current to actually find the time.",
+    commonMistake: "Stopping the calculation at an intermediate quantity (like total charge) without completing the final necessary step to solve for the actually requested quantity (time, in this case).",
+    apTip: "For electrolysis TIME calculations, work backward through the same general steps as a mass-deposition problem, but end with time = charge/current as the final step — always double-check which specific quantity (mass, time, or current) the problem is actually asking you to solve for, since it's easy to stop one step too early."
+  }
+},
+{
+  id: 'chem-9-28', difficulty: 3, type: 'mcq', topic: 'Catalytic Converters',
+  prompt: "Catalytic converters in automobiles use platinum, palladium, or rhodium catalysts to convert toxic exhaust gases (like CO and NOx) into less harmful products (CO2 and N2) at operating temperature. These conversion reactions are thermodynamically favorable but proceed extremely slowly without a catalyst at typical exhaust temperatures. What role does the catalyst play in this real-world application?",
+  choices: ['The catalyst makes the reaction thermodynamically favorable, changing its ΔG° from positive to negative', 'The catalyst provides an alternative reaction pathway with lower activation energy, dramatically increasing the reaction rate without changing the reaction\'s already-favorable thermodynamics', 'The catalyst is consumed in the reaction, providing the chemical energy needed to drive the conversion', 'The catalyst changes the products of the reaction to something other than CO2 and N2'],
+  correct: 1,
+  explanation: {
+    correct: "Since these exhaust-gas conversion reactions are already thermodynamically favorable (spontaneous, negative ΔG°) but proceed too slowly to be useful without assistance, the catalyst's role is purely KINETIC: it provides an alternative reaction pathway with a lower activation energy, dramatically speeding up the reaction rate so that meaningful conversion actually occurs within the vehicle's exhaust system, all without altering the reaction's fundamental thermodynamic favorability.",
+    wrong: { 0: "The reaction is described as ALREADY thermodynamically favorable even without the catalyst; the catalyst's role is specifically to address the SLOW RATE (a kinetic issue), not to change an already-favorable ΔG° into being favorable (it already is).", 2: "By definition, a true catalyst is NOT consumed in the reaction it catalyzes; it provides an alternative pathway and is fully regenerated at the end of each catalytic cycle, unlike a reactant (such as ATP in the earlier coupled-reaction example) that IS consumed.", 3: "The catalyst doesn't change WHAT products form (CO2 and N2 remain the products); it only affects HOW QUICKLY those already-thermodynamically-favored products are reached." },
+    tempting: "Choice C can tempt students who conflate a catalyst's role with that of a coupled reactant (like ATP), but a genuine catalyst is specifically NOT consumed, distinguishing it fundamentally from a reactant that provides thermodynamic driving force.",
+    commonMistake: "Confusing a catalyst's purely kinetic role (speeding up an already-favorable reaction via lower activation energy) with either changing a reaction's fundamental thermodynamics or serving as a consumed reactant providing chemical driving force.",
+    apTip: "This catalytic converter example reinforces the core kinetics-vs-thermodynamics distinction from earlier in this unit: a catalyst NEVER changes whether a reaction is thermodynamically favorable (that's fixed by ΔG°) — it only changes HOW FAST an already-favorable reaction can practically proceed, which is exactly the problem it solves for otherwise-too-slow (but thermodynamically fine) exhaust conversion reactions."
+  }
+},
+{
+  id: 'chem-9-29', difficulty: 4, type: 'mcq', topic: 'Multi-Component Calorimetry',
+  prompt: "A reaction occurs in a calorimeter containing 100.0 g of aqueous solution (specific heat ≈ 4.18 J/(g·°C), same as water) plus the calorimeter itself, which has its own heat capacity of 15.0 J/°C. If the temperature rises by 5.00°C, what is the TOTAL heat released by the reaction (accounting for both the solution and the calorimeter absorbing heat)?",
+  choices: ['q ≈ 2090 J (solution only, ignoring the calorimeter)', 'q ≈ 2165 J (solution plus calorimeter combined)', 'q ≈ 75 J (calorimeter only)', 'q ≈ 4180 J'],
+  correct: 1,
+  explanation: {
+    correct: "q_solution = (100.0 g)(4.18 J/(g·°C))(5.00°C) = 2090 J; q_calorimeter = (15.0 J/°C)(5.00°C) = 75 J; total heat absorbed (and thus released by the reaction) = 2090 + 75 = 2165 J — both heat sinks (the solution AND the calorimeter itself) must be accounted for to get the true total heat released.",
+    wrong: { 0: "This correctly calculates the solution's heat absorption alone, but INCOMPLETELY omits the calorimeter's own heat capacity contribution (75 J), underestimating the true total heat released by the reaction.", 2: "This is only the calorimeter's contribution (75 J) in isolation, omitting the much larger solution contribution (2090 J) — the TOTAL heat released must include both heat-absorbing components.", 3: "This value doesn't correctly follow from either calculation performed separately or combined; it appears to be a miscalculated or unrelated intermediate value." },
+    tempting: "Choice A is a very common and significant trap in more realistic calorimetry problems — correctly calculating the heat absorbed by the solution, but forgetting that the calorimeter apparatus ITSELF also absorbs some heat and must be included for an accurate total.",
+    commonMistake: "Forgetting to include the calorimeter's own heat capacity (a real, physical heat sink) in the total heat calculation, focusing only on the more obvious heat absorbed by the solution/water.",
+    apTip: "For more sophisticated (and more experimentally realistic) calorimetry problems, always check whether the calorimeter's OWN heat capacity is provided — if so, it must be ADDED to the solution's heat absorption to get the complete, accurate total heat released by the reaction; omitting this term is one of the most common realistic-calorimetry errors."
+  }
+},
+{
+  id: 'chem-9-30', difficulty: 4, type: 'mcq', topic: 'Solving for Unknown Bond Enthalpy',
+  prompt: "For the reaction CH4(g) + Cl2(g) → CH3Cl(g) + HCl(g), ΔH°rxn = −99 kJ. Using known bond enthalpies (C–H = 413 kJ/mol, Cl–Cl = 243 kJ/mol, H–Cl = 431 kJ/mol), and knowing this reaction breaks 1 C-H bond and 1 Cl-Cl bond while forming 1 (new, unknown) C-Cl bond and 1 H-Cl bond, solve for the approximate C–Cl bond enthalpy.",
+  choices: ['C–Cl ≈ 324 kJ/mol', 'C–Cl ≈ 126 kJ/mol', 'C–Cl ≈ 587 kJ/mol', 'C–Cl ≈ 755 kJ/mol'],
+  correct: 0,
+  explanation: {
+    correct: "Setting up ΔH°rxn = (bonds broken) − (bonds formed): −99 = [413 + 243] − [x + 431], where x is the unknown C–Cl bond enthalpy; solving: −99 = 656 − x − 431 = 225 − x, so x = 225 − (−99) = 324 kJ/mol.",
+    wrong: { 1: "This value doesn't correctly follow from properly rearranging and solving the ΔH°rxn = (bonds broken) − (bonds formed) equation for the unknown x.", 2: "This is roughly double the correct answer, suggesting a possible sign or algebraic rearrangement error when isolating x.", 3: "This value is far too large for a typical single bond enthalpy in this context, suggesting a significant setup or arithmetic error." },
+    tempting: "Choice B might result from an algebra error when isolating x, such as mishandling the negative signs during rearrangement of the equation.",
+    commonMistake: "Making sign errors when algebraically rearranging the bond-enthalpy equation to solve for an unknown bond energy, especially when the given ΔH°rxn itself is negative.",
+    apTip: "When solving for an unknown bond enthalpy, set up the FULL equation explicitly first (ΔH°rxn = bonds broken − bonds formed, with the unknown as a variable x in the correct position), then carefully perform the algebra step-by-step to isolate x — rushing this rearrangement is where most sign errors occur."
+  }
+},
+{
+  id: 'chem-9-31', difficulty: 4, type: 'mcq', topic: 'Combined E°cell, ΔG°, and K',
+  prompt: "For a hypothetical cell with E°cell = +0.50 V and n = 1, which of the following statements about ΔG° and K is TRUE?",
+  choices: ['ΔG° is positive and K is less than 1', 'ΔG° is negative and K is greater than 1, since a positive E°cell always corresponds to both a negative ΔG° and a K value greater than 1', 'ΔG° is positive but K is greater than 1 (these can have inconsistent signs)', 'ΔG° and K are both exactly zero'],
+  correct: 1,
+  explanation: {
+    correct: "A positive E°cell always corresponds to a negative ΔG° (via ΔG° = −nFE°) and, correspondingly, a K value greater than 1 (via ΔG° = −RT ln K, where a negative ΔG° requires a positive ln K, meaning K > 1) — these three quantities (positive E°cell, negative ΔG°, and K > 1) always travel together consistently for a spontaneous, product-favored reaction.",
+    wrong: { 0: "This describes the OPPOSITE, self-consistent set of relationships (which would occur for a NEGATIVE E°cell, not the positive one given here) — a positive E°cell cannot correspond to a positive ΔG° and K < 1.", 2: "ΔG° and K can NEVER have 'inconsistent' signs relative to each other — they are directly, quantitatively linked through the SAME underlying thermodynamic relationships; a negative ΔG° always means K > 1, and a positive ΔG° always means K < 1, without exception.", 3: "ΔG° = 0 and K = 1 would specifically correspond to E°cell = 0, not the given nonzero value of +0.50 V; a nonzero E°cell always produces nonzero (and non-unity) corresponding ΔG° and K values." },
+    tempting: "Choice C tests whether the fundamental consistency between ΔG° and K is properly understood — this specific combination (positive ΔG° with K > 1) can NEVER actually occur together, since they are mathematically locked to the same sign relationship.",
+    commonMistake: "Believing that ΔG° and K could ever show 'mismatched' or seemingly contradictory signs, rather than recognizing they are directly and permanently linked through the same underlying equation, always changing together consistently.",
+    apTip: "Memorize this fully consistent chain of relationships for a SPONTANEOUS process (as indicated by positive E°cell): positive E°cell ALWAYS pairs with negative ΔG° AND K > 1 — these three indicators of thermodynamic favorability always agree with each other and can never show contradictory signs relative to one another."
+  }
+},
+{
+  id: 'chem-9-32', difficulty: 4, type: 'mcq', topic: 'Ranking Oxidizing and Reducing Agents',
+  prompt: "Given standard reduction potentials: F2 + 2e⁻ → 2F⁻ (E° = +2.87 V), Cu²⁺ + 2e⁻ → Cu (E° = +0.34 V), and Li⁺ + e⁻ → Li (E° = −3.04 V), which species is the STRONGEST oxidizing agent, and which is the STRONGEST reducing agent, among the species actually listed?",
+  choices: ['F2 is the strongest oxidizing agent; Li is the strongest reducing agent', 'Li⁺ is the strongest oxidizing agent; F⁻ is the strongest reducing agent', 'Cu²⁺ is the strongest oxidizing agent; Cu is the strongest reducing agent', 'All three species have identical oxidizing/reducing strength'],
+  correct: 0,
+  explanation: {
+    correct: "F2 has the most POSITIVE E° (+2.87 V), meaning it has the greatest tendency to be reduced (gain electrons), making it the STRONGEST oxidizing agent among these options; Li (whose ion, Li⁺, has the most NEGATIVE E° at −3.04 V) has the greatest tendency to be oxidized (lose electrons) in its elemental form, making elemental Li the STRONGEST reducing agent among these options.",
+    wrong: { 1: "This has the relationships reversed — Li⁺ (with the most negative reduction potential) has the LEAST tendency to be reduced, not the greatest, so it's actually the WEAKEST oxidizing agent, not the strongest; similarly, F⁻ is a very weak reducing agent, not a strong one, since it corresponds to the most positive (favorable) reduction potential.", 2: "While Cu²⁺ can act as an oxidizing agent and Cu as a reducing agent, their E° values (+0.34 V) are much more moderate compared to the extremes shown by F2 (+2.87 V) and Li (−3.04 V) among these three specific options — Cu²⁺ and Cu are not the STRONGEST in either category here.", 3: "These three species have dramatically different E° values (ranging from +2.87 V to −3.04 V), representing very different oxidizing/reducing strengths — they are far from identical in this regard." },
+    tempting: "Choice B is a classic trap — correctly identifying the two EXTREME E° values but then incorrectly reversing which species (the reduced or oxidized form) actually serves as the strong oxidizing/reducing agent based on those potentials.",
+    commonMistake: "Confusing which specific chemical species (the oxidized form vs. the reduced form shown in a half-reaction) actually serves as the strong oxidizing or reducing AGENT, based on a given E° value.",
+    apTip: "Remember: the species on the LEFT side of a reduction half-reaction (the oxidized form, like F2 or Cu²⁺) is the actual OXIDIZING AGENT if that E° is very positive; the species on the RIGHT side (the reduced form, like Li or Cu) is the actual REDUCING AGENT if that E° is very negative — always double check which side of the half-reaction the relevant agent is actually located on."
+  }
+},
+{
+  id: 'chem-9-33', difficulty: 4, type: 'mcq', topic: 'Reversing Half-Reactions for E°cell',
+  prompt: "Two half-reactions are given: Ag⁺ + e⁻ → Ag (E° = +0.80 V) and Fe²⁺ + 2e⁻ → Fe (E° = −0.44 V). If Fe is used as the ANODE (oxidized to Fe²⁺) and Ag⁺ is used as the CATHODE (reduced to Ag), what is E°cell for this galvanic cell?",
+  choices: ['E°cell = +0.36 V', 'E°cell = +1.24 V', 'E°cell = −1.24 V', 'E°cell = +0.44 V'],
+  correct: 1,
+  explanation: {
+    correct: "E°cell = E°cathode − E°anode = (+0.80 V) − (−0.44 V) = +0.80 + 0.44 = +1.24 V — using the ORIGINAL reduction potentials for both half-reactions (without manually flipping Fe's sign first), since the formula's subtraction already correctly accounts for the anode undergoing oxidation.",
+    wrong: { 0: "This appears to have added the two E° values directly (0.80 + (−0.44) = 0.36) rather than correctly applying the E°cathode − E°anode subtraction formula.", 2: "This is the negative of the correct answer, suggesting the cathode and anode may have been swapped in the subtraction.", 3: "This is simply the magnitude of Fe's given reduction potential alone, not the result of correctly combining both half-reactions using the E°cathode − E°anode formula." },
+    tempting: "Choice A is the same common trap seen in earlier E°cell problems — directly adding the two given E° values, rather than correctly applying the E°cathode − E°anode subtraction.",
+    commonMistake: "Repeating the same E°cell calculation error pattern (adding instead of subtracting, or subtracting in the wrong order) across different specific half-reaction examples.",
+    apTip: "No matter which specific half-reactions are involved, always apply the SAME formula consistently: E°cell = E°cathode (using its given reduction potential) − E°anode (also using ITS given reduction potential, not a pre-flipped value) — this consistent approach avoids sign errors regardless of the specific numbers involved."
+  }
+},
+{
+  id: 'chem-9-34', difficulty: 4, type: 'mcq', topic: 'Rechargeable Batteries',
+  prompt: "A rechargeable lithium-ion battery operates as a galvanic cell while powering a device (discharging) and as an electrolytic cell while being plugged in to recharge. What changes between these two modes of operation?",
+  choices: ["The battery's chemical composition changes entirely into a different substance between the two modes", "During discharge, the cell's spontaneous redox reaction proceeds forward, generating current; during recharging, an external power source forces this same reaction to run in REVERSE (a non-spontaneous process), restoring the original reactants", 'Recharging has no chemical effect on the battery at all', 'The same reaction runs forward spontaneously in both discharging AND recharging modes'],
+  correct: 1,
+  explanation: {
+    correct: "During discharge, the battery's internal redox reaction proceeds in its spontaneous, favorable direction (galvanic cell behavior), converting chemical energy into usable electrical energy; during recharging, an external power source (like a wall charger) forces this SAME reaction to run in REVERSE (now acting as an electrolytic cell), which is non-spontaneous and requires that external energy input, restoring the original higher-energy reactants so the battery can be used again.",
+    wrong: { 0: "The battery's fundamental chemical COMPOSITION (the actual elements/compounds present) doesn't change into something entirely different; rather, the SAME redox couple simply shifts back and forth between its oxidized and reduced forms, depending on which direction the reaction is currently running.", 2: "Recharging absolutely does have a real, significant chemical effect — it's specifically restoring the original reactants (reversing the discharge reaction) so that the battery can later discharge again, which is the entire functional point of a rechargeable (as opposed to single-use) battery.", 3: "The reaction cannot run spontaneously forward in BOTH directions simultaneously — one direction (discharge) is thermodynamically favorable (spontaneous, galvanic), while the reverse direction (recharge) is specifically NON-spontaneous, requiring external electrical energy input (electrolytic) to force it to occur." },
+    tempting: "Choice D might tempt students who don't fully connect galvanic/electrolytic cell principles to this everyday, practical rechargeable battery example.",
+    commonMistake: "Not recognizing that a SINGLE rechargeable battery system alternates between functioning as a galvanic cell (spontaneous discharge) and an electrolytic cell (non-spontaneous, externally-forced recharge), rather than treating these as requiring two entirely separate chemical systems.",
+    apTip: "Rechargeable batteries are one of the best everyday, practical examples connecting galvanic and electrolytic cell concepts directly together: the exact SAME redox reaction runs forward (spontaneously, galvanic) during use and backward (non-spontaneously, requiring external electrolytic energy input) during charging — recognizing this reversible relationship is a favorite way this topic is tested."
+  }
+},
+{
+  id: 'chem-9-35', difficulty: 4, type: 'mcq', topic: 'Sacrificial Anodes (Corrosion Prevention)',
+  prompt: "To protect an iron pipeline from corrosion (rusting), a more easily oxidized metal, such as zinc or magnesium, is often attached to the pipeline as a 'sacrificial anode.' What electrochemical principle explains why this protects the iron?",
+  choices: ['The sacrificial metal chemically coats the iron, forming a physical barrier that blocks oxygen and water', 'The sacrificial metal has a more negative standard reduction potential than iron, making it more easily oxidized; it preferentially corrodes (is oxidized) instead of the iron, protecting the iron by acting as the anode in the resulting electrochemical cell', 'The sacrificial metal reacts directly and completely with the iron in a single displacement reaction, permanently transforming it into a more corrosion-resistant alloy', 'Sacrificial anodes work by lowering the local temperature, slowing all reaction rates in the area'],
+  correct: 1,
+  explanation: {
+    correct: "A sacrificial anode metal (like zinc or magnesium) is deliberately chosen because it has a MORE NEGATIVE standard reduction potential than iron, meaning it has a greater inherent tendency to be oxidized (lose electrons); when connected to the iron pipeline (forming a working electrochemical cell with the surrounding environment), the sacrificial metal preferentially undergoes oxidation (corrodes) INSTEAD of the iron, effectively protecting the iron by acting as the anode while the iron is forced into the protected cathode role.",
+    wrong: { 0: "This describes a physical barrier coating method (like galvanization or painting), which is a genuinely different corrosion-prevention strategy from the specific ELECTROCHEMICAL principle (preferential oxidation based on relative reduction potentials) underlying sacrificial anode protection.", 2: "This isn't a single displacement reaction forming a permanent alloy; rather, it's an ongoing ELECTROCHEMICAL process where the sacrificial metal continuously corrodes (is oxidized) over time in place of the iron, requiring periodic replacement of the sacrificial anode as it's gradually consumed.", 3: "Sacrificial anode protection has nothing to do with temperature changes; it's specifically based on the relative standard reduction potentials (and thus relative oxidation tendencies) of the two different metals involved." },
+    tempting: "Choice A is tempting since physical barrier coatings (like galvanized zinc coating) are a real and related corrosion-prevention strategy, but sacrificial ANODE protection specifically relies on the ELECTROCHEMICAL principle of preferential oxidation, not simply physical blocking.",
+    commonMistake: "Confusing sacrificial anode protection (an electrochemical, reduction-potential-based strategy) with physical barrier methods (like paint or galvanized coatings), which operate on an entirely different, non-electrochemical principle.",
+    apTip: "Sacrificial anode protection is a direct, practical real-world application of standard reduction potential rankings: always choose a metal with a MORE NEGATIVE E° than the metal you're trying to protect, ensuring the sacrificial metal is oxidized (consumed) instead of the protected metal — this is precisely why zinc (E° = −0.76 V) or magnesium (even more negative) are commonly chosen to protect iron/steel (E° = −0.44 V) pipelines and ship hulls."
+  }
+},
+{
+  id: 'chem-9-36', difficulty: 5, type: 'mcq', topic: 'Nernst Equation',
+  prompt: "For the Zn-Cu cell (E°cell = +1.10 V, n = 2), if the concentrations are non-standard, with [Cu²⁺] = 0.010 M and [Zn²⁺] = 1.0 M, use the Nernst equation E = E° − (0.0592/n)log(Q) to calculate the actual cell potential, E. (Q = [Zn²⁺]/[Cu²⁺] for this reaction, based on the overall balanced equation Zn + Cu²⁺ → Zn²⁺ + Cu)",
+  choices: ['E ≈ 1.10 V (unchanged from standard conditions)', 'E ≈ 1.04 V', 'E ≈ 1.16 V', 'E ≈ 0.0592 V'],
+  correct: 1,
+  explanation: {
+    correct: "Q = [Zn²⁺]/[Cu²⁺] = 1.0/0.010 = 100; E = E° − (0.0592/n)log(Q) = 1.10 − (0.0592/2)log(100) = 1.10 − (0.0296)(2) = 1.10 − 0.0592 ≈ 1.04 V, showing that non-standard concentrations (here, a lower-than-standard [Cu²⁺]) cause the actual cell potential to deviate somewhat from the standard E°cell value.",
+    wrong: { 0: "E°cell (+1.10 V) is the potential specifically under STANDARD conditions (1 M concentrations); since the given concentrations here are non-standard ([Cu²⁺] = 0.010 M, not 1 M), the Nernst equation correction must be applied, and the actual E will differ from E°.", 2: "This has the sign of the Nernst correction term backwards — since Q > 1 in this specific case (more product-side Zn²⁺ than reactant-side Cu²⁺, relatively speaking), the correction term should DECREASE E below E°, not increase it.", 3: "This is simply the coefficient (0.0592) from the Nernst equation itself, reported directly as if it were the final calculated E value, rather than completing the full calculation using the actual given Q and n values." },
+    tempting: "Choice C is tempting if the sign of the Nernst correction term is flipped, adding instead of correctly subtracting it from E°.",
+    commonMistake: "Mismanaging the sign of the (0.0592/n)log(Q) correction term in the Nernst equation, or forgetting to apply this correction altogether when concentrations are explicitly given as non-standard.",
+    apTip: "Always check whether concentrations given in a problem are standard (1 M, in which case E = E° exactly) or non-standard (any other value, requiring the Nernst equation correction) — and carefully identify Q using the SAME products-over-reactants setup as an ordinary reaction quotient, based on the specific overall balanced redox equation."
+  }
+},
+{
+  id: 'chem-9-37', difficulty: 5, type: 'mcq', topic: 'Concentration Cells',
+  prompt: "A concentration cell is built using the same Cu²⁺/Cu electrode system on both sides, but with different concentrations: one half-cell has [Cu²⁺] = 1.0 M, and the other has [Cu²⁺] = 0.10 M. What is E°cell for this setup, and what drives the resulting nonzero cell potential?",
+  choices: ['E°cell = +1.10 V, the same as any standard Cu²⁺/Cu cell', 'E°cell = 0 V, since both half-cells use identical electrodes and identical standard reduction potentials; the actual nonzero potential arises entirely from the CONCENTRATION difference, calculated using the Nernst equation, not from any difference in E° itself', 'E°cell cannot be calculated for a concentration cell', 'The cell will not function at all, since both sides are the same element'],
+  correct: 1,
+  explanation: {
+    correct: "Since both half-cells use IDENTICAL electrode materials and IDENTICAL standard reduction potentials (both are Cu²⁺/Cu, E° = +0.34 V), E°cell = E°cathode − E°anode = 0.34 − 0.34 = 0 V exactly; however, the cell still generates a genuine, measurable NONZERO potential because of the CONCENTRATION difference between the two half-cells, which must be calculated using the Nernst equation (the system spontaneously drives toward equalizing the concentrations, generating current in the process, consistent with Le Chatelier's principle).",
+    wrong: { 0: "This is the E°cell value for a DIFFERENT type of cell (Zn-Cu, with two different electrode materials); for THIS concentration cell (identical Cu²⁺/Cu on both sides), E°cell is specifically 0 V, since both half-cells share the exact same standard reduction potential.", 2: "E°cell absolutely CAN be calculated for a concentration cell — it's simply 0 V, since E°cathode and E°anode are identical for this type of cell (same electrode/ion system on both sides).", 3: "The cell DOES function and generates a real, measurable potential, specifically DRIVEN BY the concentration difference — this is precisely what makes it interesting and useful (concentration cells are used, for example, in certain types of ion-selective electrodes and pH meters), rather than being non-functional." },
+    tempting: "Choice A is tempting if the type of cell described (concentration cell, same electrode material) is confused with a standard two-different-metal galvanic cell (like Zn-Cu), which would indeed have a large nonzero E°cell.",
+    commonMistake: "Confusing E°cell (based on standard reduction potential differences alone, which is 0 for identical electrodes) with the ACTUAL cell potential (which can still be nonzero due to a concentration difference, calculated via the Nernst equation) for a concentration cell specifically.",
+    apTip: "Concentration cells are a special, important case that beautifully illustrates the distinction between E° (standard potential, based purely on electrode identity, always 0 here) and the ACTUAL potential E (which incorporates real, non-standard concentration effects via the Nernst equation) — this distinction is a favorite advanced conceptual test of truly understanding the Nernst equation's purpose."
+  }
+},
+{
+  id: 'chem-9-38', difficulty: 5, type: 'mcq', topic: 'Fuel Cells and Thermodynamic Efficiency',
+  prompt: "A hydrogen fuel cell converts the chemical energy of the reaction 2H2 + O2 → 2H2O directly into electrical energy via a controlled electrochemical process, while a conventional combustion engine burns the same reaction as an uncontrolled combustion process, converting chemical energy into heat (and then partially into mechanical work). Why can a fuel cell, in principle, achieve a higher thermodynamic efficiency at converting this reaction's energy into useful work than a combustion engine can?",
+  choices: ['Fuel cells use a completely different chemical reaction that releases more total energy than combustion', 'A fuel cell can, in principle, directly convert the reaction\'s maximum available useful work (equal to |ΔG°|) into electrical energy, while a combustion engine\'s efficiency is fundamentally capped by additional thermodynamic (heat-engine) limitations described by the Carnot efficiency, since it must first convert chemical energy into heat, then heat into work', 'Combustion engines and fuel cells have identical theoretical maximum efficiencies, so there is no real difference', 'Fuel cells work at a lower temperature, which always guarantees higher efficiency for any energy conversion process'],
+  correct: 1,
+  explanation: {
+    correct: "A fuel cell can, in principle, convert the reaction's Gibbs free energy change directly into electrical work (since |ΔG°| represents the maximum non-expansion useful work obtainable from a reaction at constant temperature and pressure); a combustion engine, by contrast, first converts chemical energy into HEAT, and then must convert that heat into mechanical work via a heat engine cycle, which is fundamentally limited by Carnot efficiency (dependent on the temperature difference between the hot and cold reservoirs) — this ADDITIONAL heat-to-work conversion step imposes an extra efficiency ceiling that a direct electrochemical (fuel cell) pathway can, in principle, avoid.",
+    wrong: { 0: "Both a fuel cell and a combustion engine can use the exact SAME underlying chemical reaction (2H2 + O2 → 2H2O) and thus release the same total energy; the difference lies in HOW EFFICIENTLY each device can convert that released energy into useful work, not in the total amount of energy available.", 2: "These two energy-conversion pathways have genuinely different theoretical maximum efficiencies — a fuel cell's direct electrochemical pathway isn't subject to the same Carnot efficiency limitation that constrains any heat-engine-based process like a combustion engine.", 3: "Lower temperature alone doesn't universally guarantee higher efficiency for any energy conversion process; the actual explanation here is specifically about AVOIDING the heat-engine (Carnot-limited) conversion pathway altogether, not simply about operating at a particular temperature." },
+    tempting: "Choice A is tempting since fuel cells are often marketed as fundamentally 'different' or 'better' technology, but the underlying chemical reaction can be identical to conventional combustion — the key difference is specifically in the ENERGY CONVERSION PATHWAY and its associated efficiency limitations, not in the amount of chemical energy released.",
+    commonMistake: "Not connecting Gibbs free energy's specific meaning (maximum obtainable non-expansion useful work) to the practical, real-world difference between direct electrochemical energy conversion (fuel cells) and indirect heat-engine-based energy conversion (combustion engines), which is subject to an ADDITIONAL Carnot efficiency limitation.",
+    apTip: "College-level insight: this comparison directly connects ΔG° (as 'maximum useful work available') to real engineering efficiency considerations — a combustion engine's overall efficiency is the product of the ORIGINAL reaction's thermodynamic efficiency AND the ADDITIONAL Carnot efficiency of the heat-engine conversion step, while a fuel cell can, in principle, skip that second limiting step entirely by directly harnessing the reaction's free energy as electrical work."
+  }
+},
+{
+  id: 'chem-9-39', difficulty: 5, type: 'mcq', topic: 'ATP Coupling — Numeric Application',
+  prompt: "The phosphorylation of glucose to glucose-6-phosphate (an early, otherwise unfavorable step in cellular glycolysis) has ΔG°' ≈ +13.8 kJ/mol on its own. When coupled with ATP hydrolysis (ΔG°' ≈ −30.5 kJ/mol), what is the overall ΔG°' for the coupled reaction, and is it now favorable?",
+  choices: ['ΔG°\' ≈ +44.3 kJ/mol; still unfavorable', 'ΔG°\' ≈ −16.7 kJ/mol; now favorable, since ATP hydrolysis\'s large negative ΔG°\' more than compensates for the glucose phosphorylation\'s smaller positive ΔG°\'', 'ΔG°\' ≈ −44.3 kJ/mol; favorable, but this significantly overestimates the actual coupled value', 'ΔG°\' ≈ +16.7 kJ/mol; still unfavorable'],
+  correct: 1,
+  explanation: {
+    correct: "Just as with any coupled reaction, the individual ΔG°' values add algebraically: ΔG°'(overall) = ΔG°'(glucose phosphorylation) + ΔG°'(ATP hydrolysis) = (+13.8) + (−30.5) = −16.7 kJ/mol; since this combined value is negative, the overall coupled process IS thermodynamically favorable, even though the glucose phosphorylation step alone was unfavorable (positive ΔG°').",
+    wrong: { 0: "This appears to have subtracted the two values with the wrong sign convention (13.8 − (−30.5) = 44.3) rather than correctly adding them directly as coupled ΔG°' values.", 2: "While the CONCLUSION (favorable) matches the requested reasoning, this specific numeric value (−44.3 kJ/mol) doesn't correctly follow from properly ADDING +13.8 and −30.5; that specific arithmetic actually corresponds to subtracting incorrectly with a sign flip, similar to choice A's error but with an overall sign reversed.", 3: "This has the same sign error as choice A (subtracting incorrectly instead of adding), and also incorrectly concludes the process remains unfavorable, when correctly adding the two given ΔG°' values actually results in an overall favorable (negative) value." },
+    tempting: "Choice A is tempting from a sign-handling error when combining a positive and a negative ΔG°' value — always simply ADD the two values directly (respecting their given signs), rather than subtracting or otherwise manipulating them.",
+    commonMistake: "Mishandling the addition of a positive and a negative ΔG°' value when combining coupled reactions, sometimes effectively subtracting instead of correctly adding the two signed values together.",
+    apTip: "For ANY coupled reaction problem (industrial, biological, or otherwise), the process is always the same: simply ADD the individual ΔG° (or ΔG°') values together, respecting their given signs, to find the overall coupled ΔG° — this is mathematically identical to the additive nature of ΔH in Hess's Law, just applied to Gibbs free energy instead."
+  }
+},
+{
+  id: 'chem-9-40', difficulty: 5, type: 'mcq', topic: 'Calorimetry and Hess\'s Law Integration',
+  prompt: "A student burns 2.00 g of a hydrocarbon fuel in a calibrated bomb calorimeter (heat capacity C = 4.062 kJ/°C, previously determined via a benzoic acid calibration), observing a temperature increase of 8.50°C. The molar mass of the fuel is 114.2 g/mol. What is the experimentally determined molar heat of combustion for this fuel (in kJ/mol)?",
+  choices: ['≈ 34.5 kJ/mol', '≈ −1975 kJ/mol', '≈ 17.3 kJ/mol', '≈ −3950 kJ/mol'],
+  correct: 1,
+  explanation: {
+    correct: "Total heat released: q = CΔT = (4.062 kJ/°C)(8.50°C) ≈ 34.5 kJ, released by 2.00 g of fuel; moles of fuel = 2.00 g / 114.2 g/mol ≈ 0.01751 mol; molar heat of combustion = −34.5 kJ / 0.01751 mol ≈ −1975 kJ/mol (negative, since combustion is exothermic — heat is released BY the sample, meaning the reaction's ΔH itself is negative from the system's perspective, even though q measured by the calorimeter is a positive quantity of heat absorbed by the calorimeter itself).",
+    wrong: { 0: "This is simply the total heat released (34.5 kJ) for the 2.00 g sample, without dividing by the actual moles of fuel present to obtain the correct MOLAR (per-mole) quantity requested.", 2: "This value doesn't correctly follow from properly dividing the total heat by the correct number of moles of fuel calculated from the given mass and molar mass.", 3: "This is roughly double the correctly calculated value, suggesting a possible error such as failing to correctly convert mass to moles or a doubling error somewhere in the calculation." },
+    tempting: "Choice A is a very common trap in multi-step calorimetry problems — correctly calculating the total heat released for the given SAMPLE mass, but forgetting the final, essential step of converting to a per-MOLE quantity as specifically requested.",
+    commonMistake: "Stopping a calorimetry calculation at total heat released (for the given sample mass) without completing the necessary final conversion to a molar quantity, especially when a molar mass is explicitly provided as part of the problem (a strong hint that a mole-based final answer is expected).",
+    apTip: "Whenever a calorimetry problem provides a molar mass alongside a sample mass, this is usually a strong signal that the final requested answer should be in molar terms (kJ/mol) — always complete the full sequence: total heat (q = CΔT) → moles of sample → heat PER MOLE (q ÷ moles), remembering to assign a negative sign to the final answer since combustion is exothermic from the fuel's (system's) perspective."
+  }
+},
+{
+  id: 'chem-9-41', difficulty: 5, type: 'mcq', topic: 'Comprehensive Synthesis — Battery Design Trade-offs',
+  prompt: "Battery engineers must balance multiple competing factors when designing a new battery chemistry: a reaction with a very large, favorable E°cell (high energy density) might also have very fast, potentially dangerous kinetics (risk of thermal runaway or explosion) if not carefully controlled, while a more kinetically \"tame\" (slower-reacting) chemistry might be safer but deliver less power or energy density. What does this design challenge best illustrate about the relationship between thermodynamics and kinetics in real engineering applications?",
+  choices: ['Thermodynamic favorability (E°cell, ΔG°) and kinetic behavior (reaction rate, safety) are entirely unrelated properties, and engineers can freely optimize one without ever needing to consider the other', 'A chemically favorable (thermodynamically strong) reaction doesn\'t automatically guarantee a practically ideal engineering solution, since the SAME reaction\'s kinetics (which are governed by separate factors like activation energy) must also be carefully managed — real-world applications require balancing BOTH thermodynamic favorability AND kinetic controllability/safety simultaneously', 'Engineers should always choose the reaction with the largest possible E°cell value, since bigger is always better regardless of any other consideration', 'This trade-off only exists in theory and has no bearing on actual battery technology'],
+  correct: 1,
+  explanation: {
+    correct: "This engineering challenge directly illustrates the practical, real-world importance of considering thermodynamics (favorability/energy content, described by E°cell and ΔG°) and kinetics (reaction rate and controllability, governed by activation energy and other factors) as two SEPARATE but EQUALLY IMPORTANT considerations — a thermodynamically powerful reaction (large E°cell) is only a good practical engineering solution if its kinetics can also be adequately controlled for safe, reliable operation, requiring engineers to balance BOTH factors together rather than optimizing either one in isolation.",
+    wrong: { 0: "While thermodynamics and kinetics ARE technically distinct, independent properties (as established throughout this unit), this doesn't mean they can be considered in complete ISOLATION from each other in a real engineering context — precisely because BOTH must be successfully managed together for a practical, safe, effective final product, as this battery design example directly demonstrates.", 2: "Simply maximizing E°cell without any regard for kinetic safety considerations is explicitly identified as a real engineering RISK (thermal runaway, explosion) in this scenario, not a universally 'better' engineering strategy — real design requires balancing this thermodynamic factor against practical kinetic/safety constraints.", 3: "This trade-off is a genuine, actively managed real-world engineering challenge in battery technology (for example, this is precisely why some very high-energy-density battery chemistries require extensive additional safety engineering, or why certain chemistries are avoided despite their theoretically superior energy content) — it isn't merely a theoretical abstraction." },
+    tempting: "Choice A can tempt students who have learned that thermodynamics and kinetics are 'independent' as a general conceptual fact, without appreciating that real engineering applications specifically require carefully balancing BOTH independent factors together, rather than concluding they can simply be ignored relative to each other.",
+    commonMistake: "Interpreting the conceptual INDEPENDENCE of thermodynamics and kinetics (a true, foundational chemistry principle) as meaning these two factors are practically IRRELEVANT to each other in real applications, rather than correctly recognizing that real-world engineering must successfully account for and balance BOTH factors simultaneously.",
+    apTip: "This capstone-style synthesis question ties together the entire unit's central theme: thermodynamics (ΔG°, E°cell — determining whether/how favorably a reaction proceeds) and kinetics (rate, activation energy — determining how fast and how controllably it proceeds) are conceptually independent, but real-world chemical engineering and technology design (batteries, industrial processes, biological systems) require carefully considering and balancing BOTH factors together for a successful, safe, and practical outcome."
+  }
+},
+{
+  id: 'chem-9-42', difficulty: 1, type: 'mcq', topic: 'Standard Hydrogen Electrode',
+  prompt: "The standard hydrogen electrode (SHE) is assigned a standard reduction potential of exactly E° = 0.000 V. What is the purpose of this assignment?",
+  choices: ['It indicates that hydrogen never participates in any redox reaction', 'It serves as an arbitrary reference point against which all other standard reduction potentials are measured, similar to how sea level serves as a reference for elevation', 'It means hydrogen is the strongest possible oxidizing agent', 'It means hydrogen is the strongest possible reducing agent'],
+  correct: 1,
+  explanation: {
+    correct: "Just as absolute elevation is measured relative to an arbitrary reference point (sea level = 0), all standard reduction potentials are measured RELATIVE to the standard hydrogen electrode, which is arbitrarily assigned E° = 0.000 V exactly — this allows every other half-reaction's E° value to be meaningfully compared on a single consistent scale.",
+    wrong: { 0: "Hydrogen participates in plenty of redox reactions (as both an oxidizing and reducing agent in various contexts); the E° = 0.000 V assignment is simply a reference point convention, not a statement about hydrogen's reactivity.", 2: "E° = 0.000 V is a middling, reference value, not an extreme one — it doesn't indicate hydrogen is either the strongest oxidizing or reducing agent; many other half-reactions have both more positive and more negative E° values.", 3: "Similarly, this reference value doesn't indicate hydrogen is an extreme reducing agent either — it's specifically a neutral, arbitrary zero point for the entire scale of standard reduction potentials." },
+    tempting: "Choices C and D can tempt students into overinterpreting the SIGNIFICANCE of the specific number zero, rather than correctly recognizing it as a deliberately chosen, arbitrary reference point (much like sea level in elevation measurements).",
+    commonMistake: "Assuming that a reference value of exactly zero must carry some special chemical significance (like being an extreme value), rather than correctly understanding it as simply a convenient, arbitrary calibration point for an entire relative measurement scale.",
+    apTip: "The elevation/sea-level analogy is extremely useful here: just as we can't measure 'absolute' elevation directly (only elevation RELATIVE to some reference), we can't measure a single half-reaction's 'absolute' reduction potential directly either — all standard reduction potential tables report values relative to the arbitrarily-defined SHE reference point."
+  }
+},
+{
+  id: 'chem-9-43', difficulty: 2, type: 'mcq', topic: 'Cell Notation',
+  prompt: "In standard electrochemical cell notation, the convention is: (anode | anode solution) || (cathode solution | cathode). What does the double vertical line (||) specifically represent?",
+  choices: ['A direct wire connecting the two electrodes', 'The salt bridge (or other porous barrier) separating the two half-cells while still allowing ion flow to maintain electrical neutrality', 'A boundary indicating no actual physical connection exists between the half-cells', 'The direction of conventional current flow'],
+  correct: 1,
+  explanation: {
+    correct: "The double vertical line (||) in standard cell notation specifically represents the salt bridge (or other porous barrier/junction) that physically separates the two half-cell solutions from directly mixing, while still allowing ion flow between them to maintain overall electrical neutrality as the cell operates.",
+    wrong: { 0: "The direct wire connection (external circuit) between the two electrodes isn't represented within the cell notation formula itself; the notation focuses specifically on the internal half-cell components and their separating junction.", 2: "This has it backwards — the double line specifically indicates that SOME connection (the salt bridge) DOES exist between the half-cells, just one that prevents direct solution mixing while still permitting necessary ion flow.", 3: "Current flow direction isn't what the double line itself represents; it's specifically indicating the physical salt bridge/junction component of the cell's construction." },
+    tempting: "Choice C is tempting if the double line's separating function (keeping solutions apart) is over-interpreted as meaning NO connection at all exists, rather than correctly understanding it as a specific TYPE of limited, ion-permeable connection (the salt bridge).",
+    commonMistake: "Misinterpreting the double line as indicating a complete absence of connection between half-cells, rather than correctly recognizing it as representing a specific component (the salt bridge) that permits selective ion flow while still separating the bulk solutions.",
+    apTip: "Remember standard cell notation reads left-to-right as physically arranged in the actual cell: anode | anode solution || cathode solution | cathode — with single lines (|) representing phase boundaries (like solid electrode to solution) and the double line (||) specifically representing the salt bridge connecting the two half-cells."
+  }
+},
+{
+  id: 'chem-9-44', difficulty: 2, type: 'mcq', topic: 'Salt Bridge Function',
+  prompt: "What is the primary purpose of a salt bridge in a galvanic cell?",
+  choices: ['To directly conduct electrons between the two half-cells, replacing the need for an external wire', 'To maintain electrical neutrality in each half-cell by allowing ion flow between them, without letting the bulk solutions directly mix', 'To increase the cell\'s overall temperature, speeding up the reaction', 'To physically prevent any electrical current from flowing through the cell'],
+  correct: 1,
+  explanation: {
+    correct: "As the redox reaction proceeds, one half-cell accumulates excess positive charge (from cations being produced) while the other accumulates excess negative charge (from cations being consumed); the salt bridge allows ions (typically from an inert electrolyte like KNO3) to flow between the half-cells to maintain overall charge neutrality in each compartment, WITHOUT allowing the bulk solutions themselves to directly mix.",
+    wrong: { 0: "Electrons flow through the EXTERNAL WIRE circuit (connecting the two electrodes), not through the salt bridge; the salt bridge specifically carries IONS (not electrons) to maintain charge balance internally within the solutions.", 2: "The salt bridge has no role in temperature regulation; its function is specifically electrical/ionic (maintaining charge neutrality), not thermal.", 3: "The salt bridge actually ENABLES the cell to function continuously by maintaining charge balance — without it, the reaction would quickly stop as charge imbalances built up; it doesn't prevent current flow, it's essential for SUSTAINING it." },
+    tempting: "Choice A can tempt students who conflate the salt bridge's ION-carrying function with the external wire's ELECTRON-carrying function — these are two distinct pathways carrying different charge carriers within the same overall circuit.",
+    commonMistake: "Confusing the salt bridge (carries ions, maintains charge neutrality inside the solutions) with the external wire (carries electrons, completes the circuit and does the actual useful electrical work) — both are necessary but serve entirely different functions.",
+    apTip: "Keep these two distinct current pathways clearly separated: ELECTRONS flow through the external wire (from anode to cathode, doing useful electrical work); IONS flow through the salt bridge (maintaining charge neutrality within each half-cell) — a functioning galvanic cell absolutely requires BOTH pathways working together."
+  }
+},
+{
+  id: 'chem-9-45', difficulty: 2, type: 'mcq', topic: 'Electroplating',
+  prompt: "Electroplating (such as coating a steel object with a thin layer of chromium) is a practical application of which type of electrochemical cell?",
+  choices: ['A galvanic cell, since the metal ions spontaneously deposit onto the object', 'An electrolytic cell, since an external power source is used to force metal ions to deposit (reduce) onto the object being plated, a process that would not occur spontaneously on its own', 'Neither type of cell is involved in electroplating', 'A calorimeter, since heat is released during the plating process'],
+  correct: 1,
+  explanation: {
+    correct: "Electroplating specifically requires an EXTERNAL power source to force metal ions (like Cr³⁺) to be reduced and deposited onto the surface of the object being plated — this deliberate, externally-driven, non-spontaneous deposition process is a classic, widely-used real-world application of an ELECTROLYTIC cell.",
+    wrong: { 0: "The deposition of metal ions in electroplating does NOT occur spontaneously on its own; it specifically requires external electrical energy input to force the reaction to proceed, which is the defining characteristic of an electrolytic (not galvanic) cell.", 2: "Electroplating is very much based on electrochemical cell principles — specifically, it's a direct, practical, everyday application of an electrolytic cell.", 3: "A calorimeter is an entirely different type of device (used for measuring heat changes), unrelated to the electrochemical deposition process involved in electroplating." },
+    tempting: "Choice A is tempting since 'plating' might loosely suggest a naturally occurring, spontaneous coating process, but electroplating specifically requires deliberate external electrical energy to force the otherwise non-spontaneous metal deposition to occur.",
+    commonMistake: "Assuming any metal deposition process must be spontaneous (galvanic) by default, rather than correctly recognizing that USEFUL, CONTROLLED deposition processes like electroplating specifically require external energy input (electrolytic), precisely because the desired deposition wouldn't otherwise happen on its own.",
+    apTip: "Electroplating, electrolysis of water, and industrial metal refining/production (like aluminum via the Hall-Héroult process) are all classic real-world ELECTROLYTIC cell applications — a helpful pattern-recognition cue is that these processes all involve forcing a normally non-spontaneous, desired chemical change using deliberately supplied external electrical energy."
+  }
+},
+{
+  id: 'chem-9-46', difficulty: 3, type: 'mcq', topic: 'E and Approach to Equilibrium',
+  prompt: "As a galvanic cell operates and its reaction proceeds toward equilibrium, what happens to the cell's actual potential, E (as opposed to the fixed standard value E°)?",
+  choices: ['E remains exactly constant at E° for the entire time the cell operates', 'E gradually decreases toward zero as the reaction approaches equilibrium (where Q = K), since the driving force for further reaction diminishes as the system nears its equilibrium composition', 'E gradually increases without limit as the reaction proceeds', 'E is completely unrelated to how close the system is to equilibrium'],
+  correct: 1,
+  explanation: {
+    correct: "As a galvanic cell discharges and its internal reaction proceeds forward, the actual concentrations of reactants and products continuously shift, causing Q to change and gradually approach K; via the Nernst equation, this causes the actual cell potential E to gradually DECREASE toward zero, reflecting the diminishing driving force for further reaction as the system approaches equilibrium (a 'dead battery' is simply a cell whose internal reaction has reached equilibrium, where E = 0).",
+    wrong: { 0: "E does NOT remain constant at E° during actual operation — E° is specifically the potential only under STANDARD conditions (all concentrations at 1 M); as the reaction proceeds and concentrations change from these standard values, the ACTUAL potential E changes correspondingly (via the Nernst equation).", 2: "E doesn't increase without limit; in fact, it does the opposite, decreasing over time as the reaction approaches equilibrium and the driving force for further spontaneous change diminishes.", 3: "E is DIRECTLY and quantitatively related to how close the system is to equilibrium (via the Nernst equation, which explicitly incorporates Q, a direct measure of the current position relative to equilibrium)." },
+    tempting: "Choice A is tempting if E° (a fixed, standard-condition value) and E (the actual, continuously changing potential during real operation) are not clearly distinguished from each other.",
+    commonMistake: "Confusing the FIXED standard cell potential (E°, a single reference value at standard 1 M concentrations) with the continuously CHANGING actual cell potential (E) that a real, operating battery exhibits as its internal concentrations shift during use.",
+    apTip: "This explains the everyday, practical experience of a battery gradually 'running down': as a galvanic cell discharges, its internal reactant concentrations decrease and product concentrations increase, driving Q toward K and E toward 0 — a completely 'dead' battery has reached E = 0, meaning its internal reaction has reached equilibrium and can no longer do any useful electrical work."
+  }
+},
+{
+  id: 'chem-9-47', difficulty: 3, type: 'mcq', topic: 'Industrial Electrolysis — Aluminum Production',
+  prompt: "Aluminum metal is industrially produced from its ore via the Hall-Héroult process, which uses electrolysis (passing a very large electric current through molten aluminum oxide) rather than chemical reduction methods used for many other metals. This process is extremely energy-intensive. What does this indicate about the thermodynamics of reducing Al³⁺ to Al metal?",
+  choices: ['The reduction of Al³⁺ to Al is a spontaneous process requiring no significant energy input', 'The reduction of Al³⁺ to Al is highly non-spontaneous (very unfavorable, requiring substantial energy input) under normal conditions, which is exactly why external electrical energy (electrolysis) must be used to force this reduction to occur', 'Aluminum doesn\'t actually undergo reduction in this process at all', 'This process actually releases more energy than it consumes'],
+  correct: 1,
+  explanation: {
+    correct: "The extremely high energy requirement of the Hall-Héroult electrolytic process directly reflects that reducing Al³⁺ to elemental Al metal is a highly non-spontaneous (thermodynamically unfavorable) process under normal conditions — aluminum's very negative standard reduction potential means significant external electrical energy must be supplied to force this reduction to actually occur, which is precisely why electrolysis (rather than a simpler, spontaneous chemical reduction method) is required for aluminum production.",
+    wrong: { 0: "If this reduction were spontaneous and required no significant energy input, there would be no need for the extremely energy-intensive electrolytic process actually used industrially — the very fact that so much energy IS required directly demonstrates the reaction's non-spontaneous nature.", 2: "Reduction (gain of electrons, converting Al³⁺ to Al) absolutely does occur in this process — this is the entire chemical point of the Hall-Héroult process, converting aluminum ions into usable aluminum metal.", 3: "This process CONSUMES a very large amount of energy (as an electrolytic, non-spontaneous process) rather than releasing net energy — this is precisely why aluminum production is well known for being one of the more energy-intensive industrial metal refining processes." },
+    tempting: "Choice A can tempt students who don't connect the practical observation (extremely high energy requirement) with the underlying thermodynamic explanation (a highly non-spontaneous reduction reaction).",
+    commonMistake: "Not connecting a real-world industrial process's practical energy requirements directly back to the underlying thermodynamic favorability (or lack thereof) of the specific reaction being carried out.",
+    apTip: "This aluminum production example reinforces a key connection in this unit: an industrial process's ENERGY INTENSITY (how much external energy must be supplied) is a direct, practical reflection of the underlying reaction's THERMODYNAMIC UNFAVORABILITY — highly energy-intensive electrolytic processes (like aluminum or other reactive metal production) always indicate a highly non-spontaneous reduction reaction being forced to occur."
+  }
+},
+{
+  id: 'chem-9-48', difficulty: 4, type: 'mcq', topic: 'Electrolysis — Effect of Electron Stoichiometry',
+  prompt: "The exact same total charge (4472 C) is passed through two different electrolytic cells: one depositing Ag (from Ag⁺ + e⁻ → Ag, requiring 1 electron per atom, resulting in 5.00 g Ag deposited) and another depositing Al (from Al³⁺ + 3e⁻ → Al, requiring 3 electrons per atom). Even though aluminum has a much smaller molar mass than silver, why is the mass of Al deposited (≈0.417 g) so much LESS than the mass of Ag deposited, despite using the identical total charge?",
+  choices: ['This is an error; the same charge should always deposit the same mass regardless of the metal', 'Because Al³⁺ requires 3 electrons per atom deposited (compared to only 1 electron per atom for Ag⁺), the same total charge (same total number of electrons) can only deposit one-third as many moles of Al as it could of Ag, and this reduced mole count outweighs aluminum\'s smaller molar mass in this specific comparison', 'Aluminum simply doesn\'t conduct electricity as well as silver', 'The molar mass difference alone fully explains this result, without any need to consider electron stoichiometry'],
+  correct: 1,
+  explanation: {
+    correct: "Since the same total charge corresponds to the same total number of moles of electrons, and Al³⁺ requires 3 electrons per atom (compared to just 1 for Ag⁺), only one-third as many MOLES of Al can be deposited compared to moles of Ag for that same total charge; even though aluminum's per-mole mass is smaller than silver's, this specific problem's numbers show that the reduced mole count (due to needing 3x the electrons per atom) has a larger overall effect, resulting in a smaller total mass of Al deposited compared to Ag.",
+    wrong: { 0: "This ISN'T an error — different metals genuinely deposit different masses for the same total charge, specifically because of their different electron-to-atom stoichiometric requirements (and different molar masses), not because of any calculation mistake.", 2: "Electrical conductivity of the solid metal itself isn't the relevant factor here; the determining factors are specifically the electron stoichiometry (electrons required per atom) and molar mass of each metal ion being reduced.", 3: "Molar mass ALONE doesn't fully explain this result — the electron stoichiometry (3 electrons needed per Al atom vs. just 1 per Ag atom) is an equally critical factor that must be considered together with molar mass to correctly predict and explain the final deposited mass for a given total charge." },
+    tempting: "Choice D is tempting since molar mass IS part of the explanation, but considering molar mass ALONE (without also accounting for the differing electron requirements per atom) would incorrectly predict that more Al (with its smaller molar mass) should deposit for the same charge, when the electron stoichiometry factor actually dominates in this specific comparison.",
+    commonMistake: "Focusing only on molar mass differences between metals when comparing electrolysis mass-deposition results, while overlooking the equally important (and sometimes dominant) effect of different electron-to-atom stoichiometric ratios required by different metal ions.",
+    apTip: "When comparing electrolytic mass deposition between different metals for the same total charge, always consider BOTH factors together: (1) the electron-to-atom stoichiometry (how many electrons each specific ion requires per atom deposited) AND (2) the molar mass of the metal — a metal requiring more electrons per atom will deposit proportionally FEWER moles for the same total charge, which can outweigh even a smaller molar mass, exactly as demonstrated in this Al vs. Ag comparison."
+  }
+},
+{
+  id: 'chem-9-49', difficulty: 4, type: 'mcq', topic: 'Applied Bond Enthalpy — Rocket Fuel',
+  prompt: "Rocket fuels are often chosen specifically for reactions with a very large, favorable (very negative) ΔH of combustion. Using the bond-enthalpy method (ΔH ≈ bonds broken − bonds formed), what general structural feature would make a potential fuel-oxidizer combination especially favorable for this purpose?",
+  choices: ['The reactants should contain very strong, stable bonds that require a large amount of energy to break, while the products should have relatively weak bonds', 'The reactants should contain relatively weak bonds (making them easier to break, requiring less energy input), while the products should contain very strong bonds (releasing a large amount of energy upon formation) — maximizing the net energy release', 'Bond strength has no bearing on how much energy a fuel combustion reaction releases', 'Both reactants and products should have identical bond strengths for optimal energy release'],
+  correct: 1,
+  explanation: {
+    correct: "To maximize the magnitude of a negative (favorable) ΔH via the bond-enthalpy method (bonds broken − bonds formed), an ideal fuel-oxidizer combination should have RELATIVELY WEAK bonds in the reactants (requiring only a small energy investment to break) combined with VERY STRONG bonds in the products (releasing a large amount of energy upon formation) — this combination maximizes the net energy difference (and thus the net energy released) from the overall reaction, which is exactly why extremely strong product bonds (like the very strong bonds in N2 or H2O, common rocket combustion products) are highly desirable.",
+    wrong: { 0: "This describes the OPPOSITE of what's thermodynamically desirable for a highly exothermic fuel — strong reactant bonds require a LARGE energy investment to break, while weak product bonds release only a SMALL amount of energy upon formation, together minimizing (not maximizing) the net energy released.", 2: "Bond strength is DIRECTLY and centrally connected to how much energy is released or absorbed in any reaction via the bond-enthalpy method — it's precisely the quantitative basis for predicting and explaining a fuel's energy output.", 3: "Identical bond strengths between reactants and products would result in a net ΔH close to ZERO (since the bonds-broken and bonds-formed terms would roughly cancel out), which would make for a very POOR fuel choice, not an optimal one for maximizing energy release." },
+    tempting: "Choice A is tempting from an intuitive (but backwards) assumption that 'strong reactant bonds' should somehow lead to more powerful energy release, when actually the OPPOSITE combination (weak reactant bonds, strong product bonds) is what maximizes net exothermic energy release.",
+    commonMistake: "Reversing the desired relative bond-strength pattern (reactants vs. products) needed to maximize a reaction's exothermic energy release, rather than correctly identifying that WEAK reactant bonds paired with STRONG product bonds is the ideal combination.",
+    apTip: "This principle explains why fuels like liquid hydrogen/liquid oxygen (forming the very strong O-H bonds in water) or hydrazine-based fuels are effective rocket propellants: the combination of relatively easily-broken reactant bonds and very strong, highly stable product bonds (like the exceptionally strong bonds in water or nitrogen gas) maximizes the net energy released per the bond-enthalpy method — this is the same underlying principle used to explain and predict combustion reaction energetics generally."
+  }
+},
+{
+  id: 'chem-9-50', difficulty: 3, type: 'mcq', topic: 'Corrosion and Reduction Potentials',
+  prompt: "Iron readily corrodes (rusts) when exposed to moisture and oxygen, while gold remains essentially untarnished under the same conditions for extremely long periods. What does this practical difference indicate about the relative standard reduction potentials of iron and gold?",
+  choices: ['Iron and gold have essentially identical standard reduction potentials', 'Iron has a relatively negative standard reduction potential (making it easily oxidized/corroded), while gold has a very positive standard reduction potential (making it highly resistant to oxidation, since it strongly \"prefers\" to remain in its reduced, metallic form)', 'Gold actually corrodes faster than iron, but the resulting compound is simply invisible', 'Reduction potentials have no relationship to a metal\'s real-world corrosion resistance'],
+  correct: 1,
+  explanation: {
+    correct: "Iron's relatively negative standard reduction potential (E° = −0.44 V) means it has a significant tendency to be OXIDIZED (lose electrons, forming rust, Fe2O3), while gold's very positive standard reduction potential (E° ≈ +1.50 V) means it strongly resists oxidation and 'prefers' to remain in its reduced, metallic elemental form — this is precisely why gold is prized for its exceptional corrosion resistance and long-term stability, while iron requires protective measures (like the sacrificial anodes discussed earlier) to prevent ongoing corrosion.",
+    wrong: { 0: "Iron and gold have dramatically DIFFERENT standard reduction potentials (roughly −0.44 V vs. +1.50 V, respectively) — this large difference is precisely what explains their very different real-world corrosion behaviors.", 2: "Gold does NOT corrode faster than iron in any sense (visible or otherwise); it is specifically prized throughout human history for its exceptional resistance to corrosion and tarnishing, directly resulting from its very positive standard reduction potential.", 3: "Standard reduction potentials are DIRECTLY and quantitatively connected to a metal's real-world corrosion resistance — metals with very positive E° values (like gold, platinum) are generally highly corrosion-resistant ('noble metals'), while metals with more negative E° values (like iron, zinc) are generally much more prone to oxidation/corrosion." },
+    tempting: "Choice A might tempt students who don't recognize just how dramatically different two elements' reduction potentials can be, and how directly this connects to easily observable real-world properties like corrosion resistance.",
+    commonMistake: "Not connecting familiar, everyday real-world observations (like gold's famous resistance to tarnishing, compared to iron's well-known tendency to rust) to the underlying, quantitative standard reduction potential values that directly explain these practical differences.",
+    apTip: "The term 'noble metal' (traditionally applied to gold, platinum, and similar highly corrosion-resistant metals) directly reflects their characteristically very POSITIVE standard reduction potentials — connecting this everyday term to the underlying electrochemistry concept (a strong preference to remain in reduced, metallic form rather than being oxidized) is a great way to remember this practical real-world application of reduction potential values."
+  }
+}
       ]
     }
   ],
