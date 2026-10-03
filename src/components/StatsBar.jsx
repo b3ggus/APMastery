@@ -5,9 +5,9 @@ import { supabase, supabaseEnabled } from '../lib/supabase.js'
 const content = getContentStats()
 
 const ACCENTS = {
-  ember: { border: 'border-ember/40', bg: 'bg-ember/10', text: 'text-ember-light' },
-  moss: { border: 'border-moss/40', bg: 'bg-moss/10', text: 'text-moss-light' },
-  indigo: { border: 'border-indigo/40', bg: 'bg-indigo/10', text: 'text-indigo-light' },
+  ember: { border: 'border-ember/40', bg: 'bg-ember/10', text: 'text-ember-dark' },
+  moss: { border: 'border-moss/40', bg: 'bg-moss/10', text: 'text-moss-dark' },
+  indigo: { border: 'border-indigo/40', bg: 'bg-indigo/10', text: 'text-indigo-dark' },
 }
 
 function Stat({ icon, value, label, accent }) {

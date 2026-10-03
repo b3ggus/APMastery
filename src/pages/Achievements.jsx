@@ -13,7 +13,7 @@ export default function Achievements() {
         {BADGES.map((b) => {
           const earned = earnedBadgeIds.includes(b.id)
           return (
-            <div key={b.id} className={`rounded-lg border-2 p-4 ${earned ? 'border-gold/50 bg-gold/10' : 'border-ink-line bg-ink-soft/40 opacity-50'}`}>
+            <div key={b.id} className={`rounded-lg border-2 p-4 ${earned ? 'border-gold/50 bg-gold/10' : 'border-panel-line bg-panel-soft/40 opacity-50'}`}>
               <div className="text-3xl mb-2">{earned ? b.icon : '🔒'}</div>
               <h3 className="font-display text-lg">{b.name}</h3>
               <p className="text-xs text-paper/50 mt-1">{b.desc}</p>

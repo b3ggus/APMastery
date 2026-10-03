@@ -51,7 +51,7 @@ export default function Ranked() {
           const active = tier.name === current.name
           const reached = state.xp >= tier.min
           return (
-            <div key={tier.name} className={`flex items-center justify-between rounded-md border px-4 py-2.5 ${active ? 'border-gold bg-gold/10' : 'border-ink-line'}`}>
+            <div key={tier.name} className={`flex items-center justify-between rounded-md border px-4 py-2.5 ${active ? 'border-gold bg-gold/10' : 'border-panel-line bg-panel'}`}>
               <span className="flex items-center gap-2">
                 <span className="w-2.5 h-2.5 rounded-full" style={{ background: tier.color }} />
                 <span className={reached ? 'text-paper' : 'text-paper/40'}>{tier.name}</span>

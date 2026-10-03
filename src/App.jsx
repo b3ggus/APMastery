@@ -17,7 +17,7 @@ import Leaderboard from './pages/Leaderboard.jsx'
 
 export default function App() {
   return (
-    <div className="min-h-screen bg-graph bg-[length:24px_24px]">
+    <div className="min-h-screen">
       <Nav />
       <main>
         <Routes>

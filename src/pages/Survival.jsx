@@ -58,7 +58,7 @@ export default function Survival() {
         <p className="text-paper/60 mb-2">You answered {correctCount} correctly before 3 mistakes.</p>
         <p className="text-paper/40 text-sm mb-6">Personal best: {state.bestSurvival}</p>
         <div className="flex gap-3 justify-center">
-          <Link to="/" className="focus-ring border border-ink-line rounded-md px-5 py-2.5 hover:bg-ink-soft">Home</Link>
+          <Link to="/" className="focus-ring border border-panel-line rounded-md px-5 py-2.5 hover:bg-panel-soft">Home</Link>
           <button onClick={restart} className="focus-ring bg-ember text-paper rounded-md px-5 py-2.5 hover:brightness-110">Run it back</button>
         </div>
       </div>

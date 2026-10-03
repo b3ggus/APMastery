@@ -21,11 +21,11 @@ export default function Nav() {
   const { current } = rankForXP(state.xp)
 
   return (
-    <header className="sticky top-0 z-40 border-b border-ink-line bg-ink/95 backdrop-blur">
+    <header className="sticky top-0 z-40 border-b border-panel-line bg-panel/95 backdrop-blur shadow-sm">
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
         <div className="flex items-center justify-between h-16">
           <Link to="/" className="font-display text-xl font-600 tracking-tight text-paper">
-            Specimen <span className="text-gold">·</span> <span className="text-sm font-body font-500 text-paper/60">AP Study Arena</span>
+            ⚔️ <span className="text-gold">AP Study Arena</span>
           </Link>
           <nav className="hidden md:flex items-center gap-1">
             {LINKS.map((l) => (
@@ -33,7 +33,7 @@ export default function Nav() {
                 key={l.to}
                 to={l.to}
                 className={`focus-ring px-3 py-2 rounded text-sm font-medium transition-colors ${
-                  location.pathname === l.to ? 'bg-ink-soft text-paper' : 'text-paper/60 hover:text-paper hover:bg-ink-soft/60'
+                  location.pathname === l.to ? 'bg-panel-soft text-paper' : 'text-paper/60 hover:text-paper hover:bg-panel-soft'
                 }`}
               >
                 {l.label}
@@ -46,11 +46,11 @@ export default function Nav() {
               {current.name}
             </span>
             <span className="text-paper/80">{state.xp} XP</span>
-            <span className="text-ember-light">{state.coins}c</span>
+            <span className="text-ember-dark">{state.coins}c</span>
             <span title={`${state.streak} day streak`}>{streakFlames(state.streak)}{state.streak}</span>
             {user ? (
               <button
-                className="focus-ring text-paper/50 hover:text-paper text-xs border border-ink-line rounded px-2 py-1"
+                className="focus-ring text-paper/50 hover:text-paper text-xs border border-panel-line rounded px-2 py-1"
                 title="Sign out"
                 onClick={signOut}
               >
@@ -58,7 +58,7 @@ export default function Nav() {
               </button>
             ) : (
               <Link
-                className="focus-ring text-xs border border-ink-line rounded px-2 py-1 text-paper/60 hover:text-paper"
+                className="focus-ring text-xs border border-panel-line rounded px-2 py-1 text-paper/60 hover:text-paper"
                 to="/signup"
               >
                 Sign up
@@ -72,7 +72,7 @@ export default function Nav() {
               key={l.to}
               to={l.to}
               className={`focus-ring shrink-0 px-3 py-1.5 rounded text-xs font-medium ${
-                location.pathname === l.to ? 'bg-ink-soft text-paper' : 'text-paper/60'
+                location.pathname === l.to ? 'bg-panel-soft text-paper' : 'text-paper/60'
               }`}
             >
               {l.label}

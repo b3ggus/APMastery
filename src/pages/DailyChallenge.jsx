@@ -38,7 +38,7 @@ export default function DailyChallenge() {
         <div className="text-5xl mb-4">✅</div>
         <h1 className="font-display text-3xl mb-2">Already done for today</h1>
         <p className="text-paper/60 mb-6">Come back tomorrow for a new set of 10. Total daily challenges completed: {state.dailyChallengesDone}.</p>
-        <Link to="/" className="focus-ring border border-ink-line rounded-md px-5 py-2.5 hover:bg-ink-soft">Home</Link>
+        <Link to="/" className="focus-ring border border-panel-line rounded-md px-5 py-2.5 hover:bg-panel-soft">Home</Link>
       </div>
     )
   }

@@ -76,7 +76,7 @@ export default function Leaderboard() {
 
   return (
     <div className="max-w-2xl mx-auto px-4 sm:px-6 py-10">
-      <div className="relative overflow-hidden rounded-xl border border-gold/30 bg-gradient-to-br from-gold/15 via-ink-soft to-ink-soft p-6 mb-6">
+      <div className="relative overflow-hidden rounded-xl border border-gold/30 bg-gradient-to-br from-gold/20 via-ember/10 to-moss/15 p-6 mb-6">
         <div className="absolute -top-10 -right-10 text-[140px] opacity-10 select-none leading-none">🏆</div>
         <h1 className="font-display text-4xl mb-1">Leaderboard</h1>
         <p className="text-paper/60 text-sm">
@@ -102,7 +102,7 @@ export default function Leaderboard() {
       {loading && (
         <div className="space-y-1.5 animate-pulse">
           {Array.from({ length: 8 }).map((_, i) => (
-            <div key={i} className="h-12 rounded-lg bg-ink-soft/60" />
+            <div key={i} className="h-12 rounded-lg bg-panel-soft" />
           ))}
         </div>
       )}
@@ -121,15 +121,15 @@ export default function Leaderboard() {
                     isMe
                       ? 'bg-gold/15 border border-gold/50'
                       : rank <= 3
-                        ? 'bg-ink-soft border border-ink-line'
-                        : 'bg-ink-soft/40 border border-transparent hover:border-ink-line'
+                        ? 'bg-panel-soft border border-panel-line shadow-sm'
+                        : 'bg-panel border border-panel-line/60 hover:border-panel-line'
                   }`}
                 >
                   <span className="w-7 text-center font-mono text-sm text-paper/40 shrink-0">
                     {MEDALS[rank - 1] ?? rank}
                   </span>
                   <span
-                    className="w-8 h-8 rounded-full flex items-center justify-center text-sm font-display font-semibold text-ink shrink-0"
+                    className="w-8 h-8 rounded-full flex items-center justify-center text-sm font-display font-semibold text-white shrink-0 shadow-sm"
                     style={{ backgroundColor: avatarColor(row.username) }}
                   >
                     {row.username[0]?.toUpperCase()}
@@ -160,7 +160,7 @@ export default function Leaderboard() {
               <button
                 onClick={handleLoadMore}
                 disabled={loadingMore}
-                className="focus-ring px-5 py-2 rounded-lg border border-ink-line text-paper/70 hover:text-paper hover:border-gold/50 text-sm font-mono disabled:opacity-50"
+                className="focus-ring px-5 py-2 rounded-lg border border-panel-line bg-panel text-paper/70 hover:text-paper hover:border-gold/50 text-sm font-mono disabled:opacity-50"
               >
                 {loadingMore ? 'Loading…' : `Show next ${Math.min(PAGE_SIZE, totalCount - rows.length)}`}
               </button>

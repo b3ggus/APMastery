@@ -16,9 +16,9 @@ export default function SubjectPage() {
       <div className="flex items-center justify-between mb-6">
         <div>
           <h1 className="font-display text-3xl">{subject.icon} {subject.name}</h1>
-          <p className="text-paper/50 text-sm mt-1">Work down the trail — beat each Unit Boss with zero mistakes to unlock the next unit.</p>
+          <p className="text-paper/50 text-sm mt-1">Jump into any unit in any order — finish a unit's practice to unlock its Boss Battle.</p>
         </div>
-        <Link to={`/subject/${subject.id}/frq`} className="focus-ring shrink-0 border border-ink-line rounded-md px-4 py-2 text-sm hover:bg-ink-soft">
+        <Link to={`/subject/${subject.id}/frq`} className="focus-ring shrink-0 border border-panel-line rounded-md px-4 py-2 text-sm hover:bg-panel-soft">
           📝 FRQs
         </Link>
       </div>

@@ -41,7 +41,7 @@ export default function FRQPage() {
       {!open ? (
         <div className="space-y-3">
           {subject.frqs.map((f) => (
-            <button key={f.id} onClick={() => openFrq(f.id)} className="focus-ring w-full text-left border border-ink-line rounded-lg p-4 hover:bg-ink-soft flex items-center justify-between">
+            <button key={f.id} onClick={() => openFrq(f.id)} className="focus-ring w-full text-left border border-panel-line bg-panel rounded-lg p-4 hover:bg-panel-soft flex items-center justify-between">
               <div>
                 <p className="font-medium">Unit {f.unit} Free Response</p>
                 <p className="text-xs text-paper/40 mt-1 line-clamp-1">{f.prompt.slice(0, 90)}…</p>

@@ -37,7 +37,7 @@ export default function Flashcards() {
           <div className="text-5xl mb-4">🌿</div>
           <h2 className="font-display text-xl mb-2">Nothing due right now</h2>
           <p className="text-paper/50 text-sm mb-6">Missed questions from practice automatically become flashcards here, spaced out over time.</p>
-          <Link to="/" className="focus-ring border border-ink-line rounded-md px-5 py-2.5 hover:bg-ink-soft">Home</Link>
+          <Link to="/" className="focus-ring border border-panel-line bg-panel rounded-md px-5 py-2.5 hover:bg-panel-soft">Home</Link>
         </div>
       ) : (
         <div className="bg-paper-card text-ink rounded-lg p-6 sm:p-8 shadow-xl card-torn">

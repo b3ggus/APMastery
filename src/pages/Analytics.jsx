@@ -66,7 +66,7 @@ export default function Analytics() {
     <div className="max-w-4xl mx-auto px-4 sm:px-6 py-8 space-y-10">
       <h1 className="font-display text-3xl">📊 Analytics</h1>
 
-      <section className="bg-ink-soft border border-ink-line rounded-lg p-5">
+      <section className="bg-panel-soft border border-panel-line rounded-lg p-5">
         <h2 className="font-display text-lg mb-3">Estimated AP Score</h2>
         <p className="text-xs text-paper/40 mb-4 font-mono">A rough heuristic based on your accuracy weighted by difficulty — not an official prediction.</p>
         <div className="grid sm:grid-cols-3 gap-4">
@@ -81,7 +81,7 @@ export default function Analytics() {
         </div>
       </section>
 
-      <section className="bg-ink-soft border border-ink-line rounded-lg p-5">
+      <section className="bg-panel-soft border border-panel-line rounded-lg p-5">
         <h2 className="font-display text-lg mb-3">Accuracy over last 14 active days</h2>
         <ResponsiveContainer width="100%" height={220}>
           <LineChart data={daily}>
@@ -94,7 +94,7 @@ export default function Analytics() {
         </ResponsiveContainer>
       </section>
 
-      <section className="bg-ink-soft border border-ink-line rounded-lg p-5">
+      <section className="bg-panel-soft border border-panel-line rounded-lg p-5">
         <h2 className="font-display text-lg mb-3">Accuracy by difficulty</h2>
         <ResponsiveContainer width="100%" height={220}>
           <BarChart data={[1, 2, 3, 4, 5].map((d) => ({ name: '⭐'.repeat(d), accuracy: diffBuckets[d].total ? Math.round((diffBuckets[d].correct / diffBuckets[d].total) * 100) : 0 }))}>
@@ -107,7 +107,7 @@ export default function Analytics() {
         </ResponsiveContainer>
       </section>
 
-      <section className="bg-ink-soft border border-ink-line rounded-lg p-5">
+      <section className="bg-panel-soft border border-panel-line rounded-lg p-5">
         <h2 className="font-display text-lg mb-3">You struggle with</h2>
         {weakest.length === 0 ? (
           <p className="text-paper/50 text-sm">Not enough data per topic yet — keep practicing to surface weak spots.</p>

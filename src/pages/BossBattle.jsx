@@ -72,7 +72,7 @@ export default function BossBattle() {
         <h1 className="font-display text-3xl mb-2">The boss got you</h1>
         <p className="text-paper/60 mb-6">One mistake breaks the run — that's the deal with boss battles. You got to question {index + 1} of {BOSS_LENGTH}.</p>
         <div className="flex gap-3 justify-center">
-          <Link to={`/subject/${subject.id}`} className="focus-ring border border-ink-line rounded-md px-5 py-2.5 hover:bg-ink-soft">Back to trail</Link>
+          <Link to={`/subject/${subject.id}`} className="focus-ring border border-panel-line rounded-md px-5 py-2.5 hover:bg-panel-soft">Back to trail</Link>
           <button onClick={retry} className="focus-ring bg-danger text-paper rounded-md px-5 py-2.5 hover:brightness-110">Try again</button>
         </div>
       </div>

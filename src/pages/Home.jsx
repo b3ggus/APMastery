@@ -19,17 +19,17 @@ export default function Home() {
   return (
     <div className="max-w-6xl mx-auto px-4 sm:px-6 py-8 space-y-10">
       <section className="grid sm:grid-cols-3 gap-4">
-        <div className="bg-ink-soft border border-ink-line rounded-lg p-5">
+        <div className="bg-panel-soft border border-panel-line rounded-lg p-5">
           <p className="text-xs uppercase tracking-wide text-paper/50 font-mono mb-1">Streak</p>
           <p className="font-display text-3xl">{streakFlames(state.streak)} {state.streak} days</p>
           <p className="text-xs text-paper/40 mt-1">Best: {state.bestStreak} days</p>
         </div>
-        <div className="bg-ink-soft border border-ink-line rounded-lg p-5">
+        <div className="bg-panel-soft border border-panel-line rounded-lg p-5">
           <p className="text-xs uppercase tracking-wide text-paper/50 font-mono mb-1">Rank</p>
           <p className="font-display text-3xl" style={{ color: current.color }}>{current.name}</p>
           <p className="text-xs text-paper/40 mt-1">{next ? `${toNext} XP to ${next.name}` : 'Max rank reached'}</p>
         </div>
-        <div className="bg-ink-soft border border-ink-line rounded-lg p-5">
+        <div className="bg-panel-soft border border-panel-line rounded-lg p-5">
           <p className="text-xs uppercase tracking-wide text-paper/50 font-mono mb-1">Lifetime</p>
           <p className="font-display text-3xl">{stats.totalCorrect} correct</p>
           <p className="text-xs text-paper/40 mt-1">{state.coins} coins earned</p>
@@ -65,7 +65,7 @@ export default function Home() {
         <h2 className="font-display text-2xl mb-4">More subjects — coming soon</h2>
         <div className="flex flex-wrap gap-2">
           {COMING_SOON.map((s) => (
-            <span key={s.id} className="text-sm px-3 py-1.5 rounded-full border border-ink-line text-paper/40 font-mono">
+            <span key={s.id} className="text-sm px-3 py-1.5 rounded-full border border-panel-line text-paper/40 font-mono">
               {s.icon} {s.name}
             </span>
           ))}

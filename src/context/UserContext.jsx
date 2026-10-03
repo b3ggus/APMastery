@@ -144,10 +144,11 @@ export function UserProvider({ children }) {
     })
   }
 
-  function isUnitUnlocked(subjectId, units, unitIndex) {
-    if (unitIndex === 0) return true
-    const prevUnit = units[unitIndex - 1]
-    return !!state.unitProgress[`${subjectId}:${prevUnit.id}`]?.bossDefeated
+  function isUnitUnlocked() {
+    // Every unit is accessible from the start — students can study subjects
+    // in whatever order makes sense for their own class/exam schedule,
+    // rather than being forced through them sequentially.
+    return true
   }
 
   function recordSurvival(score) {
